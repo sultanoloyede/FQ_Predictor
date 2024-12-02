@@ -1,0 +1,82 @@
+2024-10-31 11:48:25,136 - INFO - Fetching games for season 2017-18
+2024-10-31 11:48:25,156 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:25,637 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:48:25,734 - INFO - Number of games fetched for season 2017-18 before filtering: 3760
+2024-10-31 11:48:25,756 - INFO - Number of games after filtering for season 2017-18: 2460
+2024-10-31 11:48:25,756 - INFO - Added 2460 games for season 2017-18
+2024-10-31 11:48:26,757 - INFO - Fetching games for season 2018-19
+2024-10-31 11:48:26,761 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:26,984 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 221277
+2024-10-31 11:48:27,517 - INFO - Number of games fetched for season 2018-19 before filtering: 3810
+2024-10-31 11:48:27,527 - INFO - Number of games after filtering for season 2018-19: 2460
+2024-10-31 11:48:27,527 - INFO - Added 2460 games for season 2018-19
+2024-10-31 11:48:28,531 - INFO - Fetching games for season 2019-20
+2024-10-31 11:48:28,536 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:28,886 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:48:29,002 - INFO - Number of games fetched for season 2019-20 before filtering: 3312
+2024-10-31 11:48:29,011 - INFO - Number of games after filtering for season 2019-20: 2118
+2024-10-31 11:48:29,011 - INFO - Added 2118 games for season 2019-20
+2024-10-31 11:48:30,014 - INFO - Fetching games for season 2020-21
+2024-10-31 11:48:30,019 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:30,136 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2020-21&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:48:30,527 - INFO - Number of games fetched for season 2020-21 before filtering: 2430
+2024-10-31 11:48:30,534 - INFO - Number of games after filtering for season 2020-21: 2160
+2024-10-31 11:48:30,535 - INFO - Added 2160 games for season 2020-21
+2024-10-31 11:48:31,539 - INFO - Fetching games for season 2021-22
+2024-10-31 11:48:31,544 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:31,700 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2021-22&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:48:31,955 - INFO - Number of games fetched for season 2021-22 before filtering: 3376
+2024-10-31 11:48:31,964 - INFO - Number of games after filtering for season 2021-22: 2460
+2024-10-31 11:48:31,964 - INFO - Added 2460 games for season 2021-22
+2024-10-31 11:48:32,967 - INFO - Fetching games for season 2022-23
+2024-10-31 11:48:32,972 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:48:33,269 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2022-23&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:48:33,609 - INFO - Number of games fetched for season 2022-23 before filtering: 3420
+2024-10-31 11:48:33,617 - INFO - Number of games after filtering for season 2022-23: 2460
+2024-10-31 11:48:33,617 - INFO - Added 2460 games for season 2022-23
+2024-10-31 11:48:34,666 - INFO - Loaded cache from all_training_data.pkl
+2024-10-31 11:48:34,668 - INFO - Resuming from existing data. 7059 games already processed.
+2024-10-31 11:48:34,819 - INFO - Saved cache to all_training_data.pkl
+2024-10-31 11:48:34,819 - INFO - All training data has been collected and saved.
+2024-10-31 11:48:35,014 - INFO - 'MATCHUP' column is present.
+2024-10-31 11:50:53,571 - INFO - Fetching games for season 2017-18
+2024-10-31 11:50:53,623 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:50:55,324 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2017-18&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 217654
+2024-10-31 11:50:55,777 - INFO - Number of games fetched for season 2017-18 before filtering: 3760
+2024-10-31 11:50:55,805 - INFO - Number of games after filtering for season 2017-18: 2460
+2024-10-31 11:50:55,805 - INFO - Added 2460 games for season 2017-18
+2024-10-31 11:50:56,811 - INFO - Fetching games for season 2018-19
+2024-10-31 11:50:56,817 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:50:56,942 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:50:57,201 - INFO - Number of games fetched for season 2018-19 before filtering: 3810
+2024-10-31 11:50:57,210 - INFO - Number of games after filtering for season 2018-19: 2460
+2024-10-31 11:50:57,210 - INFO - Added 2460 games for season 2018-19
+2024-10-31 11:50:58,214 - INFO - Fetching games for season 2019-20
+2024-10-31 11:50:58,218 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:50:58,389 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2019-20&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:50:58,718 - INFO - Number of games fetched for season 2019-20 before filtering: 3312
+2024-10-31 11:50:58,726 - INFO - Number of games after filtering for season 2019-20: 2118
+2024-10-31 11:50:58,726 - INFO - Added 2118 games for season 2019-20
+2024-10-31 11:50:59,728 - INFO - Fetching games for season 2020-21
+2024-10-31 11:50:59,734 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:51:00,261 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2020-21&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 134831
+2024-10-31 11:51:00,326 - INFO - Number of games fetched for season 2020-21 before filtering: 2430
+2024-10-31 11:51:00,400 - INFO - Number of games after filtering for season 2020-21: 2160
+2024-10-31 11:51:00,400 - INFO - Added 2160 games for season 2020-21
+2024-10-31 11:51:01,405 - INFO - Fetching games for season 2021-22
+2024-10-31 11:51:01,410 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:51:01,524 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2021-22&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:51:01,659 - INFO - Number of games fetched for season 2021-22 before filtering: 3376
+2024-10-31 11:51:01,668 - INFO - Number of games after filtering for season 2021-22: 2460
+2024-10-31 11:51:01,668 - INFO - Added 2460 games for season 2021-22
+2024-10-31 11:51:02,671 - INFO - Fetching games for season 2022-23
+2024-10-31 11:51:02,676 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:51:02,855 - DEBUG - https://stats.nba.com:443 "GET /stats/leaguegamefinder?Conference=&DateFrom=&DateTo=&Division=&DraftNumber=&DraftRound=&DraftTeamID=&DraftYear=&EqAST=&EqBLK=&EqDD=&EqDREB=&EqFG3A=&EqFG3M=&EqFG3_PCT=&EqFGA=&EqFGM=&EqFG_PCT=&EqFTA=&EqFTM=&EqFT_PCT=&EqMINUTES=&EqOREB=&EqPF=&EqPTS=&EqREB=&EqSTL=&EqTD=&EqTOV=&GameID=&GtAST=&GtBLK=&GtDD=&GtDREB=&GtFG3A=&GtFG3M=&GtFG3_PCT=&GtFGA=&GtFGM=&GtFG_PCT=&GtFTA=&GtFTM=&GtFT_PCT=&GtMINUTES=&GtOREB=&GtPF=&GtPTS=&GtREB=&GtSTL=&GtTD=&GtTOV=&LeagueID=&Location=&LtAST=&LtBLK=&LtDD=&LtDREB=&LtFG3A=&LtFG3M=&LtFG3_PCT=&LtFGA=&LtFGM=&LtFG_PCT=&LtFTA=&LtFTM=&LtFT_PCT=&LtMINUTES=&LtOREB=&LtPF=&LtPTS=&LtREB=&LtSTL=&LtTD=&LtTOV=&Outcome=&PORound=&PlayerID=&PlayerOrTeam=T&RookieYear=&Season=2022-23&SeasonSegment=&SeasonType=Regular+Season&StarterBench=&TeamID=&VsConference=&VsDivision=&VsTeamID=&YearsExperience= HTTP/11" 200 None
+2024-10-31 11:51:02,951 - INFO - Number of games fetched for season 2022-23 before filtering: 3420
+2024-10-31 11:51:02,960 - INFO - Number of games after filtering for season 2022-23: 2460
+2024-10-31 11:51:02,960 - INFO - Added 2460 games for season 2022-23
+2024-10-31 11:51:04,010 - INFO - Loaded cache from all_training_data.pkl
+2024-10-31 11:51:04,012 - INFO - Resuming from existing data. 7059 games already processed.
+2024-10-31 11:51:04,174 - INFO - Saved cache to all_training_data.pkl
+2024-10-31 11:51:04,175 - INFO - All training data has been collected and saved.
+2024-10-31 11:51:04,369 - ERROR - 'HOME_AWAY' column is missing in training_dataset_df.

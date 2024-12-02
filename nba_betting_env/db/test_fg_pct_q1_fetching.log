@@ -1,0 +1,22 @@
+2024-10-31 11:40:59,686 - INFO - Created test game IDs and saved to test_game_ids.pkl
+2024-10-31 11:40:59,686 - INFO - Fetching FG_PCT_Q1 for GAME_ID: 0022100001, TEAM_ID: 1610612737
+2024-10-31 11:40:59,701 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:41:00,877 - DEBUG - https://stats.nba.com:443 "GET /stats/boxscoreadvancedv2?EndPeriod=0&EndRange=0&GameID=0022100001&RangeType=0&StartPeriod=0&StartRange=0 HTTP/11" 200 2766
+2024-10-31 11:41:00,886 - WARNING - No Q1 stats found for GAME_ID: 0022100001, TEAM_ID: 1610612737
+2024-10-31 11:41:01,890 - INFO - Fetching FG_PCT_Q1 for GAME_ID: 0022100002, TEAM_ID: 1610612744
+2024-10-31 11:41:01,893 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:41:02,652 - DEBUG - https://stats.nba.com:443 "GET /stats/boxscoreadvancedv2?EndPeriod=0&EndRange=0&GameID=0022100002&RangeType=0&StartPeriod=0&StartRange=0 HTTP/11" 200 2724
+2024-10-31 11:41:02,659 - WARNING - No Q1 stats found for GAME_ID: 0022100002, TEAM_ID: 1610612744
+2024-10-31 11:41:03,662 - INFO - Fetching FG_PCT_Q1 for GAME_ID: 0022100003, TEAM_ID: 1610612751
+2024-10-31 11:41:03,665 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:41:04,493 - DEBUG - https://stats.nba.com:443 "GET /stats/boxscoreadvancedv2?EndPeriod=0&EndRange=0&GameID=0022100003&RangeType=0&StartPeriod=0&StartRange=0 HTTP/11" 200 2473
+2024-10-31 11:41:04,499 - WARNING - No Q1 stats found for GAME_ID: 0022100003, TEAM_ID: 1610612751
+2024-10-31 11:41:05,501 - INFO - Fetching FG_PCT_Q1 for GAME_ID: 0022100004, TEAM_ID: 1610612766
+2024-10-31 11:41:05,504 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:41:06,509 - DEBUG - https://stats.nba.com:443 "GET /stats/boxscoreadvancedv2?EndPeriod=0&EndRange=0&GameID=0022100004&RangeType=0&StartPeriod=0&StartRange=0 HTTP/11" 200 2574
+2024-10-31 11:41:06,514 - WARNING - No Q1 stats found for GAME_ID: 0022100004, TEAM_ID: 1610612766
+2024-10-31 11:41:07,518 - INFO - Fetching FG_PCT_Q1 for GAME_ID: 0022100005, TEAM_ID: 1610612749
+2024-10-31 11:41:07,521 - DEBUG - Starting new HTTPS connection (1): stats.nba.com:443
+2024-10-31 11:41:07,581 - DEBUG - https://stats.nba.com:443 "GET /stats/boxscoreadvancedv2?EndPeriod=0&EndRange=0&GameID=0022100005&RangeType=0&StartPeriod=0&StartRange=0 HTTP/11" 200 2695
+2024-10-31 11:41:07,587 - WARNING - No Q1 stats found for GAME_ID: 0022100005, TEAM_ID: 1610612749
+2024-10-31 11:41:08,607 - INFO - Saved FG_PCT_Q1 results to 'test_fg_pct_q1_results.csv'

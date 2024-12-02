@@ -1,0 +1,18 @@
+2024-11-09 17:53:14,613 INFO:Fetching games for season 2024-25
+2024-11-09 17:53:14,811 INFO:Number of games fetched for season 2024-25 before filtering: 274
+2024-11-09 17:53:14,826 INFO:Number of games after filtering for season 2024-25: 274
+2024-11-09 17:53:14,826 INFO:Added 274 games for season 2024-25
+2024-11-09 17:53:15,846 INFO:No existing data file found at nba_ai_all_training_data.pkl.
+2024-11-09 17:53:15,846 INFO:Starting data collection from scratch.
+2024-11-09 17:54:22,856 INFO:Data successfully saved to nba_ai_all_training_data.pkl.
+2024-11-09 17:54:22,856 INFO:Processed 100/137 training games
+2024-11-09 17:54:47,673 INFO:Data successfully saved to nba_ai_all_training_data.pkl.
+2024-11-09 17:54:47,673 INFO:Processed 137/137 training games
+2024-11-09 17:54:48,281 INFO:Data successfully saved to nba_ai_all_training_data.pkl.
+2024-11-09 17:54:48,281 INFO:All training data has been collected and saved.
+2024-11-09 17:54:48,320 INFO:Computing additional features.
+2024-11-09 17:54:49,692 INFO:Checkpoint saved to 'nba_ai_training_dataset_with_trends.csv'.
+2024-11-09 17:54:49,692 INFO:Dataset preparation is complete.
+2024-11-09 17:54:49,727 INFO:Final training dataset saved to 'nba_ai_input_training_dataset.csv'.
+2024-11-09 18:08:00,640 INFO:Fetching games for seasons: ['2024-25', '2024-23', '2023-22']
+2024-11-09 18:15:44,441 INFO:Fetching games for seasons: ['2023-24', '2022-23', '2021-22']
