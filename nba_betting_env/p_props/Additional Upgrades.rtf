@@ -21,7 +21,7 @@
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Below are a few ideas for additional features you could implement to further boost your model\'92s predictive accuracy. They build on your existing threshold-based stats (e.g. \'93amount of times threshold was hit in last 5/10/20 games\'94 or \'93this season\'94), which appear to be valuable signals:\
+Below are a few ideas for additional features I could implement to further boost my model\'92s predictive accuracy. They build on my existing threshold-based stats (e.g. \'93amount of times threshold was hit in last 5/10/20 games\'94 or \'93this season\'94), which appear to be valuable signals:\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa298\partightenfactor0
@@ -29,8 +29,8 @@
 \f1\b\fs36 \cf0 1. Streak / Consecutive Hits or Misses\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls1\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Consecutive-Hit Count
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Consecutive-Hit Count
 \f0\b0 : How many 
 \f1\b consecutive
 \f0\b0  games the player has 
@@ -38,21 +38,21 @@
 \f0\b0  (e.g., 10, 15, or 20 points).\
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
 \ls1\ilvl1
-\f2\i \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f2\i \cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3\i0 \uc0\u9702 
 \f2\i 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Example
+Example
 \f0\i0 : If a player has cleared 15+ points in 4 straight games, that can be a strong indicator they might clear it again.\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls1\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Consecutive-Miss Count
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Consecutive-Miss Count
 \f0\b0 : Similarly, how many consecutive games the player has 
 \f1\b failed
 \f0\b0  to exceed the threshold.\
 \ls1\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Longest Streak in Last N Games
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Longest Streak in Last N Games
 \f0\b0 : For instance, the length of the 
 \f2\i longest
 \f0\i0  consecutive run of clearing the threshold in the last 10 or 20 games. This can capture \'93hot\'94 vs. \'93cold\'94 stretches.\
@@ -63,13 +63,13 @@
 \f1\b\fs36 \cf0 2. Margin Above (or Below) Threshold\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b0\fs24 \cf0 If the threshold is 15 points, you can look at how many points the player typically scores 
+\f0\b0\fs24 \cf0 If the threshold is 15 points, I can look at how many points the player typically scores 
 \f1\b above
 \f0\b0  15:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls2\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Rolling Average Margin
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Rolling Average Margin
 \f0\b0 :\uc0\u8232 
 \f4 margin\uc0\u8232 
 \fs18 i\uc0\u8232 
@@ -84,9 +84,9 @@
 \f2\i last 10 games
 \f0\i0 ).\
 \ls2\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Percentage of Games Clearing Threshold by 5+ or 10+
-\f0\b0 \uc0\u8232 For instance, you already track hitting 15+ points, but maybe you track \'93did the player reach 15 + 5 = 20 in the last 10 games?\'94 (essentially a \'93bigger threshold\'94) to see if they not only exceed 15, but by a large margin.\
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Percentage of Games Clearing Threshold by 5+ or 10+
+\f0\b0 \uc0\u8232 For instance, I already track hitting 15+ points, but maybe I track \'93did the player reach 15 + 5 = 20 in the last 10 games?\'94 (essentially a \'93bigger threshold\'94) to see if they not only exceed 15, but by a large margin.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa298\partightenfactor0
@@ -94,19 +94,19 @@
 \f1\b\fs36 \cf0 3. Hit Rate Trend or \'93Momentum\'94\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls3\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Moving Average Trend
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Moving Average Trend
 \f0\b0 : Consider the difference between \'93hit rate in the last 5 games\'94 and \'93hit rate in the previous 5 games,\'94 or difference between last-5 and last-10 rolling stats.\
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls3\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls3\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 E.g., if the player\'92s rate of hitting 15+ jumped from 40% (2 out of 5) to 80% (4 out of 5) recently, that\'92s a strong sign of momentum.\
+E.g., if the player\'92s rate of hitting 15+ jumped from 40% (2 out of 5) to 80% (4 out of 5) recently, that\'92s a strong sign of momentum.\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls3\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Slope of Rolling Average
-\f0\b0 : If you track the rolling average of points, you can compute a simple linear regression slope over the last N games. A positive slope indicates they are steadily improving.\
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Slope of Rolling Average
+\f0\b0 : If I track the rolling average of points, I can compute a simple linear regression slope over the last N games. A positive slope indicates they are steadily improving.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa298\partightenfactor0
@@ -114,12 +114,12 @@
 \f1\b\fs36 \cf0 4. Variability / Consistency\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls4\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Standard Deviation
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Standard Deviation
 \f0\b0  (last 5, 10, 20 games): A player who is extremely consistent may be more reliably hitting the threshold if their average is near it. Conversely, a high-variance player might have a lower probability if they\'92re all over the place.\
 \ls4\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Range of Points
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Range of Points
 \f0\b0 : Max points \'96 min points in last 5 or 10 games. Similar idea to stdev: are they boom-or-bust or consistent?\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
@@ -128,19 +128,19 @@
 \f1\b\fs36 \cf0 5. Time Since Last Hit\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls5\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Games Since Last Hit
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Games Since Last Hit
 \f0\b0 : Number of games elapsed since the last time the player cleared the threshold.\
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls5\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls5\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 For example, if you\'92re predicting 20+ points and the player last achieved it 1 game ago vs. 6 games ago, that may matter.\
+For example, if I\'92re predicting 20+ points and the player last achieved it 1 game ago vs. 6 games ago, that may matter.\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls5\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Days Rest or Days Between Games
-\f0\b0 : If you have the schedule, how many days they had off prior to each game could also be a feature.\
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Days Rest or Days Between Games
+\f0\b0 : If I have the schedule, how many days they had off prior to each game could also be a feature.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa298\partightenfactor0
@@ -148,12 +148,12 @@
 \f1\b\fs36 \cf0 6. Advanced Rolling Decompositions\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls6\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Weighted Rolling Averages
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weighted Rolling Averages
 \f0\b0 : Give more weight to recent games. For instance, an exponentially weighted moving average of points (or of times the threshold was hit).\
 \ls6\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Rolling Summation of \'93Excess Points\'94
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Rolling Summation of \'93Excess Points\'94
 \f0\b0  above threshold. E.g., in the last 10 games, how many total points above 10 did the player accumulate?\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
@@ -162,21 +162,21 @@
 \f1\b\fs36 \cf0 7. Relative Performance vs. Team or Teammates\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f2\i\b0\fs24 \cf0 (If you have data for the entire team or have advanced stats)
+\f2\i\b0\fs24 \cf0 (If I have data for the entire team or have advanced stats)
 \f0\i0 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls7\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Usage Rate / %Shots
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Usage Rate / %Shots
 \f0\b0 : If the player took a higher percentage of team shots recently, that might increase their scoring odds.\
 \ls7\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Share of Team\'92s Points
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Share of Team\'92s Points
 \f0\b0 : The fraction of total team points contributed by this player in the last N games.\
 \ls7\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 On/Off Court Splits
-\f0\b0  (if you have \'93minutes on the floor\'94 vs. overall game minutes).\
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+On/Off Court Splits
+\f0\b0  (if I have \'93minutes on the floor\'94 vs. overall game minutes).\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa298\partightenfactor0
@@ -184,20 +184,20 @@
 \f1\b\fs36 \cf0 8. Opposition or Contextual Factors\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f2\i\b0\fs24 \cf0 (If you have game-level data about opponents or context)
+\f2\i\b0\fs24 \cf0 (If I have game-level data about opponents or context)
 \f0\i0 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls8\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Opponent Strength
-\f0\b0 : Some advanced stats if you know the defensive rating of the opponent.\
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Opponent Strength
+\f0\b0 : Some advanced stats if I know the defensive rating of the opponent.\
 \ls8\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Home vs. Away
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Home vs. Away
 \f0\b0 : Some players perform better at home.\
 \ls8\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Back-to-Back Indicator
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Back-to-Back Indicator
 \f0\b0 : If the team is on a back-to-back, players may be fatigued, etc.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
@@ -209,12 +209,12 @@
 \f0\b0\fs24 \cf0 Combine multiple signals into a single feature, for example:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls9\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Hotness Score
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Hotness Score
 \f0\b0 : Weighted combination of \'93streak length,\'94 \'93average margin above threshold,\'94 and \'93recent rolling average.\'94\
 \ls9\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Coldness Score
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Coldness Score
 \f0\b0 : Weighted combination of consecutive misses, negative margin, etc.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
@@ -223,43 +223,43 @@
 \f1\b\fs36 \cf0 How to Implement\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b0\fs24 \cf0 You would extend your feature engineering function(s) to compute these features in the same rolling/aggregated manner you do for the existing threshold stats. For example:\
+\f0\b0\fs24 \cf0 I would extend my feature engineering function(s) to compute these features in the same rolling/aggregated manner I do for the existing threshold stats. For example:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls10\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Streak Features
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Streak Features
 \f0\b0 \
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Track whether game 
+Track whether game 
 \f4 i\uc0\u8232 \u8232 
 \f0 i
 \f4 \uc0\u8232 
 \f0 was above/below threshold.\
-\ls10\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls10\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 For game 
+For game 
 \f4 i\uc0\u8232 +\u8232 1\u8232 \u8232 
 \f0 i+1
 \f4 \uc0\u8232 
-\f0 , your feature is \'93streak length through game 
+\f0 , my feature is \'93streak length through game 
 \f4 i\uc0\u8232 \u8232 
 \f0 i
 \f4 \uc0\u8232 
 \f0 .\'94\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls10\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Margin Above Threshold
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Margin Above Threshold
 \f0\b0 \
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 In each rolling window, sum or average 
+In each rolling window, sum or average 
 \f4 (\uc0\u8232 points\u8232 
 \fs18 j\uc0\u8232 
 \fs24 \uc0\u8232 \u8722 \u8232 threshold\u8232 )\u8232 \u8232 
@@ -278,14 +278,14 @@
 \f0 .\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
 \ls10\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Variability
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+Variability
 \f0\b0  (std, range)\
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\ls10\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
 \f3 \uc0\u9702 
 \f0 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Over the last N games, 
+Over the last N games, 
 \f5\fs26 std(points)
 \f0\fs24  or 
 \f5\fs26 [max(points) - min(points)]
@@ -295,7 +295,7 @@
 \f1\b \cf0 Remember
 \f0\b0  to drop or fill 
 \f5\fs26 NaN
-\f0\fs24 s if you don\'92t have enough games. Consistency with your current approach (rolling on last 5/10/20) will help keep your dataset structure uniform.\
+\f0\fs24 s if I don\'92t have enough games. Consistency with my current approach (rolling on last 5/10/20) will help keep my dataset structure uniform.\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sa280\partightenfactor0
@@ -303,34 +303,34 @@
 \f1\b\fs28 \cf0 Summary\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b0\fs24 \cf0 In short, you already have raw \'93hit count\'94 features for various windows, which are great. Consider adding:\
+\f0\b0\fs24 \cf0 In short, I already have raw \'93hit count\'94 features for various windows.\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls11\ilvl0
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Streak lengths
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Streak lengths
 \f0\b0  (consecutive hits/misses).\
 \ls11\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Margin above threshold
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Margin above threshold
 \f0\b0  (and average margin).\
 \ls11\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Trend
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+Trend
 \f0\b0  or 
 \f1\b momentum
 \f0\b0  features (like slope or difference in rolling averages).\
 \ls11\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Variability
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+Variability
 \f0\b0  (standard deviation, range).\
 \ls11\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Time since last hit
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	5	}\expnd0\expndtw0\kerning0
+Time since last hit
 \f0\b0 .\
 \ls11\ilvl0
-\f1\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Any contextual info
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+Any contextual info
 \f0\b0  if available (opponent quality, home/away, back-to-back, rest days, etc.).\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 Each of these features can capture a different aspect of a player\'92s performance pattern, potentially boosting your model\'92s accuracy.\
+\cf0 Each of these features can capture a different aspect of a player\'92s performance pattern, potentially boosting my model\'92s accuracy.\
 }
