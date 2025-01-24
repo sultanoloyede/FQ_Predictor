@@ -91,10 +91,10 @@ def construct_new_row(df, team_abbr, opponent_abbr):
         new_row['Recent_Trend_Team'] = team_recent_game.get('Recent_Trend_Team', '[0,0,0]')
     
     if opponent_recent_game is not None:
-        new_row['Season_Avg_Pace_Opponent'] = opponent_recent_game.get('Season_Avg_Pace_Opponent', 0)
-        new_row['Season_Avg_FG_PCT_Opponent'] = opponent_recent_game.get('Season_Avg_FG_PCT_Opponent', 0)
-        new_row['PPG_Opponent'] = opponent_recent_game.get('PPG_Opponent', 0)
-        new_row['Recent_Trend_Opponent'] = opponent_recent_game.get('Recent_Trend_Opponent', '[0,0,0]')
+        new_row['Season_Avg_Pace_Opponent'] = opponent_recent_game.get('Season_Avg_Pace_Team', 0)
+        new_row['Season_Avg_FG_PCT_Opponent'] = opponent_recent_game.get('Season_Avg_FG_PCT_Team', 0)
+        new_row['PPG_Opponent'] = opponent_recent_game.get('PPG_Team', 0)
+        new_row['Recent_Trend_Opponent'] = opponent_recent_game.get('Recent_Trend_Team', '[0,0,0]')
         new_row['Opp_Off_Rating_Avg'] = opponent_recent_game.get('Off_Rating_Avg', 0)
     
     if head_to_head_game is not None:
@@ -229,9 +229,9 @@ for col in categorical_columns:
 df['Total_First_Quarter_Points'] = pd.to_numeric(df['Total_First_Quarter_Points'], errors='coerce')
 df['Total_First_Quarter_Points'].fillna(0, inplace=True)
 
-# Define target variable based on the new threshold of 50.
-threshold = 50
-df['target_over_50'] = (df['Total_First_Quarter_Points'] >= threshold).astype(int)
+# Define target variable based on the new threshold of 52.
+threshold = 52
+df['target_over_52'] = (df['Total_First_Quarter_Points'] >= threshold).astype(int)
 df = df.drop(columns=['Total_First_Quarter_Points'])
 
 # Save the LabelEncoder for future use.
@@ -259,7 +259,7 @@ df.drop(columns=['Average_Season_Avg_Pace'], inplace=True)
 
 # === Feature Scaling ===
 categorical_columns = ['TEAM_ABBREVIATION', 'OPPONENT_TEAM_ABBREVIATION', 'Home_Away']
-numerical_columns = [col for col in df.columns if col not in categorical_columns and col != 'target_over_50']
+numerical_columns = [col for col in df.columns if col not in categorical_columns and col != 'target_over_52']
 
 scaler = StandardScaler()
 df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
@@ -268,13 +268,31 @@ df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
 joblib.dump(scaler, 'scaler.pkl')
 
 # Separate features and the target variable.
-X = df.drop(columns=['target_over_50'])
-y = df['target_over_50'].astype(int)  # Ensure y is integer type
+X = df.drop(columns=['target_over_52'])
+y = df['target_over_52'].astype(int)  # Ensure y is integer type
 
 
 # Verify the target variable
 print("Data type of y:", y.dtype)
 print("Unique values in y:", y.unique())
+
+# Compute correlation matrix
+corr_matrix = df.corr()
+
+# Extract correlation of each feature with the target
+target_correlations = corr_matrix['target_over_52'].drop('target_over_52')
+
+# Sort correlations by absolute value to see strongest associations first
+target_correlations_sorted = target_correlations.abs().sort_values(ascending=False)
+
+# Plot the correlations as a bar graph
+plt.figure(figsize=(12, 8))
+target_correlations_sorted.plot(kind='bar', color='skyblue')
+plt.title('Feature Correlations with target_over_52')
+plt.ylabel('Correlation Coefficient')
+plt.xlabel('Features')
+plt.tight_layout()
+plt.show()
 
 # === Model Development and Cross-Validation ===
 model_path = 'best_nba_model.pkl'
@@ -388,7 +406,7 @@ if os.path.exists(model_path) and os.path.exists(scaler_path):
     print(f"GAME_DATE: {first_game_date}")
     print(f"TEAM1: {team1}")
     print(f"TEAM2: {team2}")
-    print(f"Predicted Class: {'Over' if loaded_prediction[0] == 1 else 'Under'}")
+    print(f"Predicted Class: {'Over 52' if loaded_prediction[0] == 1 else 'Under 53'}")
     print(f"Predicted Probability: {loaded_prediction_proba[0][loaded_prediction[0]]:.4f}")
     
     if len(sys.argv) == 3:

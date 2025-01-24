@@ -1,0 +1,79 @@
+**Project Overview:**
+
+This project predicts whether NBA players will exceed specific point thresholds—10+, 15+, or 20+ points—by analyzing their past and current performance data. It is organized into the following folders and scripts:
+
+---
+
+### Folder Structure
+
+1. **backup**  
+   - Contains a complete backup of the project.
+
+2. **data**  
+   - **players**  
+     - A CSV containing game-level stats for each player from the current season, previous season, and the last 20 games before the previous season. Columns:  
+       ```
+       game_id, game_date, points, fga, minutes, fouls, player_id, player_name, team_id
+       ```
+   - **top_scorers**  
+     - Contains three CSV files for the top 25 players predicted to surpass each points threshold (10+, 15+, and 20+). Each CSV has the columns:
+       ```
+       player_id, player_name, team_id, predicted_probability
+       ```
+     - The 20+ points predictions are handled first (highest priority), followed by 15+ and then 10+, ensuring no player appears more than once across these lists.
+   - **combined feature prediction**  
+     - A CSV including *all* players with additional processed statistics and probability fields. Columns:
+       ```
+       player_id, ppg_last_10_games, ppg_last_20_games,
+       pct_10_plus_last_10_games, pct_15_plus_last_10_games, pct_20_plus_last_10_games,
+       avg_score_bottom_20_percent_games, fga_avg_last_10_games, fga_avg_season,
+       fga_avg_last_5_games, minutes_avg_last_10_games, minutes_avg_season,
+       minutes_avg_last_5_games, fouls_avg_last_10_games, fouls_avg_last_20_games,
+       foul_rate_last_10_games, foul_rate_last_20_games
+       ```
+
+3. **logs**  
+   - Contains log files (e.g., `fetch_players.log`, `fetch_teams.log`, `initialize_csvs.log`, `train_models.log`, `update_predictions.log`) capturing the execution details of each corresponding script.
+
+4. **models**  
+   - Stores `.pkl` files for the best-performing machine learning models for each points threshold (10+, 15+, 20+) and their associated scalers.
+
+5. **scripts**  
+   - **fetch_players.py**  
+     - Fetches and updates player-related data.
+   - **fetch_teams.py**  
+     - Fetches and updates team-related data.
+   - **initialize_csvs.py**  
+     - Initializes CSV files with player information for the first project run.
+   - **train_models.py**  
+     - Creates a combined dataset of all players and all the games they've played.  
+     - Trains separate ML models to predict 10+, 15+, and 20+ point thresholds, selecting the best model for each.  
+     - Saves the best models and scalers in the `models` folder.
+   - **update_predictions.py**  
+     - Uses the saved best models to generate predictions and probabilities for each threshold.  
+     - Populates the top 25 players (per threshold) into separate CSV files in `top_scorers`.  
+     - Ensures the highest threshold (20+) is processed first, then 15+, and finally 10+, without any player overlap across lists.
+
+---
+
+**Workflow Summary:**
+
+1. **Data Initialization**  
+   - `initialize_csvs.py` sets up the baseline CSV files if this is the first run.
+
+2. **Data Collection**  
+   - `fetch_players.py` and `fetch_teams.py` gather the latest information on players and teams.
+
+3. **Model Training**  
+   - `train_models.py` merges all historical player-game data, trains multiple models, and picks the best one for each point threshold (10+, 15+, 20+).  
+   - Trained models are saved in the `models` folder.
+
+4. **Prediction Updates**  
+   - `update_predictions.py` loads the best models to predict probabilities of players exceeding the point thresholds.  
+   - Generates CSVs for each threshold (stored in `top_scorers`) and ensures no player is duplicated across those lists.
+
+5. **Logging & Backup**  
+   - All scripts log their processes in the `logs` folder.  
+   - A backup of the project is kept in the `backup` folder.
+
+This structured approach allows for continuous data gathering, model training, and prediction updates to identify which NBA players are most likely to exceed 10+, 15+, or 20+ points in upcoming games.

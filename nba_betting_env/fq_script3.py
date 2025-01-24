@@ -997,7 +997,6 @@ else:
                 team = line_score.iloc[0] 
             else:
                 team = line_score.iloc[1] 
-
             return int(team['PTS_QTR1'])
 
         def num_of_games(csv_filename, team_id):
@@ -1331,6 +1330,7 @@ else:
 
                 # Filter to the exact game_id
                 game = games[games['GAME_ID'] == game_id]
+                
                 if game.empty:
                     print(f"No matching game details found for GAME_ID {game_id}.")
                     return

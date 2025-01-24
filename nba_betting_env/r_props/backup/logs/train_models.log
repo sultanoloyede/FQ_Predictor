@@ -1,0 +1,2351 @@
+2024-12-25 12:01:42,961:INFO:Training process started.
+2024-12-25 12:01:43,693:INFO:Loaded data from 112 player files. Total games loaded: 11195
+2024-12-25 12:01:43,695:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-25 12:01:53,770:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-25 12:01:54,264:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-25 12:01:54,431:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-25 12:01:58,032:INFO:Prepared features and targets for 109 players for target > 4 rebounds.
+2024-12-25 12:01:58,033:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-25 12:02:24,830:INFO:Best XGBoost ROC-AUC: 0.8274
+2024-12-25 12:02:24,831:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7613664146909971, 'gamma': 2.137705091792748, 'learning_rate': 0.017625738023228556, 'max_depth': 5, 'min_child_weight': 7, 'n_estimators': 340, 'reg_alpha': 0.3143559810763267, 'reg_lambda': 0.5085706911647028, 'subsample': 0.9537832369630466}
+2024-12-25 12:02:24,832:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-25 12:03:42,209:INFO:Best GradientBoosting ROC-AUC: 0.7669
+2024-12-25 12:03:42,211:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2024-12-25 12:03:42,211:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-25 12:03:49,757:INFO:Best LogisticRegression ROC-AUC: 0.8166
+2024-12-25 12:03:49,757:INFO:Best LogisticRegression Parameters: {'C': 1.969828624191452, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-25 12:03:49,757:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-25 12:03:50,791:INFO:Best KNeighbors ROC-AUC: 0.8077
+2024-12-25 12:03:50,791:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 20, 'weights': 'distance'}
+2024-12-25 12:03:50,950:INFO:XGBoost model retrained on the entire dataset.
+2024-12-25 12:03:50,952:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-25 12:03:50,961:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8274.pkl.
+2024-12-25 12:03:50,961:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-25 12:04:01,447:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-25 12:04:01,937:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-25 12:04:02,113:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-25 12:04:05,655:INFO:Prepared features and targets for 109 players for target > 6 rebounds.
+2024-12-25 12:04:05,655:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-25 12:04:28,409:INFO:Best XGBoost ROC-AUC: 0.8145
+2024-12-25 12:04:28,410:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9056020883680015, 'gamma': 4.103197378719777, 'learning_rate': 0.19778190103047186, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 267, 'reg_alpha': 0.9053506419560637, 'reg_lambda': 0.19579113478929644, 'subsample': 0.5346806504375827}
+2024-12-25 12:04:28,411:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-25 12:06:08,063:INFO:Best GradientBoosting ROC-AUC: 0.7656
+2024-12-25 12:06:08,065:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.25463842853645025, 'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'n_estimators': 478, 'subsample': 0.5370223258670452}
+2024-12-25 12:06:08,065:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-25 12:06:18,619:INFO:Best LogisticRegression ROC-AUC: 0.8415
+2024-12-25 12:06:18,621:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-25 12:06:18,622:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-25 12:06:19,835:INFO:Best KNeighbors ROC-AUC: 0.7603
+2024-12-25 12:06:19,835:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-25 12:06:19,841:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-25 12:06:19,842:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-25 12:06:19,843:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8415.pkl.
+2024-12-25 12:06:19,843:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-25 12:06:32,275:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-25 12:06:32,924:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-25 12:06:33,102:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-25 12:06:38,416:INFO:Prepared features and targets for 109 players for target > 8 rebounds.
+2024-12-25 12:06:38,416:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-25 12:07:05,514:INFO:Best XGBoost ROC-AUC: 0.8310
+2024-12-25 12:07:05,514:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6150926341207776, 'gamma': 2.4959668994237614, 'learning_rate': 0.18160125976275493, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 271, 'reg_alpha': 0.9404585843529143, 'reg_lambda': 0.9539285770025874, 'subsample': 0.9574321951102243}
+2024-12-25 12:07:05,515:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-25 12:09:01,863:INFO:Best GradientBoosting ROC-AUC: 0.7992
+2024-12-25 12:09:01,864:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08763399448000507, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 6, 'min_samples_split': 11, 'n_estimators': 871, 'subsample': 0.5924272277627636}
+2024-12-25 12:09:01,865:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-25 12:09:09,940:INFO:Best LogisticRegression ROC-AUC: 0.8272
+2024-12-25 12:09:09,941:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-25 12:09:09,942:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-25 12:09:10,703:INFO:Best KNeighbors ROC-AUC: 0.7966
+2024-12-25 12:09:10,703:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 27, 'weights': 'uniform'}
+2024-12-25 12:09:10,754:INFO:XGBoost model retrained on the entire dataset.
+2024-12-25 12:09:10,757:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-25 12:09:10,762:INFO:Best model (XGBoost) saved to ../models/model_8_plus_XGBoost_roc_auc_0.8310.pkl.
+2024-12-25 12:09:10,763:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-25 12:09:20,470:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-25 12:09:20,976:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-25 12:09:21,151:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-25 12:09:24,763:INFO:Prepared features and targets for 109 players for target > 10 rebounds.
+2024-12-25 12:09:24,764:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-25 12:09:37,016:INFO:Best XGBoost ROC-AUC: 0.8541
+2024-12-25 12:09:37,017:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.67031228473212, 'gamma': 1.3034726411795154, 'learning_rate': 0.15881123628802185, 'max_depth': 12, 'min_child_weight': 5, 'n_estimators': 725, 'reg_alpha': 0.628942846779884, 'reg_lambda': 0.877472013527053, 'subsample': 0.8675355219019429}
+2024-12-25 12:09:37,017:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-25 12:11:47,716:INFO:Best GradientBoosting ROC-AUC: 0.8374
+2024-12-25 12:11:47,718:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11753971856328177, 'max_depth': 11, 'max_features': 'log2', 'min_samples_leaf': 9, 'min_samples_split': 9, 'n_estimators': 879, 'subsample': 0.6654490124263246}
+2024-12-25 12:11:47,718:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-25 12:11:57,870:INFO:Best LogisticRegression ROC-AUC: 0.8315
+2024-12-25 12:11:57,871:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-25 12:11:57,872:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-25 12:11:58,978:INFO:Best KNeighbors ROC-AUC: 0.8322
+2024-12-25 12:11:58,979:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2024-12-25 12:11:59,112:INFO:XGBoost model retrained on the entire dataset.
+2024-12-25 12:11:59,115:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-25 12:11:59,127:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8541.pkl.
+2024-12-25 12:11:59,127:INFO:
+=== Training process completed successfully ===
+2024-12-26 10:45:40,728:INFO:Training process started.
+2024-12-26 10:45:41,395:INFO:Loaded data from 112 player files. Total games loaded: 11226
+2024-12-26 10:45:41,396:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-26 10:45:50,318:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-26 10:45:50,810:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-26 10:45:50,975:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-26 10:45:56,470:INFO:Prepared features and targets for 109 players for target > 4 rebounds.
+2024-12-26 10:45:56,471:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-26 10:46:26,866:INFO:Best XGBoost ROC-AUC: 0.8314
+2024-12-26 10:46:26,867:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6250082246080524, 'gamma': 2.902720061719549, 'learning_rate': 0.2701349821629166, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 794, 'reg_alpha': 0.7508710677914974, 'reg_lambda': 0.7545428740846823, 'subsample': 0.5515619344179663}
+2024-12-26 10:46:26,868:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-26 10:48:56,009:INFO:Best GradientBoosting ROC-AUC: 0.7997
+2024-12-26 10:48:56,012:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2024-12-26 10:48:56,012:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-26 10:49:05,995:INFO:Best LogisticRegression ROC-AUC: 0.8339
+2024-12-26 10:49:05,995:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-26 10:49:05,997:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-26 10:49:07,443:INFO:Best KNeighbors ROC-AUC: 0.8291
+2024-12-26 10:49:07,443:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 27, 'weights': 'uniform'}
+2024-12-26 10:49:07,453:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-26 10:49:07,459:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-26 10:49:07,460:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8339.pkl.
+2024-12-26 10:49:07,460:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-26 10:49:18,264:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-26 10:49:18,745:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-26 10:49:18,907:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-26 10:49:22,377:INFO:Prepared features and targets for 109 players for target > 6 rebounds.
+2024-12-26 10:49:22,377:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-26 10:49:34,399:INFO:Best XGBoost ROC-AUC: 0.8247
+2024-12-26 10:49:34,399:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2024-12-26 10:49:34,399:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-26 10:50:55,759:INFO:Best GradientBoosting ROC-AUC: 0.7919
+2024-12-26 10:50:55,759:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2024-12-26 10:50:55,760:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-26 10:51:02,766:INFO:Best LogisticRegression ROC-AUC: 0.8385
+2024-12-26 10:51:02,766:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-26 10:51:02,767:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-26 10:51:03,439:INFO:Best KNeighbors ROC-AUC: 0.7924
+2024-12-26 10:51:03,440:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+2024-12-26 10:51:03,445:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-26 10:51:03,449:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-26 10:51:03,450:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8385.pkl.
+2024-12-26 10:51:03,450:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-26 10:51:12,804:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-26 10:51:13,522:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-26 10:51:13,711:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-26 10:51:17,212:INFO:Prepared features and targets for 109 players for target > 8 rebounds.
+2024-12-26 10:51:17,212:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-26 10:51:29,827:INFO:Best XGBoost ROC-AUC: 0.8465
+2024-12-26 10:51:29,827:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.5442462510259598, 'gamma': 0.979914312095726, 'learning_rate': 0.02356818667316142, 'max_depth': 10, 'min_child_weight': 5, 'n_estimators': 819, 'reg_alpha': 0.7473201101373809, 'reg_lambda': 0.5396921323890798, 'subsample': 0.7933755828319241}
+2024-12-26 10:51:29,827:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-26 10:52:39,710:INFO:Best GradientBoosting ROC-AUC: 0.8337
+2024-12-26 10:52:39,711:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.038102430348427745, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 329, 'subsample': 0.6965488623333802}
+2024-12-26 10:52:39,711:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-26 10:52:46,867:INFO:Best LogisticRegression ROC-AUC: 0.8539
+2024-12-26 10:52:46,867:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-26 10:52:46,868:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-26 10:52:47,558:INFO:Best KNeighbors ROC-AUC: 0.8570
+2024-12-26 10:52:47,558:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-26 10:52:47,560:INFO:KNeighbors model retrained on the entire dataset.
+2024-12-26 10:52:47,563:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-26 10:52:47,564:INFO:Best model (KNeighbors) saved to ../models/model_8_plus_KNeighbors_roc_auc_0.8570.pkl.
+2024-12-26 10:52:47,564:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-26 10:52:56,711:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-26 10:52:57,191:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-26 10:52:57,351:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-26 10:53:00,750:INFO:Prepared features and targets for 109 players for target > 10 rebounds.
+2024-12-26 10:53:00,750:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-26 10:53:11,836:INFO:Best XGBoost ROC-AUC: 0.8662
+2024-12-26 10:53:11,836:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9056020883680015, 'gamma': 4.103197378719777, 'learning_rate': 0.19778190103047186, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 267, 'reg_alpha': 0.9053506419560637, 'reg_lambda': 0.19579113478929644, 'subsample': 0.5346806504375827}
+2024-12-26 10:53:11,837:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-26 10:54:19,741:INFO:Best GradientBoosting ROC-AUC: 0.8585
+2024-12-26 10:54:19,741:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2024-12-26 10:54:19,741:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-26 10:54:26,415:INFO:Best LogisticRegression ROC-AUC: 0.9097
+2024-12-26 10:54:26,415:INFO:Best LogisticRegression Parameters: {'C': 4.468327528535911, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-26 10:54:26,416:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-26 10:54:27,115:INFO:Best KNeighbors ROC-AUC: 0.8671
+2024-12-26 10:54:27,115:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-26 10:54:27,123:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-26 10:54:27,127:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-26 10:54:27,128:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9097.pkl.
+2024-12-26 10:54:27,128:INFO:
+=== Training process completed successfully ===
+2024-12-27 11:36:09,051:INFO:Training process started.
+2024-12-27 11:36:09,751:INFO:Loaded data from 112 player files. Total games loaded: 11273
+2024-12-27 11:36:09,752:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-27 11:36:19,552:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-27 11:36:20,113:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-27 11:36:20,287:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-27 11:36:23,754:INFO:Prepared features and targets for 109 players for target > 4 rebounds.
+2024-12-27 11:36:23,754:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-27 11:36:46,619:INFO:Best XGBoost ROC-AUC: 0.7968
+2024-12-27 11:36:46,621:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9436063712881633, 'gamma': 2.3610746258097466, 'learning_rate': 0.04587827378149051, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 104, 'reg_alpha': 0.5612771975694962, 'reg_lambda': 0.770967179954561, 'subsample': 0.7468977981821954}
+2024-12-27 11:36:46,621:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-27 11:37:59,310:INFO:Best GradientBoosting ROC-AUC: 0.7855
+2024-12-27 11:37:59,310:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.23394742153540724, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 18, 'n_estimators': 739, 'subsample': 0.7841543016677358}
+2024-12-27 11:37:59,311:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-27 11:38:06,679:INFO:Best LogisticRegression ROC-AUC: 0.8135
+2024-12-27 11:38:06,679:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-27 11:38:06,679:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-27 11:38:07,459:INFO:Best KNeighbors ROC-AUC: 0.8080
+2024-12-27 11:38:07,459:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+2024-12-27 11:38:07,463:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-27 11:38:07,465:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-27 11:38:07,466:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8135.pkl.
+2024-12-27 11:38:07,466:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-27 11:38:17,114:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-27 11:38:17,606:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-27 11:38:17,787:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-27 11:38:21,239:INFO:Prepared features and targets for 109 players for target > 6 rebounds.
+2024-12-27 11:38:21,239:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-27 11:38:34,845:INFO:Best XGBoost ROC-AUC: 0.8191
+2024-12-27 11:38:34,845:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.520364401159485, 'gamma': 4.277302920055036, 'learning_rate': 0.2210973578140071, 'max_depth': 14, 'min_child_weight': 5, 'n_estimators': 650, 'reg_alpha': 0.3463043210894008, 'reg_lambda': 0.4646738129396114, 'subsample': 0.8248868413213817}
+2024-12-27 11:38:34,845:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-27 11:39:45,333:INFO:Best GradientBoosting ROC-AUC: 0.7896
+2024-12-27 11:39:45,334:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2024-12-27 11:39:45,334:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-27 11:39:52,324:INFO:Best LogisticRegression ROC-AUC: 0.7936
+2024-12-27 11:39:52,324:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-27 11:39:52,324:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-27 11:39:53,119:INFO:Best KNeighbors ROC-AUC: 0.8113
+2024-12-27 11:39:53,119:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 16, 'weights': 'distance'}
+2024-12-27 11:39:53,195:INFO:XGBoost model retrained on the entire dataset.
+2024-12-27 11:39:53,197:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-27 11:39:53,205:INFO:Best model (XGBoost) saved to ../models/model_6_plus_XGBoost_roc_auc_0.8191.pkl.
+2024-12-27 11:39:53,205:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-27 11:40:03,056:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-27 11:40:03,569:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-27 11:40:03,731:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-27 11:40:07,141:INFO:Prepared features and targets for 109 players for target > 8 rebounds.
+2024-12-27 11:40:07,141:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-27 11:40:19,953:INFO:Best XGBoost ROC-AUC: 0.9009
+2024-12-27 11:40:19,954:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.681814801189647, 'gamma': 4.858910413604804, 'learning_rate': 0.2987341884826334, 'max_depth': 9, 'min_child_weight': 2, 'n_estimators': 486, 'reg_alpha': 0.30087830981676966, 'reg_lambda': 0.2848404943774676, 'subsample': 0.5184434736772664}
+2024-12-27 11:40:19,954:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-27 11:41:30,880:INFO:Best GradientBoosting ROC-AUC: 0.8982
+2024-12-27 11:41:30,880:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.038102430348427745, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 329, 'subsample': 0.6965488623333802}
+2024-12-27 11:41:30,880:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-27 11:41:37,954:INFO:Best LogisticRegression ROC-AUC: 0.8905
+2024-12-27 11:41:37,954:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-27 11:41:37,954:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-27 11:41:38,657:INFO:Best KNeighbors ROC-AUC: 0.8943
+2024-12-27 11:41:38,658:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2024-12-27 11:41:38,771:INFO:XGBoost model retrained on the entire dataset.
+2024-12-27 11:41:38,774:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-27 11:41:38,782:INFO:Best model (XGBoost) saved to ../models/model_8_plus_XGBoost_roc_auc_0.9009.pkl.
+2024-12-27 11:41:38,782:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-27 11:41:48,495:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-27 11:41:48,980:WARNING:Player 1641744 has less than 20 games. Skipping.
+2024-12-27 11:41:49,161:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-27 11:41:52,620:INFO:Prepared features and targets for 109 players for target > 10 rebounds.
+2024-12-27 11:41:52,621:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-27 11:42:04,341:INFO:Best XGBoost ROC-AUC: 0.8560
+2024-12-27 11:42:04,341:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.67031228473212, 'gamma': 1.3034726411795154, 'learning_rate': 0.15881123628802185, 'max_depth': 12, 'min_child_weight': 5, 'n_estimators': 725, 'reg_alpha': 0.628942846779884, 'reg_lambda': 0.877472013527053, 'subsample': 0.8675355219019429}
+2024-12-27 11:42:04,342:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-27 11:43:11,931:INFO:Best GradientBoosting ROC-AUC: 0.8519
+2024-12-27 11:43:11,931:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.20002112695312704, 'max_depth': 8, 'max_features': 'sqrt', 'min_samples_leaf': 11, 'min_samples_split': 8, 'n_estimators': 289, 'subsample': 0.5550259622638384}
+2024-12-27 11:43:11,931:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-27 11:43:18,763:INFO:Best LogisticRegression ROC-AUC: 0.8509
+2024-12-27 11:43:18,763:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-27 11:43:18,763:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-27 11:43:19,434:INFO:Best KNeighbors ROC-AUC: 0.8463
+2024-12-27 11:43:19,434:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-27 11:43:19,515:INFO:XGBoost model retrained on the entire dataset.
+2024-12-27 11:43:19,518:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-27 11:43:19,526:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8560.pkl.
+2024-12-27 11:43:19,527:INFO:
+=== Training process completed successfully ===
+2024-12-28 12:13:43,402:INFO:Training process started.
+2024-12-28 12:13:44,005:INFO:Loaded data from 112 player files. Total games loaded: 11318
+2024-12-28 12:13:44,006:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-28 12:13:53,174:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-28 12:13:53,902:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-28 12:13:57,367:INFO:Prepared features and targets for 110 players for target > 4 rebounds.
+2024-12-28 12:13:57,367:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-28 12:14:18,912:INFO:Best XGBoost ROC-AUC: 0.8133
+2024-12-28 12:14:18,914:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.816550728636634, 'gamma': 1.6951489552435035, 'learning_rate': 0.11476287238379826, 'max_depth': 5, 'min_child_weight': 4, 'n_estimators': 251, 'reg_alpha': 0.4045081271221901, 'reg_lambda': 0.8877700987609598, 'subsample': 0.9254642243837563}
+2024-12-28 12:14:18,914:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-28 12:15:30,646:INFO:Best GradientBoosting ROC-AUC: 0.7665
+2024-12-28 12:15:30,646:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2024-12-28 12:15:30,646:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-28 12:15:37,939:INFO:Best LogisticRegression ROC-AUC: 0.7944
+2024-12-28 12:15:37,939:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-28 12:15:37,940:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-28 12:15:38,717:INFO:Best KNeighbors ROC-AUC: 0.7461
+2024-12-28 12:15:38,717:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-28 12:15:38,771:INFO:XGBoost model retrained on the entire dataset.
+2024-12-28 12:15:38,775:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-28 12:15:38,780:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8133.pkl.
+2024-12-28 12:15:38,780:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-28 12:15:48,956:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-28 12:15:49,627:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-28 12:15:53,149:INFO:Prepared features and targets for 110 players for target > 6 rebounds.
+2024-12-28 12:15:53,149:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-28 12:16:05,445:INFO:Best XGBoost ROC-AUC: 0.8397
+2024-12-28 12:16:05,445:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.5503890006887133, 'gamma': 0.09110912825774864, 'learning_rate': 0.038332888226778515, 'max_depth': 5, 'min_child_weight': 7, 'n_estimators': 948, 'reg_alpha': 0.6557226353807422, 'reg_lambda': 0.38539662096556504, 'subsample': 0.8408068344863948}
+2024-12-28 12:16:05,446:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-28 12:17:15,351:INFO:Best GradientBoosting ROC-AUC: 0.7969
+2024-12-28 12:17:15,351:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.10778767156056542, 'max_depth': 6, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 8, 'n_estimators': 919, 'subsample': 0.970261632244802}
+2024-12-28 12:17:15,351:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-28 12:17:22,796:INFO:Best LogisticRegression ROC-AUC: 0.8450
+2024-12-28 12:17:22,796:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-28 12:17:22,797:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-28 12:17:23,493:INFO:Best KNeighbors ROC-AUC: 0.7715
+2024-12-28 12:17:23,493:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-28 12:17:23,501:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-28 12:17:23,504:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-28 12:17:23,505:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8450.pkl.
+2024-12-28 12:17:23,505:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-28 12:17:33,339:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-28 12:17:34,020:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-28 12:17:37,495:INFO:Prepared features and targets for 110 players for target > 8 rebounds.
+2024-12-28 12:17:37,495:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-28 12:17:49,443:INFO:Best XGBoost ROC-AUC: 0.8431
+2024-12-28 12:17:49,443:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.587477463547968, 'gamma': 4.910841716647178, 'learning_rate': 0.16499076738130428, 'max_depth': 3, 'min_child_weight': 2, 'n_estimators': 996, 'reg_alpha': 0.09310276780589921, 'reg_lambda': 0.8972157579533268, 'subsample': 0.9502090285816652}
+2024-12-28 12:17:49,444:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-28 12:18:58,344:INFO:Best GradientBoosting ROC-AUC: 0.8211
+2024-12-28 12:18:58,344:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.038102430348427745, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 329, 'subsample': 0.6965488623333802}
+2024-12-28 12:18:58,344:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-28 12:19:05,618:INFO:Best LogisticRegression ROC-AUC: 0.8566
+2024-12-28 12:19:05,618:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-28 12:19:05,618:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-28 12:19:06,307:INFO:Best KNeighbors ROC-AUC: 0.8457
+2024-12-28 12:19:06,307:INFO:Best KNeighbors Parameters: {'metric': 'minkowski', 'n_neighbors': 22, 'weights': 'uniform'}
+2024-12-28 12:19:06,316:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-28 12:19:06,319:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-28 12:19:06,320:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8566.pkl.
+2024-12-28 12:19:06,320:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-28 12:19:15,942:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-28 12:19:16,616:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-28 12:19:20,095:INFO:Prepared features and targets for 110 players for target > 10 rebounds.
+2024-12-28 12:19:20,095:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-28 12:19:31,843:INFO:Best XGBoost ROC-AUC: 0.9043
+2024-12-28 12:19:31,844:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9436063712881633, 'gamma': 2.3610746258097466, 'learning_rate': 0.04587827378149051, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 104, 'reg_alpha': 0.5612771975694962, 'reg_lambda': 0.770967179954561, 'subsample': 0.7468977981821954}
+2024-12-28 12:19:31,844:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-28 12:20:53,370:INFO:Best GradientBoosting ROC-AUC: 0.9064
+2024-12-28 12:20:53,371:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2024-12-28 12:20:53,371:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-28 12:21:01,215:INFO:Best LogisticRegression ROC-AUC: 0.9058
+2024-12-28 12:21:01,216:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-28 12:21:01,216:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-28 12:21:02,133:INFO:Best KNeighbors ROC-AUC: 0.9034
+2024-12-28 12:21:02,134:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 12, 'weights': 'distance'}
+2024-12-28 12:21:02,869:INFO:GradientBoosting model retrained on the entire dataset.
+2024-12-28 12:21:02,872:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-28 12:21:02,909:INFO:Best model (GradientBoosting) saved to ../models/model_10_plus_GradientBoosting_roc_auc_0.9064.pkl.
+2024-12-28 12:21:02,909:INFO:
+=== Training process completed successfully ===
+2024-12-29 09:11:34,814:INFO:Training process started.
+2024-12-29 09:11:35,626:INFO:Loaded data from 114 player files. Total games loaded: 11613
+2024-12-29 09:11:35,627:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-29 09:11:45,314:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-29 09:11:45,987:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-29 09:11:50,009:INFO:Prepared features and targets for 112 players for target > 4 rebounds.
+2024-12-29 09:11:50,009:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-29 09:12:11,876:INFO:Best XGBoost ROC-AUC: 0.8445
+2024-12-29 09:12:11,878:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.681814801189647, 'gamma': 4.858910413604804, 'learning_rate': 0.2987341884826334, 'max_depth': 9, 'min_child_weight': 2, 'n_estimators': 486, 'reg_alpha': 0.30087830981676966, 'reg_lambda': 0.2848404943774676, 'subsample': 0.5184434736772664}
+2024-12-29 09:12:11,878:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-29 09:13:21,607:INFO:Best GradientBoosting ROC-AUC: 0.8206
+2024-12-29 09:13:21,607:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.02523055931181908, 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 15, 'min_samples_split': 3, 'n_estimators': 933, 'subsample': 0.7192370615090435}
+2024-12-29 09:13:21,607:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-29 09:13:28,502:INFO:Best LogisticRegression ROC-AUC: 0.8273
+2024-12-29 09:13:28,503:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-29 09:13:28,503:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-29 09:13:29,305:INFO:Best KNeighbors ROC-AUC: 0.8110
+2024-12-29 09:13:29,305:INFO:Best KNeighbors Parameters: {'metric': 'minkowski', 'n_neighbors': 25, 'weights': 'distance'}
+2024-12-29 09:13:29,371:INFO:XGBoost model retrained on the entire dataset.
+2024-12-29 09:13:29,373:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-29 09:13:29,380:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8445.pkl.
+2024-12-29 09:13:29,380:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-29 09:13:39,215:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-29 09:13:39,890:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-29 09:13:43,586:INFO:Prepared features and targets for 112 players for target > 6 rebounds.
+2024-12-29 09:13:43,587:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-29 09:13:55,754:INFO:Best XGBoost ROC-AUC: 0.8797
+2024-12-29 09:13:55,754:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9315517129377968, 'gamma': 3.1164906341377896, 'learning_rate': 0.10926940745579475, 'max_depth': 9, 'min_child_weight': 7, 'n_estimators': 673, 'reg_alpha': 0.32518332202674705, 'reg_lambda': 0.7296061783380641, 'subsample': 0.8187787356776066}
+2024-12-29 09:13:55,754:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-29 09:15:05,160:INFO:Best GradientBoosting ROC-AUC: 0.8646
+2024-12-29 09:15:05,160:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.29592155410718596, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'n_estimators': 215, 'subsample': 0.6472244460347929}
+2024-12-29 09:15:05,160:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-29 09:15:11,782:INFO:Best LogisticRegression ROC-AUC: 0.8741
+2024-12-29 09:15:11,782:INFO:Best LogisticRegression Parameters: {'C': 3.0561376917337064, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-29 09:15:11,783:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-29 09:15:12,465:INFO:Best KNeighbors ROC-AUC: 0.8411
+2024-12-29 09:15:12,465:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-29 09:15:12,545:INFO:XGBoost model retrained on the entire dataset.
+2024-12-29 09:15:12,548:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-29 09:15:12,557:INFO:Best model (XGBoost) saved to ../models/model_6_plus_XGBoost_roc_auc_0.8797.pkl.
+2024-12-29 09:15:12,557:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-29 09:15:22,432:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-29 09:15:23,125:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-29 09:15:26,768:INFO:Prepared features and targets for 112 players for target > 8 rebounds.
+2024-12-29 09:15:26,768:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-29 09:15:38,647:INFO:Best XGBoost ROC-AUC: 0.8773
+2024-12-29 09:15:38,647:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8248164495236073, 'gamma': 4.24611705247089, 'learning_rate': 0.207283867690103, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 569, 'reg_alpha': 0.26520236768172545, 'reg_lambda': 0.24398964337908358, 'subsample': 0.9865052773762228}
+2024-12-29 09:15:38,647:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-29 09:16:46,159:INFO:Best GradientBoosting ROC-AUC: 0.8604
+2024-12-29 09:16:46,159:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2024-12-29 09:16:46,159:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-29 09:16:53,087:INFO:Best LogisticRegression ROC-AUC: 0.8519
+2024-12-29 09:16:53,087:INFO:Best LogisticRegression Parameters: {'C': 0.017787658410143285, 'penalty': 'l2', 'solver': 'saga'}
+2024-12-29 09:16:53,087:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-29 09:16:53,788:INFO:Best KNeighbors ROC-AUC: 0.8927
+2024-12-29 09:16:53,788:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 8, 'weights': 'distance'}
+2024-12-29 09:16:53,791:INFO:KNeighbors model retrained on the entire dataset.
+2024-12-29 09:16:53,795:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-29 09:16:53,796:INFO:Best model (KNeighbors) saved to ../models/model_8_plus_KNeighbors_roc_auc_0.8927.pkl.
+2024-12-29 09:16:53,797:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-29 09:17:03,765:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-29 09:17:04,457:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-29 09:17:08,096:INFO:Prepared features and targets for 112 players for target > 10 rebounds.
+2024-12-29 09:17:08,096:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-29 09:17:19,676:INFO:Best XGBoost ROC-AUC: 0.9442
+2024-12-29 09:17:19,676:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.816550728636634, 'gamma': 1.6951489552435035, 'learning_rate': 0.11476287238379826, 'max_depth': 5, 'min_child_weight': 4, 'n_estimators': 251, 'reg_alpha': 0.4045081271221901, 'reg_lambda': 0.8877700987609598, 'subsample': 0.9254642243837563}
+2024-12-29 09:17:19,676:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-29 09:18:26,486:INFO:Best GradientBoosting ROC-AUC: 0.9544
+2024-12-29 09:18:26,486:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2605907486767714, 'max_depth': 14, 'max_features': 'log2', 'min_samples_leaf': 6, 'min_samples_split': 17, 'n_estimators': 448, 'subsample': 0.9291794024068599}
+2024-12-29 09:18:26,487:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-29 09:18:32,958:INFO:Best LogisticRegression ROC-AUC: 0.9567
+2024-12-29 09:18:32,959:INFO:Best LogisticRegression Parameters: {'C': 1.969828624191452, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-29 09:18:32,959:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-29 09:18:33,667:INFO:Best KNeighbors ROC-AUC: 0.9561
+2024-12-29 09:18:33,667:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-29 09:18:33,673:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-29 09:18:33,676:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-29 09:18:33,677:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9567.pkl.
+2024-12-29 09:18:33,677:INFO:
+=== Training process completed successfully ===
+2024-12-30 01:07:15,479:INFO:Training process started.
+2024-12-30 01:07:16,165:INFO:Loaded data from 114 player files. Total games loaded: 11646
+2024-12-30 01:07:16,166:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-30 01:07:25,734:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-30 01:07:26,448:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-30 01:07:30,146:INFO:Prepared features and targets for 112 players for target > 4 rebounds.
+2024-12-30 01:07:30,146:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-30 01:07:51,963:INFO:Best XGBoost ROC-AUC: 0.7820
+2024-12-30 01:07:51,964:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8248164495236073, 'gamma': 4.24611705247089, 'learning_rate': 0.207283867690103, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 569, 'reg_alpha': 0.26520236768172545, 'reg_lambda': 0.24398964337908358, 'subsample': 0.9865052773762228}
+2024-12-30 01:07:51,964:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-30 01:09:03,326:INFO:Best GradientBoosting ROC-AUC: 0.6683
+2024-12-30 01:09:03,326:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.038102430348427745, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 329, 'subsample': 0.6965488623333802}
+2024-12-30 01:09:03,326:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-30 01:09:10,528:INFO:Best LogisticRegression ROC-AUC: 0.6764
+2024-12-30 01:09:10,528:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-30 01:09:10,529:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-30 01:09:11,324:INFO:Best KNeighbors ROC-AUC: 0.6895
+2024-12-30 01:09:11,324:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-30 01:09:11,412:INFO:XGBoost model retrained on the entire dataset.
+2024-12-30 01:09:11,413:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-30 01:09:11,421:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.7820.pkl.
+2024-12-30 01:09:11,421:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-30 01:09:21,144:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-30 01:09:21,838:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-30 01:09:25,576:INFO:Prepared features and targets for 112 players for target > 6 rebounds.
+2024-12-30 01:09:25,576:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-30 01:09:37,861:INFO:Best XGBoost ROC-AUC: 0.8151
+2024-12-30 01:09:37,861:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2024-12-30 01:09:37,861:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-30 01:10:48,885:INFO:Best GradientBoosting ROC-AUC: 0.8266
+2024-12-30 01:10:48,885:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2024-12-30 01:10:48,886:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-30 01:10:56,093:INFO:Best LogisticRegression ROC-AUC: 0.8277
+2024-12-30 01:10:56,093:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-30 01:10:56,094:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-30 01:10:56,781:INFO:Best KNeighbors ROC-AUC: 0.8060
+2024-12-30 01:10:56,781:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-30 01:10:56,787:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-30 01:10:56,789:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-30 01:10:56,790:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8277.pkl.
+2024-12-30 01:10:56,790:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-30 01:11:06,565:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-30 01:11:07,312:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-30 01:11:11,042:INFO:Prepared features and targets for 112 players for target > 8 rebounds.
+2024-12-30 01:11:11,042:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-30 01:11:23,749:INFO:Best XGBoost ROC-AUC: 0.8822
+2024-12-30 01:11:23,749:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2024-12-30 01:11:23,750:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-30 01:12:32,620:INFO:Best GradientBoosting ROC-AUC: 0.8646
+2024-12-30 01:12:32,620:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.09003430428258549, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 5, 'min_samples_split': 2, 'n_estimators': 484, 'subsample': 0.6197809453334862}
+2024-12-30 01:12:32,620:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-30 01:12:39,737:INFO:Best LogisticRegression ROC-AUC: 0.9065
+2024-12-30 01:12:39,738:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-30 01:12:39,738:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-30 01:12:40,479:INFO:Best KNeighbors ROC-AUC: 0.8955
+2024-12-30 01:12:40,479:INFO:Best KNeighbors Parameters: {'metric': 'minkowski', 'n_neighbors': 25, 'weights': 'distance'}
+2024-12-30 01:12:40,483:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-30 01:12:40,486:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-30 01:12:40,487:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.9065.pkl.
+2024-12-30 01:12:40,488:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-30 01:12:50,119:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-30 01:12:50,808:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-30 01:12:54,523:INFO:Prepared features and targets for 112 players for target > 10 rebounds.
+2024-12-30 01:12:54,523:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-30 01:13:06,347:INFO:Best XGBoost ROC-AUC: 0.9099
+2024-12-30 01:13:06,348:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8416317594127292, 'gamma': 3.0499832889131047, 'learning_rate': 0.2599584735208493, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 661, 'reg_alpha': 0.662522284353982, 'reg_lambda': 0.31171107608941095, 'subsample': 0.7600340105889054}
+2024-12-30 01:13:06,348:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-30 01:14:14,818:INFO:Best GradientBoosting ROC-AUC: 0.9033
+2024-12-30 01:14:14,818:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.3020991510265952, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 18, 'min_samples_split': 3, 'n_estimators': 921, 'subsample': 0.7242120714931237}
+2024-12-30 01:14:14,818:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-30 01:14:21,640:INFO:Best LogisticRegression ROC-AUC: 0.9130
+2024-12-30 01:14:21,640:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-30 01:14:21,641:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-30 01:14:22,367:INFO:Best KNeighbors ROC-AUC: 0.9202
+2024-12-30 01:14:22,367:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-30 01:14:22,369:INFO:KNeighbors model retrained on the entire dataset.
+2024-12-30 01:14:22,373:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-30 01:14:22,374:INFO:Best model (KNeighbors) saved to ../models/model_10_plus_KNeighbors_roc_auc_0.9202.pkl.
+2024-12-30 01:14:22,374:INFO:
+=== Training process completed successfully ===
+2024-12-31 07:15:15,186:INFO:Training process started.
+2024-12-31 07:15:15,645:INFO:Loaded data from 114 player files. Total games loaded: 11686
+2024-12-31 07:15:15,646:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2024-12-31 07:15:25,325:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-31 07:15:26,031:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-31 07:15:29,810:INFO:Prepared features and targets for 112 players for target > 4 rebounds.
+2024-12-31 07:15:29,810:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-31 07:15:50,794:INFO:Best XGBoost ROC-AUC: 0.7957
+2024-12-31 07:15:50,796:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7733551396716398, 'gamma': 0.9242722776276352, 'learning_rate': 0.30087538832936755, 'max_depth': 12, 'min_child_weight': 2, 'n_estimators': 301, 'reg_alpha': 0.8948273504276488, 'reg_lambda': 0.5978999788110851, 'subsample': 0.9609371175115584}
+2024-12-31 07:15:50,796:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-31 07:17:05,866:INFO:Best GradientBoosting ROC-AUC: 0.8125
+2024-12-31 07:17:05,867:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08553468874760924, 'max_depth': 4, 'max_features': 'log2', 'min_samples_leaf': 17, 'min_samples_split': 6, 'n_estimators': 724, 'subsample': 0.9988702425244709}
+2024-12-31 07:17:05,868:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-31 07:17:12,788:INFO:Best LogisticRegression ROC-AUC: 0.8392
+2024-12-31 07:17:12,788:INFO:Best LogisticRegression Parameters: {'C': 9.74755518841459, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-31 07:17:12,788:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-31 07:17:13,600:INFO:Best KNeighbors ROC-AUC: 0.7873
+2024-12-31 07:17:13,600:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2024-12-31 07:17:13,611:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-31 07:17:13,614:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2024-12-31 07:17:13,615:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8392.pkl.
+2024-12-31 07:17:13,616:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2024-12-31 07:17:23,872:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-31 07:17:24,579:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-31 07:17:28,376:INFO:Prepared features and targets for 112 players for target > 6 rebounds.
+2024-12-31 07:17:28,376:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-31 07:17:40,074:INFO:Best XGBoost ROC-AUC: 0.8372
+2024-12-31 07:17:40,074:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2024-12-31 07:17:40,074:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-31 07:18:52,242:INFO:Best GradientBoosting ROC-AUC: 0.8142
+2024-12-31 07:18:52,242:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2024-12-31 07:18:52,242:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-31 07:18:59,206:INFO:Best LogisticRegression ROC-AUC: 0.8778
+2024-12-31 07:18:59,206:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-31 07:18:59,208:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-31 07:18:59,906:INFO:Best KNeighbors ROC-AUC: 0.8413
+2024-12-31 07:18:59,907:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2024-12-31 07:18:59,911:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-31 07:18:59,913:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2024-12-31 07:18:59,914:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8778.pkl.
+2024-12-31 07:18:59,914:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2024-12-31 07:19:10,302:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-31 07:19:11,011:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-31 07:19:14,895:INFO:Prepared features and targets for 112 players for target > 8 rebounds.
+2024-12-31 07:19:14,895:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-31 07:19:26,423:INFO:Best XGBoost ROC-AUC: 0.8852
+2024-12-31 07:19:26,423:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2024-12-31 07:19:26,423:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-31 07:20:38,981:INFO:Best GradientBoosting ROC-AUC: 0.9052
+2024-12-31 07:20:38,983:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.3020991510265952, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 18, 'min_samples_split': 3, 'n_estimators': 921, 'subsample': 0.7242120714931237}
+2024-12-31 07:20:38,983:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-31 07:20:45,745:INFO:Best LogisticRegression ROC-AUC: 0.8873
+2024-12-31 07:20:45,745:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-31 07:20:45,745:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-31 07:20:46,481:INFO:Best KNeighbors ROC-AUC: 0.8680
+2024-12-31 07:20:46,481:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 24, 'weights': 'uniform'}
+2024-12-31 07:20:47,426:INFO:GradientBoosting model retrained on the entire dataset.
+2024-12-31 07:20:47,430:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2024-12-31 07:20:47,471:INFO:Best model (GradientBoosting) saved to ../models/model_8_plus_GradientBoosting_roc_auc_0.9052.pkl.
+2024-12-31 07:20:47,471:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2024-12-31 07:20:57,894:WARNING:Player 1631131 has less than 20 games. Skipping.
+2024-12-31 07:20:58,604:WARNING:Player 1642013 has less than 20 games. Skipping.
+2024-12-31 07:21:02,401:INFO:Prepared features and targets for 112 players for target > 10 rebounds.
+2024-12-31 07:21:02,401:INFO:
+--- Evaluating Model: XGBoost ---
+2024-12-31 07:21:13,837:INFO:Best XGBoost ROC-AUC: 0.9102
+2024-12-31 07:21:13,837:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.5852620618436457, 'gamma': 0.3252579649263976, 'learning_rate': 0.29466566117599996, 'max_depth': 14, 'min_child_weight': 2, 'n_estimators': 876, 'reg_alpha': 0.015966252220214194, 'reg_lambda': 0.230893825622149, 'subsample': 0.6205127330130058}
+2024-12-31 07:21:13,837:INFO:
+--- Evaluating Model: GradientBoosting ---
+2024-12-31 07:22:24,715:INFO:Best GradientBoosting ROC-AUC: 0.9060
+2024-12-31 07:22:24,715:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.150028867974394, 'max_depth': 7, 'max_features': 'log2', 'min_samples_leaf': 7, 'min_samples_split': 10, 'n_estimators': 266, 'subsample': 0.5066324805799333}
+2024-12-31 07:22:24,715:INFO:
+--- Evaluating Model: LogisticRegression ---
+2024-12-31 07:22:30,923:INFO:Best LogisticRegression ROC-AUC: 0.9121
+2024-12-31 07:22:30,923:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2024-12-31 07:22:30,923:INFO:
+--- Evaluating Model: KNeighbors ---
+2024-12-31 07:22:31,616:INFO:Best KNeighbors ROC-AUC: 0.9020
+2024-12-31 07:22:31,617:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2024-12-31 07:22:31,623:INFO:LogisticRegression model retrained on the entire dataset.
+2024-12-31 07:22:31,625:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2024-12-31 07:22:31,628:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9121.pkl.
+2024-12-31 07:22:31,628:INFO:
+=== Training process completed successfully ===
+2025-01-01 09:28:34,515:INFO:Training process started.
+2025-01-01 09:28:35,226:INFO:Loaded data from 115 player files. Total games loaded: 11804
+2025-01-01 09:28:35,227:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-01 09:28:44,695:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 09:28:45,378:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 09:28:49,091:INFO:Prepared features and targets for 113 players for target > 4 rebounds.
+2025-01-01 09:28:49,092:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 09:29:09,955:INFO:Best XGBoost ROC-AUC: 0.8586
+2025-01-01 09:29:09,957:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6254302636733307, 'gamma': 0.9216683716568502, 'learning_rate': 0.0342618899851593, 'max_depth': 11, 'min_child_weight': 5, 'n_estimators': 740, 'reg_alpha': 0.17329432007084578, 'reg_lambda': 0.15643704267108605, 'subsample': 0.6251214490822976}
+2025-01-01 09:29:09,957:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 09:30:20,199:INFO:Best GradientBoosting ROC-AUC: 0.8119
+2025-01-01 09:30:20,199:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-01 09:30:20,199:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 09:30:26,895:INFO:Best LogisticRegression ROC-AUC: 0.8951
+2025-01-01 09:30:26,896:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 09:30:26,896:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 09:30:27,707:INFO:Best KNeighbors ROC-AUC: 0.8498
+2025-01-01 09:30:27,707:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-01 09:30:27,716:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-01 09:30:27,719:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-01 09:30:27,720:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8951.pkl.
+2025-01-01 09:30:27,721:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-01 09:30:38,478:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 09:30:39,171:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 09:30:42,979:INFO:Prepared features and targets for 113 players for target > 6 rebounds.
+2025-01-01 09:30:42,980:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 09:30:54,800:INFO:Best XGBoost ROC-AUC: 0.9006
+2025-01-01 09:30:54,801:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9436063712881633, 'gamma': 2.3610746258097466, 'learning_rate': 0.04587827378149051, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 104, 'reg_alpha': 0.5612771975694962, 'reg_lambda': 0.770967179954561, 'subsample': 0.7468977981821954}
+2025-01-01 09:30:54,801:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 09:32:03,051:INFO:Best GradientBoosting ROC-AUC: 0.9089
+2025-01-01 09:32:03,051:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.10778767156056542, 'max_depth': 6, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 8, 'n_estimators': 919, 'subsample': 0.970261632244802}
+2025-01-01 09:32:03,051:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 09:32:09,623:INFO:Best LogisticRegression ROC-AUC: 0.9055
+2025-01-01 09:32:09,623:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 09:32:09,623:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 09:32:10,308:INFO:Best KNeighbors ROC-AUC: 0.8517
+2025-01-01 09:32:10,308:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-01 09:32:11,412:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-01 09:32:11,415:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-01 09:32:11,461:INFO:Best model (GradientBoosting) saved to ../models/model_6_plus_GradientBoosting_roc_auc_0.9089.pkl.
+2025-01-01 09:32:11,461:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-01 09:32:21,575:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 09:32:22,260:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 09:32:26,030:INFO:Prepared features and targets for 113 players for target > 8 rebounds.
+2025-01-01 09:32:26,031:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 09:32:37,699:INFO:Best XGBoost ROC-AUC: 0.8601
+2025-01-01 09:32:37,699:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8360130676475996, 'gamma': 1.6407633373736596, 'learning_rate': 0.05651248501832326, 'max_depth': 8, 'min_child_weight': 6, 'n_estimators': 404, 'reg_alpha': 0.03734818874921442, 'reg_lambda': 0.8226005606596583, 'subsample': 0.6800953207056315}
+2025-01-01 09:32:37,700:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 09:33:47,695:INFO:Best GradientBoosting ROC-AUC: 0.8136
+2025-01-01 09:33:47,695:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.19355586841671385, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 15, 'min_samples_split': 13, 'n_estimators': 666, 'subsample': 0.9916154429033941}
+2025-01-01 09:33:47,696:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 09:33:54,434:INFO:Best LogisticRegression ROC-AUC: 0.8632
+2025-01-01 09:33:54,434:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 09:33:54,435:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 09:33:55,139:INFO:Best KNeighbors ROC-AUC: 0.8443
+2025-01-01 09:33:55,139:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-01 09:33:55,144:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-01 09:33:55,146:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-01 09:33:55,147:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8632.pkl.
+2025-01-01 09:33:55,147:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-01 09:34:05,223:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 09:34:05,899:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 09:34:09,703:INFO:Prepared features and targets for 113 players for target > 10 rebounds.
+2025-01-01 09:34:09,703:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 09:34:20,972:INFO:Best XGBoost ROC-AUC: 0.8864
+2025-01-01 09:34:20,972:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6965488623333802, 'gamma': 4.460232775885567, 'learning_rate': 0.19934158779917888, 'max_depth': 4, 'min_child_weight': 5, 'n_estimators': 897, 'reg_alpha': 0.6451033620305648, 'reg_lambda': 0.6689240596630996, 'subsample': 0.9320837825359516}
+2025-01-01 09:34:20,972:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 09:35:28,930:INFO:Best GradientBoosting ROC-AUC: 0.8564
+2025-01-01 09:35:28,930:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2025-01-01 09:35:28,930:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 09:35:35,607:INFO:Best LogisticRegression ROC-AUC: 0.8830
+2025-01-01 09:35:35,608:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 09:35:35,609:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 09:35:36,281:INFO:Best KNeighbors ROC-AUC: 0.8655
+2025-01-01 09:35:36,281:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-01 09:35:36,393:INFO:XGBoost model retrained on the entire dataset.
+2025-01-01 09:35:36,395:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-01 09:35:36,407:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8864.pkl.
+2025-01-01 09:35:36,407:INFO:
+=== Training process completed successfully ===
+2025-01-01 10:42:22,510:INFO:Training process started.
+2025-01-01 10:42:23,225:INFO:Loaded data from 115 player files. Total games loaded: 11804
+2025-01-01 10:42:23,226:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-01 10:42:32,714:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 10:42:33,408:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 10:42:37,156:INFO:Prepared features and targets for 113 players for target > 4 rebounds.
+2025-01-01 10:42:37,157:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 10:42:57,396:INFO:Best XGBoost ROC-AUC: 0.8586
+2025-01-01 10:42:57,397:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6254302636733307, 'gamma': 0.9216683716568502, 'learning_rate': 0.0342618899851593, 'max_depth': 11, 'min_child_weight': 5, 'n_estimators': 740, 'reg_alpha': 0.17329432007084578, 'reg_lambda': 0.15643704267108605, 'subsample': 0.6251214490822976}
+2025-01-01 10:42:57,397:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 10:44:05,976:INFO:Best GradientBoosting ROC-AUC: 0.8119
+2025-01-01 10:44:05,976:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-01 10:44:05,976:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 10:44:12,586:INFO:Best LogisticRegression ROC-AUC: 0.8951
+2025-01-01 10:44:12,586:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 10:44:12,587:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 10:44:13,352:INFO:Best KNeighbors ROC-AUC: 0.8498
+2025-01-01 10:44:13,352:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-01 10:44:13,361:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-01 10:44:13,364:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-01 10:44:13,365:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8951.pkl.
+2025-01-01 10:44:13,365:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-01 10:44:23,465:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 10:44:24,159:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 10:44:28,010:INFO:Prepared features and targets for 113 players for target > 6 rebounds.
+2025-01-01 10:44:28,010:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 10:44:39,344:INFO:Best XGBoost ROC-AUC: 0.9006
+2025-01-01 10:44:39,344:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9436063712881633, 'gamma': 2.3610746258097466, 'learning_rate': 0.04587827378149051, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 104, 'reg_alpha': 0.5612771975694962, 'reg_lambda': 0.770967179954561, 'subsample': 0.7468977981821954}
+2025-01-01 10:44:39,344:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 10:45:47,037:INFO:Best GradientBoosting ROC-AUC: 0.9089
+2025-01-01 10:45:47,038:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.10778767156056542, 'max_depth': 6, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 8, 'n_estimators': 919, 'subsample': 0.970261632244802}
+2025-01-01 10:45:47,038:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 10:45:53,449:INFO:Best LogisticRegression ROC-AUC: 0.9055
+2025-01-01 10:45:53,449:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 10:45:53,449:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 10:45:54,197:INFO:Best KNeighbors ROC-AUC: 0.8517
+2025-01-01 10:45:54,197:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-01 10:45:55,288:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-01 10:45:55,289:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-01 10:45:55,351:INFO:Best model (GradientBoosting) saved to ../models/model_6_plus_GradientBoosting_roc_auc_0.9089.pkl.
+2025-01-01 10:45:55,351:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-01 10:46:05,557:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 10:46:06,246:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 10:46:10,067:INFO:Prepared features and targets for 113 players for target > 8 rebounds.
+2025-01-01 10:46:10,068:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 10:46:21,322:INFO:Best XGBoost ROC-AUC: 0.8601
+2025-01-01 10:46:21,322:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8360130676475996, 'gamma': 1.6407633373736596, 'learning_rate': 0.05651248501832326, 'max_depth': 8, 'min_child_weight': 6, 'n_estimators': 404, 'reg_alpha': 0.03734818874921442, 'reg_lambda': 0.8226005606596583, 'subsample': 0.6800953207056315}
+2025-01-01 10:46:21,322:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 10:47:29,731:INFO:Best GradientBoosting ROC-AUC: 0.8136
+2025-01-01 10:47:29,731:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.19355586841671385, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 15, 'min_samples_split': 13, 'n_estimators': 666, 'subsample': 0.9916154429033941}
+2025-01-01 10:47:29,731:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 10:47:36,572:INFO:Best LogisticRegression ROC-AUC: 0.8632
+2025-01-01 10:47:36,573:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 10:47:36,574:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 10:47:37,256:INFO:Best KNeighbors ROC-AUC: 0.8443
+2025-01-01 10:47:37,256:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-01 10:47:37,264:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-01 10:47:37,265:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-01 10:47:37,266:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8632.pkl.
+2025-01-01 10:47:37,267:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-01 10:47:47,823:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-01 10:47:48,516:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-01 10:47:52,382:INFO:Prepared features and targets for 113 players for target > 10 rebounds.
+2025-01-01 10:47:52,382:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-01 10:48:03,570:INFO:Best XGBoost ROC-AUC: 0.8864
+2025-01-01 10:48:03,570:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6965488623333802, 'gamma': 4.460232775885567, 'learning_rate': 0.19934158779917888, 'max_depth': 4, 'min_child_weight': 5, 'n_estimators': 897, 'reg_alpha': 0.6451033620305648, 'reg_lambda': 0.6689240596630996, 'subsample': 0.9320837825359516}
+2025-01-01 10:48:03,570:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-01 10:49:11,358:INFO:Best GradientBoosting ROC-AUC: 0.8564
+2025-01-01 10:49:11,358:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2025-01-01 10:49:11,358:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-01 10:49:18,060:INFO:Best LogisticRegression ROC-AUC: 0.8830
+2025-01-01 10:49:18,060:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-01 10:49:18,060:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-01 10:49:18,760:INFO:Best KNeighbors ROC-AUC: 0.8655
+2025-01-01 10:49:18,760:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-01 10:49:18,862:INFO:XGBoost model retrained on the entire dataset.
+2025-01-01 10:49:18,864:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-01 10:49:18,877:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8864.pkl.
+2025-01-01 10:49:18,878:INFO:
+=== Training process completed successfully ===
+2025-01-02 15:05:18,282:INFO:Training process started.
+2025-01-02 15:05:19,052:INFO:Loaded data from 115 player files. Total games loaded: 11846
+2025-01-02 15:05:19,054:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-02 15:05:28,387:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:05:29,043:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:05:32,665:INFO:Prepared features and targets for 113 players for target > 4 rebounds.
+2025-01-02 15:05:32,665:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:05:55,118:INFO:Best XGBoost ROC-AUC: 0.8021
+2025-01-02 15:05:55,120:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6872700594236812, 'gamma': 4.75357153204958, 'learning_rate': 0.22959818254342154, 'max_depth': 7, 'min_child_weight': 7, 'n_estimators': 221, 'reg_alpha': 0.15599452033620265, 'reg_lambda': 0.05808361216819946, 'subsample': 0.9330880728874675}
+2025-01-02 15:05:55,120:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:07:04,190:INFO:Best GradientBoosting ROC-AUC: 0.7169
+2025-01-02 15:07:04,190:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-02 15:07:04,190:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:07:11,264:INFO:Best LogisticRegression ROC-AUC: 0.7945
+2025-01-02 15:07:11,264:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:07:11,264:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:07:12,050:INFO:Best KNeighbors ROC-AUC: 0.7671
+2025-01-02 15:07:12,050:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2025-01-02 15:07:12,089:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:07:12,090:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-02 15:07:12,095:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8021.pkl.
+2025-01-02 15:07:12,095:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-02 15:07:22,067:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:07:22,728:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:07:26,420:INFO:Prepared features and targets for 113 players for target > 6 rebounds.
+2025-01-02 15:07:26,420:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:07:38,909:INFO:Best XGBoost ROC-AUC: 0.7771
+2025-01-02 15:07:38,909:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2025-01-02 15:07:38,909:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:08:46,812:INFO:Best GradientBoosting ROC-AUC: 0.7739
+2025-01-02 15:08:46,812:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.29592155410718596, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'n_estimators': 215, 'subsample': 0.6472244460347929}
+2025-01-02 15:08:46,813:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:08:53,630:INFO:Best LogisticRegression ROC-AUC: 0.7758
+2025-01-02 15:08:53,630:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:08:53,630:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:08:54,322:INFO:Best KNeighbors ROC-AUC: 0.7584
+2025-01-02 15:08:54,322:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-02 15:08:54,398:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:08:54,399:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-02 15:08:54,406:INFO:Best model (XGBoost) saved to ../models/model_6_plus_XGBoost_roc_auc_0.7771.pkl.
+2025-01-02 15:08:54,406:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-02 15:09:04,248:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:09:04,911:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:09:08,969:INFO:Prepared features and targets for 113 players for target > 8 rebounds.
+2025-01-02 15:09:08,970:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:09:21,060:INFO:Best XGBoost ROC-AUC: 0.7881
+2025-01-02 15:09:21,060:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.520364401159485, 'gamma': 4.277302920055036, 'learning_rate': 0.2210973578140071, 'max_depth': 14, 'min_child_weight': 5, 'n_estimators': 650, 'reg_alpha': 0.3463043210894008, 'reg_lambda': 0.4646738129396114, 'subsample': 0.8248868413213817}
+2025-01-02 15:09:21,060:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:10:33,599:INFO:Best GradientBoosting ROC-AUC: 0.7228
+2025-01-02 15:10:33,600:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.02523055931181908, 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 15, 'min_samples_split': 3, 'n_estimators': 933, 'subsample': 0.7192370615090435}
+2025-01-02 15:10:33,601:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:10:41,066:INFO:Best LogisticRegression ROC-AUC: 0.7741
+2025-01-02 15:10:41,067:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:10:41,067:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:10:41,777:INFO:Best KNeighbors ROC-AUC: 0.7639
+2025-01-02 15:10:41,777:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2025-01-02 15:10:41,858:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:10:41,861:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-02 15:10:41,870:INFO:Best model (XGBoost) saved to ../models/model_8_plus_XGBoost_roc_auc_0.7881.pkl.
+2025-01-02 15:10:41,870:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-02 15:10:51,793:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:10:52,457:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:10:56,098:INFO:Prepared features and targets for 113 players for target > 10 rebounds.
+2025-01-02 15:10:56,098:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:11:07,888:INFO:Best XGBoost ROC-AUC: 0.8488
+2025-01-02 15:11:07,888:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2025-01-02 15:11:07,888:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:12:14,078:INFO:Best GradientBoosting ROC-AUC: 0.9223
+2025-01-02 15:12:14,078:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2795662565581238, 'max_depth': 6, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 17, 'n_estimators': 609, 'subsample': 0.9700667212288892}
+2025-01-02 15:12:14,078:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:12:21,154:INFO:Best LogisticRegression ROC-AUC: 0.9179
+2025-01-02 15:12:21,155:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:12:21,155:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:12:21,853:INFO:Best KNeighbors ROC-AUC: 0.8346
+2025-01-02 15:12:21,853:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 18, 'weights': 'uniform'}
+2025-01-02 15:12:22,403:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-02 15:12:22,404:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-02 15:12:22,440:INFO:Best model (GradientBoosting) saved to ../models/model_10_plus_GradientBoosting_roc_auc_0.9223.pkl.
+2025-01-02 15:12:22,440:INFO:
+=== Training process completed successfully ===
+2025-01-02 15:27:32,300:INFO:Training process started.
+2025-01-02 15:27:33,046:INFO:Loaded data from 115 player files. Total games loaded: 11846
+2025-01-02 15:27:33,047:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-02 15:27:44,397:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:27:45,324:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:27:49,823:INFO:Prepared features and targets for 113 players for target > 4 rebounds.
+2025-01-02 15:27:49,824:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:28:12,635:INFO:Best XGBoost ROC-AUC: 0.8021
+2025-01-02 15:28:12,636:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6872700594236812, 'gamma': 4.75357153204958, 'learning_rate': 0.22959818254342154, 'max_depth': 7, 'min_child_weight': 7, 'n_estimators': 221, 'reg_alpha': 0.15599452033620265, 'reg_lambda': 0.05808361216819946, 'subsample': 0.9330880728874675}
+2025-01-02 15:28:12,637:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:29:23,342:INFO:Best GradientBoosting ROC-AUC: 0.7169
+2025-01-02 15:29:23,342:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-02 15:29:23,342:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:29:30,651:INFO:Best LogisticRegression ROC-AUC: 0.7945
+2025-01-02 15:29:30,651:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:29:30,651:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:29:31,418:INFO:Best KNeighbors ROC-AUC: 0.7671
+2025-01-02 15:29:31,418:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2025-01-02 15:29:31,458:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:29:31,461:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-02 15:29:31,465:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8021.pkl.
+2025-01-02 15:29:31,465:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-02 15:29:41,353:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:29:42,063:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:29:46,006:INFO:Prepared features and targets for 113 players for target > 6 rebounds.
+2025-01-02 15:29:46,006:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:29:59,055:INFO:Best XGBoost ROC-AUC: 0.7771
+2025-01-02 15:29:59,055:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2025-01-02 15:29:59,055:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:31:08,804:INFO:Best GradientBoosting ROC-AUC: 0.7739
+2025-01-02 15:31:08,804:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.29592155410718596, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'n_estimators': 215, 'subsample': 0.6472244460347929}
+2025-01-02 15:31:08,804:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:31:15,725:INFO:Best LogisticRegression ROC-AUC: 0.7758
+2025-01-02 15:31:15,726:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:31:15,726:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:31:16,476:INFO:Best KNeighbors ROC-AUC: 0.7584
+2025-01-02 15:31:16,476:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-02 15:31:16,554:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:31:16,555:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-02 15:31:16,561:INFO:Best model (XGBoost) saved to ../models/model_6_plus_XGBoost_roc_auc_0.7771.pkl.
+2025-01-02 15:31:16,561:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-02 15:31:26,455:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:31:27,174:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:31:31,077:INFO:Prepared features and targets for 113 players for target > 8 rebounds.
+2025-01-02 15:31:31,077:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:31:43,641:INFO:Best XGBoost ROC-AUC: 0.7881
+2025-01-02 15:31:43,641:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.520364401159485, 'gamma': 4.277302920055036, 'learning_rate': 0.2210973578140071, 'max_depth': 14, 'min_child_weight': 5, 'n_estimators': 650, 'reg_alpha': 0.3463043210894008, 'reg_lambda': 0.4646738129396114, 'subsample': 0.8248868413213817}
+2025-01-02 15:31:43,641:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:32:53,710:INFO:Best GradientBoosting ROC-AUC: 0.7228
+2025-01-02 15:32:53,710:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.02523055931181908, 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 15, 'min_samples_split': 3, 'n_estimators': 933, 'subsample': 0.7192370615090435}
+2025-01-02 15:32:53,710:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:33:01,226:INFO:Best LogisticRegression ROC-AUC: 0.7741
+2025-01-02 15:33:01,226:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:33:01,227:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:33:01,929:INFO:Best KNeighbors ROC-AUC: 0.7639
+2025-01-02 15:33:01,929:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2025-01-02 15:33:02,017:INFO:XGBoost model retrained on the entire dataset.
+2025-01-02 15:33:02,018:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-02 15:33:02,027:INFO:Best model (XGBoost) saved to ../models/model_8_plus_XGBoost_roc_auc_0.7881.pkl.
+2025-01-02 15:33:02,027:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-02 15:33:11,943:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:33:12,656:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:33:16,547:INFO:Prepared features and targets for 113 players for target > 10 rebounds.
+2025-01-02 15:33:16,547:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:33:29,134:INFO:Best XGBoost ROC-AUC: 0.8488
+2025-01-02 15:33:29,134:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2025-01-02 15:33:29,135:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:34:37,041:INFO:Best GradientBoosting ROC-AUC: 0.9223
+2025-01-02 15:34:37,041:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2795662565581238, 'max_depth': 6, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 17, 'n_estimators': 609, 'subsample': 0.9700667212288892}
+2025-01-02 15:34:37,041:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:34:44,259:INFO:Best LogisticRegression ROC-AUC: 0.9179
+2025-01-02 15:34:44,259:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:34:44,259:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:34:44,976:INFO:Best KNeighbors ROC-AUC: 0.8346
+2025-01-02 15:34:44,977:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 18, 'weights': 'uniform'}
+2025-01-02 15:34:45,552:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-02 15:34:45,553:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-02 15:34:45,577:INFO:Best model (GradientBoosting) saved to ../models/model_10_plus_GradientBoosting_roc_auc_0.9223.pkl.
+2025-01-02 15:34:45,577:INFO:
+=== Training process completed successfully ===
+2025-01-02 15:52:15,456:INFO:Training process started.
+2025-01-02 15:52:16,142:INFO:Loaded data from 113 player files. Total games loaded: 11600
+2025-01-02 15:52:16,143:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-02 15:52:25,561:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:52:26,243:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:52:29,871:INFO:Prepared features and targets for 111 players for target > 4 rebounds.
+2025-01-02 15:52:29,871:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:52:52,794:INFO:Best XGBoost ROC-AUC: 0.8062
+2025-01-02 15:52:52,796:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8079255821949569, 'gamma': 4.719458022803786, 'learning_rate': 0.2932754791375502, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 763, 'reg_alpha': 0.6771683423829817, 'reg_lambda': 0.5733670416719333, 'subsample': 0.5642501766169551}
+2025-01-02 15:52:52,796:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:54:02,994:INFO:Best GradientBoosting ROC-AUC: 0.7638
+2025-01-02 15:54:02,994:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-02 15:54:02,995:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:54:10,159:INFO:Best LogisticRegression ROC-AUC: 0.8095
+2025-01-02 15:54:10,159:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:54:10,160:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:54:10,939:INFO:Best KNeighbors ROC-AUC: 0.7650
+2025-01-02 15:54:10,939:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'uniform'}
+2025-01-02 15:54:10,946:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-02 15:54:10,948:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-02 15:54:10,949:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8095.pkl.
+2025-01-02 15:54:10,949:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-02 15:54:21,157:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:54:21,843:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:54:25,599:INFO:Prepared features and targets for 111 players for target > 6 rebounds.
+2025-01-02 15:54:25,599:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:54:38,028:INFO:Best XGBoost ROC-AUC: 0.7310
+2025-01-02 15:54:38,028:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7613664146909971, 'gamma': 2.137705091792748, 'learning_rate': 0.017625738023228556, 'max_depth': 5, 'min_child_weight': 7, 'n_estimators': 340, 'reg_alpha': 0.3143559810763267, 'reg_lambda': 0.5085706911647028, 'subsample': 0.9537832369630466}
+2025-01-02 15:54:38,028:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:55:48,040:INFO:Best GradientBoosting ROC-AUC: 0.7032
+2025-01-02 15:55:48,041:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2025-01-02 15:55:48,041:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:55:54,938:INFO:Best LogisticRegression ROC-AUC: 0.7756
+2025-01-02 15:55:54,938:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:55:54,938:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:55:55,659:INFO:Best KNeighbors ROC-AUC: 0.7502
+2025-01-02 15:55:55,659:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-02 15:55:55,666:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-02 15:55:55,667:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-02 15:55:55,668:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.7756.pkl.
+2025-01-02 15:55:55,668:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-02 15:56:05,901:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:56:06,594:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:56:10,310:INFO:Prepared features and targets for 111 players for target > 8 rebounds.
+2025-01-02 15:56:10,310:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:56:22,484:INFO:Best XGBoost ROC-AUC: 0.7823
+2025-01-02 15:56:22,484:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7613664146909971, 'gamma': 2.137705091792748, 'learning_rate': 0.017625738023228556, 'max_depth': 5, 'min_child_weight': 7, 'n_estimators': 340, 'reg_alpha': 0.3143559810763267, 'reg_lambda': 0.5085706911647028, 'subsample': 0.9537832369630466}
+2025-01-02 15:56:22,484:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:57:32,364:INFO:Best GradientBoosting ROC-AUC: 0.7036
+2025-01-02 15:57:32,365:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-02 15:57:32,365:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:57:40,005:INFO:Best LogisticRegression ROC-AUC: 0.7991
+2025-01-02 15:57:40,006:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:57:40,006:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:57:40,678:INFO:Best KNeighbors ROC-AUC: 0.7738
+2025-01-02 15:57:40,678:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 18, 'weights': 'uniform'}
+2025-01-02 15:57:40,685:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-02 15:57:40,686:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-02 15:57:40,687:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.7991.pkl.
+2025-01-02 15:57:40,687:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-02 15:57:50,720:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-02 15:57:51,546:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-02 15:57:55,263:INFO:Prepared features and targets for 111 players for target > 10 rebounds.
+2025-01-02 15:57:55,264:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-02 15:58:06,988:INFO:Best XGBoost ROC-AUC: 0.8478
+2025-01-02 15:58:06,988:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.5240294620985169, 'gamma': 4.7457286579569296, 'learning_rate': 0.2760041161894143, 'max_depth': 6, 'min_child_weight': 3, 'n_estimators': 541, 'reg_alpha': 0.5010398839152592, 'reg_lambda': 0.5393774484000625, 'subsample': 0.8419818846990705}
+2025-01-02 15:58:06,988:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-02 15:59:13,700:INFO:Best GradientBoosting ROC-AUC: 0.9149
+2025-01-02 15:59:13,700:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2795662565581238, 'max_depth': 6, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 17, 'n_estimators': 609, 'subsample': 0.9700667212288892}
+2025-01-02 15:59:13,700:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-02 15:59:20,562:INFO:Best LogisticRegression ROC-AUC: 0.9439
+2025-01-02 15:59:20,563:INFO:Best LogisticRegression Parameters: {'C': 5.996584841970366, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-02 15:59:20,563:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-02 15:59:21,402:INFO:Best KNeighbors ROC-AUC: 0.8268
+2025-01-02 15:59:21,402:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2025-01-02 15:59:21,413:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-02 15:59:21,414:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-02 15:59:21,415:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9439.pkl.
+2025-01-02 15:59:21,415:INFO:
+=== Training process completed successfully ===
+2025-01-03 08:46:07,482:INFO:Training process started.
+2025-01-03 08:46:08,238:INFO:Loaded data from 115 player files. Total games loaded: 11796
+2025-01-03 08:46:08,239:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-03 08:46:17,904:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-03 08:46:18,617:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-03 08:46:22,592:INFO:Prepared features and targets for 113 players for target > 4 rebounds.
+2025-01-03 08:46:22,592:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-03 08:46:46,016:INFO:Best XGBoost ROC-AUC: 0.8390
+2025-01-03 08:46:46,017:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.587477463547968, 'gamma': 4.910841716647178, 'learning_rate': 0.16499076738130428, 'max_depth': 3, 'min_child_weight': 2, 'n_estimators': 996, 'reg_alpha': 0.09310276780589921, 'reg_lambda': 0.8972157579533268, 'subsample': 0.9502090285816652}
+2025-01-03 08:46:46,018:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-03 08:48:05,929:INFO:Best GradientBoosting ROC-AUC: 0.8213
+2025-01-03 08:48:05,929:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.27616382277289797, 'max_depth': 3, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 16, 'n_estimators': 561, 'subsample': 0.9244569121330419}
+2025-01-03 08:48:05,929:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-03 08:48:14,024:INFO:Best LogisticRegression ROC-AUC: 0.8129
+2025-01-03 08:48:14,024:INFO:Best LogisticRegression Parameters: {'C': 7.090725777960454, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-03 08:48:14,025:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-03 08:48:14,873:INFO:Best KNeighbors ROC-AUC: 0.7727
+2025-01-03 08:48:14,873:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-03 08:48:14,998:INFO:XGBoost model retrained on the entire dataset.
+2025-01-03 08:48:15,000:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-03 08:48:15,021:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8390.pkl.
+2025-01-03 08:48:15,022:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-03 08:48:25,707:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-03 08:48:26,423:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-03 08:48:30,373:INFO:Prepared features and targets for 113 players for target > 6 rebounds.
+2025-01-03 08:48:30,373:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-03 08:48:43,297:INFO:Best XGBoost ROC-AUC: 0.7741
+2025-01-03 08:48:43,297:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8005575058716043, 'gamma': 3.540362888980227, 'learning_rate': 0.016175348288740735, 'max_depth': 4, 'min_child_weight': 8, 'n_estimators': 591, 'reg_alpha': 0.9385527090157502, 'reg_lambda': 0.0007787658410143283, 'subsample': 0.9961057796456088}
+2025-01-03 08:48:43,297:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-03 08:50:00,731:INFO:Best GradientBoosting ROC-AUC: 0.7223
+2025-01-03 08:50:00,732:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.3020991510265952, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 18, 'min_samples_split': 3, 'n_estimators': 921, 'subsample': 0.7242120714931237}
+2025-01-03 08:50:00,733:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-03 08:50:08,301:INFO:Best LogisticRegression ROC-AUC: 0.7741
+2025-01-03 08:50:08,301:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-03 08:50:08,301:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-03 08:50:09,049:INFO:Best KNeighbors ROC-AUC: 0.7756
+2025-01-03 08:50:09,049:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-03 08:50:09,051:INFO:KNeighbors model retrained on the entire dataset.
+2025-01-03 08:50:09,054:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-03 08:50:09,055:INFO:Best model (KNeighbors) saved to ../models/model_6_plus_KNeighbors_roc_auc_0.7756.pkl.
+2025-01-03 08:50:09,055:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-03 08:50:18,837:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-03 08:50:19,523:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-03 08:50:23,306:INFO:Prepared features and targets for 113 players for target > 8 rebounds.
+2025-01-03 08:50:23,306:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-03 08:50:35,001:INFO:Best XGBoost ROC-AUC: 0.7982
+2025-01-03 08:50:35,001:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.5240294620985169, 'gamma': 4.7457286579569296, 'learning_rate': 0.2760041161894143, 'max_depth': 6, 'min_child_weight': 3, 'n_estimators': 541, 'reg_alpha': 0.5010398839152592, 'reg_lambda': 0.5393774484000625, 'subsample': 0.8419818846990705}
+2025-01-03 08:50:35,001:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-03 08:51:47,504:INFO:Best GradientBoosting ROC-AUC: 0.7655
+2025-01-03 08:51:47,504:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.11784734536592655, 'max_depth': 12, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 19, 'n_estimators': 507, 'subsample': 0.9566202762782356}
+2025-01-03 08:51:47,504:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-03 08:51:54,853:INFO:Best LogisticRegression ROC-AUC: 0.8177
+2025-01-03 08:51:54,853:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-03 08:51:54,854:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-03 08:51:55,652:INFO:Best KNeighbors ROC-AUC: 0.7951
+2025-01-03 08:51:55,652:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-03 08:51:55,658:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-03 08:51:55,663:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-03 08:51:55,664:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8177.pkl.
+2025-01-03 08:51:55,664:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-03 08:52:05,030:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-03 08:52:05,772:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-03 08:52:09,487:INFO:Prepared features and targets for 113 players for target > 10 rebounds.
+2025-01-03 08:52:09,487:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-03 08:52:20,866:INFO:Best XGBoost ROC-AUC: 0.9082
+2025-01-03 08:52:20,866:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7733551396716398, 'gamma': 0.9242722776276352, 'learning_rate': 0.30087538832936755, 'max_depth': 12, 'min_child_weight': 2, 'n_estimators': 301, 'reg_alpha': 0.8948273504276488, 'reg_lambda': 0.5978999788110851, 'subsample': 0.9609371175115584}
+2025-01-03 08:52:20,866:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-03 08:53:31,789:INFO:Best GradientBoosting ROC-AUC: 0.9219
+2025-01-03 08:53:31,789:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.05346846162736693, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 6, 'min_samples_split': 5, 'n_estimators': 538, 'subsample': 0.8808098076643588}
+2025-01-03 08:53:31,789:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-03 08:53:39,042:INFO:Best LogisticRegression ROC-AUC: 0.9316
+2025-01-03 08:53:39,042:INFO:Best LogisticRegression Parameters: {'C': 9.74755518841459, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-03 08:53:39,042:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-03 08:53:39,771:INFO:Best KNeighbors ROC-AUC: 0.8808
+2025-01-03 08:53:39,771:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 18, 'weights': 'uniform'}
+2025-01-03 08:53:39,780:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-03 08:53:39,783:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-03 08:53:39,785:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9316.pkl.
+2025-01-03 08:53:39,785:INFO:
+=== Training process completed successfully ===
+2025-01-04 09:35:25,705:INFO:Training process started.
+2025-01-04 09:35:26,330:INFO:Loaded data from 117 player files. Total games loaded: 11957
+2025-01-04 09:35:26,330:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-04 09:35:36,012:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-04 09:35:36,705:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-04 09:35:36,735:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-04 09:35:40,679:INFO:Prepared features and targets for 114 players for target > 4 rebounds.
+2025-01-04 09:35:40,679:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-04 09:36:01,574:INFO:Best XGBoost ROC-AUC: 0.8614
+2025-01-04 09:36:01,576:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9056020883680015, 'gamma': 4.103197378719777, 'learning_rate': 0.19778190103047186, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 267, 'reg_alpha': 0.9053506419560637, 'reg_lambda': 0.19579113478929644, 'subsample': 0.5346806504375827}
+2025-01-04 09:36:01,576:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-04 09:37:11,291:INFO:Best GradientBoosting ROC-AUC: 0.8285
+2025-01-04 09:37:11,291:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-04 09:37:11,292:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-04 09:37:18,589:INFO:Best LogisticRegression ROC-AUC: 0.8676
+2025-01-04 09:37:18,589:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-04 09:37:18,590:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-04 09:37:19,385:INFO:Best KNeighbors ROC-AUC: 0.8632
+2025-01-04 09:37:19,385:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 12, 'weights': 'distance'}
+2025-01-04 09:37:19,392:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-04 09:37:19,393:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-04 09:37:19,394:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8676.pkl.
+2025-01-04 09:37:19,394:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-04 09:37:29,731:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-04 09:37:30,426:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-04 09:37:30,455:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-04 09:37:34,331:INFO:Prepared features and targets for 114 players for target > 6 rebounds.
+2025-01-04 09:37:34,331:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-04 09:37:46,727:INFO:Best XGBoost ROC-AUC: 0.8010
+2025-01-04 09:37:46,727:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6044593588076801, 'gamma': 3.355717584120253, 'learning_rate': 0.11759403438884916, 'max_depth': 13, 'min_child_weight': 2, 'n_estimators': 884, 'reg_alpha': 0.8486697949246744, 'reg_lambda': 0.13662133144202881, 'subsample': 0.8544554984550593}
+2025-01-04 09:37:46,728:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-04 09:38:56,696:INFO:Best GradientBoosting ROC-AUC: 0.7801
+2025-01-04 09:38:56,696:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-04 09:38:56,696:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-04 09:39:04,295:INFO:Best LogisticRegression ROC-AUC: 0.8027
+2025-01-04 09:39:04,296:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-04 09:39:04,296:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-04 09:39:05,203:INFO:Best KNeighbors ROC-AUC: 0.8027
+2025-01-04 09:39:05,204:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 18, 'weights': 'uniform'}
+2025-01-04 09:39:05,206:INFO:KNeighbors model retrained on the entire dataset.
+2025-01-04 09:39:05,208:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-04 09:39:05,209:INFO:Best model (KNeighbors) saved to ../models/model_6_plus_KNeighbors_roc_auc_0.8027.pkl.
+2025-01-04 09:39:05,209:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-04 09:39:15,844:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-04 09:39:16,592:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-04 09:39:16,622:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-04 09:39:20,487:INFO:Prepared features and targets for 114 players for target > 8 rebounds.
+2025-01-04 09:39:20,487:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-04 09:39:32,648:INFO:Best XGBoost ROC-AUC: 0.8142
+2025-01-04 09:39:32,648:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2025-01-04 09:39:32,648:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-04 09:40:42,745:INFO:Best GradientBoosting ROC-AUC: 0.7737
+2025-01-04 09:40:42,745:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-04 09:40:42,745:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-04 09:40:50,530:INFO:Best LogisticRegression ROC-AUC: 0.8091
+2025-01-04 09:40:50,531:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-04 09:40:50,531:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-04 09:40:51,306:INFO:Best KNeighbors ROC-AUC: 0.7902
+2025-01-04 09:40:51,306:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-04 09:40:51,392:INFO:XGBoost model retrained on the entire dataset.
+2025-01-04 09:40:51,393:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-04 09:40:51,400:INFO:Best model (XGBoost) saved to ../models/model_8_plus_XGBoost_roc_auc_0.8142.pkl.
+2025-01-04 09:40:51,400:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-04 09:41:01,676:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-04 09:41:02,370:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-04 09:41:02,402:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-04 09:41:06,262:INFO:Prepared features and targets for 114 players for target > 10 rebounds.
+2025-01-04 09:41:06,262:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-04 09:41:18,395:INFO:Best XGBoost ROC-AUC: 0.8718
+2025-01-04 09:41:18,395:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6629794526009424, 'gamma': 1.1012052378277415, 'learning_rate': 0.22334485973140536, 'max_depth': 5, 'min_child_weight': 4, 'n_estimators': 963, 'reg_alpha': 0.09617655109142076, 'reg_lambda': 0.940523264489604, 'subsample': 0.6987860105437611}
+2025-01-04 09:41:18,396:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-04 09:42:28,156:INFO:Best GradientBoosting ROC-AUC: 0.8458
+2025-01-04 09:42:28,156:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08763399448000507, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 6, 'min_samples_split': 11, 'n_estimators': 871, 'subsample': 0.5924272277627636}
+2025-01-04 09:42:28,156:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-04 09:42:35,264:INFO:Best LogisticRegression ROC-AUC: 0.8584
+2025-01-04 09:42:35,264:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-04 09:42:35,265:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-04 09:42:36,039:INFO:Best KNeighbors ROC-AUC: 0.8696
+2025-01-04 09:42:36,039:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-04 09:42:36,147:INFO:XGBoost model retrained on the entire dataset.
+2025-01-04 09:42:36,148:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-04 09:42:36,160:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8718.pkl.
+2025-01-04 09:42:36,160:INFO:
+=== Training process completed successfully ===
+2025-01-05 09:21:39,952:INFO:Training process started.
+2025-01-05 09:21:40,679:INFO:Loaded data from 118 player files. Total games loaded: 12085
+2025-01-05 09:21:40,680:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-05 09:21:51,458:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-05 09:21:52,251:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-05 09:21:52,280:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-05 09:21:56,110:INFO:Prepared features and targets for 115 players for target > 4 rebounds.
+2025-01-05 09:21:56,110:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 09:22:17,258:INFO:Best XGBoost ROC-AUC: 0.8624
+2025-01-05 09:22:17,259:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8248164495236073, 'gamma': 4.24611705247089, 'learning_rate': 0.207283867690103, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 569, 'reg_alpha': 0.26520236768172545, 'reg_lambda': 0.24398964337908358, 'subsample': 0.9865052773762228}
+2025-01-05 09:22:17,260:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 09:23:27,516:INFO:Best GradientBoosting ROC-AUC: 0.8247
+2025-01-05 09:23:27,516:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-05 09:23:27,516:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 09:23:34,434:INFO:Best LogisticRegression ROC-AUC: 0.8616
+2025-01-05 09:23:34,434:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 09:23:34,435:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 09:23:35,332:INFO:Best KNeighbors ROC-AUC: 0.8406
+2025-01-05 09:23:35,333:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-05 09:23:35,420:INFO:XGBoost model retrained on the entire dataset.
+2025-01-05 09:23:35,422:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-05 09:23:35,429:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8624.pkl.
+2025-01-05 09:23:35,429:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-05 09:23:46,021:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-05 09:23:46,841:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-05 09:23:46,871:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-05 09:23:50,841:INFO:Prepared features and targets for 115 players for target > 6 rebounds.
+2025-01-05 09:23:50,841:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 09:24:03,172:INFO:Best XGBoost ROC-AUC: 0.8174
+2025-01-05 09:24:03,172:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6150926341207776, 'gamma': 2.4959668994237614, 'learning_rate': 0.18160125976275493, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 271, 'reg_alpha': 0.9404585843529143, 'reg_lambda': 0.9539285770025874, 'subsample': 0.9574321951102243}
+2025-01-05 09:24:03,172:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 09:25:13,304:INFO:Best GradientBoosting ROC-AUC: 0.7697
+2025-01-05 09:25:13,304:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-05 09:25:13,304:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 09:25:20,516:INFO:Best LogisticRegression ROC-AUC: 0.8091
+2025-01-05 09:25:20,517:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 09:25:20,517:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 09:25:21,242:INFO:Best KNeighbors ROC-AUC: 0.8288
+2025-01-05 09:25:21,242:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-05 09:25:21,244:INFO:KNeighbors model retrained on the entire dataset.
+2025-01-05 09:25:21,245:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-05 09:25:21,246:INFO:Best model (KNeighbors) saved to ../models/model_6_plus_KNeighbors_roc_auc_0.8288.pkl.
+2025-01-05 09:25:21,247:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-05 09:25:32,031:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-05 09:25:32,829:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-05 09:25:32,858:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-05 09:25:36,714:INFO:Prepared features and targets for 115 players for target > 8 rebounds.
+2025-01-05 09:25:36,714:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 09:25:48,914:INFO:Best XGBoost ROC-AUC: 0.8714
+2025-01-05 09:25:48,915:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8248164495236073, 'gamma': 4.24611705247089, 'learning_rate': 0.207283867690103, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 569, 'reg_alpha': 0.26520236768172545, 'reg_lambda': 0.24398964337908358, 'subsample': 0.9865052773762228}
+2025-01-05 09:25:48,915:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 09:27:05,534:INFO:Best GradientBoosting ROC-AUC: 0.8143
+2025-01-05 09:27:05,534:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.10778767156056542, 'max_depth': 6, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 8, 'n_estimators': 919, 'subsample': 0.970261632244802}
+2025-01-05 09:27:05,534:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 09:27:15,209:INFO:Best LogisticRegression ROC-AUC: 0.8875
+2025-01-05 09:27:15,209:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 09:27:15,209:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 09:27:15,978:INFO:Best KNeighbors ROC-AUC: 0.8357
+2025-01-05 09:27:15,978:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 16, 'weights': 'distance'}
+2025-01-05 09:27:15,983:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-05 09:27:15,985:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-05 09:27:15,986:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8875.pkl.
+2025-01-05 09:27:15,987:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-05 09:27:28,885:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-05 09:27:29,762:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-05 09:27:29,794:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-05 09:27:34,239:INFO:Prepared features and targets for 115 players for target > 10 rebounds.
+2025-01-05 09:27:34,239:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 09:27:49,110:INFO:Best XGBoost ROC-AUC: 0.9118
+2025-01-05 09:27:49,110:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8416317594127292, 'gamma': 3.0499832889131047, 'learning_rate': 0.2599584735208493, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 661, 'reg_alpha': 0.662522284353982, 'reg_lambda': 0.31171107608941095, 'subsample': 0.7600340105889054}
+2025-01-05 09:27:49,110:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 09:29:29,962:INFO:Best GradientBoosting ROC-AUC: 0.8844
+2025-01-05 09:29:29,964:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.26399834267149175, 'max_depth': 6, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 12, 'n_estimators': 724, 'subsample': 0.5808143570473069}
+2025-01-05 09:29:29,964:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 09:29:39,008:INFO:Best LogisticRegression ROC-AUC: 0.9123
+2025-01-05 09:29:39,008:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 09:29:39,009:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 09:29:39,760:INFO:Best KNeighbors ROC-AUC: 0.9029
+2025-01-05 09:29:39,760:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-05 09:29:39,764:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-05 09:29:39,767:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-05 09:29:39,769:INFO:Best model (LogisticRegression) saved to ../models/model_10_plus_LogisticRegression_roc_auc_0.9123.pkl.
+2025-01-05 09:29:39,769:INFO:
+=== Training process completed successfully ===
+2025-01-06 06:24:14,881:INFO:Training process started.
+2025-01-06 06:24:15,742:INFO:Loaded data from 118 player files. Total games loaded: 12117
+2025-01-06 06:24:15,744:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-06 06:24:29,396:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-06 06:24:30,462:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-06 06:24:30,501:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-06 06:24:35,981:INFO:Prepared features and targets for 115 players for target > 4 rebounds.
+2025-01-06 06:24:35,981:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:25:06,573:INFO:Best XGBoost ROC-AUC: 0.8136
+2025-01-06 06:25:06,575:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.587477463547968, 'gamma': 4.910841716647178, 'learning_rate': 0.16499076738130428, 'max_depth': 3, 'min_child_weight': 2, 'n_estimators': 996, 'reg_alpha': 0.09310276780589921, 'reg_lambda': 0.8972157579533268, 'subsample': 0.9502090285816652}
+2025-01-06 06:25:06,575:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:27:02,618:INFO:Best GradientBoosting ROC-AUC: 0.8026
+2025-01-06 06:27:02,618:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08553468874760924, 'max_depth': 4, 'max_features': 'log2', 'min_samples_leaf': 17, 'min_samples_split': 6, 'n_estimators': 724, 'subsample': 0.9988702425244709}
+2025-01-06 06:27:02,618:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:27:13,132:INFO:Best LogisticRegression ROC-AUC: 0.8186
+2025-01-06 06:27:13,133:INFO:Best LogisticRegression Parameters: {'C': 0.017787658410143285, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-06 06:27:13,134:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 06:27:14,479:INFO:Best KNeighbors ROC-AUC: 0.8071
+2025-01-06 06:27:14,479:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}
+2025-01-06 06:27:14,483:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-06 06:27:14,487:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-06 06:27:14,489:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.8186.pkl.
+2025-01-06 06:27:14,489:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-06 06:27:29,542:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-06 06:27:30,618:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-06 06:27:30,656:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-06 06:27:36,304:INFO:Prepared features and targets for 115 players for target > 6 rebounds.
+2025-01-06 06:27:36,304:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:27:55,343:INFO:Best XGBoost ROC-AUC: 0.8015
+2025-01-06 06:27:55,343:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2025-01-06 06:27:55,343:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:29:52,498:INFO:Best GradientBoosting ROC-AUC: 0.7909
+2025-01-06 06:29:52,499:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-06 06:29:52,499:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:30:05,194:INFO:Best LogisticRegression ROC-AUC: 0.8167
+2025-01-06 06:30:05,194:INFO:Best LogisticRegression Parameters: {'C': 0.35388521115218396, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-06 06:30:05,194:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 06:30:06,358:INFO:Best KNeighbors ROC-AUC: 0.8318
+2025-01-06 06:30:06,358:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 12, 'weights': 'distance'}
+2025-01-06 06:30:06,360:INFO:KNeighbors model retrained on the entire dataset.
+2025-01-06 06:30:06,366:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-06 06:30:06,368:INFO:Best model (KNeighbors) saved to ../models/model_6_plus_KNeighbors_roc_auc_0.8318.pkl.
+2025-01-06 06:30:06,368:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-06 06:30:21,800:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-06 06:30:23,104:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-06 06:30:23,155:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-06 06:30:28,758:INFO:Prepared features and targets for 115 players for target > 8 rebounds.
+2025-01-06 06:30:28,759:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:30:47,250:INFO:Best XGBoost ROC-AUC: 0.8187
+2025-01-06 06:30:47,250:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7703175608050532, 'gamma': 3.187149507491033, 'learning_rate': 0.22782740011679847, 'max_depth': 4, 'min_child_weight': 3, 'n_estimators': 756, 'reg_alpha': 0.39882090144479454, 'reg_lambda': 0.43352073758074205, 'subsample': 0.8720213214995577}
+2025-01-06 06:30:47,250:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:32:41,641:INFO:Best GradientBoosting ROC-AUC: 0.8232
+2025-01-06 06:32:41,643:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.20002112695312704, 'max_depth': 8, 'max_features': 'sqrt', 'min_samples_leaf': 11, 'min_samples_split': 8, 'n_estimators': 289, 'subsample': 0.5550259622638384}
+2025-01-06 06:32:41,643:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:32:53,639:INFO:Best LogisticRegression ROC-AUC: 0.8714
+2025-01-06 06:32:53,640:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-06 06:32:53,640:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 06:32:54,900:INFO:Best KNeighbors ROC-AUC: 0.8313
+2025-01-06 06:32:54,901:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 24, 'weights': 'uniform'}
+2025-01-06 06:32:54,907:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-06 06:32:54,910:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-06 06:32:54,912:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8714.pkl.
+2025-01-06 06:32:54,912:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-06 06:33:09,915:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-06 06:33:11,044:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-06 06:33:11,091:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-06 06:33:17,009:INFO:Prepared features and targets for 115 players for target > 10 rebounds.
+2025-01-06 06:33:17,009:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:33:34,113:INFO:Best XGBoost ROC-AUC: 0.8566
+2025-01-06 06:33:34,114:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6629794526009424, 'gamma': 1.1012052378277415, 'learning_rate': 0.22334485973140536, 'max_depth': 5, 'min_child_weight': 4, 'n_estimators': 963, 'reg_alpha': 0.09617655109142076, 'reg_lambda': 0.940523264489604, 'subsample': 0.6987860105437611}
+2025-01-06 06:33:34,115:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:35:25,644:INFO:Best GradientBoosting ROC-AUC: 0.8632
+2025-01-06 06:35:25,645:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.16257120734941083, 'max_depth': 7, 'max_features': 'log2', 'min_samples_leaf': 7, 'min_samples_split': 14, 'n_estimators': 754, 'subsample': 0.8777755692715243}
+2025-01-06 06:35:25,646:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:35:37,044:INFO:Best LogisticRegression ROC-AUC: 0.8500
+2025-01-06 06:35:37,044:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-06 06:35:37,044:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 06:35:38,207:INFO:Best KNeighbors ROC-AUC: 0.8474
+2025-01-06 06:35:38,207:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-06 06:35:39,417:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-06 06:35:39,420:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-06 06:35:39,475:INFO:Best model (GradientBoosting) saved to ../models/model_10_plus_GradientBoosting_roc_auc_0.8632.pkl.
+2025-01-06 06:35:39,476:INFO:
+=== Training process completed successfully ===
+2025-01-07 08:52:47,613:INFO:Training process started.
+2025-01-07 08:52:48,441:INFO:Loaded data from 118 player files. Total games loaded: 12163
+2025-01-07 08:52:48,442:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-07 08:53:02,001:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-07 08:53:03,032:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-07 08:53:03,069:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-07 08:53:08,417:INFO:Prepared features and targets for 115 players for target > 4 rebounds.
+2025-01-07 08:53:08,417:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 08:53:38,216:INFO:Best XGBoost ROC-AUC: 0.8031
+2025-01-07 08:53:38,217:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8079255821949569, 'gamma': 4.719458022803786, 'learning_rate': 0.2932754791375502, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 763, 'reg_alpha': 0.6771683423829817, 'reg_lambda': 0.5733670416719333, 'subsample': 0.5642501766169551}
+2025-01-07 08:53:38,218:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 08:55:29,193:INFO:Best GradientBoosting ROC-AUC: 0.7585
+2025-01-07 08:55:29,194:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-07 08:55:29,194:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 08:55:38,736:INFO:Best LogisticRegression ROC-AUC: 0.7898
+2025-01-07 08:55:38,736:INFO:Best LogisticRegression Parameters: {'C': 3.347086111390218, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-07 08:55:38,736:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 08:55:40,092:INFO:Best KNeighbors ROC-AUC: 0.7953
+2025-01-07 08:55:40,093:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 27, 'weights': 'uniform'}
+2025-01-07 08:55:40,297:INFO:XGBoost model retrained on the entire dataset.
+2025-01-07 08:55:40,303:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-07 08:55:40,364:INFO:Best model (XGBoost) saved to ../models/model_4_plus_XGBoost_roc_auc_0.8031.pkl.
+2025-01-07 08:55:40,365:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-07 08:56:06,139:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-07 08:56:09,033:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-07 08:56:09,152:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-07 08:56:20,916:INFO:Prepared features and targets for 115 players for target > 6 rebounds.
+2025-01-07 08:56:20,918:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 08:56:45,630:INFO:Best XGBoost ROC-AUC: 0.8151
+2025-01-07 08:56:45,631:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8360130676475996, 'gamma': 1.6407633373736596, 'learning_rate': 0.05651248501832326, 'max_depth': 8, 'min_child_weight': 6, 'n_estimators': 404, 'reg_alpha': 0.03734818874921442, 'reg_lambda': 0.8226005606596583, 'subsample': 0.6800953207056315}
+2025-01-07 08:56:45,631:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 08:58:42,369:INFO:Best GradientBoosting ROC-AUC: 0.7551
+2025-01-07 08:58:42,371:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-07 08:58:42,372:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 08:58:52,290:INFO:Best LogisticRegression ROC-AUC: 0.8177
+2025-01-07 08:58:52,290:INFO:Best LogisticRegression Parameters: {'C': 0.017787658410143285, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-07 08:58:52,290:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 08:58:53,715:INFO:Best KNeighbors ROC-AUC: 0.7741
+2025-01-07 08:58:53,716:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-07 08:58:53,720:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-07 08:58:53,723:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-07 08:58:53,726:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8177.pkl.
+2025-01-07 08:58:53,726:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-07 08:59:12,834:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-07 08:59:15,986:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-07 08:59:16,066:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-07 08:59:24,732:INFO:Prepared features and targets for 115 players for target > 8 rebounds.
+2025-01-07 08:59:24,733:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 08:59:56,281:INFO:Best XGBoost ROC-AUC: 0.8529
+2025-01-07 08:59:56,281:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8047821669899484, 'gamma': 2.5133951161443076, 'learning_rate': 0.025443625374996805, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 484, 'reg_alpha': 0.23956189066697242, 'reg_lambda': 0.1448948720912231, 'subsample': 0.7447263801387816}
+2025-01-07 08:59:56,281:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 09:02:58,185:INFO:Best GradientBoosting ROC-AUC: 0.8355
+2025-01-07 09:02:58,266:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-07 09:02:58,267:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 09:03:10,940:INFO:Best LogisticRegression ROC-AUC: 0.8581
+2025-01-07 09:03:10,941:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-07 09:03:10,942:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 09:03:12,476:INFO:Best KNeighbors ROC-AUC: 0.8262
+2025-01-07 09:03:12,477:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-07 09:03:12,485:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-07 09:03:12,489:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-07 09:03:12,490:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8581.pkl.
+2025-01-07 09:03:12,490:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-07 09:03:27,612:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-07 09:03:28,886:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-07 09:03:28,926:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-07 09:03:34,369:INFO:Prepared features and targets for 115 players for target > 10 rebounds.
+2025-01-07 09:03:34,369:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 09:03:51,678:INFO:Best XGBoost ROC-AUC: 0.8672
+2025-01-07 09:03:51,678:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8079255821949569, 'gamma': 4.719458022803786, 'learning_rate': 0.2932754791375502, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 763, 'reg_alpha': 0.6771683423829817, 'reg_lambda': 0.5733670416719333, 'subsample': 0.5642501766169551}
+2025-01-07 09:03:51,678:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 09:05:46,665:INFO:Best GradientBoosting ROC-AUC: 0.8257
+2025-01-07 09:05:46,666:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-07 09:05:46,666:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 09:05:57,047:INFO:Best LogisticRegression ROC-AUC: 0.8540
+2025-01-07 09:05:57,048:INFO:Best LogisticRegression Parameters: {'C': 3.0561376917337064, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-07 09:05:57,049:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 09:05:58,661:INFO:Best KNeighbors ROC-AUC: 0.8417
+2025-01-07 09:05:58,662:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-07 09:05:58,785:INFO:XGBoost model retrained on the entire dataset.
+2025-01-07 09:05:58,788:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-07 09:05:58,802:INFO:Best model (XGBoost) saved to ../models/model_10_plus_XGBoost_roc_auc_0.8672.pkl.
+2025-01-07 09:05:58,802:INFO:
+=== Training process completed successfully ===
+2025-01-08 09:36:13,863:INFO:Training process started.
+2025-01-08 09:36:14,380:INFO:Loaded data from 118 player files. Total games loaded: 12199
+2025-01-08 09:36:14,381:INFO:
+=== Training for Target: 4_plus (> 4 rebounds) ===
+2025-01-08 09:36:25,228:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-08 09:36:26,032:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-08 09:36:26,063:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-08 09:36:29,968:INFO:Prepared features and targets for 115 players for target > 4 rebounds.
+2025-01-08 09:36:29,969:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:36:51,306:INFO:Best XGBoost ROC-AUC: 0.7621
+2025-01-08 09:36:51,307:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8416317594127292, 'gamma': 3.0499832889131047, 'learning_rate': 0.2599584735208493, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 661, 'reg_alpha': 0.662522284353982, 'reg_lambda': 0.31171107608941095, 'subsample': 0.7600340105889054}
+2025-01-08 09:36:51,307:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 09:38:03,695:INFO:Best GradientBoosting ROC-AUC: 0.7607
+2025-01-08 09:38:03,695:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2632639422178934, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 18, 'min_samples_split': 16, 'n_estimators': 953, 'subsample': 0.679323390648082}
+2025-01-08 09:38:03,695:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 09:38:11,220:INFO:Best LogisticRegression ROC-AUC: 0.7811
+2025-01-08 09:38:11,221:INFO:Best LogisticRegression Parameters: {'C': 0.017787658410143285, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-08 09:38:11,222:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 09:38:11,993:INFO:Best KNeighbors ROC-AUC: 0.7521
+2025-01-08 09:38:11,993:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'uniform'}
+2025-01-08 09:38:11,999:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-08 09:38:12,000:INFO:Scaler saved to ../models/scaler_4_plus.pkl.
+2025-01-08 09:38:12,002:INFO:Best model (LogisticRegression) saved to ../models/model_4_plus_LogisticRegression_roc_auc_0.7811.pkl.
+2025-01-08 09:38:12,002:INFO:
+=== Training for Target: 6_plus (> 6 rebounds) ===
+2025-01-08 09:38:23,399:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-08 09:38:24,208:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-08 09:38:24,241:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-08 09:38:28,252:INFO:Prepared features and targets for 115 players for target > 6 rebounds.
+2025-01-08 09:38:28,252:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:38:40,877:INFO:Best XGBoost ROC-AUC: 0.8008
+2025-01-08 09:38:40,877:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6044593588076801, 'gamma': 3.355717584120253, 'learning_rate': 0.11759403438884916, 'max_depth': 13, 'min_child_weight': 2, 'n_estimators': 884, 'reg_alpha': 0.8486697949246744, 'reg_lambda': 0.13662133144202881, 'subsample': 0.8544554984550593}
+2025-01-08 09:38:40,877:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 09:39:51,971:INFO:Best GradientBoosting ROC-AUC: 0.7894
+2025-01-08 09:39:51,971:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.29592155410718596, 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'n_estimators': 215, 'subsample': 0.6472244460347929}
+2025-01-08 09:39:51,971:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 09:39:59,049:INFO:Best LogisticRegression ROC-AUC: 0.8152
+2025-01-08 09:39:59,049:INFO:Best LogisticRegression Parameters: {'C': 0.32313292455558584, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-08 09:39:59,050:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 09:39:59,751:INFO:Best KNeighbors ROC-AUC: 0.7864
+2025-01-08 09:39:59,751:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 26, 'weights': 'distance'}
+2025-01-08 09:39:59,756:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-08 09:39:59,757:INFO:Scaler saved to ../models/scaler_6_plus.pkl.
+2025-01-08 09:39:59,758:INFO:Best model (LogisticRegression) saved to ../models/model_6_plus_LogisticRegression_roc_auc_0.8152.pkl.
+2025-01-08 09:39:59,758:INFO:
+=== Training for Target: 8_plus (> 8 rebounds) ===
+2025-01-08 09:40:10,331:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-08 09:40:11,160:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-08 09:40:11,192:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-08 09:40:15,127:INFO:Prepared features and targets for 115 players for target > 8 rebounds.
+2025-01-08 09:40:15,127:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:40:27,715:INFO:Best XGBoost ROC-AUC: 0.8258
+2025-01-08 09:40:27,716:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8087407548138583, 'gamma': 3.0582658024414044, 'learning_rate': 0.012119891565915222, 'max_depth': 11, 'min_child_weight': 1, 'n_estimators': 574, 'reg_alpha': 0.6118528947223795, 'reg_lambda': 0.13949386065204183, 'subsample': 0.6460723242676091}
+2025-01-08 09:40:27,716:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 09:41:36,737:INFO:Best GradientBoosting ROC-AUC: 0.8271
+2025-01-08 09:41:36,737:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-08 09:41:36,738:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 09:41:44,316:INFO:Best LogisticRegression ROC-AUC: 0.8585
+2025-01-08 09:41:44,316:INFO:Best LogisticRegression Parameters: {'C': 9.74755518841459, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-08 09:41:44,317:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 09:41:44,999:INFO:Best KNeighbors ROC-AUC: 0.8024
+2025-01-08 09:41:45,000:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-08 09:41:45,009:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-08 09:41:45,011:INFO:Scaler saved to ../models/scaler_8_plus.pkl.
+2025-01-08 09:41:45,012:INFO:Best model (LogisticRegression) saved to ../models/model_8_plus_LogisticRegression_roc_auc_0.8585.pkl.
+2025-01-08 09:41:45,013:INFO:
+=== Training for Target: 10_plus (> 10 rebounds) ===
+2025-01-08 09:41:55,508:WARNING:Player 1631131 has less than 20 games. Skipping.
+2025-01-08 09:41:56,331:WARNING:Player 1642013 has less than 20 games. Skipping.
+2025-01-08 09:41:56,362:WARNING:Player 1642269 has less than 20 games. Skipping.
+2025-01-08 09:42:00,390:INFO:Prepared features and targets for 115 players for target > 10 rebounds.
+2025-01-08 09:42:00,391:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:42:12,576:INFO:Best XGBoost ROC-AUC: 0.8402
+2025-01-08 09:42:12,576:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.647816842918857, 'gamma': 0.527471299151353, 'learning_rate': 0.14696037114487306, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 897, 'reg_alpha': 0.8832802589188683, 'reg_lambda': 0.32434502100527396, 'subsample': 0.5610439773503366}
+2025-01-08 09:42:12,576:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 09:43:20,120:INFO:Best GradientBoosting ROC-AUC: 0.8850
+2025-01-08 09:43:20,120:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.2605907486767714, 'max_depth': 14, 'max_features': 'log2', 'min_samples_leaf': 6, 'min_samples_split': 17, 'n_estimators': 448, 'subsample': 0.9291794024068599}
+2025-01-08 09:43:20,120:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 09:43:26,878:INFO:Best LogisticRegression ROC-AUC: 0.8490
+2025-01-08 09:43:26,878:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-08 09:43:26,878:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 09:43:27,552:INFO:Best KNeighbors ROC-AUC: 0.8468
+2025-01-08 09:43:27,553:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2025-01-08 09:43:28,060:INFO:GradientBoosting model retrained on the entire dataset.
+2025-01-08 09:43:28,061:INFO:Scaler saved to ../models/scaler_10_plus.pkl.
+2025-01-08 09:43:28,090:INFO:Best model (GradientBoosting) saved to ../models/model_10_plus_GradientBoosting_roc_auc_0.8850.pkl.
+2025-01-08 09:43:28,090:INFO:
+=== Training process completed successfully ===
+2025-01-10 08:11:22,427 INFO:Starting consolidation of player game logs.
+2025-01-10 08:11:22,453 DEBUG:Loaded 125 rows from player_203083.csv.
+2025-01-10 08:11:22,459 DEBUG:Loaded 117 rows from player_1628380.csv.
+2025-01-10 08:11:22,464 DEBUG:Loaded 84 rows from player_1641726.csv.
+2025-01-10 08:11:22,470 DEBUG:Loaded 61 rows from player_1631217.csv.
+2025-01-10 08:11:22,476 DEBUG:Loaded 100 rows from player_203486.csv.
+2025-01-10 08:11:22,481 DEBUG:Loaded 115 rows from player_1629048.csv.
+2025-01-10 08:11:22,486 DEBUG:Loaded 117 rows from player_1629060.csv.
+2025-01-10 08:11:22,492 DEBUG:Loaded 115 rows from player_1628381.csv.
+2025-01-10 08:11:22,497 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-10 08:11:22,502 DEBUG:Loaded 100 rows from player_1628976.csv.
+2025-01-10 08:11:22,507 DEBUG:Loaded 7 rows from player_1642013.csv.
+2025-01-10 08:11:22,512 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-10 08:11:22,518 DEBUG:Loaded 128 rows from player_1628369.csv.
+2025-01-10 08:11:22,523 DEBUG:Loaded 118 rows from player_203081.csv.
+2025-01-10 08:11:22,528 DEBUG:Loaded 115 rows from player_1628392.csv.
+2025-01-10 08:11:22,533 DEBUG:Loaded 132 rows from player_1628386.csv.
+2025-01-10 08:11:22,538 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-10 08:11:22,544 DEBUG:Loaded 96 rows from player_1641708.csv.
+2025-01-10 08:11:22,549 DEBUG:Loaded 78 rows from player_1641709.csv.
+2025-01-10 08:11:22,554 DEBUG:Loaded 109 rows from player_1628378.csv.
+2025-01-10 08:11:22,559 DEBUG:Loaded 116 rows from player_1626157.csv.
+2025-01-10 08:11:22,563 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-10 08:11:22,567 DEBUG:Loaded 132 rows from player_203497.csv.
+2025-01-10 08:11:22,571 DEBUG:Loaded 102 rows from player_1626168.csv.
+2025-01-10 08:11:22,575 DEBUG:Loaded 118 rows from player_1627749.csv.
+2025-01-10 08:11:22,579 DEBUG:Loaded 113 rows from player_1631117.csv.
+2025-01-10 08:11:22,583 DEBUG:Loaded 124 rows from player_1627826.csv.
+2025-01-10 08:11:22,587 DEBUG:Loaded 83 rows from player_1630180.csv.
+2025-01-10 08:11:22,590 DEBUG:Loaded 28 rows from player_1642270.csv.
+2025-01-10 08:11:22,594 DEBUG:Loaded 122 rows from player_1630194.csv.
+2025-01-10 08:11:22,598 DEBUG:Loaded 31 rows from player_1642259.csv.
+2025-01-10 08:11:22,602 DEBUG:Loaded 23 rows from player_1641744.csv.
+2025-01-10 08:11:22,606 DEBUG:Loaded 97 rows from player_1629639.csv.
+2025-01-10 08:11:22,610 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-10 08:11:22,615 DEBUG:Loaded 102 rows from player_202710.csv.
+2025-01-10 08:11:22,620 DEBUG:Loaded 107 rows from player_1630208.csv.
+2025-01-10 08:11:22,625 DEBUG:Loaded 108 rows from player_1630552.csv.
+2025-01-10 08:11:22,629 DEBUG:Loaded 91 rows from player_204001.csv.
+2025-01-10 08:11:22,633 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-10 08:11:22,637 DEBUG:Loaded 119 rows from player_1630578.csv.
+2025-01-10 08:11:22,640 DEBUG:Loaded 124 rows from player_202699.csv.
+2025-01-10 08:11:22,645 DEBUG:Loaded 105 rows from player_1630168.csv.
+2025-01-10 08:11:22,650 DEBUG:Loaded 101 rows from player_1629028.csv.
+2025-01-10 08:11:22,655 DEBUG:Loaded 103 rows from player_1630596.csv.
+2025-01-10 08:11:22,662 DEBUG:Loaded 114 rows from player_1631105.csv.
+2025-01-10 08:11:22,666 DEBUG:Loaded 51 rows from player_1629011.csv.
+2025-01-10 08:11:22,671 DEBUG:Loaded 116 rows from player_1631110.csv.
+2025-01-10 08:11:22,676 DEBUG:Loaded 112 rows from player_1630583.csv.
+2025-01-10 08:11:22,681 DEBUG:Loaded 114 rows from player_201143.csv.
+2025-01-10 08:11:22,686 DEBUG:Loaded 104 rows from player_1630595.csv.
+2025-01-10 08:11:22,690 DEBUG:Loaded 132 rows from player_1630581.csv.
+2025-01-10 08:11:22,695 DEBUG:Loaded 66 rows from player_1631106.csv.
+2025-01-10 08:11:22,701 DEBUG:Loaded 131 rows from player_1631099.csv.
+2025-01-10 08:11:22,706 DEBUG:Loaded 41 rows from player_1641998.csv.
+2025-01-10 08:11:22,711 DEBUG:Loaded 98 rows from player_1630191.csv.
+2025-01-10 08:11:22,716 DEBUG:Loaded 36 rows from player_1642274.csv.
+2025-01-10 08:11:22,722 DEBUG:Loaded 106 rows from player_1629628.csv.
+2025-01-10 08:11:22,727 DEBUG:Loaded 120 rows from player_1627759.csv.
+2025-01-10 08:11:22,732 DEBUG:Loaded 120 rows from player_201142.csv.
+2025-01-10 08:11:22,737 DEBUG:Loaded 130 rows from player_203999.csv.
+2025-01-10 08:11:22,742 DEBUG:Loaded 121 rows from player_203994.csv.
+2025-01-10 08:11:22,746 DEBUG:Loaded 112 rows from player_101108.csv.
+2025-01-10 08:11:22,751 DEBUG:Loaded 137 rows from player_1627783.csv.
+2025-01-10 08:11:22,755 DEBUG:Loaded 123 rows from player_1629023.csv.
+2025-01-10 08:11:22,760 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-10 08:11:22,765 DEBUG:Loaded 104 rows from player_1641764.csv.
+2025-01-10 08:11:22,770 DEBUG:Loaded 135 rows from player_1630162.csv.
+2025-01-10 08:11:22,775 DEBUG:Loaded 113 rows from player_1630188.csv.
+2025-01-10 08:11:22,780 DEBUG:Loaded 105 rows from player_1631094.csv.
+2025-01-10 08:11:22,785 DEBUG:Loaded 103 rows from player_1630567.csv.
+2025-01-10 08:11:22,790 DEBUG:Loaded 61 rows from player_1629750.csv.
+2025-01-10 08:11:22,794 DEBUG:Loaded 72 rows from player_203954.csv.
+2025-01-10 08:11:22,798 DEBUG:Loaded 49 rows from player_1629020.csv.
+2025-01-10 08:11:22,802 DEBUG:Loaded 52 rows from player_1631109.csv.
+2025-01-10 08:11:22,805 DEBUG:Loaded 136 rows from player_1629008.csv.
+2025-01-10 08:11:22,809 DEBUG:Loaded 92 rows from player_1631096.csv.
+2025-01-10 08:11:22,814 DEBUG:Loaded 97 rows from player_1629627.csv.
+2025-01-10 08:11:22,819 DEBUG:Loaded 116 rows from player_1631097.csv.
+2025-01-10 08:11:22,824 DEBUG:Loaded 136 rows from player_202685.csv.
+2025-01-10 08:11:22,829 DEBUG:Loaded 88 rows from player_202695.csv.
+2025-01-10 08:11:22,833 DEBUG:Loaded 9 rows from player_1631131.csv.
+2025-01-10 08:11:22,837 DEBUG:Loaded 96 rows from player_1630549.csv.
+2025-01-10 08:11:22,842 DEBUG:Loaded 102 rows from player_203944.csv.
+2025-01-10 08:11:22,847 DEBUG:Loaded 118 rows from player_202331.csv.
+2025-01-10 08:11:22,852 DEBUG:Loaded 130 rows from player_203991.csv.
+2025-01-10 08:11:22,856 DEBUG:Loaded 101 rows from player_1627751.csv.
+2025-01-10 08:11:22,860 DEBUG:Loaded 131 rows from player_202696.csv.
+2025-01-10 08:11:22,863 DEBUG:Loaded 123 rows from player_201566.csv.
+2025-01-10 08:11:22,867 DEBUG:Loaded 133 rows from player_201572.csv.
+2025-01-10 08:11:22,871 DEBUG:Loaded 130 rows from player_1630166.csv.
+2025-01-10 08:11:22,874 DEBUG:Loaded 3 rows from player_1642269.csv.
+2025-01-10 08:11:22,878 DEBUG:Loaded 91 rows from player_201567.csv.
+2025-01-10 08:11:22,882 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-10 08:11:22,885 DEBUG:Loaded 135 rows from player_1626171.csv.
+2025-01-10 08:11:22,889 DEBUG:Loaded 126 rows from player_1628389.csv.
+2025-01-10 08:11:22,893 DEBUG:Loaded 137 rows from player_1628404.csv.
+2025-01-10 08:11:22,897 DEBUG:Loaded 130 rows from player_1628983.csv.
+2025-01-10 08:11:22,900 DEBUG:Loaded 87 rows from player_203114.csv.
+2025-01-10 08:11:22,904 DEBUG:Loaded 130 rows from player_203076.csv.
+2025-01-10 08:11:22,908 DEBUG:Loaded 124 rows from player_1626172.csv.
+2025-01-10 08:11:22,912 DEBUG:Loaded 37 rows from player_1629057.csv.
+2025-01-10 08:11:22,918 DEBUG:Loaded 100 rows from player_1629731.csv.
+2025-01-10 08:11:22,923 DEBUG:Loaded 136 rows from player_1627734.csv.
+2025-01-10 08:11:22,928 DEBUG:Loaded 121 rows from player_1629651.csv.
+2025-01-10 08:11:22,933 DEBUG:Loaded 102 rows from player_1641705.csv.
+2025-01-10 08:11:22,938 DEBUG:Loaded 104 rows from player_1628374.csv.
+2025-01-10 08:11:22,943 DEBUG:Loaded 121 rows from player_203507.csv.
+2025-01-10 08:11:22,948 DEBUG:Loaded 132 rows from player_1626167.csv.
+2025-01-10 08:11:22,953 DEBUG:Loaded 110 rows from player_203932.csv.
+2025-01-10 08:11:22,958 DEBUG:Loaded 122 rows from player_1629640.csv.
+2025-01-10 08:11:22,962 DEBUG:Loaded 103 rows from player_1631218.csv.
+2025-01-10 08:11:22,965 DEBUG:Loaded 121 rows from player_1628991.csv.
+2025-01-10 08:11:22,968 DEBUG:Loaded 129 rows from player_1629655.csv.
+2025-01-10 08:11:22,971 DEBUG:Loaded 70 rows from player_1626174.csv.
+2025-01-10 08:11:22,974 DEBUG:Loaded 107 rows from player_1628398.csv.
+2025-01-10 08:11:22,977 DEBUG:Loaded 61 rows from player_1627732.csv.
+2025-01-10 08:11:22,980 DEBUG:Loaded 107 rows from player_203110.csv.
+2025-01-10 08:11:22,984 DEBUG:Loaded 126 rows from player_201935.csv.
+2025-01-10 08:11:22,994 INFO:Successfully concatenated 118 files. Total rows: 12199
+2025-01-10 08:11:23,048 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-10 08:12:25,377 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-10 08:12:25,379 INFO:[Approach B: label_4_plus] => {1: 9909, 0: 1963}
+2025-01-10 08:12:25,379 INFO:[Approach B: label_6_plus] => {1: 7419, 0: 4453}
+2025-01-10 08:12:25,380 INFO:[Approach B: label_8_plus] => {0: 6907, 1: 4965}
+2025-01-10 08:12:25,380 INFO:[Approach B: label_10_plus] => {0: 8851, 1: 3021}
+2025-01-10 08:12:25,390 INFO:=== Training Approach B for threshold: 4_plus ===
+2025-01-10 08:12:25,409 INFO:[4_plus] Train set: (9236, 23), Test set: (2310, 23)
+2025-01-10 08:12:25,410 INFO:[4_plus] Class distribution in TRAIN: {1: 0.8353183196188826, 0: 0.16468168038111736}
+2025-01-10 08:12:25,410 INFO:[4_plus] Class distribution in TEST: {1: 0.8354978354978355, 0: 0.1645021645021645}
+2025-01-10 08:12:25,550 INFO:[4_plus] After SMOTE => Train shape: (15430, 23)
+2025-01-10 08:12:25,552 INFO:[4_plus] Class distribution after SMOTE: {1: 7715, 0: 7715}
+2025-01-10 08:12:27,363 INFO:[4_plus] LogisticRegression -> Test Accuracy: 0.6481
+2025-01-10 08:12:28,313 INFO:[4_plus] XGBoost -> Test Accuracy: 0.8229
+2025-01-10 08:12:28,626 INFO:[4_plus] KNeighbors -> Test Accuracy: 0.6364
+2025-01-10 08:12:36,049 INFO:[4_plus] GradientBoosting -> Test Accuracy: 0.8121
+2025-01-10 08:12:36,049 INFO:[4_plus - Approach B] Best Model: XGBoost, Score: 0.8229
+2025-01-10 08:12:36,059 INFO:Saved best Approach B model for 4_plus to ../models/model_4_plus_approachB_XGBoost_acc_0.8229.pkl
+2025-01-10 08:12:36,059 INFO:=== Training Approach B for threshold: 6_plus ===
+2025-01-10 08:12:36,067 INFO:[6_plus] Train set: (9236, 23), Test set: (2310, 23)
+2025-01-10 08:12:36,068 INFO:[6_plus] Class distribution in TRAIN: {1: 0.6257037678648766, 0: 0.3742962321351234}
+2025-01-10 08:12:36,068 INFO:[6_plus] Class distribution in TEST: {1: 0.6255411255411255, 0: 0.37445887445887444}
+2025-01-10 08:12:36,125 INFO:[6_plus] After SMOTE => Train shape: (11558, 23)
+2025-01-10 08:12:36,126 INFO:[6_plus] Class distribution after SMOTE: {1: 5779, 0: 5779}
+2025-01-10 08:12:36,890 INFO:[6_plus] LogisticRegression -> Test Accuracy: 0.6693
+2025-01-10 08:12:37,383 INFO:[6_plus] XGBoost -> Test Accuracy: 0.6450
+2025-01-10 08:12:37,762 INFO:[6_plus] KNeighbors -> Test Accuracy: 0.6212
+2025-01-10 08:12:42,320 INFO:[6_plus] GradientBoosting -> Test Accuracy: 0.6823
+2025-01-10 08:12:42,321 INFO:[6_plus - Approach B] Best Model: GradientBoosting, Score: 0.6823
+2025-01-10 08:12:42,331 INFO:Saved best Approach B model for 6_plus to ../models/model_6_plus_approachB_GradientBoosting_acc_0.6823.pkl
+2025-01-10 08:12:42,332 INFO:=== Training Approach B for threshold: 8_plus ===
+2025-01-10 08:12:42,339 INFO:[8_plus] Train set: (9236, 23), Test set: (2310, 23)
+2025-01-10 08:12:42,339 INFO:[8_plus] Class distribution in TRAIN: {0: 0.5819618882633174, 1: 0.41803811173668254}
+2025-01-10 08:12:42,340 INFO:[8_plus] Class distribution in TEST: {0: 0.5818181818181818, 1: 0.41818181818181815}
+2025-01-10 08:12:42,405 INFO:[8_plus] After SMOTE => Train shape: (10750, 23)
+2025-01-10 08:12:42,405 INFO:[8_plus] Class distribution after SMOTE: {1: 5375, 0: 5375}
+2025-01-10 08:12:43,013 INFO:[8_plus] LogisticRegression -> Test Accuracy: 0.6965
+2025-01-10 08:12:43,361 INFO:[8_plus] XGBoost -> Test Accuracy: 0.6753
+2025-01-10 08:12:43,649 INFO:[8_plus] KNeighbors -> Test Accuracy: 0.6511
+2025-01-10 08:12:47,807 INFO:[8_plus] GradientBoosting -> Test Accuracy: 0.7026
+2025-01-10 08:12:47,808 INFO:[8_plus - Approach B] Best Model: GradientBoosting, Score: 0.7026
+2025-01-10 08:12:47,815 INFO:Saved best Approach B model for 8_plus to ../models/model_8_plus_approachB_GradientBoosting_acc_0.7026.pkl
+2025-01-10 08:12:47,815 INFO:=== Training Approach B for threshold: 10_plus ===
+2025-01-10 08:12:47,827 INFO:[10_plus] Train set: (9236, 23), Test set: (2310, 23)
+2025-01-10 08:12:47,827 INFO:[10_plus] Class distribution in TRAIN: {0: 0.7452360329146817, 1: 0.25476396708531834}
+2025-01-10 08:12:47,828 INFO:[10_plus] Class distribution in TEST: {0: 0.7454545454545455, 1: 0.2545454545454545}
+2025-01-10 08:12:48,456 INFO:[10_plus] LogisticRegression -> Test Accuracy: 0.7905
+2025-01-10 08:12:48,733 INFO:[10_plus] XGBoost -> Test Accuracy: 0.7758
+2025-01-10 08:12:49,003 INFO:[10_plus] KNeighbors -> Test Accuracy: 0.7680
+2025-01-10 08:12:51,850 INFO:[10_plus] GradientBoosting -> Test Accuracy: 0.7827
+2025-01-10 08:12:51,852 INFO:[10_plus - Approach B] Best Model: LogisticRegression, Score: 0.7905
+2025-01-10 08:12:51,853 INFO:Saved best Approach B model for 10_plus to ../models/model_10_plus_approachB_LogisticRegression_acc_0.7905.pkl
+2025-01-10 08:12:51,853 INFO:Approach B training complete.
+2025-01-11 07:05:26,115 INFO:Starting consolidation of player game logs.
+2025-01-11 07:05:26,134 DEBUG:Loaded 125 rows from player_203083.csv.
+2025-01-11 07:05:26,140 DEBUG:Loaded 118 rows from player_1628380.csv.
+2025-01-11 07:05:26,144 DEBUG:Loaded 85 rows from player_1641726.csv.
+2025-01-11 07:05:26,149 DEBUG:Loaded 61 rows from player_1631217.csv.
+2025-01-11 07:05:26,152 DEBUG:Loaded 101 rows from player_203486.csv.
+2025-01-11 07:05:26,156 DEBUG:Loaded 117 rows from player_1629048.csv.
+2025-01-11 07:05:26,160 DEBUG:Loaded 117 rows from player_1629060.csv.
+2025-01-11 07:05:26,164 DEBUG:Loaded 115 rows from player_1628381.csv.
+2025-01-11 07:05:26,168 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-11 07:05:26,171 DEBUG:Loaded 102 rows from player_1628976.csv.
+2025-01-11 07:05:26,175 DEBUG:Loaded 7 rows from player_1642013.csv.
+2025-01-11 07:05:26,180 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-11 07:05:26,185 DEBUG:Loaded 129 rows from player_1628369.csv.
+2025-01-11 07:05:26,190 DEBUG:Loaded 118 rows from player_203081.csv.
+2025-01-11 07:05:26,196 DEBUG:Loaded 117 rows from player_1628392.csv.
+2025-01-11 07:05:26,201 DEBUG:Loaded 134 rows from player_1628386.csv.
+2025-01-11 07:05:26,206 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-11 07:05:26,210 DEBUG:Loaded 97 rows from player_1641708.csv.
+2025-01-11 07:05:26,215 DEBUG:Loaded 79 rows from player_1641709.csv.
+2025-01-11 07:05:26,218 DEBUG:Loaded 110 rows from player_1628378.csv.
+2025-01-11 07:05:26,221 DEBUG:Loaded 118 rows from player_1626157.csv.
+2025-01-11 07:05:26,225 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-11 07:05:26,228 DEBUG:Loaded 133 rows from player_203497.csv.
+2025-01-11 07:05:26,232 DEBUG:Loaded 102 rows from player_1626168.csv.
+2025-01-11 07:05:26,235 DEBUG:Loaded 120 rows from player_1627749.csv.
+2025-01-11 07:05:26,239 DEBUG:Loaded 114 rows from player_1631117.csv.
+2025-01-11 07:05:26,243 DEBUG:Loaded 125 rows from player_1627826.csv.
+2025-01-11 07:05:26,247 DEBUG:Loaded 83 rows from player_1630180.csv.
+2025-01-11 07:05:26,251 DEBUG:Loaded 29 rows from player_1642270.csv.
+2025-01-11 07:05:26,254 DEBUG:Loaded 123 rows from player_1630194.csv.
+2025-01-11 07:05:26,258 DEBUG:Loaded 32 rows from player_1642259.csv.
+2025-01-11 07:05:26,262 DEBUG:Loaded 24 rows from player_1641744.csv.
+2025-01-11 07:05:26,266 DEBUG:Loaded 98 rows from player_1629639.csv.
+2025-01-11 07:05:26,269 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-11 07:05:26,273 DEBUG:Loaded 102 rows from player_202710.csv.
+2025-01-11 07:05:26,277 DEBUG:Loaded 107 rows from player_1630208.csv.
+2025-01-11 07:05:26,280 DEBUG:Loaded 108 rows from player_1630552.csv.
+2025-01-11 07:05:26,284 DEBUG:Loaded 92 rows from player_204001.csv.
+2025-01-11 07:05:26,289 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-11 07:05:26,293 DEBUG:Loaded 120 rows from player_1630578.csv.
+2025-01-11 07:05:26,296 DEBUG:Loaded 126 rows from player_202699.csv.
+2025-01-11 07:05:26,299 DEBUG:Loaded 106 rows from player_1630168.csv.
+2025-01-11 07:05:26,303 DEBUG:Loaded 103 rows from player_1629028.csv.
+2025-01-11 07:05:26,307 DEBUG:Loaded 105 rows from player_1630596.csv.
+2025-01-11 07:05:26,311 DEBUG:Loaded 116 rows from player_1631105.csv.
+2025-01-11 07:05:26,315 DEBUG:Loaded 51 rows from player_1629011.csv.
+2025-01-11 07:05:26,319 DEBUG:Loaded 116 rows from player_1631110.csv.
+2025-01-11 07:05:26,323 DEBUG:Loaded 113 rows from player_1630583.csv.
+2025-01-11 07:05:26,327 DEBUG:Loaded 115 rows from player_201143.csv.
+2025-01-11 07:05:26,331 DEBUG:Loaded 104 rows from player_1630595.csv.
+2025-01-11 07:05:26,334 DEBUG:Loaded 134 rows from player_1630581.csv.
+2025-01-11 07:05:26,339 DEBUG:Loaded 66 rows from player_1631106.csv.
+2025-01-11 07:05:26,345 DEBUG:Loaded 132 rows from player_1631099.csv.
+2025-01-11 07:05:26,349 DEBUG:Loaded 41 rows from player_1641998.csv.
+2025-01-11 07:05:26,353 DEBUG:Loaded 100 rows from player_1630191.csv.
+2025-01-11 07:05:26,356 DEBUG:Loaded 38 rows from player_1642274.csv.
+2025-01-11 07:05:26,359 DEBUG:Loaded 108 rows from player_1629628.csv.
+2025-01-11 07:05:26,363 DEBUG:Loaded 121 rows from player_1627759.csv.
+2025-01-11 07:05:26,367 DEBUG:Loaded 121 rows from player_201142.csv.
+2025-01-11 07:05:26,371 DEBUG:Loaded 131 rows from player_203999.csv.
+2025-01-11 07:05:26,375 DEBUG:Loaded 121 rows from player_203994.csv.
+2025-01-11 07:05:26,378 DEBUG:Loaded 112 rows from player_101108.csv.
+2025-01-11 07:05:26,381 DEBUG:Loaded 139 rows from player_1627783.csv.
+2025-01-11 07:05:26,385 DEBUG:Loaded 124 rows from player_1629023.csv.
+2025-01-11 07:05:26,388 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-11 07:05:26,393 DEBUG:Loaded 104 rows from player_1641764.csv.
+2025-01-11 07:05:26,398 DEBUG:Loaded 136 rows from player_1630162.csv.
+2025-01-11 07:05:26,402 DEBUG:Loaded 115 rows from player_1630188.csv.
+2025-01-11 07:05:26,405 DEBUG:Loaded 106 rows from player_1631094.csv.
+2025-01-11 07:05:26,409 DEBUG:Loaded 105 rows from player_1630567.csv.
+2025-01-11 07:05:26,413 DEBUG:Loaded 63 rows from player_1629750.csv.
+2025-01-11 07:05:26,416 DEBUG:Loaded 72 rows from player_203954.csv.
+2025-01-11 07:05:26,420 DEBUG:Loaded 49 rows from player_1629020.csv.
+2025-01-11 07:05:26,424 DEBUG:Loaded 52 rows from player_1631109.csv.
+2025-01-11 07:05:26,427 DEBUG:Loaded 138 rows from player_1629008.csv.
+2025-01-11 07:05:26,432 DEBUG:Loaded 92 rows from player_1631096.csv.
+2025-01-11 07:05:26,437 DEBUG:Loaded 97 rows from player_1629627.csv.
+2025-01-11 07:05:26,442 DEBUG:Loaded 118 rows from player_1631097.csv.
+2025-01-11 07:05:26,446 DEBUG:Loaded 138 rows from player_202685.csv.
+2025-01-11 07:05:26,450 DEBUG:Loaded 88 rows from player_202695.csv.
+2025-01-11 07:05:26,453 DEBUG:Loaded 9 rows from player_1631131.csv.
+2025-01-11 07:05:26,457 DEBUG:Loaded 97 rows from player_1630549.csv.
+2025-01-11 07:05:26,460 DEBUG:Loaded 103 rows from player_203944.csv.
+2025-01-11 07:05:26,464 DEBUG:Loaded 119 rows from player_202331.csv.
+2025-01-11 07:05:26,468 DEBUG:Loaded 131 rows from player_203991.csv.
+2025-01-11 07:05:26,472 DEBUG:Loaded 103 rows from player_1627751.csv.
+2025-01-11 07:05:26,476 DEBUG:Loaded 133 rows from player_202696.csv.
+2025-01-11 07:05:26,480 DEBUG:Loaded 125 rows from player_201566.csv.
+2025-01-11 07:05:26,484 DEBUG:Loaded 135 rows from player_201572.csv.
+2025-01-11 07:05:26,488 DEBUG:Loaded 132 rows from player_1630166.csv.
+2025-01-11 07:05:26,491 DEBUG:Loaded 4 rows from player_1642269.csv.
+2025-01-11 07:05:26,494 DEBUG:Loaded 91 rows from player_201567.csv.
+2025-01-11 07:05:26,498 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-11 07:05:26,502 DEBUG:Loaded 137 rows from player_1626171.csv.
+2025-01-11 07:05:26,506 DEBUG:Loaded 127 rows from player_1628389.csv.
+2025-01-11 07:05:26,510 DEBUG:Loaded 139 rows from player_1628404.csv.
+2025-01-11 07:05:26,514 DEBUG:Loaded 132 rows from player_1628983.csv.
+2025-01-11 07:05:26,519 DEBUG:Loaded 89 rows from player_203114.csv.
+2025-01-11 07:05:26,522 DEBUG:Loaded 130 rows from player_203076.csv.
+2025-01-11 07:05:26,525 DEBUG:Loaded 126 rows from player_1626172.csv.
+2025-01-11 07:05:26,528 DEBUG:Loaded 38 rows from player_1629057.csv.
+2025-01-11 07:05:26,531 DEBUG:Loaded 102 rows from player_1629731.csv.
+2025-01-11 07:05:26,536 DEBUG:Loaded 137 rows from player_1627734.csv.
+2025-01-11 07:05:26,539 DEBUG:Loaded 123 rows from player_1629651.csv.
+2025-01-11 07:05:26,542 DEBUG:Loaded 103 rows from player_1641705.csv.
+2025-01-11 07:05:26,545 DEBUG:Loaded 105 rows from player_1628374.csv.
+2025-01-11 07:05:26,549 DEBUG:Loaded 123 rows from player_203507.csv.
+2025-01-11 07:05:26,553 DEBUG:Loaded 133 rows from player_1626167.csv.
+2025-01-11 07:05:26,557 DEBUG:Loaded 110 rows from player_203932.csv.
+2025-01-11 07:05:26,561 DEBUG:Loaded 123 rows from player_1629640.csv.
+2025-01-11 07:05:26,565 DEBUG:Loaded 105 rows from player_1631218.csv.
+2025-01-11 07:05:26,570 DEBUG:Loaded 122 rows from player_1628991.csv.
+2025-01-11 07:05:26,575 DEBUG:Loaded 130 rows from player_1629655.csv.
+2025-01-11 07:05:26,579 DEBUG:Loaded 70 rows from player_1626174.csv.
+2025-01-11 07:05:26,584 DEBUG:Loaded 109 rows from player_1628398.csv.
+2025-01-11 07:05:26,588 DEBUG:Loaded 62 rows from player_1627732.csv.
+2025-01-11 07:05:26,591 DEBUG:Loaded 108 rows from player_203110.csv.
+2025-01-11 07:05:26,594 DEBUG:Loaded 127 rows from player_201935.csv.
+2025-01-11 07:05:26,606 INFO:Successfully concatenated 118 files. Total rows: 12315
+2025-01-11 07:05:26,687 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-11 07:06:35,597 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-11 07:06:35,608 INFO:[Approach B: label_4_plus] => {1: 10009, 0: 1979}
+2025-01-11 07:06:35,609 INFO:[Approach B: label_6_plus] => {1: 7497, 0: 4491}
+2025-01-11 07:06:35,610 INFO:[Approach B: label_8_plus] => {0: 6970, 1: 5018}
+2025-01-11 07:06:35,610 INFO:[Approach B: label_10_plus] => {0: 8926, 1: 3062}
+2025-01-11 07:06:35,628 INFO:=== Training Approach B for threshold: 4_plus ===
+2025-01-11 07:06:35,666 INFO:[4_plus] Train set: (9329, 23), Test set: (2333, 23)
+2025-01-11 07:06:35,667 INFO:[4_plus] Class distribution in TRAIN: {1: 0.835566513023904, 0: 0.16443348697609605}
+2025-01-11 07:06:35,667 INFO:[4_plus] Class distribution in TEST: {1: 0.8358336905272181, 0: 0.16416630947278182}
+2025-01-11 07:06:35,936 INFO:[4_plus] After SMOTE => Train shape: (15590, 23)
+2025-01-11 07:06:35,937 INFO:[4_plus] Class distribution after SMOTE: {1: 7795, 0: 7795}
+2025-01-11 07:06:37,337 INFO:[4_plus] LogisticRegression -> Test Accuracy: 0.6369
+2025-01-11 07:06:38,045 INFO:[4_plus] XGBoost -> Test Accuracy: 0.8204
+2025-01-11 07:06:38,425 INFO:[4_plus] KNeighbors -> Test Accuracy: 0.6361
+2025-01-11 07:06:46,789 INFO:[4_plus] GradientBoosting -> Test Accuracy: 0.8144
+2025-01-11 07:06:46,790 INFO:[4_plus - Approach B] Best Model: XGBoost, Score: 0.8204
+2025-01-11 07:06:46,793 INFO:Saved best Approach B model for 4_plus to ../models/model_4_plus_approachB_XGBoost_acc_0.8204.pkl
+2025-01-11 07:06:46,793 INFO:=== Training Approach B for threshold: 6_plus ===
+2025-01-11 07:06:46,801 INFO:[6_plus] Train set: (9329, 23), Test set: (2333, 23)
+2025-01-11 07:06:46,802 INFO:[6_plus] Class distribution in TRAIN: {1: 0.6261121234859042, 0: 0.37388787651409583}
+2025-01-11 07:06:46,803 INFO:[6_plus] Class distribution in TEST: {1: 0.6262323189027004, 0: 0.37376768109729963}
+2025-01-11 07:06:46,861 INFO:[6_plus] After SMOTE => Train shape: (11682, 23)
+2025-01-11 07:06:46,861 INFO:[6_plus] Class distribution after SMOTE: {1: 5841, 0: 5841}
+2025-01-11 07:06:47,947 INFO:[6_plus] LogisticRegression -> Test Accuracy: 0.6665
+2025-01-11 07:06:48,411 INFO:[6_plus] XGBoost -> Test Accuracy: 0.6558
+2025-01-11 07:06:48,712 INFO:[6_plus] KNeighbors -> Test Accuracy: 0.6207
+2025-01-11 07:06:53,481 INFO:[6_plus] GradientBoosting -> Test Accuracy: 0.6794
+2025-01-11 07:06:53,489 INFO:[6_plus - Approach B] Best Model: GradientBoosting, Score: 0.6794
+2025-01-11 07:06:53,514 INFO:Saved best Approach B model for 6_plus to ../models/model_6_plus_approachB_GradientBoosting_acc_0.6794.pkl
+2025-01-11 07:06:53,515 INFO:=== Training Approach B for threshold: 8_plus ===
+2025-01-11 07:06:53,524 INFO:[8_plus] Train set: (9329, 23), Test set: (2333, 23)
+2025-01-11 07:06:53,524 INFO:[8_plus] Class distribution in TRAIN: {0: 0.58151999142459, 1: 0.41848000857541}
+2025-01-11 07:06:53,526 INFO:[8_plus] Class distribution in TEST: {0: 0.5816545220745821, 1: 0.41834547792541793}
+2025-01-11 07:06:53,593 INFO:[8_plus] After SMOTE => Train shape: (10850, 23)
+2025-01-11 07:06:53,594 INFO:[8_plus] Class distribution after SMOTE: {0: 5425, 1: 5425}
+2025-01-11 07:06:54,633 INFO:[8_plus] LogisticRegression -> Test Accuracy: 0.7064
+2025-01-11 07:06:55,060 INFO:[8_plus] XGBoost -> Test Accuracy: 0.6777
+2025-01-11 07:06:55,371 INFO:[8_plus] KNeighbors -> Test Accuracy: 0.6489
+2025-01-11 07:06:59,304 INFO:[8_plus] GradientBoosting -> Test Accuracy: 0.7115
+2025-01-11 07:06:59,304 INFO:[8_plus - Approach B] Best Model: GradientBoosting, Score: 0.7115
+2025-01-11 07:06:59,310 INFO:Saved best Approach B model for 8_plus to ../models/model_8_plus_approachB_GradientBoosting_acc_0.7115.pkl
+2025-01-11 07:06:59,311 INFO:=== Training Approach B for threshold: 10_plus ===
+2025-01-11 07:06:59,319 INFO:[10_plus] Train set: (9329, 23), Test set: (2333, 23)
+2025-01-11 07:06:59,319 INFO:[10_plus] Class distribution in TRAIN: {0: 0.7443455890234751, 1: 0.2556544109765248}
+2025-01-11 07:06:59,320 INFO:[10_plus] Class distribution in TEST: {0: 0.7441063009001286, 1: 0.2558936990998714}
+2025-01-11 07:07:00,108 INFO:[10_plus] LogisticRegression -> Test Accuracy: 0.7938
+2025-01-11 07:07:00,360 INFO:[10_plus] XGBoost -> Test Accuracy: 0.7694
+2025-01-11 07:07:00,612 INFO:[10_plus] KNeighbors -> Test Accuracy: 0.7630
+2025-01-11 07:07:03,181 INFO:[10_plus] GradientBoosting -> Test Accuracy: 0.7870
+2025-01-11 07:07:03,181 INFO:[10_plus - Approach B] Best Model: LogisticRegression, Score: 0.7938
+2025-01-11 07:07:03,182 INFO:Saved best Approach B model for 10_plus to ../models/model_10_plus_approachB_LogisticRegression_acc_0.7938.pkl
+2025-01-11 07:07:03,183 INFO:Approach B training complete.
+2025-01-12 06:14:57,630 INFO:Starting consolidation of player game logs.
+2025-01-12 06:14:57,641 DEBUG:Loaded 125 rows from player_203083.csv.
+2025-01-12 06:14:57,644 DEBUG:Loaded 118 rows from player_1628380.csv.
+2025-01-12 06:14:57,648 DEBUG:Loaded 85 rows from player_1641726.csv.
+2025-01-12 06:14:57,651 DEBUG:Loaded 61 rows from player_1631217.csv.
+2025-01-12 06:14:57,654 DEBUG:Loaded 102 rows from player_203486.csv.
+2025-01-12 06:14:57,658 DEBUG:Loaded 117 rows from player_1629048.csv.
+2025-01-12 06:14:57,661 DEBUG:Loaded 117 rows from player_1629060.csv.
+2025-01-12 06:14:57,668 DEBUG:Loaded 115 rows from player_1628381.csv.
+2025-01-12 06:14:57,679 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-12 06:14:57,684 DEBUG:Loaded 102 rows from player_1628976.csv.
+2025-01-12 06:14:57,692 DEBUG:Loaded 7 rows from player_1642013.csv.
+2025-01-12 06:14:57,698 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-12 06:14:57,702 DEBUG:Loaded 129 rows from player_1628369.csv.
+2025-01-12 06:14:57,706 DEBUG:Loaded 118 rows from player_203081.csv.
+2025-01-12 06:14:57,710 DEBUG:Loaded 117 rows from player_1628392.csv.
+2025-01-12 06:14:57,714 DEBUG:Loaded 134 rows from player_1628386.csv.
+2025-01-12 06:14:57,718 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-12 06:14:57,722 DEBUG:Loaded 97 rows from player_1641708.csv.
+2025-01-12 06:14:57,725 DEBUG:Loaded 79 rows from player_1641709.csv.
+2025-01-12 06:14:57,728 DEBUG:Loaded 110 rows from player_1628378.csv.
+2025-01-12 06:14:57,731 DEBUG:Loaded 118 rows from player_1626157.csv.
+2025-01-12 06:14:57,735 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-12 06:14:57,738 DEBUG:Loaded 134 rows from player_203497.csv.
+2025-01-12 06:14:57,742 DEBUG:Loaded 102 rows from player_1626168.csv.
+2025-01-12 06:14:57,745 DEBUG:Loaded 120 rows from player_1627749.csv.
+2025-01-12 06:14:57,748 DEBUG:Loaded 115 rows from player_1631117.csv.
+2025-01-12 06:14:57,752 DEBUG:Loaded 125 rows from player_1627826.csv.
+2025-01-12 06:14:57,756 DEBUG:Loaded 83 rows from player_1630180.csv.
+2025-01-12 06:14:57,759 DEBUG:Loaded 30 rows from player_1642270.csv.
+2025-01-12 06:14:57,763 DEBUG:Loaded 123 rows from player_1630194.csv.
+2025-01-12 06:14:57,766 DEBUG:Loaded 32 rows from player_1642259.csv.
+2025-01-12 06:14:57,769 DEBUG:Loaded 25 rows from player_1641744.csv.
+2025-01-12 06:14:57,774 DEBUG:Loaded 99 rows from player_1629639.csv.
+2025-01-12 06:14:57,777 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-12 06:14:57,782 DEBUG:Loaded 102 rows from player_202710.csv.
+2025-01-12 06:14:57,786 DEBUG:Loaded 107 rows from player_1630208.csv.
+2025-01-12 06:14:57,788 DEBUG:Loaded 108 rows from player_1630552.csv.
+2025-01-12 06:14:57,793 DEBUG:Loaded 92 rows from player_204001.csv.
+2025-01-12 06:14:57,797 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-12 06:14:57,800 DEBUG:Loaded 120 rows from player_1630578.csv.
+2025-01-12 06:14:57,803 DEBUG:Loaded 127 rows from player_202699.csv.
+2025-01-12 06:14:57,806 DEBUG:Loaded 106 rows from player_1630168.csv.
+2025-01-12 06:14:57,809 DEBUG:Loaded 103 rows from player_1629028.csv.
+2025-01-12 06:14:57,813 DEBUG:Loaded 105 rows from player_1630596.csv.
+2025-01-12 06:14:57,815 DEBUG:Loaded 117 rows from player_1631105.csv.
+2025-01-12 06:14:57,819 DEBUG:Loaded 51 rows from player_1629011.csv.
+2025-01-12 06:14:57,822 DEBUG:Loaded 116 rows from player_1631110.csv.
+2025-01-12 06:14:57,826 DEBUG:Loaded 114 rows from player_1630583.csv.
+2025-01-12 06:14:57,829 DEBUG:Loaded 115 rows from player_201143.csv.
+2025-01-12 06:14:57,833 DEBUG:Loaded 109 rows from player_1630595.csv.
+2025-01-12 06:14:57,837 DEBUG:Loaded 134 rows from player_1630581.csv.
+2025-01-12 06:14:57,840 DEBUG:Loaded 66 rows from player_1631106.csv.
+2025-01-12 06:14:57,843 DEBUG:Loaded 132 rows from player_1631099.csv.
+2025-01-12 06:14:57,846 DEBUG:Loaded 41 rows from player_1641998.csv.
+2025-01-12 06:14:57,850 DEBUG:Loaded 101 rows from player_1630191.csv.
+2025-01-12 06:14:57,853 DEBUG:Loaded 38 rows from player_1642274.csv.
+2025-01-12 06:14:57,856 DEBUG:Loaded 109 rows from player_1629628.csv.
+2025-01-12 06:14:57,860 DEBUG:Loaded 121 rows from player_1627759.csv.
+2025-01-12 06:14:57,864 DEBUG:Loaded 122 rows from player_201142.csv.
+2025-01-12 06:14:57,868 DEBUG:Loaded 131 rows from player_203999.csv.
+2025-01-12 06:14:57,871 DEBUG:Loaded 121 rows from player_203994.csv.
+2025-01-12 06:14:57,886 DEBUG:Loaded 112 rows from player_101108.csv.
+2025-01-12 06:14:57,889 DEBUG:Loaded 139 rows from player_1627783.csv.
+2025-01-12 06:14:57,893 DEBUG:Loaded 124 rows from player_1629023.csv.
+2025-01-12 06:14:57,898 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-12 06:14:57,901 DEBUG:Loaded 104 rows from player_1641764.csv.
+2025-01-12 06:14:57,904 DEBUG:Loaded 137 rows from player_1630162.csv.
+2025-01-12 06:14:57,909 DEBUG:Loaded 115 rows from player_1630188.csv.
+2025-01-12 06:14:57,920 DEBUG:Loaded 106 rows from player_1631094.csv.
+2025-01-12 06:14:57,933 DEBUG:Loaded 106 rows from player_1630567.csv.
+2025-01-12 06:14:57,946 DEBUG:Loaded 63 rows from player_1629750.csv.
+2025-01-12 06:14:57,952 DEBUG:Loaded 72 rows from player_203954.csv.
+2025-01-12 06:14:57,960 DEBUG:Loaded 49 rows from player_1629020.csv.
+2025-01-12 06:14:57,969 DEBUG:Loaded 52 rows from player_1631109.csv.
+2025-01-12 06:14:57,974 DEBUG:Loaded 138 rows from player_1629008.csv.
+2025-01-12 06:14:57,980 DEBUG:Loaded 92 rows from player_1631096.csv.
+2025-01-12 06:14:57,988 DEBUG:Loaded 97 rows from player_1629627.csv.
+2025-01-12 06:14:57,995 DEBUG:Loaded 118 rows from player_1631097.csv.
+2025-01-12 06:14:57,999 DEBUG:Loaded 138 rows from player_202685.csv.
+2025-01-12 06:14:58,003 DEBUG:Loaded 88 rows from player_202695.csv.
+2025-01-12 06:14:58,006 DEBUG:Loaded 9 rows from player_1631131.csv.
+2025-01-12 06:14:58,010 DEBUG:Loaded 97 rows from player_1630549.csv.
+2025-01-12 06:14:58,014 DEBUG:Loaded 104 rows from player_203944.csv.
+2025-01-12 06:14:58,017 DEBUG:Loaded 119 rows from player_202331.csv.
+2025-01-12 06:14:58,021 DEBUG:Loaded 131 rows from player_203991.csv.
+2025-01-12 06:14:58,024 DEBUG:Loaded 104 rows from player_1627751.csv.
+2025-01-12 06:14:58,028 DEBUG:Loaded 133 rows from player_202696.csv.
+2025-01-12 06:14:58,032 DEBUG:Loaded 125 rows from player_201566.csv.
+2025-01-12 06:14:58,036 DEBUG:Loaded 135 rows from player_201572.csv.
+2025-01-12 06:14:58,040 DEBUG:Loaded 133 rows from player_1630166.csv.
+2025-01-12 06:14:58,043 DEBUG:Loaded 4 rows from player_1642269.csv.
+2025-01-12 06:14:58,047 DEBUG:Loaded 91 rows from player_201567.csv.
+2025-01-12 06:14:58,051 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-12 06:14:58,055 DEBUG:Loaded 137 rows from player_1626171.csv.
+2025-01-12 06:14:58,058 DEBUG:Loaded 128 rows from player_1628389.csv.
+2025-01-12 06:14:58,061 DEBUG:Loaded 139 rows from player_1628404.csv.
+2025-01-12 06:14:58,065 DEBUG:Loaded 132 rows from player_1628983.csv.
+2025-01-12 06:14:58,069 DEBUG:Loaded 89 rows from player_203114.csv.
+2025-01-12 06:14:58,073 DEBUG:Loaded 130 rows from player_203076.csv.
+2025-01-12 06:14:58,076 DEBUG:Loaded 126 rows from player_1626172.csv.
+2025-01-12 06:14:58,079 DEBUG:Loaded 38 rows from player_1629057.csv.
+2025-01-12 06:14:58,085 DEBUG:Loaded 102 rows from player_1629731.csv.
+2025-01-12 06:14:58,090 DEBUG:Loaded 137 rows from player_1627734.csv.
+2025-01-12 06:14:58,096 DEBUG:Loaded 123 rows from player_1629651.csv.
+2025-01-12 06:14:58,099 DEBUG:Loaded 103 rows from player_1641705.csv.
+2025-01-12 06:14:58,102 DEBUG:Loaded 106 rows from player_1628374.csv.
+2025-01-12 06:14:58,105 DEBUG:Loaded 123 rows from player_203507.csv.
+2025-01-12 06:14:58,109 DEBUG:Loaded 133 rows from player_1626167.csv.
+2025-01-12 06:14:58,113 DEBUG:Loaded 110 rows from player_203932.csv.
+2025-01-12 06:14:58,117 DEBUG:Loaded 123 rows from player_1629640.csv.
+2025-01-12 06:14:58,121 DEBUG:Loaded 105 rows from player_1631218.csv.
+2025-01-12 06:14:58,125 DEBUG:Loaded 123 rows from player_1628991.csv.
+2025-01-12 06:14:58,128 DEBUG:Loaded 130 rows from player_1629655.csv.
+2025-01-12 06:14:58,132 DEBUG:Loaded 70 rows from player_1626174.csv.
+2025-01-12 06:14:58,136 DEBUG:Loaded 109 rows from player_1628398.csv.
+2025-01-12 06:14:58,140 DEBUG:Loaded 62 rows from player_1627732.csv.
+2025-01-12 06:14:58,143 DEBUG:Loaded 108 rows from player_203110.csv.
+2025-01-12 06:14:58,148 DEBUG:Loaded 127 rows from player_201935.csv.
+2025-01-12 06:14:58,159 INFO:Successfully concatenated 118 files. Total rows: 12340
+2025-01-12 06:14:58,228 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-12 06:16:07,802 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-12 06:16:07,803 INFO:[Approach B: label_4_plus] => {1: 10032, 0: 1981}
+2025-01-12 06:16:07,803 INFO:[Approach B: label_6_plus] => {1: 7514, 0: 4499}
+2025-01-12 06:16:07,804 INFO:[Approach B: label_8_plus] => {0: 6983, 1: 5030}
+2025-01-12 06:16:07,804 INFO:[Approach B: label_10_plus] => {0: 8943, 1: 3070}
+2025-01-12 06:16:07,813 INFO:=== Training Approach B for threshold: 4_plus ===
+2025-01-12 06:16:07,821 INFO:[4_plus] Train set: (9349, 23), Test set: (2338, 23)
+2025-01-12 06:16:07,822 INFO:[4_plus] Class distribution in TRAIN: {1: 0.8358113167183656, 0: 0.1641886832816344}
+2025-01-12 06:16:07,822 INFO:[4_plus] Class distribution in TEST: {1: 0.8357570573139436, 0: 0.16424294268605646}
+2025-01-12 06:16:07,930 INFO:[4_plus] After SMOTE => Train shape: (15628, 23)
+2025-01-12 06:16:07,931 INFO:[4_plus] Class distribution after SMOTE: {1: 7814, 0: 7814}
+2025-01-12 06:16:09,948 INFO:[4_plus] LogisticRegression -> Test Accuracy: 0.6403
+2025-01-12 06:16:10,866 INFO:[4_plus] XGBoost -> Test Accuracy: 0.8191
+2025-01-12 06:16:11,239 INFO:[4_plus] KNeighbors -> Test Accuracy: 0.6253
+2025-01-12 06:16:19,050 INFO:[4_plus] GradientBoosting -> Test Accuracy: 0.8109
+2025-01-12 06:16:19,050 INFO:[4_plus - Approach B] Best Model: XGBoost, Score: 0.8191
+2025-01-12 06:16:19,055 INFO:Saved best Approach B model for 4_plus to ../models/model_4_plus_approachB_XGBoost_acc_0.8191.pkl
+2025-01-12 06:16:19,055 INFO:=== Training Approach B for threshold: 6_plus ===
+2025-01-12 06:16:19,063 INFO:[6_plus] Train set: (9349, 23), Test set: (2338, 23)
+2025-01-12 06:16:19,064 INFO:[6_plus] Class distribution in TRAIN: {1: 0.6262701893250615, 0: 0.3737298106749385}
+2025-01-12 06:16:19,065 INFO:[6_plus] Class distribution in TEST: {1: 0.6261762189905903, 0: 0.3738237810094098}
+2025-01-12 06:16:19,124 INFO:[6_plus] After SMOTE => Train shape: (11710, 23)
+2025-01-12 06:16:19,124 INFO:[6_plus] Class distribution after SMOTE: {1: 5855, 0: 5855}
+2025-01-12 06:16:20,198 INFO:[6_plus] LogisticRegression -> Test Accuracy: 0.6647
+2025-01-12 06:16:21,020 INFO:[6_plus] XGBoost -> Test Accuracy: 0.6625
+2025-01-12 06:16:21,420 INFO:[6_plus] KNeighbors -> Test Accuracy: 0.6343
+2025-01-12 06:16:26,072 INFO:[6_plus] GradientBoosting -> Test Accuracy: 0.6822
+2025-01-12 06:16:26,072 INFO:[6_plus - Approach B] Best Model: GradientBoosting, Score: 0.6822
+2025-01-12 06:16:26,079 INFO:Saved best Approach B model for 6_plus to ../models/model_6_plus_approachB_GradientBoosting_acc_0.6822.pkl
+2025-01-12 06:16:26,079 INFO:=== Training Approach B for threshold: 8_plus ===
+2025-01-12 06:16:26,087 INFO:[8_plus] Train set: (9349, 23), Test set: (2338, 23)
+2025-01-12 06:16:26,088 INFO:[8_plus] Class distribution in TRAIN: {0: 0.5814525617713124, 1: 0.41854743822868756}
+2025-01-12 06:16:26,089 INFO:[8_plus] Class distribution in TEST: {0: 0.5812660393498716, 1: 0.4187339606501283}
+2025-01-12 06:16:26,156 INFO:[8_plus] After SMOTE => Train shape: (10872, 23)
+2025-01-12 06:16:26,157 INFO:[8_plus] Class distribution after SMOTE: {1: 5436, 0: 5436}
+2025-01-12 06:16:27,037 INFO:[8_plus] LogisticRegression -> Test Accuracy: 0.6929
+2025-01-12 06:16:27,830 INFO:[8_plus] XGBoost -> Test Accuracy: 0.6762
+2025-01-12 06:16:28,216 INFO:[8_plus] KNeighbors -> Test Accuracy: 0.6450
+2025-01-12 06:16:32,314 INFO:[8_plus] GradientBoosting -> Test Accuracy: 0.6959
+2025-01-12 06:16:32,315 INFO:[8_plus - Approach B] Best Model: GradientBoosting, Score: 0.6959
+2025-01-12 06:16:32,321 INFO:Saved best Approach B model for 8_plus to ../models/model_8_plus_approachB_GradientBoosting_acc_0.6959.pkl
+2025-01-12 06:16:32,321 INFO:=== Training Approach B for threshold: 10_plus ===
+2025-01-12 06:16:32,329 INFO:[10_plus] Train set: (9349, 23), Test set: (2338, 23)
+2025-01-12 06:16:32,329 INFO:[10_plus] Class distribution in TRAIN: {0: 0.7441437586907691, 1: 0.25585624130923096}
+2025-01-12 06:16:32,330 INFO:[10_plus] Class distribution in TEST: {0: 0.7442258340461934, 1: 0.2557741659538067}
+2025-01-12 06:16:33,122 INFO:[10_plus] LogisticRegression -> Test Accuracy: 0.8003
+2025-01-12 06:16:33,398 INFO:[10_plus] XGBoost -> Test Accuracy: 0.7746
+2025-01-12 06:16:33,825 INFO:[10_plus] KNeighbors -> Test Accuracy: 0.7622
+2025-01-12 06:16:36,772 INFO:[10_plus] GradientBoosting -> Test Accuracy: 0.7943
+2025-01-12 06:16:36,773 INFO:[10_plus - Approach B] Best Model: LogisticRegression, Score: 0.8003
+2025-01-12 06:16:36,774 INFO:Saved best Approach B model for 10_plus to ../models/model_10_plus_approachB_LogisticRegression_acc_0.8003.pkl
+2025-01-12 06:16:36,774 INFO:Approach B training complete.

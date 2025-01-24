@@ -1,0 +1,385 @@
+2025-01-05 07:59:25,101:INFO:Starting CSV initialization for current season 2024-25, last completed season 2023-24, and previous season 2022-23.
+2025-01-05 07:59:26,898:INFO:Team: Atlanta Hawks (ID: 1610612737) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,898:INFO:Team: Boston Celtics (ID: 1610612738) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,899:INFO:Team: Cleveland Cavaliers (ID: 1610612739) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,900:INFO:Team: New Orleans Pelicans (ID: 1610612740) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,900:INFO:Team: Chicago Bulls (ID: 1610612741) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,900:INFO:Team: Dallas Mavericks (ID: 1610612742) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,901:INFO:Team: Denver Nuggets (ID: 1610612743) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,901:INFO:Team: Golden State Warriors (ID: 1610612744) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,902:INFO:Team: Houston Rockets (ID: 1610612745) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,902:INFO:Team: Los Angeles Clippers (ID: 1610612746) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,903:INFO:Team: Los Angeles Lakers (ID: 1610612747) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,904:INFO:Team: Miami Heat (ID: 1610612748) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,904:INFO:Team: Milwaukee Bucks (ID: 1610612749) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,904:INFO:Team: Minnesota Timberwolves (ID: 1610612750) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,905:INFO:Team: Brooklyn Nets (ID: 1610612751) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,905:INFO:Team: New York Knicks (ID: 1610612752) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,906:INFO:Team: Orlando Magic (ID: 1610612753) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,907:INFO:Team: Indiana Pacers (ID: 1610612754) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,907:INFO:Team: Philadelphia 76ers (ID: 1610612755) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,908:INFO:Team: Phoenix Suns (ID: 1610612756) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,908:INFO:Team: Portland Trail Blazers (ID: 1610612757) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,908:INFO:Team: Sacramento Kings (ID: 1610612758) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,909:INFO:Team: San Antonio Spurs (ID: 1610612759) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,909:INFO:Team: Oklahoma City Thunder (ID: 1610612760) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,910:INFO:Team: Toronto Raptors (ID: 1610612761) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,910:INFO:Team: Utah Jazz (ID: 1610612762) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,911:INFO:Team: Memphis Grizzlies (ID: 1610612763) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,911:INFO:Team: Washington Wizards (ID: 1610612764) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,912:INFO:Team: Detroit Pistons (ID: 1610612765) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,912:INFO:Team: Charlotte Hornets (ID: 1610612766) - Top 4 3ppg Players Fetched.
+2025-01-05 07:59:26,912:INFO:Total players fetched: 120 out of expected 120.
+2025-01-05 07:59:26,913:INFO:All teams have their top 3ppg players fetched.
+2025-01-05 07:59:26,914:INFO:Initializing CSV for player Trae Young (ID: 1629027).
+2025-01-05 07:59:28,745:INFO:Columns in game_logs for player Trae Young (ID: 1629027): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:28,760:INFO:Initialized CSV for player Trae Young (ID: 1629027).
+2025-01-05 07:59:29,262:INFO:Initializing CSV for player Dejounte Murray (ID: 1627749).
+2025-01-05 07:59:31,046:INFO:Columns in game_logs for player Dejounte Murray (ID: 1627749): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:31,053:INFO:Initialized CSV for player Dejounte Murray (ID: 1627749).
+2025-01-05 07:59:31,559:INFO:Initializing CSV for player Bogdan Bogdanović (ID: 203992).
+2025-01-05 07:59:33,872:INFO:Columns in game_logs for player Bogdan Bogdanović (ID: 203992): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:33,878:INFO:Initialized CSV for player Bogdan Bogdanović (ID: 203992).
+2025-01-05 07:59:34,380:INFO:Initializing CSV for player De'Andre Hunter (ID: 1629631).
+2025-01-05 07:59:36,461:INFO:Columns in game_logs for player De'Andre Hunter (ID: 1629631): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:36,468:INFO:Initialized CSV for player De'Andre Hunter (ID: 1629631).
+2025-01-05 07:59:36,974:INFO:Initializing CSV for player Jayson Tatum (ID: 1628369).
+2025-01-05 07:59:38,780:INFO:Columns in game_logs for player Jayson Tatum (ID: 1628369): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:38,786:INFO:Initialized CSV for player Jayson Tatum (ID: 1628369).
+2025-01-05 07:59:39,289:INFO:Initializing CSV for player Derrick White (ID: 1628401).
+2025-01-05 07:59:41,033:INFO:Columns in game_logs for player Derrick White (ID: 1628401): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:41,039:INFO:Initialized CSV for player Derrick White (ID: 1628401).
+2025-01-05 07:59:41,542:INFO:Initializing CSV for player Payton Pritchard (ID: 1630202).
+2025-01-05 07:59:43,293:INFO:Columns in game_logs for player Payton Pritchard (ID: 1630202): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:43,298:INFO:Initialized CSV for player Payton Pritchard (ID: 1630202).
+2025-01-05 07:59:43,801:INFO:Initializing CSV for player Sam Hauser (ID: 1630573).
+2025-01-05 07:59:45,539:INFO:Columns in game_logs for player Sam Hauser (ID: 1630573): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:45,545:INFO:Initialized CSV for player Sam Hauser (ID: 1630573).
+2025-01-05 07:59:46,048:INFO:Initializing CSV for player Donovan Mitchell (ID: 1628378).
+2025-01-05 07:59:47,807:INFO:Columns in game_logs for player Donovan Mitchell (ID: 1628378): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:47,814:INFO:Initialized CSV for player Donovan Mitchell (ID: 1628378).
+2025-01-05 07:59:48,319:INFO:Initializing CSV for player Darius Garland (ID: 1629636).
+2025-01-05 07:59:50,071:INFO:Columns in game_logs for player Darius Garland (ID: 1629636): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:50,077:INFO:Initialized CSV for player Darius Garland (ID: 1629636).
+2025-01-05 07:59:50,583:INFO:Initializing CSV for player Sam Merrill (ID: 1630241).
+2025-01-05 07:59:52,323:INFO:Columns in game_logs for player Sam Merrill (ID: 1630241): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:52,329:INFO:Initialized CSV for player Sam Merrill (ID: 1630241).
+2025-01-05 07:59:52,835:INFO:Initializing CSV for player Max Strus (ID: 1629622).
+2025-01-05 07:59:54,643:INFO:Columns in game_logs for player Max Strus (ID: 1629622): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:54,649:INFO:Initialized CSV for player Max Strus (ID: 1629622).
+2025-01-05 07:59:55,155:INFO:Initializing CSV for player CJ McCollum (ID: 203468).
+2025-01-05 07:59:56,906:INFO:Columns in game_logs for player CJ McCollum (ID: 203468): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:56,912:INFO:Initialized CSV for player CJ McCollum (ID: 203468).
+2025-01-05 07:59:57,415:INFO:Initializing CSV for player Trey Murphy III (ID: 1630530).
+2025-01-05 07:59:59,202:INFO:Columns in game_logs for player Trey Murphy III (ID: 1630530): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 07:59:59,206:INFO:Initialized CSV for player Trey Murphy III (ID: 1630530).
+2025-01-05 07:59:59,711:INFO:Initializing CSV for player Brandon Ingram (ID: 1627742).
+2025-01-05 08:00:01,867:INFO:Columns in game_logs for player Brandon Ingram (ID: 1627742): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:01,873:INFO:Initialized CSV for player Brandon Ingram (ID: 1627742).
+2025-01-05 08:00:02,379:INFO:Initializing CSV for player Jose Alvarado (ID: 1630631).
+2025-01-05 08:00:04,567:INFO:Columns in game_logs for player Jose Alvarado (ID: 1630631): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:04,571:INFO:Initialized CSV for player Jose Alvarado (ID: 1630631).
+2025-01-05 08:00:05,076:INFO:Initializing CSV for player Coby White (ID: 1629632).
+2025-01-05 08:00:07,793:INFO:Columns in game_logs for player Coby White (ID: 1629632): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:07,799:INFO:Initialized CSV for player Coby White (ID: 1629632).
+2025-01-05 08:00:08,301:INFO:Initializing CSV for player Zach LaVine (ID: 203897).
+2025-01-05 08:00:10,420:INFO:Columns in game_logs for player Zach LaVine (ID: 203897): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:10,427:INFO:Initialized CSV for player Zach LaVine (ID: 203897).
+2025-01-05 08:00:10,932:INFO:Initializing CSV for player Alex Caruso (ID: 1627936).
+2025-01-05 08:00:12,761:INFO:Columns in game_logs for player Alex Caruso (ID: 1627936): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:12,767:INFO:Initialized CSV for player Alex Caruso (ID: 1627936).
+2025-01-05 08:00:13,273:INFO:Initializing CSV for player Nikola Vučević (ID: 202696).
+2025-01-05 08:00:15,441:INFO:Columns in game_logs for player Nikola Vučević (ID: 202696): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:15,447:INFO:Initialized CSV for player Nikola Vučević (ID: 202696).
+2025-01-05 08:00:15,949:INFO:Initializing CSV for player Luka Dončić (ID: 1629029).
+2025-01-05 08:00:17,812:INFO:Columns in game_logs for player Luka Dončić (ID: 1629029): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:17,819:INFO:Initialized CSV for player Luka Dončić (ID: 1629029).
+2025-01-05 08:00:18,325:INFO:Initializing CSV for player Klay Thompson (ID: 202691).
+2025-01-05 08:00:20,184:INFO:Columns in game_logs for player Klay Thompson (ID: 202691): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:20,188:INFO:Initialized CSV for player Klay Thompson (ID: 202691).
+2025-01-05 08:00:20,693:INFO:Initializing CSV for player Kyrie Irving (ID: 202681).
+2025-01-05 08:00:22,843:INFO:Columns in game_logs for player Kyrie Irving (ID: 202681): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:22,849:INFO:Initialized CSV for player Kyrie Irving (ID: 202681).
+2025-01-05 08:00:23,355:INFO:Initializing CSV for player Tim Hardaway Jr. (ID: 203501).
+2025-01-05 08:00:25,371:INFO:Columns in game_logs for player Tim Hardaway Jr. (ID: 203501): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:25,375:INFO:Initialized CSV for player Tim Hardaway Jr. (ID: 203501).
+2025-01-05 08:00:25,881:INFO:Initializing CSV for player Michael Porter Jr. (ID: 1629008).
+2025-01-05 08:00:27,730:INFO:Columns in game_logs for player Michael Porter Jr. (ID: 1629008): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:27,736:INFO:Initialized CSV for player Michael Porter Jr. (ID: 1629008).
+2025-01-05 08:00:28,238:INFO:Initializing CSV for player Jamal Murray (ID: 1627750).
+2025-01-05 08:00:30,293:INFO:Columns in game_logs for player Jamal Murray (ID: 1627750): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:30,298:INFO:Initialized CSV for player Jamal Murray (ID: 1627750).
+2025-01-05 08:00:30,803:INFO:Initializing CSV for player Nikola Jokić (ID: 203999).
+2025-01-05 08:00:33,163:INFO:Columns in game_logs for player Nikola Jokić (ID: 203999): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:33,169:INFO:Initialized CSV for player Nikola Jokić (ID: 203999).
+2025-01-05 08:00:33,670:INFO:Initializing CSV for player Kentavious Caldwell-Pope (ID: 203484).
+2025-01-05 08:00:35,606:INFO:Columns in game_logs for player Kentavious Caldwell-Pope (ID: 203484): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:35,618:INFO:Initialized CSV for player Kentavious Caldwell-Pope (ID: 203484).
+2025-01-05 08:00:36,121:INFO:Initializing CSV for player Stephen Curry (ID: 201939).
+2025-01-05 08:00:38,174:INFO:Columns in game_logs for player Stephen Curry (ID: 201939): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:38,181:INFO:Initialized CSV for player Stephen Curry (ID: 201939).
+2025-01-05 08:00:38,683:INFO:Initializing CSV for player Klay Thompson (ID: 202691).
+2025-01-05 08:00:38,683:INFO:CSV for player Klay Thompson (ID: 202691) already exists. Skipping initialization.
+2025-01-05 08:00:39,184:INFO:Initializing CSV for player Buddy Hield (ID: 1627741).
+2025-01-05 08:00:42,073:INFO:Columns in game_logs for player Buddy Hield (ID: 1627741): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:42,079:INFO:Initialized CSV for player Buddy Hield (ID: 1627741).
+2025-01-05 08:00:42,581:INFO:Initializing CSV for player Dennis Schröder (ID: 203471).
+2025-01-05 08:00:44,642:INFO:Columns in game_logs for player Dennis Schröder (ID: 203471): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:44,648:INFO:Initialized CSV for player Dennis Schröder (ID: 203471).
+2025-01-05 08:00:45,151:INFO:Initializing CSV for player Fred VanVleet (ID: 1627832).
+2025-01-05 08:00:46,904:INFO:Columns in game_logs for player Fred VanVleet (ID: 1627832): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:46,910:INFO:Initialized CSV for player Fred VanVleet (ID: 1627832).
+2025-01-05 08:00:47,416:INFO:Initializing CSV for player Jalen Green (ID: 1630224).
+2025-01-05 08:00:49,248:INFO:Columns in game_logs for player Jalen Green (ID: 1630224): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:49,255:INFO:Initialized CSV for player Jalen Green (ID: 1630224).
+2025-01-05 08:00:49,761:INFO:Initializing CSV for player Dillon Brooks (ID: 1628415).
+2025-01-05 08:00:51,636:INFO:Columns in game_logs for player Dillon Brooks (ID: 1628415): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:51,640:INFO:Initialized CSV for player Dillon Brooks (ID: 1628415).
+2025-01-05 08:00:52,143:INFO:Initializing CSV for player Jabari Smith Jr. (ID: 1631095).
+2025-01-05 08:00:54,019:INFO:Columns in game_logs for player Jabari Smith Jr. (ID: 1631095): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:54,026:INFO:Initialized CSV for player Jabari Smith Jr. (ID: 1631095).
+2025-01-05 08:00:54,531:INFO:Initializing CSV for player Paul George (ID: 202331).
+2025-01-05 08:00:56,450:INFO:Columns in game_logs for player Paul George (ID: 202331): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:56,453:INFO:Initialized CSV for player Paul George (ID: 202331).
+2025-01-05 08:00:56,954:INFO:Initializing CSV for player Norman Powell (ID: 1626181).
+2025-01-05 08:00:59,069:INFO:Columns in game_logs for player Norman Powell (ID: 1626181): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:00:59,075:INFO:Initialized CSV for player Norman Powell (ID: 1626181).
+2025-01-05 08:00:59,581:INFO:Initializing CSV for player James Harden (ID: 201935).
+2025-01-05 08:01:01,647:INFO:Columns in game_logs for player James Harden (ID: 201935): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:01,650:INFO:Initialized CSV for player James Harden (ID: 201935).
+2025-01-05 08:01:02,153:INFO:Initializing CSV for player Kawhi Leonard (ID: 202695).
+2025-01-05 08:01:04,393:INFO:Columns in game_logs for player Kawhi Leonard (ID: 202695): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:04,399:INFO:Initialized CSV for player Kawhi Leonard (ID: 202695).
+2025-01-05 08:01:04,904:INFO:Initializing CSV for player D'Angelo Russell (ID: 1626156).
+2025-01-05 08:01:07,258:INFO:Columns in game_logs for player D'Angelo Russell (ID: 1626156): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:07,262:INFO:Initialized CSV for player D'Angelo Russell (ID: 1626156).
+2025-01-05 08:01:07,764:INFO:Initializing CSV for player Austin Reaves (ID: 1630559).
+2025-01-05 08:01:09,583:INFO:Columns in game_logs for player Austin Reaves (ID: 1630559): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:09,590:INFO:Initialized CSV for player Austin Reaves (ID: 1630559).
+2025-01-05 08:01:10,095:INFO:Initializing CSV for player Dorian Finney-Smith (ID: 1627827).
+2025-01-05 08:01:11,842:INFO:Columns in game_logs for player Dorian Finney-Smith (ID: 1627827): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:11,849:INFO:Initialized CSV for player Dorian Finney-Smith (ID: 1627827).
+2025-01-05 08:01:12,349:INFO:Initializing CSV for player LeBron James (ID: 2544).
+2025-01-05 08:01:14,326:INFO:Columns in game_logs for player LeBron James (ID: 2544): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:14,333:INFO:Initialized CSV for player LeBron James (ID: 2544).
+2025-01-05 08:01:14,838:INFO:Initializing CSV for player Tyler Herro (ID: 1629639).
+2025-01-05 08:01:17,301:INFO:Columns in game_logs for player Tyler Herro (ID: 1629639): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:17,308:INFO:Initialized CSV for player Tyler Herro (ID: 1629639).
+2025-01-05 08:01:17,813:INFO:Initializing CSV for player Duncan Robinson (ID: 1629130).
+2025-01-05 08:01:19,662:INFO:Columns in game_logs for player Duncan Robinson (ID: 1629130): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:19,668:INFO:Initialized CSV for player Duncan Robinson (ID: 1629130).
+2025-01-05 08:01:20,174:INFO:Initializing CSV for player Terry Rozier (ID: 1626179).
+2025-01-05 08:01:22,008:INFO:Columns in game_logs for player Terry Rozier (ID: 1626179): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:22,015:INFO:Initialized CSV for player Terry Rozier (ID: 1626179).
+2025-01-05 08:01:22,518:INFO:Initializing CSV for player Alec Burks (ID: 202692).
+2025-01-05 08:01:24,409:INFO:Columns in game_logs for player Alec Burks (ID: 202692): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:24,415:INFO:Initialized CSV for player Alec Burks (ID: 202692).
+2025-01-05 08:01:24,921:INFO:Initializing CSV for player Damian Lillard (ID: 203081).
+2025-01-05 08:01:26,966:INFO:Columns in game_logs for player Damian Lillard (ID: 203081): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:26,972:INFO:Initialized CSV for player Damian Lillard (ID: 203081).
+2025-01-05 08:01:27,477:INFO:Initializing CSV for player Malik Beasley (ID: 1627736).
+2025-01-05 08:01:29,622:INFO:Columns in game_logs for player Malik Beasley (ID: 1627736): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:29,629:INFO:Initialized CSV for player Malik Beasley (ID: 1627736).
+2025-01-05 08:01:30,134:INFO:Initializing CSV for player Gary Trent Jr. (ID: 1629018).
+2025-01-05 08:01:32,288:INFO:Columns in game_logs for player Gary Trent Jr. (ID: 1629018): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:32,294:INFO:Initialized CSV for player Gary Trent Jr. (ID: 1629018).
+2025-01-05 08:01:32,796:INFO:Initializing CSV for player Brook Lopez (ID: 201572).
+2025-01-05 08:01:35,012:INFO:Columns in game_logs for player Brook Lopez (ID: 201572): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:35,019:INFO:Initialized CSV for player Brook Lopez (ID: 201572).
+2025-01-05 08:01:35,520:INFO:Initializing CSV for player Anthony Edwards (ID: 1630162).
+2025-01-05 08:01:37,879:INFO:Columns in game_logs for player Anthony Edwards (ID: 1630162): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:37,885:INFO:Initialized CSV for player Anthony Edwards (ID: 1630162).
+2025-01-05 08:01:38,391:INFO:Initializing CSV for player Donte DiVincenzo (ID: 1628978).
+2025-01-05 08:01:40,436:INFO:Columns in game_logs for player Donte DiVincenzo (ID: 1628978): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:40,442:INFO:Initialized CSV for player Donte DiVincenzo (ID: 1628978).
+2025-01-05 08:01:40,948:INFO:Initializing CSV for player Karl-Anthony Towns (ID: 1626157).
+2025-01-05 08:01:43,109:INFO:Columns in game_logs for player Karl-Anthony Towns (ID: 1626157): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:43,116:INFO:Initialized CSV for player Karl-Anthony Towns (ID: 1626157).
+2025-01-05 08:01:43,622:INFO:Initializing CSV for player Mike Conley (ID: 201144).
+2025-01-05 08:01:45,763:INFO:Columns in game_logs for player Mike Conley (ID: 201144): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:45,770:INFO:Initialized CSV for player Mike Conley (ID: 201144).
+2025-01-05 08:01:46,273:INFO:Initializing CSV for player Cameron Johnson (ID: 1629661).
+2025-01-05 08:01:48,134:INFO:Columns in game_logs for player Cameron Johnson (ID: 1629661): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:48,141:INFO:Initialized CSV for player Cameron Johnson (ID: 1629661).
+2025-01-05 08:01:48,647:INFO:Initializing CSV for player Mikal Bridges (ID: 1628969).
+2025-01-05 08:01:50,991:INFO:Columns in game_logs for player Mikal Bridges (ID: 1628969): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:50,997:INFO:Initialized CSV for player Mikal Bridges (ID: 1628969).
+2025-01-05 08:01:51,502:INFO:Initializing CSV for player Cam Thomas (ID: 1630560).
+2025-01-05 08:01:53,434:INFO:Columns in game_logs for player Cam Thomas (ID: 1630560): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:53,440:INFO:Initialized CSV for player Cam Thomas (ID: 1630560).
+2025-01-05 08:01:53,946:INFO:Initializing CSV for player De'Anthony Melton (ID: 1629001).
+2025-01-05 08:01:56,223:INFO:Columns in game_logs for player De'Anthony Melton (ID: 1629001): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:56,230:INFO:Initialized CSV for player De'Anthony Melton (ID: 1629001).
+2025-01-05 08:01:56,733:INFO:Initializing CSV for player Donte DiVincenzo (ID: 1628978).
+2025-01-05 08:01:56,733:INFO:CSV for player Donte DiVincenzo (ID: 1628978) already exists. Skipping initialization.
+2025-01-05 08:01:57,235:INFO:Initializing CSV for player Jalen Brunson (ID: 1628973).
+2025-01-05 08:01:59,405:INFO:Columns in game_logs for player Jalen Brunson (ID: 1628973): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:01:59,412:INFO:Initialized CSV for player Jalen Brunson (ID: 1628973).
+2025-01-05 08:01:59,913:INFO:Initializing CSV for player Mikal Bridges (ID: 1628969).
+2025-01-05 08:01:59,913:INFO:CSV for player Mikal Bridges (ID: 1628969) already exists. Skipping initialization.
+2025-01-05 08:02:00,415:INFO:Initializing CSV for player Bojan Bogdanović (ID: 202711).
+2025-01-05 08:02:02,650:INFO:Columns in game_logs for player Bojan Bogdanović (ID: 202711): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:02,657:INFO:Initialized CSV for player Bojan Bogdanović (ID: 202711).
+2025-01-05 08:02:03,161:INFO:Initializing CSV for player Jalen Suggs (ID: 1630591).
+2025-01-05 08:02:27,580:INFO:Columns in game_logs for player Jalen Suggs (ID: 1630591): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:27,586:INFO:Initialized CSV for player Jalen Suggs (ID: 1630591).
+2025-01-05 08:02:28,092:INFO:Initializing CSV for player Paolo Banchero (ID: 1631094).
+2025-01-05 08:02:30,072:INFO:Columns in game_logs for player Paolo Banchero (ID: 1631094): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:30,078:INFO:Initialized CSV for player Paolo Banchero (ID: 1631094).
+2025-01-05 08:02:30,581:INFO:Initializing CSV for player Franz Wagner (ID: 1630532).
+2025-01-05 08:02:32,484:INFO:Columns in game_logs for player Franz Wagner (ID: 1630532): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:32,490:INFO:Initialized CSV for player Franz Wagner (ID: 1630532).
+2025-01-05 08:02:32,992:INFO:Initializing CSV for player Kentavious Caldwell-Pope (ID: 203484).
+2025-01-05 08:02:32,992:INFO:CSV for player Kentavious Caldwell-Pope (ID: 203484) already exists. Skipping initialization.
+2025-01-05 08:02:33,493:INFO:Initializing CSV for player Tyrese Haliburton (ID: 1630169).
+2025-01-05 08:02:35,635:INFO:Columns in game_logs for player Tyrese Haliburton (ID: 1630169): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:35,641:INFO:Initialized CSV for player Tyrese Haliburton (ID: 1630169).
+2025-01-05 08:02:36,147:INFO:Initializing CSV for player Myles Turner (ID: 1626167).
+2025-01-05 08:02:38,289:INFO:Columns in game_logs for player Myles Turner (ID: 1626167): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:38,295:INFO:Initialized CSV for player Myles Turner (ID: 1626167).
+2025-01-05 08:02:38,801:INFO:Initializing CSV for player Doug McDermott (ID: 203926).
+2025-01-05 08:02:40,978:INFO:Columns in game_logs for player Doug McDermott (ID: 203926): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:40,990:INFO:Initialized CSV for player Doug McDermott (ID: 203926).
+2025-01-05 08:02:41,496:INFO:Initializing CSV for player Pascal Siakam (ID: 1627783).
+2025-01-05 08:02:43,857:INFO:Columns in game_logs for player Pascal Siakam (ID: 1627783): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:43,864:INFO:Initialized CSV for player Pascal Siakam (ID: 1627783).
+2025-01-05 08:02:44,366:INFO:Initializing CSV for player Tyrese Maxey (ID: 1630178).
+2025-01-05 08:02:47,510:INFO:Columns in game_logs for player Tyrese Maxey (ID: 1630178): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:47,517:INFO:Initialized CSV for player Tyrese Maxey (ID: 1630178).
+2025-01-05 08:02:48,023:INFO:Initializing CSV for player Buddy Hield (ID: 1627741).
+2025-01-05 08:02:48,024:INFO:CSV for player Buddy Hield (ID: 1627741) already exists. Skipping initialization.
+2025-01-05 08:02:48,527:INFO:Initializing CSV for player Jared McCain (ID: 1642272).
+2025-01-05 08:02:50,681:INFO:Columns in game_logs for player Jared McCain (ID: 1642272): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:50,686:INFO:Initialized CSV for player Jared McCain (ID: 1642272).
+2025-01-05 08:02:51,189:INFO:Initializing CSV for player Paul George (ID: 202331).
+2025-01-05 08:02:51,189:INFO:CSV for player Paul George (ID: 202331) already exists. Skipping initialization.
+2025-01-05 08:02:51,692:INFO:Initializing CSV for player Grayson Allen (ID: 1628960).
+2025-01-05 08:02:53,617:INFO:Columns in game_logs for player Grayson Allen (ID: 1628960): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:53,623:INFO:Initialized CSV for player Grayson Allen (ID: 1628960).
+2025-01-05 08:02:54,128:INFO:Initializing CSV for player Devin Booker (ID: 1626164).
+2025-01-05 08:02:55,981:INFO:Columns in game_logs for player Devin Booker (ID: 1626164): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:55,987:INFO:Initialized CSV for player Devin Booker (ID: 1626164).
+2025-01-05 08:02:56,488:INFO:Initializing CSV for player Tyus Jones (ID: 1626145).
+2025-01-05 08:02:58,569:INFO:Columns in game_logs for player Tyus Jones (ID: 1626145): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:02:58,576:INFO:Initialized CSV for player Tyus Jones (ID: 1626145).
+2025-01-05 08:02:59,079:INFO:Initializing CSV for player Kevin Durant (ID: 201142).
+2025-01-05 08:03:00,901:INFO:Columns in game_logs for player Kevin Durant (ID: 201142): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:00,907:INFO:Initialized CSV for player Kevin Durant (ID: 201142).
+2025-01-05 08:03:01,413:INFO:Initializing CSV for player Anfernee Simons (ID: 1629014).
+2025-01-05 08:03:03,305:INFO:Columns in game_logs for player Anfernee Simons (ID: 1629014): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:03,311:INFO:Initialized CSV for player Anfernee Simons (ID: 1629014).
+2025-01-05 08:03:03,813:INFO:Initializing CSV for player Jerami Grant (ID: 203924).
+2025-01-05 08:03:06,077:INFO:Columns in game_logs for player Jerami Grant (ID: 203924): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:06,084:INFO:Initialized CSV for player Jerami Grant (ID: 203924).
+2025-01-05 08:03:06,586:INFO:Initializing CSV for player Malcolm Brogdon (ID: 1627763).
+2025-01-05 08:03:08,346:INFO:Columns in game_logs for player Malcolm Brogdon (ID: 1627763): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:08,352:INFO:Initialized CSV for player Malcolm Brogdon (ID: 1627763).
+2025-01-05 08:03:08,855:INFO:Initializing CSV for player Shaedon Sharpe (ID: 1631101).
+2025-01-05 08:03:13,011:INFO:Columns in game_logs for player Shaedon Sharpe (ID: 1631101): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:13,018:INFO:Initialized CSV for player Shaedon Sharpe (ID: 1631101).
+2025-01-05 08:03:13,523:INFO:Initializing CSV for player De'Aaron Fox (ID: 1628368).
+2025-01-05 08:03:15,363:INFO:Columns in game_logs for player De'Aaron Fox (ID: 1628368): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:15,368:INFO:Initialized CSV for player De'Aaron Fox (ID: 1628368).
+2025-01-05 08:03:15,872:INFO:Initializing CSV for player Malik Monk (ID: 1628370).
+2025-01-05 08:03:20,138:INFO:Columns in game_logs for player Malik Monk (ID: 1628370): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:20,147:INFO:Initialized CSV for player Malik Monk (ID: 1628370).
+2025-01-05 08:03:20,653:INFO:Initializing CSV for player Keegan Murray (ID: 1631099).
+2025-01-05 08:03:22,779:INFO:Columns in game_logs for player Keegan Murray (ID: 1631099): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:22,785:INFO:Initialized CSV for player Keegan Murray (ID: 1631099).
+2025-01-05 08:03:23,291:INFO:Initializing CSV for player Harrison Barnes (ID: 203084).
+2025-01-05 08:03:25,380:INFO:Columns in game_logs for player Harrison Barnes (ID: 203084): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:25,387:INFO:Initialized CSV for player Harrison Barnes (ID: 203084).
+2025-01-05 08:03:25,889:INFO:Initializing CSV for player Victor Wembanyama (ID: 1641705).
+2025-01-05 08:03:27,856:INFO:Columns in game_logs for player Victor Wembanyama (ID: 1641705): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:27,863:INFO:Initialized CSV for player Victor Wembanyama (ID: 1641705).
+2025-01-05 08:03:28,365:INFO:Initializing CSV for player Devin Vassell (ID: 1630170).
+2025-01-05 08:03:30,213:INFO:Columns in game_logs for player Devin Vassell (ID: 1630170): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:30,220:INFO:Initialized CSV for player Devin Vassell (ID: 1630170).
+2025-01-05 08:03:30,726:INFO:Initializing CSV for player Julian Champagnie (ID: 1630577).
+2025-01-05 08:03:32,555:INFO:Columns in game_logs for player Julian Champagnie (ID: 1630577): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:32,562:INFO:Initialized CSV for player Julian Champagnie (ID: 1630577).
+2025-01-05 08:03:33,067:INFO:Initializing CSV for player Chris Paul (ID: 101108).
+2025-01-05 08:03:34,946:INFO:Columns in game_logs for player Chris Paul (ID: 101108): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:34,953:INFO:Initialized CSV for player Chris Paul (ID: 101108).
+2025-01-05 08:03:35,455:INFO:Initializing CSV for player Luguentz Dort (ID: 1629652).
+2025-01-05 08:03:37,210:INFO:Columns in game_logs for player Luguentz Dort (ID: 1629652): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:37,217:INFO:Initialized CSV for player Luguentz Dort (ID: 1629652).
+2025-01-05 08:03:37,722:INFO:Initializing CSV for player Isaiah Joe (ID: 1630198).
+2025-01-05 08:03:39,501:INFO:Columns in game_logs for player Isaiah Joe (ID: 1630198): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:39,509:INFO:Initialized CSV for player Isaiah Joe (ID: 1630198).
+2025-01-05 08:03:40,015:INFO:Initializing CSV for player Shai Gilgeous-Alexander (ID: 1628983).
+2025-01-05 08:03:41,796:INFO:Columns in game_logs for player Shai Gilgeous-Alexander (ID: 1628983): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:41,803:INFO:Initialized CSV for player Shai Gilgeous-Alexander (ID: 1628983).
+2025-01-05 08:03:42,309:INFO:Initializing CSV for player Jalen Williams (ID: 1631114).
+2025-01-05 08:03:44,075:INFO:Columns in game_logs for player Jalen Williams (ID: 1631114): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:44,081:INFO:Initialized CSV for player Jalen Williams (ID: 1631114).
+2025-01-05 08:03:44,585:INFO:Initializing CSV for player Gary Trent Jr. (ID: 1629018).
+2025-01-05 08:03:44,585:INFO:CSV for player Gary Trent Jr. (ID: 1629018) already exists. Skipping initialization.
+2025-01-05 08:03:45,090:INFO:Initializing CSV for player Immanuel Quickley (ID: 1630193).
+2025-01-05 08:03:47,199:INFO:Columns in game_logs for player Immanuel Quickley (ID: 1630193): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:47,205:INFO:Initialized CSV for player Immanuel Quickley (ID: 1630193).
+2025-01-05 08:03:47,710:INFO:Initializing CSV for player Gradey Dick (ID: 1641711).
+2025-01-05 08:03:49,523:INFO:Columns in game_logs for player Gradey Dick (ID: 1641711): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:49,529:INFO:Initialized CSV for player Gradey Dick (ID: 1641711).
+2025-01-05 08:03:50,033:INFO:Initializing CSV for player RJ Barrett (ID: 1629628).
+2025-01-05 08:03:52,325:INFO:Columns in game_logs for player RJ Barrett (ID: 1629628): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:52,332:INFO:Initialized CSV for player RJ Barrett (ID: 1629628).
+2025-01-05 08:03:52,837:INFO:Initializing CSV for player Lauri Markkanen (ID: 1628374).
+2025-01-05 08:03:54,676:INFO:Columns in game_logs for player Lauri Markkanen (ID: 1628374): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:54,683:INFO:Initialized CSV for player Lauri Markkanen (ID: 1628374).
+2025-01-05 08:03:55,189:INFO:Initializing CSV for player Keyonte George (ID: 1641718).
+2025-01-05 08:03:57,101:INFO:Columns in game_logs for player Keyonte George (ID: 1641718): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:57,108:INFO:Initialized CSV for player Keyonte George (ID: 1641718).
+2025-01-05 08:03:57,610:INFO:Initializing CSV for player Svi Mykhailiuk (ID: 1629004).
+2025-01-05 08:03:59,825:INFO:Columns in game_logs for player Svi Mykhailiuk (ID: 1629004): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:03:59,831:INFO:Initialized CSV for player Svi Mykhailiuk (ID: 1629004).
+2025-01-05 08:04:00,337:INFO:Initializing CSV for player Collin Sexton (ID: 1629012).
+2025-01-05 08:04:02,165:INFO:Columns in game_logs for player Collin Sexton (ID: 1629012): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:02,172:INFO:Initialized CSV for player Collin Sexton (ID: 1629012).
+2025-01-05 08:04:02,675:INFO:Initializing CSV for player Desmond Bane (ID: 1630217).
+2025-01-05 08:04:04,536:INFO:Columns in game_logs for player Desmond Bane (ID: 1630217): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:04,542:INFO:Initialized CSV for player Desmond Bane (ID: 1630217).
+2025-01-05 08:04:05,048:INFO:Initializing CSV for player Luke Kennard (ID: 1628379).
+2025-01-05 08:04:07,165:INFO:Columns in game_logs for player Luke Kennard (ID: 1628379): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:07,172:INFO:Initialized CSV for player Luke Kennard (ID: 1628379).
+2025-01-05 08:04:07,677:INFO:Initializing CSV for player GG Jackson (ID: 1641713).
+2025-01-05 08:04:09,655:INFO:Columns in game_logs for player GG Jackson (ID: 1641713): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:09,661:INFO:Initialized CSV for player GG Jackson (ID: 1641713).
+2025-01-05 08:04:10,167:INFO:Initializing CSV for player Jaylen Wells (ID: 1642377).
+2025-01-05 08:04:12,040:INFO:Columns in game_logs for player Jaylen Wells (ID: 1642377): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:12,046:INFO:Initialized CSV for player Jaylen Wells (ID: 1642377).
+2025-01-05 08:04:12,552:INFO:Initializing CSV for player Jordan Poole (ID: 1629673).
+2025-01-05 08:04:14,301:INFO:Columns in game_logs for player Jordan Poole (ID: 1629673): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:14,308:INFO:Initialized CSV for player Jordan Poole (ID: 1629673).
+2025-01-05 08:04:14,814:INFO:Initializing CSV for player Corey Kispert (ID: 1630557).
+2025-01-05 08:04:16,532:INFO:Columns in game_logs for player Corey Kispert (ID: 1630557): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:16,545:INFO:Initialized CSV for player Corey Kispert (ID: 1630557).
+2025-01-05 08:04:17,051:INFO:Initializing CSV for player Kyle Kuzma (ID: 1628398).
+2025-01-05 08:04:18,783:INFO:Columns in game_logs for player Kyle Kuzma (ID: 1628398): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:18,790:INFO:Initialized CSV for player Kyle Kuzma (ID: 1628398).
+2025-01-05 08:04:19,295:INFO:Initializing CSV for player Tyus Jones (ID: 1626145).
+2025-01-05 08:04:19,296:INFO:CSV for player Tyus Jones (ID: 1626145) already exists. Skipping initialization.
+2025-01-05 08:04:19,801:INFO:Initializing CSV for player Malik Beasley (ID: 1627736).
+2025-01-05 08:04:19,801:INFO:CSV for player Malik Beasley (ID: 1627736) already exists. Skipping initialization.
+2025-01-05 08:04:20,302:INFO:Initializing CSV for player Cade Cunningham (ID: 1630595).
+2025-01-05 08:04:22,154:INFO:Columns in game_logs for player Cade Cunningham (ID: 1630595): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:22,161:INFO:Initialized CSV for player Cade Cunningham (ID: 1630595).
+2025-01-05 08:04:22,667:INFO:Initializing CSV for player Tim Hardaway Jr. (ID: 203501).
+2025-01-05 08:04:22,667:INFO:CSV for player Tim Hardaway Jr. (ID: 203501) already exists. Skipping initialization.
+2025-01-05 08:04:23,168:INFO:Initializing CSV for player Jaden Ivey (ID: 1631093).
+2025-01-05 08:04:25,314:INFO:Columns in game_logs for player Jaden Ivey (ID: 1631093): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:25,321:INFO:Initialized CSV for player Jaden Ivey (ID: 1631093).
+2025-01-05 08:04:25,827:INFO:Initializing CSV for player LaMelo Ball (ID: 1630163).
+2025-01-05 08:04:27,579:INFO:Columns in game_logs for player LaMelo Ball (ID: 1630163): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:27,585:INFO:Initialized CSV for player LaMelo Ball (ID: 1630163).
+2025-01-05 08:04:28,086:INFO:Initializing CSV for player Brandon Miller (ID: 1641706).
+2025-01-05 08:04:29,826:INFO:Columns in game_logs for player Brandon Miller (ID: 1641706): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:29,832:INFO:Initialized CSV for player Brandon Miller (ID: 1641706).
+2025-01-05 08:04:30,333:INFO:Initializing CSV for player Miles Bridges (ID: 1628970).
+2025-01-05 08:04:32,116:INFO:Columns in game_logs for player Miles Bridges (ID: 1628970): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:32,122:INFO:Initialized CSV for player Miles Bridges (ID: 1628970).
+2025-01-05 08:04:32,628:INFO:Initializing CSV for player Davis Bertans (ID: 202722).
+2025-01-05 08:04:34,814:INFO:Columns in game_logs for player Davis Bertans (ID: 202722): ['SEASON_ID', 'PLAYER_ID', 'GAME_ID', 'GAME_DATE', 'MATCHUP', 'WL', 'MIN', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM', 'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'PLUS_MINUS', 'VIDEO_AVAILABLE']
+2025-01-05 08:04:34,820:INFO:Initialized CSV for player Davis Bertans (ID: 202722).
+2025-01-05 08:04:35,322:INFO:Total player CSVs initialized: 111
+2025-01-05 08:04:35,322:INFO:Completed CSV initialization.

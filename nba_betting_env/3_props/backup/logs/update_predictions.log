@@ -1,0 +1,901 @@
+2025-01-05 08:47:38,177:INFO:Prediction process started.
+2025-01-05 08:47:39,107:INFO:Loaded data from 110 player files. Total games loaded: 12263
+2025-01-05 08:47:39,118:DEBUG:Found ROC-AUC 0.7972 in filename 'model_1_plus_LogisticRegression_roc_auc_0.7972.pkl'.
+2025-01-05 08:47:39,347:INFO:Loaded best model for target '1_plus': model_1_plus_LogisticRegression_roc_auc_0.7972.pkl with ROC-AUC 0.7972
+2025-01-05 08:47:39,348:DEBUG:Found ROC-AUC 0.7509 in filename 'model_2_plus_KNeighbors_roc_auc_0.7509.pkl'.
+2025-01-05 08:47:39,420:INFO:Loaded best model for target '2_plus': model_2_plus_KNeighbors_roc_auc_0.7509.pkl with ROC-AUC 0.7509
+2025-01-05 08:47:39,420:DEBUG:Found ROC-AUC 0.8306 in filename 'model_3_plus_SVC_roc_auc_0.8306.pkl'.
+2025-01-05 08:47:39,424:INFO:Loaded best model for target '3_plus': model_3_plus_SVC_roc_auc_0.8306.pkl with ROC-AUC 0.8306
+2025-01-05 08:47:39,424:INFO:
+=== Making predictions for target: 1_plus (> 1 3points) ===
+2025-01-05 08:47:55,445:INFO:Prepared features for 110 players for target > 1 3points.
+2025-01-05 08:47:55,445:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-05 08:47:55,478:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-05 08:47:55,489:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-05 08:47:55,495:INFO:Predictions made for target '1_plus'.
+2025-01-05 08:47:55,496:DEBUG:Sample predictions for target '1_plus':
+[0.19062846 0.71470052 0.43904223 0.23696894 0.88770781]
+2025-01-05 08:47:55,496:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-05 08:47:55,497:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-05 08:47:55,497:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-05 08:47:55,506:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games    1_plus  2_plus  3_plus
+0    101108                 1.3  0.190628     NaN     NaN
+1   1626145                 2.7  0.714701     NaN     NaN
+2   1626156                 1.9  0.439042     NaN     NaN
+3   1626157                 1.7  0.236969     NaN     NaN
+4   1626164                 2.7  0.887708     NaN     NaN
+2025-01-05 08:47:55,507:INFO:
+=== Making predictions for target: 2_plus (> 2 3points) ===
+2025-01-05 08:48:09,710:INFO:Prepared features for 110 players for target > 2 3points.
+2025-01-05 08:48:09,710:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-05 08:48:09,736:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-05 08:48:09,739:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-05 08:48:09,740:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-05 08:48:09,803:INFO:Predictions made for target '2_plus'.
+2025-01-05 08:48:09,804:DEBUG:Sample predictions for target '2_plus':
+[0.1911658  0.35399032 0.         0.70343401 0.22412051]
+2025-01-05 08:48:09,804:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-05 08:48:09,804:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-05 08:48:09,812:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus    2_plus  3_plus
+0    101108                 1.3     NaN  0.191166     NaN
+1   1626145                 2.7     NaN  0.353990     NaN
+2   1626156                 1.9     NaN  0.000000     NaN
+3   1626157                 1.7     NaN  0.703434     NaN
+4   1626164                 2.7     NaN  0.224121     NaN
+2025-01-05 08:48:09,813:INFO:
+=== Making predictions for target: 3_plus (> 3 3points) ===
+2025-01-05 08:48:23,787:INFO:Prepared features for 110 players for target > 3 3points.
+2025-01-05 08:48:23,787:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-05 08:48:23,812:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-05 08:48:23,818:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-05 08:48:23,819:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-05 08:48:23,820:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-05 08:48:23,823:INFO:Predictions made for target '3_plus'.
+2025-01-05 08:48:23,824:DEBUG:Sample predictions for target '3_plus':
+[0.16829506 0.19219492 0.1874299  0.1669714  0.20736536]
+2025-01-05 08:48:23,824:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-05 08:48:23,836:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus  2_plus    3_plus
+0    101108                 1.3     NaN     NaN  0.168295
+1   1626145                 2.7     NaN     NaN  0.192195
+2   1626156                 1.9     NaN     NaN  0.187430
+3   1626157                 1.7     NaN     NaN  0.166971
+4   1626164                 2.7     NaN     NaN  0.207365
+2025-01-05 08:48:23,840:DEBUG:Combined Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-05 08:48:23,848:DEBUG:Sample Combined Predictions:
+  player_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0    101108                 1.3  0.168295  0.191166  0.190628
+1   1626145                 2.7  0.192195  0.353990  0.714701
+2   1626156                 1.9  0.187430  0.000000  0.439042
+3   1626157                 1.7  0.166971  0.703434  0.236969
+4   1626164                 2.7  0.207365  0.224121  0.887708
+2025-01-05 08:48:23,856:DEBUG:Latest games DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id']
+2025-01-05 08:48:23,869:DEBUG:Sample latest games:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766
+1  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763
+2  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751
+2025-01-05 08:48:23,877:DEBUG:Merged DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-05 08:48:23,889:DEBUG:Sample merged data:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766                 2.4  0.204555  0.561545  0.569752
+1  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763                 2.4  0.207914  0.761238  0.592577
+2  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752                 1.4  0.136916  0.615001  0.187594
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753                 1.6  0.174828  0.000000  0.331155
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751                 1.8  0.208153  0.000000  0.776531
+2025-01-05 08:48:23,904:INFO:Top 25 scorers identified for target '3_plus' excluding previously selected players.
+2025-01-05 08:48:23,912:DEBUG:Top scorers for target '3_plus':
+    player_id        player_name     team_id  predicted_probability
+66    1627736      Malik Beasley  1610612749               0.455583
+105    203081     Damian Lillard  1610612749               0.377623
+29    1628369       Jayson Tatum  1610612738               0.369083
+25    1630202   Payton Pritchard  1610612738               0.348800
+90    1641705  Victor Wembanyama  1610612759               0.300487
+88    1630169  Tyrese Haliburton  1610612754               0.295640
+11    1630163        LaMelo Ball  1610612766               0.287212
+55     202691      Klay Thompson  1610612742               0.282793
+87    1630178       Tyrese Maxey  1610612755               0.275620
+24     201939      Stephen Curry  1610612744               0.275595
+57    1628378   Donovan Mitchell  1610612739               0.275313
+10    1641706     Brandon Miller  1610612766               0.270361
+54    1628401      Derrick White  1610612738               0.250083
+22    1629661    Cameron Johnson  1610612751               0.249424
+89    1630595    Cade Cunningham  1610612765               0.243125
+104   1626181      Norman Powell  1610612746               0.241658
+107   1628374    Lauri Markkanen  1610612762               0.237079
+34    1628415      Dillon Brooks  1610612745               0.235785
+62    1629639        Tyler Herro  1610612748               0.232329
+26    1630530    Trey Murphy III  1610612740               0.231308
+19     202681       Kyrie Irving  1610612742               0.231081
+23    1630560         Cam Thomas  1610612751               0.229807
+93    1630577  Julian Champagnie  1610612759               0.223525
+61    1629014    Anfernee Simons  1610612757               0.220333
+44     203468        CJ McCollum  1610612740               0.219862
+2025-01-05 08:48:23,912:DEBUG:Excluded player IDs after '3_plus' list: {'1628401', '1628415', '1630163', '203468', '203081', '1629014', '1630202', '1628369', '1630169', '1628378', '1628374', '1629639', '202691', '1630530', '1630577', '1630178', '1641706', '201939', '1627736', '1641705', '1626181', '1630595', '1630560', '1629661', '202681'}
+2025-01-05 08:48:23,915:INFO:Top 25 scorers identified for target '2_plus' excluding previously selected players.
+2025-01-05 08:48:23,921:DEBUG:Top scorers for target '2_plus':
+    player_id               player_name     team_id  predicted_probability
+49    1629673              Jordan Poole  1610612764               1.000000
+9     1629029               Luka Dončić  1610612742               1.000000
+86    1629130           Duncan Robinson  1610612748               1.000000
+30    1628970             Miles Bridges  1610612766               0.811503
+37    1629652             Luguentz Dort  1610612760               0.805950
+70    1629631           De'Andre Hunter  1610612737               0.797622
+20    1631093                Jaden Ivey  1610612765               0.774492
+1     1641713                GG Jackson  1610612763               0.761238
+92    1641718            Keyonte George  1610612762               0.758709
+5     1630532              Franz Wagner  1610612753               0.754308
+58    1630224               Jalen Green  1610612745               0.750206
+52    1628370                Malik Monk  1610612758               0.743884
+41    1630559             Austin Reaves  1610612747               0.727055
+12     203924              Jerami Grant  1610612757               0.723904
+69    1629632                Coby White  1610612741               0.719817
+98     203897               Zach LaVine  1610612741               0.710272
+67    1626157        Karl-Anthony Towns  1610612750               0.703434
+102   1630162           Anthony Edwards  1610612750               0.690826
+2      202711          Bojan Bogdanović  1610612752               0.615001
+109   1627741               Buddy Hield  1610612744               0.596848
+31    1630591               Jalen Suggs  1610612753               0.585704
+94     203471           Dennis Schröder  1610612744               0.582539
+33     203484  Kentavious Caldwell-Pope  1610612743               0.574382
+79     202695             Kawhi Leonard  1610612746               0.563888
+91     202331               Paul George  1610612746               0.563076
+2025-01-05 08:48:23,922:DEBUG:Excluded player IDs after '2_plus' list: {'1628401', '1629632', '1628415', '1630163', '1641718', '203468', '1631093', '203081', '1630559', '1629014', '1630202', '202711', '1627741', '202695', '203897', '1628369', '1630169', '1630591', '1628378', '1628970', '1628374', '1629639', '202691', '1630530', '1630577', '1630178', '1641706', '1628370', '1629029', '1630532', '203471', '1629652', '203484', '201939', '1629130', '203924', '202331', '1626157', '1629673', '1627736', '1641705', '1626181', '1629631', '1641713', '1630162', '1630595', '1630560', '1630224', '1629661', '202681'}
+2025-01-05 08:48:23,925:INFO:Top 25 scorers identified for target '1_plus' excluding previously selected players.
+2025-01-05 08:48:23,931:DEBUG:Top scorers for target '1_plus':
+    player_id              player_name     team_id  predicted_probability
+80    1629027               Trae Young  1610612737               0.971208
+64    1629008       Michael Porter Jr.  1610612743               0.917030
+76     203999             Nikola Jokić  1610612743               0.906245
+108   1629012            Collin Sexton  1610612762               0.904492
+6     1627742           Brandon Ingram  1610612740               0.898815
+82    1626164             Devin Booker  1610612756               0.887708
+85    1627783            Pascal Siakam  1610612754               0.880076
+50    1630193        Immanuel Quickley  1610612761               0.879564
+53    1629636           Darius Garland  1610612739               0.869332
+40    1627832            Fred VanVleet  1610612745               0.846164
+100   1630217             Desmond Bane  1610612763               0.835802
+51    1628983  Shai Gilgeous-Alexander  1610612760               0.822950
+17    1629004           Svi Mykhailiuk  1610612762               0.787396
+63    1628978         Donte DiVincenzo  1610612750               0.787324
+4     1629001        De'Anthony Melton  1610612751               0.776531
+35       2544             LeBron James  1610612747               0.772170
+47    1628379             Luke Kennard  1610612763               0.771088
+75     202696           Nikola Vučević  1610612741               0.761121
+36    1630631            Jose Alvarado  1610612740               0.736361
+59    1630573               Sam Hauser  1610612738               0.720984
+16    1626145               Tyus Jones  1610612756               0.714701
+74     201935             James Harden  1610612746               0.708955
+95    1642377             Jaylen Wells  1610612763               0.691221
+39    1641711              Gradey Dick  1610612761               0.649760
+103   1629018           Gary Trent Jr.  1610612749               0.623104
+2025-01-05 08:48:23,931:DEBUG:Excluded player IDs after '1_plus' list: {'1628401', '1629632', '1628415', '201935', '1630163', '1641718', '203468', '1631093', '1641711', '203081', '1626145', '1630559', '1629014', '1630202', '202711', '1627741', '202695', '203897', '1628369', '1630169', '1628983', '1628978', '1642377', '1628379', '1630591', '1628378', '1630193', '1628970', '1628374', '203999', '1629018', '1629639', '1629008', '1627742', '1630631', '202691', '1630530', '1630573', '1630577', '1630178', '1641706', '1628370', '1629029', '1630532', '203471', '1629652', '203484', '1626164', '201939', '2544', '1629130', '202696', '1627832', '1629012', '1629636', '1629004', '203924', '202331', '1629001', '1626157', '1627783', '1629673', '1630217', '1627736', '1641705', '1626181', '1629631', '1641713', '1629027', '1630162', '1630595', '1630560', '1630224', '1629661', '202681'}
+2025-01-05 08:48:23,932:INFO:Top scorers for '3_plus' saved to ../data/top_scorers/top_15_3_plus.csv.
+2025-01-05 08:48:23,933:INFO:Top scorers for '2_plus' saved to ../data/top_scorers/top_15_2_plus.csv.
+2025-01-05 08:48:23,934:INFO:Top scorers for '1_plus' saved to ../data/top_scorers/top_15_1_plus.csv.
+2025-01-05 08:48:23,952:DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-05 08:48:24,292:DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-05 08:48:24,314:INFO:Saved updated top scorers for 3_plus to ../data/top_scorers/top_25_3_plus.csv
+2025-01-05 08:48:24,320:INFO:Saved updated top scorers for 2_plus to ../data/top_scorers/top_25_2_plus.csv
+2025-01-05 08:48:24,327:INFO:Saved updated top scorers for 1_plus to ../data/top_scorers/top_25_1_plus.csv
+2025-01-05 08:48:24,327:INFO:Done updating predictions with 'is_playing_today' column.
+2025-01-05 08:48:24,517:WARNING:Player ID 1628983 is NOT included in Top 3_plus scorers. Predicted probability: 0.20.
+2025-01-05 08:48:24,529:WARNING:Player ID 1628983 is NOT included in Top 2_plus scorers. Predicted probability: 0.27.
+2025-01-05 08:48:24,533:WARNING:Player ID 1628983 is NOT included in Top 1_plus scorers. Predicted probability: 0.82.
+2025-01-05 08:48:24,714:WARNING:Player ID 1629029 is NOT included in Top 3_plus scorers. Predicted probability: 0.21.
+2025-01-05 08:48:24,725:WARNING:Player ID 1629029 is NOT included in Top 2_plus scorers. Predicted probability: 1.00.
+2025-01-05 08:48:24,728:WARNING:Player ID 1629029 is NOT included in Top 1_plus scorers. Predicted probability: 0.91.
+2025-01-05 08:48:24,729:ERROR:Player file 'player_1629025.csv' not found for verification.
+2025-01-05 08:48:24,730:INFO:Prediction process completed successfully.
+2025-01-06 07:14:52,148:INFO:Prediction process started.
+2025-01-06 07:14:52,910:INFO:Loaded data from 111 player files. Total games loaded: 12385
+2025-01-06 07:14:52,911:DEBUG:Found ROC-AUC 0.7972 in filename 'model_1_plus_LogisticRegression_roc_auc_0.7972.pkl'.
+2025-01-06 07:14:52,911:DEBUG:Found ROC-AUC 0.741 in filename 'model_1_plus_XGBoost_roc_auc_0.7410.pkl'.
+2025-01-06 07:14:53,145:INFO:Loaded best model for target '1_plus': model_1_plus_LogisticRegression_roc_auc_0.7972.pkl with ROC-AUC 0.7972
+2025-01-06 07:14:53,145:DEBUG:Found ROC-AUC 0.7509 in filename 'model_2_plus_KNeighbors_roc_auc_0.7509.pkl'.
+2025-01-06 07:14:53,145:DEBUG:Found ROC-AUC 0.757 in filename 'model_2_plus_XGBoost_roc_auc_0.7570.pkl'.
+2025-01-06 07:14:53,232:INFO:Loaded best model for target '2_plus': model_2_plus_XGBoost_roc_auc_0.7570.pkl with ROC-AUC 0.7570
+2025-01-06 07:14:53,233:DEBUG:Found ROC-AUC 0.8421 in filename 'model_3_plus_XGBoost_roc_auc_0.8421.pkl'.
+2025-01-06 07:14:53,233:DEBUG:Found ROC-AUC 0.8306 in filename 'model_3_plus_SVC_roc_auc_0.8306.pkl'.
+2025-01-06 07:14:53,240:INFO:Loaded best model for target '3_plus': model_3_plus_XGBoost_roc_auc_0.8421.pkl with ROC-AUC 0.8421
+2025-01-06 07:14:53,240:INFO:
+=== Making predictions for target: 1_plus (> 1 3points) ===
+2025-01-06 07:15:12,228:INFO:Prepared features for 111 players for target > 1 3points.
+2025-01-06 07:15:12,228:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-06 07:15:12,254:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-06 07:15:12,262:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-06 07:15:12,270:INFO:Predictions made for target '1_plus'.
+2025-01-06 07:15:12,270:DEBUG:Sample predictions for target '1_plus':
+[0.19758435 0.71554698 0.44364111 0.24793516 0.89142962]
+2025-01-06 07:15:12,271:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-06 07:15:12,271:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-06 07:15:12,272:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-06 07:15:12,281:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games    1_plus  2_plus  3_plus
+0    101108                 1.3  0.197584     NaN     NaN
+1   1626145                 2.7  0.715547     NaN     NaN
+2   1626156                 1.9  0.443641     NaN     NaN
+3   1626157                 1.7  0.247935     NaN     NaN
+4   1626164                 2.7  0.891430     NaN     NaN
+2025-01-06 07:15:12,281:INFO:
+=== Making predictions for target: 2_plus (> 2 3points) ===
+2025-01-06 07:15:32,365:INFO:Prepared features for 111 players for target > 2 3points.
+2025-01-06 07:15:32,365:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-06 07:15:32,398:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-06 07:15:32,402:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-06 07:15:32,403:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-06 07:15:32,409:INFO:Predictions made for target '2_plus'.
+2025-01-06 07:15:32,409:DEBUG:Sample predictions for target '2_plus':
+[0.11761428 0.28303558 0.10256147 0.24035156 0.7331275 ]
+2025-01-06 07:15:32,409:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-06 07:15:32,410:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-06 07:15:32,421:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus    2_plus  3_plus
+0    101108                 1.3     NaN  0.117614     NaN
+1   1626145                 2.7     NaN  0.283036     NaN
+2   1626156                 1.9     NaN  0.102561     NaN
+3   1626157                 1.7     NaN  0.240352     NaN
+4   1626164                 2.7     NaN  0.733127     NaN
+2025-01-06 07:15:32,421:INFO:
+=== Making predictions for target: 3_plus (> 3 3points) ===
+2025-01-06 07:15:52,375:INFO:Prepared features for 111 players for target > 3 3points.
+2025-01-06 07:15:52,375:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-06 07:15:52,404:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.3                1.50                       0.4  ...                      1.6                     1.70                      1.6                     1.70
+1   1626145                 2.7                2.50                       0.7  ...                      1.0                     1.00                      1.0                     1.00
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.7                2.55                       0.7  ...                      2.3                     2.10                      2.3                     2.10
+
+[5 rows x 17 columns]
+2025-01-06 07:15:52,407:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-06 07:15:52,408:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-06 07:15:52,408:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-06 07:15:52,413:INFO:Predictions made for target '3_plus'.
+2025-01-06 07:15:52,413:DEBUG:Sample predictions for target '3_plus':
+[0.05903357 0.17680672 0.05903357 0.05903357 0.20905559]
+2025-01-06 07:15:52,413:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-06 07:15:52,427:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus  2_plus    3_plus
+0    101108                 1.3     NaN     NaN  0.059034
+1   1626145                 2.7     NaN     NaN  0.176807
+2   1626156                 1.9     NaN     NaN  0.059034
+3   1626157                 1.7     NaN     NaN  0.059034
+4   1626164                 2.7     NaN     NaN  0.209056
+2025-01-06 07:15:52,431:DEBUG:Combined Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-06 07:15:52,443:DEBUG:Sample Combined Predictions:
+  player_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0    101108                 1.3  0.059034  0.117614  0.197584
+1   1626145                 2.7  0.176807  0.283036  0.715547
+2   1626156                 1.9  0.059034  0.102561  0.443641
+3   1626157                 1.7  0.059034  0.240352  0.247935
+4   1626164                 2.7  0.209056  0.733127  0.891430
+2025-01-06 07:15:52,457:DEBUG:Latest games DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id']
+2025-01-06 07:15:52,484:DEBUG:Sample latest games:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766
+1  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763
+2  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751
+2025-01-06 07:15:52,490:DEBUG:Merged DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-06 07:15:52,506:DEBUG:Sample merged data:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766                 2.4  0.108403  0.245729  0.587756
+1  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763                 2.4  0.106755  0.358134  0.607486
+2  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752                 1.4  0.059034  0.117614  0.187225
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753                 1.6  0.059034  0.180845  0.345793
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751                 1.8  0.092311  0.160389  0.780838
+2025-01-06 07:15:52,511:INFO:Top 25 scorers identified for target '3_plus' excluding previously selected players.
+2025-01-06 07:15:52,528:DEBUG:Top scorers for target '3_plus':
+    player_id         player_name     team_id  predicted_probability
+107    203468         CJ McCollum  1610612740               0.588278
+25     202691       Klay Thompson  1610612742               0.588278
+79    1628401       Derrick White  1610612738               0.588278
+98    1630202    Payton Pritchard  1610612738               0.588278
+89    1628415       Dillon Brooks  1610612745               0.588278
+73    1626181       Norman Powell  1610612746               0.588278
+19    1629673        Jordan Poole  1610612764               0.547722
+78    1630163         LaMelo Ball  1610612766               0.547722
+60    1641705   Victor Wembanyama  1610612759               0.547722
+18    1629661     Cameron Johnson  1610612751               0.509475
+17    1630560          Cam Thomas  1610612751               0.509475
+77    1641706      Brandon Miller  1610612766               0.499941
+76    1630530     Trey Murphy III  1610612740               0.499941
+71     201935        James Harden  1610612746               0.472814
+100    201939       Stephen Curry  1610612744               0.470313
+30    1627736       Malik Beasley  1610612749               0.470313
+57    1628374     Lauri Markkanen  1610612762               0.470313
+49    1630577   Julian Champagnie  1610612759               0.464887
+35    1630169   Tyrese Haliburton  1610612754               0.432305
+88    1629636      Darius Garland  1610612739               0.432305
+61    1630162     Anthony Edwards  1610612750               0.396706
+43     203897         Zach LaVine  1610612741               0.394652
+65    1629027          Trae Young  1610612737               0.358172
+45    1629008  Michael Porter Jr.  1610612743               0.358172
+67    1629014     Anfernee Simons  1610612757               0.358172
+2025-01-06 07:15:52,529:DEBUG:Excluded player IDs after '3_plus' list: {'203897', '1630163', '1628415', '201935', '1629673', '1629661', '1629008', '201939', '1630577', '1630560', '1641706', '203468', '202691', '1628401', '1627736', '1626181', '1629014', '1629027', '1630162', '1630169', '1641705', '1630530', '1630202', '1629636', '1628374'}
+2025-01-06 07:15:52,534:INFO:Top 25 scorers identified for target '2_plus' excluding previously selected players.
+2025-01-06 07:15:52,543:DEBUG:Top scorers for target '2_plus':
+    player_id        player_name     team_id  predicted_probability
+55    1630178       Tyrese Maxey  1610612755               0.733127
+108   1628369       Jayson Tatum  1610612738               0.733127
+9     1629029        Luka Dončić  1610612742               0.733127
+15     202681       Kyrie Irving  1610612742               0.733127
+48    1626164       Devin Booker  1610612756               0.733127
+50    1630595    Cade Cunningham  1610612765               0.720125
+10     203924       Jerami Grant  1610612757               0.696986
+62     203081     Damian Lillard  1610612749               0.657160
+31    1629639        Tyler Herro  1610612748               0.657160
+44    1628969      Mikal Bridges  1610612751               0.657160
+36    1629130    Duncan Robinson  1610612748               0.623860
+80    1627832      Fred VanVleet  1610612745               0.616048
+103   1628370         Malik Monk  1610612758               0.607527
+91    1628378   Donovan Mitchell  1610612739               0.576535
+6     1627742     Brandon Ingram  1610612740               0.569790
+22    1641711        Gradey Dick  1610612761               0.569223
+23    1630591        Jalen Suggs  1610612753               0.569223
+21    1630193  Immanuel Quickley  1610612761               0.539987
+5     1630532       Franz Wagner  1610612753               0.519652
+84    1630559      Austin Reaves  1610612747               0.519417
+40    1629632         Coby White  1610612741               0.483763
+86    1630224        Jalen Green  1610612745               0.480216
+29     203999       Nikola Jokić  1610612743               0.474906
+34    1628978   Donte DiVincenzo  1610612750               0.450267
+46    1629631    De'Andre Hunter  1610612737               0.444259
+2025-01-06 07:15:52,544:DEBUG:Excluded player IDs after '2_plus' list: {'1629631', '1630178', '203897', '1629632', '1630532', '1630193', '1630163', '1628415', '1628378', '1627742', '1626164', '201935', '1629673', '1629661', '1627832', '1629008', '201939', '1630577', '1630560', '1629130', '1641706', '1629639', '203468', '1628978', '1630559', '202691', '203924', '1628401', '1630224', '1630591', '1641711', '1627736', '1626181', '203081', '1628969', '1629014', '1629027', '1629029', '202681', '1630162', '1630595', '1628369', '1628370', '1630169', '203999', '1641705', '1630530', '1630202', '1629636', '1628374'}
+2025-01-06 07:15:52,548:INFO:Top 25 scorers identified for target '1_plus' excluding previously selected players.
+2025-01-06 07:15:52,560:DEBUG:Top scorers for target '1_plus':
+    player_id               player_name     team_id  predicted_probability
+106   1629652             Luguentz Dort  1610612760               0.944491
+42    1627783             Pascal Siakam  1610612754               0.882524
+38    1630217              Desmond Bane  1610612763               0.837702
+92    1629012             Collin Sexton  1610612762               0.837191
+99       2544              LeBron James  1610612747               0.836273
+4     1629001         De'Anthony Melton  1610612751               0.780838
+97    1628970             Miles Bridges  1610612766               0.776360
+27    1628379              Luke Kennard  1610612763               0.772813
+63     202696            Nikola Vučević  1610612741               0.767521
+20    1630631             Jose Alvarado  1610612740               0.752189
+14    1631093                Jaden Ivey  1610612765               0.715578
+13    1626145                Tyus Jones  1610612756               0.715547
+47    1642377              Jaylen Wells  1610612763               0.705292
+94    1630557             Corey Kispert  1610612764               0.697602
+81    1628983   Shai Gilgeous-Alexander  1610612760               0.682382
+104    203471           Dennis Schröder  1610612744               0.680617
+90    1629004            Svi Mykhailiuk  1610612762               0.648335
+33    1629018            Gary Trent Jr.  1610612749               0.624763
+1     1641713                GG Jackson  1610612763               0.607486
+0      202722             Davis Bertans  1610612766               0.587756
+82    1630573                Sam Hauser  1610612738               0.534890
+32    1627750              Jamal Murray  1610612743               0.531943
+39    1628960             Grayson Allen  1610612756               0.526866
+7     1642272              Jared McCain  1610612755               0.489536
+109    203484  Kentavious Caldwell-Pope  1610612743               0.462809
+2025-01-06 07:15:52,560:DEBUG:Excluded player IDs after '1_plus' list: {'1630557', '1629631', '1630178', '1628960', '203897', '1629632', '1630532', '1630193', '1630163', '1628415', '1628378', '1631093', '1627742', '1626164', '201935', '1629673', '1629661', '1630573', '1627832', '1629008', '201939', '1630577', '1628983', '1630560', '1629130', '1630217', '1641706', '1629639', '203468', '1628978', '1641713', '1630631', '1626145', '1630559', '202691', '1627783', '1627750', '203924', '203484', '1629001', '1628401', '1630224', '1630591', '1629004', '1642377', '1641711', '1627736', '1626181', '203081', '1628969', '1629014', '1629027', '1629029', '202681', '1630162', '1630595', '1629012', '1628369', '2544', '202696', '1629018', '1642272', '1628370', '1628379', '1630169', '1629652', '1628970', '203471', '203999', '1641705', '202722', '1630530', '1630202', '1629636', '1628374'}
+2025-01-06 07:15:52,564:INFO:Top scorers for '3_plus' saved to ../data/top_scorers/top_15_3_plus.csv.
+2025-01-06 07:15:52,566:INFO:Top scorers for '2_plus' saved to ../data/top_scorers/top_15_2_plus.csv.
+2025-01-06 07:15:52,570:INFO:Top scorers for '1_plus' saved to ../data/top_scorers/top_15_1_plus.csv.
+2025-01-06 07:15:52,594:DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-06 07:15:52,919:DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-06 07:15:52,990:INFO:Saved updated top scorers for 3_plus to ../data/top_scorers/top_25_3_plus.csv
+2025-01-06 07:15:53,044:INFO:Saved updated top scorers for 2_plus to ../data/top_scorers/top_25_2_plus.csv
+2025-01-06 07:15:53,099:INFO:Saved updated top scorers for 1_plus to ../data/top_scorers/top_25_1_plus.csv
+2025-01-06 07:15:53,099:INFO:Done updating predictions with 'is_playing_today' column.
+2025-01-06 07:15:53,491:WARNING:Player ID 1628983 is NOT included in Top 3_plus scorers. Predicted probability: 0.06.
+2025-01-06 07:15:53,508:WARNING:Player ID 1628983 is NOT included in Top 2_plus scorers. Predicted probability: 0.35.
+2025-01-06 07:15:53,527:WARNING:Player ID 1628983 is NOT included in Top 1_plus scorers. Predicted probability: 0.68.
+2025-01-06 07:15:53,716:WARNING:Player ID 1629029 is NOT included in Top 3_plus scorers. Predicted probability: 0.30.
+2025-01-06 07:15:53,727:WARNING:Player ID 1629029 is NOT included in Top 2_plus scorers. Predicted probability: 0.73.
+2025-01-06 07:15:53,730:WARNING:Player ID 1629029 is NOT included in Top 1_plus scorers. Predicted probability: 0.91.
+2025-01-06 07:15:53,732:ERROR:Player file 'player_1629025.csv' not found for verification.
+2025-01-06 07:15:53,737:INFO:Prediction process completed successfully.
+2025-01-07 07:48:49,179:INFO:Prediction process started.
+2025-01-07 07:48:50,100:INFO:Loaded data from 112 player files. Total games loaded: 12561
+2025-01-07 07:48:50,102:DEBUG:Found ROC-AUC 0.7972 in filename 'model_1_plus_LogisticRegression_roc_auc_0.7972.pkl'.
+2025-01-07 07:48:50,102:DEBUG:Found ROC-AUC 0.7337 in filename 'model_1_plus_XGBoost_roc_auc_0.7337.pkl'.
+2025-01-07 07:48:50,102:DEBUG:Found ROC-AUC 0.741 in filename 'model_1_plus_XGBoost_roc_auc_0.7410.pkl'.
+2025-01-07 07:48:50,338:INFO:Loaded best model for target '1_plus': model_1_plus_LogisticRegression_roc_auc_0.7972.pkl with ROC-AUC 0.7972
+2025-01-07 07:48:50,338:DEBUG:Found ROC-AUC 0.8358 in filename 'model_2_plus_XGBoost_roc_auc_0.8358.pkl'.
+2025-01-07 07:48:50,339:DEBUG:Found ROC-AUC 0.7509 in filename 'model_2_plus_KNeighbors_roc_auc_0.7509.pkl'.
+2025-01-07 07:48:50,339:DEBUG:Found ROC-AUC 0.757 in filename 'model_2_plus_XGBoost_roc_auc_0.7570.pkl'.
+2025-01-07 07:48:50,434:INFO:Loaded best model for target '2_plus': model_2_plus_XGBoost_roc_auc_0.8358.pkl with ROC-AUC 0.8358
+2025-01-07 07:48:50,434:DEBUG:Found ROC-AUC 0.8421 in filename 'model_3_plus_XGBoost_roc_auc_0.8421.pkl'.
+2025-01-07 07:48:50,434:DEBUG:Found ROC-AUC 0.835 in filename 'model_3_plus_XGBoost_roc_auc_0.8350.pkl'.
+2025-01-07 07:48:50,434:DEBUG:Found ROC-AUC 0.8306 in filename 'model_3_plus_SVC_roc_auc_0.8306.pkl'.
+2025-01-07 07:48:50,449:INFO:Loaded best model for target '3_plus': model_3_plus_XGBoost_roc_auc_0.8421.pkl with ROC-AUC 0.8421
+2025-01-07 07:48:50,449:INFO:
+=== Making predictions for target: 1_plus (> 1 3points) ===
+2025-01-07 07:49:09,216:INFO:Prepared features for 112 players for target > 1 3points.
+2025-01-07 07:49:09,216:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-07 07:49:09,251:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.6                2.50                       0.7  ...                      1.2                     1.15                      1.2                     1.15
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.6                2.55                       0.7  ...                      2.1                     2.20                      2.1                     2.20
+
+[5 rows x 17 columns]
+2025-01-07 07:49:09,264:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-07 07:49:09,271:INFO:Predictions made for target '1_plus'.
+2025-01-07 07:49:09,271:DEBUG:Sample predictions for target '1_plus':
+[0.12242438 0.68667644 0.4361568  0.2447389  0.83297017]
+2025-01-07 07:49:09,271:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-07 07:49:09,272:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-07 07:49:09,272:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-07 07:49:09,284:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games    1_plus  2_plus  3_plus
+0    101108                 1.2  0.122424     NaN     NaN
+1   1626145                 2.6  0.686676     NaN     NaN
+2   1626156                 1.9  0.436157     NaN     NaN
+3   1626157                 1.7  0.244739     NaN     NaN
+4   1626164                 2.6  0.832970     NaN     NaN
+2025-01-07 07:49:09,284:INFO:
+=== Making predictions for target: 2_plus (> 2 3points) ===
+2025-01-07 07:49:28,070:INFO:Prepared features for 112 players for target > 2 3points.
+2025-01-07 07:49:28,070:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-07 07:49:28,096:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.6                2.50                       0.7  ...                      1.2                     1.15                      1.2                     1.15
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.6                2.55                       0.7  ...                      2.1                     2.20                      2.1                     2.20
+
+[5 rows x 17 columns]
+2025-01-07 07:49:28,099:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-07 07:49:28,100:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-07 07:49:28,105:INFO:Predictions made for target '2_plus'.
+2025-01-07 07:49:28,108:DEBUG:Sample predictions for target '2_plus':
+[0.13647218 0.5636908  0.19009428 0.13647218 0.70871854]
+2025-01-07 07:49:28,108:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-07 07:49:28,111:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-07 07:49:28,124:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus    2_plus  3_plus
+0    101108                 1.2     NaN  0.136472     NaN
+1   1626145                 2.6     NaN  0.563691     NaN
+2   1626156                 1.9     NaN  0.190094     NaN
+3   1626157                 1.7     NaN  0.136472     NaN
+4   1626164                 2.6     NaN  0.708719     NaN
+2025-01-07 07:49:28,125:INFO:
+=== Making predictions for target: 3_plus (> 3 3points) ===
+2025-01-07 07:49:47,044:INFO:Prepared features for 112 players for target > 3 3points.
+2025-01-07 07:49:47,044:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-07 07:49:47,068:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.6                2.50                       0.7  ...                      1.2                     1.15                      1.2                     1.15
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.6                2.55                       0.7  ...                      2.1                     2.20                      2.1                     2.20
+
+[5 rows x 17 columns]
+2025-01-07 07:49:47,071:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-07 07:49:47,072:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-07 07:49:47,072:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-07 07:49:47,078:INFO:Predictions made for target '3_plus'.
+2025-01-07 07:49:47,078:DEBUG:Sample predictions for target '3_plus':
+[0.05903357 0.05903357 0.05903357 0.05903357 0.16229269]
+2025-01-07 07:49:47,078:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-07 07:49:47,088:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus  2_plus    3_plus
+0    101108                 1.2     NaN     NaN  0.059034
+1   1626145                 2.6     NaN     NaN  0.059034
+2   1626156                 1.9     NaN     NaN  0.059034
+3   1626157                 1.7     NaN     NaN  0.059034
+4   1626164                 2.6     NaN     NaN  0.162293
+2025-01-07 07:49:47,091:DEBUG:Combined Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-07 07:49:47,100:DEBUG:Sample Combined Predictions:
+  player_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0    101108                 1.2  0.059034  0.136472  0.122424
+1   1626145                 2.6  0.059034  0.563691  0.686676
+2   1626156                 1.9  0.059034  0.190094  0.436157
+3   1626157                 1.7  0.059034  0.136472  0.244739
+4   1626164                 2.6  0.162293  0.708719  0.832970
+2025-01-07 07:49:47,114:DEBUG:Latest games DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id']
+2025-01-07 07:49:47,129:DEBUG:Sample latest games:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766
+1  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752
+2  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751
+2025-01-07 07:49:47,137:DEBUG:Merged DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-07 07:49:47,152:DEBUG:Sample merged data:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766                 2.4  0.108403  0.216714  0.579864
+1  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752                 1.4  0.059034  0.136472  0.184245
+2  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763                 2.4  0.106755  0.286218  0.597098
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753                 1.6  0.059034  0.162744  0.342169
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751                 1.8  0.059034  0.136472  0.776762
+2025-01-07 07:49:47,161:INFO:Top 25 scorers identified for target '3_plus' excluding previously selected players.
+2025-01-07 07:49:47,170:DEBUG:Top scorers for target '3_plus':
+    player_id         player_name     team_id  predicted_probability
+44     203468         CJ McCollum  1610612740               0.588278
+52    1628401       Derrick White  1610612738               0.588278
+86    1629014     Anfernee Simons  1610612757               0.588278
+42    1630202    Payton Pritchard  1610612738               0.588278
+87    1626181       Norman Powell  1610612746               0.588278
+77    1628370          Malik Monk  1610612758               0.588278
+19    1629673        Jordan Poole  1610612764               0.547722
+36    1630163         LaMelo Ball  1610612766               0.547722
+104   1641705   Victor Wembanyama  1610612759               0.547722
+109    202691       Klay Thompson  1610612742               0.511622
+68    1630169   Tyrese Haliburton  1610612754               0.511622
+16    1630560          Cam Thomas  1610612751               0.509475
+55    1641706      Brandon Miller  1610612766               0.499941
+43    1630530     Trey Murphy III  1610612740               0.499941
+48     201939       Stephen Curry  1610612744               0.470313
+71    1627736       Malik Beasley  1610612749               0.470313
+25    1628374     Lauri Markkanen  1610612762               0.470313
+83    1629632          Coby White  1610612741               0.468489
+11    1626220       Royce O'Neale  1610612756               0.464887
+59    1628415       Dillon Brooks  1610612745               0.422732
+17    1629661     Cameron Johnson  1610612751               0.389114
+30    1629008  Michael Porter Jr.  1610612743               0.358172
+58    1628378    Donovan Mitchell  1610612739               0.357878
+84    1629639         Tyler Herro  1610612748               0.351851
+108    203897         Zach LaVine  1610612741               0.323408
+2025-01-07 07:49:47,170:DEBUG:Excluded player IDs after '3_plus' list: {'1630530', '1629661', '1628378', '203468', '1630169', '1628401', '203897', '1628370', '1629008', '1629014', '1629632', '1628415', '1630163', '201939', '1629639', '1630202', '1628374', '1629673', '1626220', '1627736', '1641705', '202691', '1641706', '1630560', '1626181'}
+2025-01-07 07:49:47,174:INFO:Top 25 scorers identified for target '2_plus' excluding previously selected players.
+2025-01-07 07:49:47,181:DEBUG:Top scorers for target '2_plus':
+    player_id              player_name     team_id  predicted_probability
+37    1628369             Jayson Tatum  1610612738               0.794259
+9     1629029              Luka Dončić  1610612742               0.794259
+95    1630162          Anthony Edwards  1610612750               0.794259
+94     203081           Damian Lillard  1610612749               0.794259
+90    1628978         Donte DiVincenzo  1610612750               0.794259
+69    1630178             Tyrese Maxey  1610612755               0.758384
+33    1629027               Trae Young  1610612737               0.758384
+14     202681             Kyrie Irving  1610612742               0.749533
+57    1629636           Darius Garland  1610612739               0.749533
+10     203924             Jerami Grant  1610612757               0.749533
+35       2544             LeBron James  1610612747               0.708719
+99    1628969            Mikal Bridges  1610612751               0.708719
+38    1629652            Luguentz Dort  1610612760               0.708719
+67    1626164             Devin Booker  1610612756               0.708719
+72    1626145               Tyus Jones  1610612764               0.563691
+73    1630577        Julian Champagnie  1610612759               0.563691
+62    1627832            Fred VanVleet  1610612745               0.563206
+29    1627750             Jamal Murray  1610612743               0.551433
+46    1630559            Austin Reaves  1610612747               0.551433
+91    1627783            Pascal Siakam  1610612754               0.516757
+54    1628983  Shai Gilgeous-Alexander  1610612760               0.516757
+106    201142             Kevin Durant  1610612756               0.516757
+31    1629631          De'Andre Hunter  1610612737               0.512298
+23     203999             Nikola Jokić  1610612743               0.465082
+6     1627742           Brandon Ingram  1610612740               0.465082
+2025-01-07 07:49:47,182:DEBUG:Excluded player IDs after '2_plus' list: {'1630530', '1629661', '1628378', '1630577', '203468', '1628369', '1630169', '1628401', '203924', '203897', '1629652', '1628370', '1629631', '1629008', '1629636', '1627783', '1630162', '1626145', '1627832', '1629014', '203081', '1630178', '1629632', '1628415', '1629029', '1630163', '201939', '1629027', '1630559', '203999', '1628978', '1629639', '1630202', '1628969', '1628374', '1629673', '1626220', '1627736', '1641705', '1628983', '1627750', '202691', '1641706', '1630560', '201142', '1626181', '1627742', '202681', '1626164', '2544'}
+2025-01-07 07:49:47,185:INFO:Top 25 scorers identified for target '1_plus' excluding previously selected players.
+2025-01-07 07:49:47,191:DEBUG:Top scorers for target '1_plus':
+    player_id        player_name     team_id  predicted_probability
+107   1628379       Luke Kennard  1610612763               0.865803
+18    1630591        Jalen Suggs  1610612753               0.859589
+88    1630595    Cade Cunningham  1610612765               0.855956
+50    1629012      Collin Sexton  1610612762               0.831926
+28    1630217       Desmond Bane  1610612763               0.830924
+102   1630193  Immanuel Quickley  1610612761               0.826022
+89    1629130    Duncan Robinson  1610612748               0.813517
+4     1629001  De'Anthony Melton  1610612751               0.776762
+40    1628970      Miles Bridges  1610612766               0.769575
+22    1630631      Jose Alvarado  1610612740               0.746730
+78    1628960      Grayson Allen  1610612756               0.739895
+15    1631093         Jaden Ivey  1610612765               0.707235
+65    1630557      Corey Kispert  1610612764               0.688636
+45     203471    Dennis Schröder  1610612744               0.675834
+64    1629004     Svi Mykhailiuk  1610612762               0.642297
+5     1630532       Franz Wagner  1610612753               0.628728
+105    202696     Nikola Vučević  1610612741               0.597903
+2     1641713         GG Jackson  1610612763               0.597098
+92    1641711        Gradey Dick  1610612761               0.588575
+49    1630224        Jalen Green  1610612745               0.581214
+0      202722      Davis Bertans  1610612766               0.579864
+75     203084    Harrison Barnes  1610612758               0.560112
+61    1630573         Sam Hauser  1610612738               0.526358
+98    1642377       Jaylen Wells  1610612763               0.518564
+81     201935       James Harden  1610612746               0.512805
+2025-01-07 07:49:47,192:DEBUG:Excluded player IDs after '1_plus' list: {'1630530', '1629661', '1628378', '1630577', '203468', '1628970', '1642377', '202722', '1630532', '1628369', '1630169', '1628401', '203924', '1630193', '203897', '1629652', '1628370', '1629631', '1629130', '1629004', '1630557', '1629008', '203084', '1629636', '1627783', '1628379', '1630162', '1626145', '1630217', '1631093', '202696', '1630573', '1627832', '1629014', '203081', '1630178', '1629632', '1628415', '1629029', '1630163', '201939', '1629027', '1630591', '1630559', '203999', '203471', '1628978', '1629639', '1630202', '1628969', '1628960', '1628374', '1630224', '1629673', '1626220', '1627736', '1641705', '1628983', '1641713', '1627750', '202691', '1630595', '1629012', '1629001', '1641711', '1641706', '201935', '1630560', '1630631', '201142', '1626181', '1627742', '202681', '1626164', '2544'}
+2025-01-07 07:49:47,195:INFO:Top scorers for '3_plus' saved to ../data/top_scorers/top_15_3_plus.csv.
+2025-01-07 07:49:47,196:INFO:Top scorers for '2_plus' saved to ../data/top_scorers/top_15_2_plus.csv.
+2025-01-07 07:49:47,198:INFO:Top scorers for '1_plus' saved to ../data/top_scorers/top_15_1_plus.csv.
+2025-01-07 07:49:47,215:DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-07 07:49:47,510:DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-07 07:49:47,563:INFO:Saved updated top scorers for 3_plus to ../data/top_scorers/top_25_3_plus.csv
+2025-01-07 07:49:47,575:INFO:Saved updated top scorers for 2_plus to ../data/top_scorers/top_25_2_plus.csv
+2025-01-07 07:49:47,582:INFO:Saved updated top scorers for 1_plus to ../data/top_scorers/top_25_1_plus.csv
+2025-01-07 07:49:47,582:INFO:Done updating predictions with 'is_playing_today' column.
+2025-01-07 07:49:47,806:WARNING:Player ID 1628983 is NOT included in Top 3_plus scorers. Predicted probability: 0.06.
+2025-01-07 07:49:47,811:WARNING:Player ID 1628983 is NOT included in Top 2_plus scorers. Predicted probability: 0.52.
+2025-01-07 07:49:47,814:WARNING:Player ID 1628983 is NOT included in Top 1_plus scorers. Predicted probability: 0.68.
+2025-01-07 07:49:47,993:WARNING:Player ID 1629029 is NOT included in Top 3_plus scorers. Predicted probability: 0.30.
+2025-01-07 07:49:48,002:WARNING:Player ID 1629029 is NOT included in Top 2_plus scorers. Predicted probability: 0.79.
+2025-01-07 07:49:48,006:WARNING:Player ID 1629029 is NOT included in Top 1_plus scorers. Predicted probability: 0.91.
+2025-01-07 07:49:48,007:ERROR:Player file 'player_1629025.csv' not found for verification.
+2025-01-07 07:49:48,007:INFO:Prediction process completed successfully.
+2025-01-08 10:28:54,397:INFO:Prediction process started.
+2025-01-08 10:28:55,174:INFO:Loaded data from 112 player files. Total games loaded: 12601
+2025-01-08 10:28:55,175:DEBUG:Found ROC-AUC 0.7193 in filename 'model_1_plus_XGBoost_roc_auc_0.7193.pkl'.
+2025-01-08 10:28:55,175:DEBUG:Found ROC-AUC 0.7337 in filename 'model_1_plus_XGBoost_roc_auc_0.7337.pkl'.
+2025-01-08 10:28:55,402:INFO:Loaded best model for target '1_plus': model_1_plus_XGBoost_roc_auc_0.7337.pkl with ROC-AUC 0.7337
+2025-01-08 10:28:55,402:DEBUG:Found ROC-AUC 0.8358 in filename 'model_2_plus_XGBoost_roc_auc_0.8358.pkl'.
+2025-01-08 10:28:55,402:DEBUG:Found ROC-AUC 0.7241 in filename 'model_2_plus_LogisticRegression_roc_auc_0.7241.pkl'.
+2025-01-08 10:28:55,414:INFO:Loaded best model for target '2_plus': model_2_plus_XGBoost_roc_auc_0.8358.pkl with ROC-AUC 0.8358
+2025-01-08 10:28:55,414:DEBUG:Found ROC-AUC 0.8018 in filename 'model_3_plus_XGBoost_roc_auc_0.8018.pkl'.
+2025-01-08 10:28:55,414:DEBUG:Found ROC-AUC 0.835 in filename 'model_3_plus_XGBoost_roc_auc_0.8350.pkl'.
+2025-01-08 10:28:55,429:INFO:Loaded best model for target '3_plus': model_3_plus_XGBoost_roc_auc_0.8350.pkl with ROC-AUC 0.8350
+2025-01-08 10:28:55,429:INFO:
+=== Making predictions for target: 1_plus (> 1 3points) ===
+2025-01-08 10:29:09,731:INFO:Prepared features for 112 players for target > 1 3points.
+2025-01-08 10:29:09,731:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-08 10:29:09,758:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.2                2.45                       0.6  ...                      1.2                     1.10                      1.2                     1.10
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.4                2.55                       0.6  ...                      2.2                     2.20                      2.2                     2.20
+
+[5 rows x 17 columns]
+2025-01-08 10:29:09,767:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-08 10:29:09,775:INFO:Predictions made for target '1_plus'.
+2025-01-08 10:29:09,776:DEBUG:Sample predictions for target '1_plus':
+[0.38491055 0.41092306 0.42506975 0.5889617  0.41030613]
+2025-01-08 10:29:09,776:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-08 10:29:09,777:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-08 10:29:09,777:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-08 10:29:09,786:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games    1_plus  2_plus  3_plus
+0    101108                 1.2  0.384911     NaN     NaN
+1   1626145                 2.2  0.410923     NaN     NaN
+2   1626156                 1.9  0.425070     NaN     NaN
+3   1626157                 1.7  0.588962     NaN     NaN
+4   1626164                 2.4  0.410306     NaN     NaN
+2025-01-08 10:29:09,786:INFO:
+=== Making predictions for target: 2_plus (> 2 3points) ===
+2025-01-08 10:29:23,615:INFO:Prepared features for 112 players for target > 2 3points.
+2025-01-08 10:29:23,615:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-08 10:29:23,635:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.2                2.45                       0.6  ...                      1.2                     1.10                      1.2                     1.10
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.4                2.55                       0.6  ...                      2.2                     2.20                      2.2                     2.20
+
+[5 rows x 17 columns]
+2025-01-08 10:29:23,638:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-08 10:29:23,639:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-08 10:29:23,643:INFO:Predictions made for target '2_plus'.
+2025-01-08 10:29:23,643:DEBUG:Sample predictions for target '2_plus':
+[0.13647218 0.21671367 0.13647218 0.13647218 0.46508232]
+2025-01-08 10:29:23,643:ERROR:No model available for target 3_plus. Skipping predictions for this target.
+2025-01-08 10:29:23,644:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-08 10:29:23,652:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus    2_plus  3_plus
+0    101108                 1.2     NaN  0.136472     NaN
+1   1626145                 2.2     NaN  0.216714     NaN
+2   1626156                 1.9     NaN  0.136472     NaN
+3   1626157                 1.7     NaN  0.136472     NaN
+4   1626164                 2.4     NaN  0.465082     NaN
+2025-01-08 10:29:23,653:INFO:
+=== Making predictions for target: 3_plus (> 3 3points) ===
+2025-01-08 10:29:37,628:INFO:Prepared features for 112 players for target > 3 3points.
+2025-01-08 10:29:37,628:DEBUG:Features DataFrame columns: ['player_id', '3ppg_last_10_games', '3ppg_last_20_games', 'pct_1_plus_last_10_games', 'pct_2_plus_last_10_games', 'pct_3_plus_last_10_games', 'avg_score_bottom_20_percent_games', 'fg3a_avg_last_10_games', 'fg3a_avg_season', 'fg3a_avg_last_5_games', 'minutes_avg_last_10_games', 'minutes_avg_season', 'minutes_avg_last_5_games', 'fouls_avg_last_10_games', 'fouls_avg_last_20_games', 'foul_rate_last_10_games', 'foul_rate_last_20_games']
+2025-01-08 10:29:37,655:DEBUG:Sample features:
+  player_id  3ppg_last_10_games  3ppg_last_20_games  pct_1_plus_last_10_games  ...  fouls_avg_last_10_games  fouls_avg_last_20_games  foul_rate_last_10_games  foul_rate_last_20_games
+0    101108                 1.2                1.30                       0.4  ...                      1.6                     1.65                      1.6                     1.65
+1   1626145                 2.2                2.45                       0.6  ...                      1.2                     1.10                      1.2                     1.10
+2   1626156                 1.9                1.85                       0.6  ...                      2.0                     1.85                      2.0                     1.85
+3   1626157                 1.7                1.80                       0.5  ...                      4.0                     3.80                      4.0                     3.80
+4   1626164                 2.4                2.55                       0.6  ...                      2.2                     2.20                      2.2                     2.20
+
+[5 rows x 17 columns]
+2025-01-08 10:29:37,658:INFO:Combined features and predictions saved to ../data/top_scorers/combined_features_predictions.csv.
+2025-01-08 10:29:37,659:ERROR:No model available for target 1_plus. Skipping predictions for this target.
+2025-01-08 10:29:37,660:ERROR:No model available for target 2_plus. Skipping predictions for this target.
+2025-01-08 10:29:37,666:INFO:Predictions made for target '3_plus'.
+2025-01-08 10:29:37,667:DEBUG:Sample predictions for target '3_plus':
+[0.07235408 0.07235408 0.07235408 0.11696868 0.10707586]
+2025-01-08 10:29:37,667:DEBUG:Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '1_plus', '2_plus', '3_plus']
+2025-01-08 10:29:37,676:DEBUG:Sample predictions:
+  player_id  3ppg_last_10_games  1_plus  2_plus    3_plus
+0    101108                 1.2     NaN     NaN  0.072354
+1   1626145                 2.2     NaN     NaN  0.072354
+2   1626156                 1.9     NaN     NaN  0.072354
+3   1626157                 1.7     NaN     NaN  0.116969
+4   1626164                 2.4     NaN     NaN  0.107076
+2025-01-08 10:29:37,679:DEBUG:Combined Predictions DataFrame columns: ['player_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-08 10:29:37,689:DEBUG:Sample Combined Predictions:
+  player_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0    101108                 1.2  0.072354  0.136472  0.384911
+1   1626145                 2.2  0.072354  0.216714  0.410923
+2   1626156                 1.9  0.072354  0.136472  0.425070
+3   1626157                 1.7  0.116969  0.136472  0.588962
+4   1626164                 2.4  0.107076  0.465082  0.410306
+2025-01-08 10:29:37,695:DEBUG:Latest games DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id']
+2025-01-08 10:29:37,705:DEBUG:Sample latest games:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766
+1  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752
+2  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751
+2025-01-08 10:29:37,707:DEBUG:Merged DataFrame columns: ['game_id', 'game_date', '3points', 'fg3a', 'minutes', 'fouls', 'player_id', 'player_name', 'team_id', '3ppg_last_10_games', '3_plus', '2_plus', '1_plus']
+2025-01-08 10:29:37,720:DEBUG:Sample merged data:
+    game_id  game_date  3points  fg3a  minutes  fouls player_id        player_name     team_id  3ppg_last_10_games    3_plus    2_plus    1_plus
+0  22301173 2024-04-12        3     7       22      3    202722      Davis Bertans  1610612766                 2.4  0.072354  0.216714  0.403371
+1  22301190 2024-04-14        3     6       17      0    202711   Bojan Bogdanović  1610612752                 1.4  0.072354  0.136472  0.321248
+2  22301193 2024-04-14        4    13       44      1   1641713         GG Jackson  1610612763                 2.4  0.080728  0.245868  0.437775
+3  22400123 2024-10-30        2     9       37      2   1631094     Paolo Banchero  1610612753                 1.6  0.116969  0.136472  0.516911
+4  22400007 2024-11-12        2     6       26      2   1629001  De'Anthony Melton  1610612751                 1.8  0.072354  0.136472  0.348641
+2025-01-08 10:29:37,724:INFO:Top 25 scorers identified for target '3_plus' excluding previously selected players.
+2025-01-08 10:29:37,731:DEBUG:Top scorers for target '3_plus':
+    player_id         player_name     team_id  predicted_probability
+20    1629673        Jordan Poole  1610612764               0.515347
+100   1641706      Brandon Miller  1610612766               0.515347
+93    1628369        Jayson Tatum  1610612738               0.515347
+9     1629029         Luka Dončić  1610612742               0.515347
+97    1629027          Trae Young  1610612737               0.515347
+35    1630530     Trey Murphy III  1610612740               0.515347
+49    1630178        Tyrese Maxey  1610612755               0.490975
+43     203081      Damian Lillard  1610612749               0.490975
+38    1629014     Anfernee Simons  1610612757               0.490975
+98    1630162     Anthony Edwards  1610612750               0.485256
+61    1641705   Victor Wembanyama  1610612759               0.485256
+52     203897         Zach LaVine  1610612741               0.485256
+74     203468         CJ McCollum  1610612740               0.460953
+13     202681        Kyrie Irving  1610612742               0.460953
+53    1630169   Tyrese Haliburton  1610612754               0.460953
+99    1629008  Michael Porter Jr.  1610612743               0.414101
+76     201939       Stephen Curry  1610612744               0.413472
+94    1630163         LaMelo Ball  1610612766               0.413472
+48    1626181       Norman Powell  1610612746               0.413472
+44    1628969       Mikal Bridges  1610612751               0.412092
+32    1628401       Derrick White  1610612738               0.397200
+85    1629639         Tyler Herro  1610612748               0.397200
+81    1628415       Dillon Brooks  1610612745               0.385222
+36    1628378    Donovan Mitchell  1610612739               0.385039
+16    1629661     Cameron Johnson  1610612751               0.385039
+2025-01-08 10:29:37,731:DEBUG:Excluded player IDs after '3_plus' list: {'1641706', '202681', '1628401', '1630169', '1626181', '1628369', '1641705', '1629639', '1630530', '203468', '1629661', '1629673', '1630178', '1629029', '1629014', '1628969', '1628415', '1628378', '1629027', '1630162', '203897', '1630163', '203081', '1629008', '201939'}
+2025-01-08 10:29:37,735:INFO:Top 25 scorers identified for target '2_plus' excluding previously selected players.
+2025-01-08 10:29:37,741:DEBUG:Top scorers for target '2_plus':
+    player_id       player_name     team_id  predicted_probability
+109    202691     Klay Thompson  1610612742               0.758384
+73    1628374   Lauri Markkanen  1610612762               0.758384
+77    1628978  Donte DiVincenzo  1610612750               0.758384
+33    1629636    Darius Garland  1610612739               0.749533
+10    1626220     Royce O'Neale  1610612756               0.708719
+17    1630560        Cam Thomas  1610612751               0.708719
+90       2544      LeBron James  1610612747               0.708719
+11     203924      Jerami Grant  1610612757               0.708719
+40    1628370        Malik Monk  1610612758               0.708719
+78    1630224       Jalen Green  1610612745               0.708719
+86    1629012     Collin Sexton  1610612762               0.708719
+60    1629632        Coby White  1610612741               0.603556
+110   1627832     Fred VanVleet  1610612745               0.563206
+95    1627750      Jamal Murray  1610612743               0.516757
+105   1630559     Austin Reaves  1610612747               0.516757
+39    1627736     Malik Beasley  1610612749               0.512298
+84    1630202  Payton Pritchard  1610612738               0.512298
+101   1629631   De'Andre Hunter  1610612737               0.512298
+104   1629130   Duncan Robinson  1610612748               0.512298
+26    1629652     Luguentz Dort  1610612760               0.499877
+21     203999      Nikola Jokić  1610612743               0.465082
+87    1626164      Devin Booker  1610612756               0.465082
+6     1627742    Brandon Ingram  1610612740               0.465082
+54    1630595   Cade Cunningham  1610612765               0.465082
+55    1627783     Pascal Siakam  1610612754               0.465082
+2025-01-08 10:29:37,741:DEBUG:Excluded player IDs after '2_plus' list: {'1641706', '202681', '1628374', '203924', '1627832', '1628401', '1630169', '1627750', '1626181', '1629130', '202691', '1628369', '1641705', '1627742', '1626220', '1629639', '1630530', '203468', '1629661', '1630224', '1629673', '1626164', '1629636', '1628370', '1630178', '1629029', '1629631', '1629652', '1629014', '1628969', '1628415', '1628378', '1629027', '1629632', '1630162', '1628978', '1627736', '203897', '1630595', '1630202', '1630559', '1630560', '1630163', '203081', '1629008', '1629012', '2544', '203999', '1627783', '201939'}
+2025-01-08 10:29:37,744:INFO:Top 25 scorers identified for target '1_plus' excluding previously selected players.
+2025-01-08 10:29:37,754:DEBUG:Top scorers for target '1_plus':
+    player_id              player_name     team_id  predicted_probability
+46     201935             James Harden  1610612746               0.668168
+23    1630217             Desmond Bane  1610612763               0.659195
+5     1630532             Franz Wagner  1610612753               0.645104
+57     202331              Paul George  1610612746               0.636507
+75     203992        Bogdan Bogdanović  1610612737               0.599129
+89    1627827      Dorian Finney-Smith  1610612747               0.596581
+27    1628983  Shai Gilgeous-Alexander  1610612760               0.596368
+72     202696           Nikola Vučević  1610612741               0.593893
+41    1630577        Julian Champagnie  1610612759               0.591167
+22    1626157       Karl-Anthony Towns  1610612750               0.588962
+50    1629628               RJ Barrett  1610612761               0.577706
+18    1628368             De'Aaron Fox  1610612758               0.576368
+19    1630591              Jalen Suggs  1610612753               0.571177
+56    1631099            Keegan Murray  1610612758               0.557274
+14    1631093               Jaden Ivey  1610612765               0.544888
+106    201142             Kevin Durant  1610612756               0.527897
+64    1626167             Myles Turner  1610612754               0.520381
+3     1631094           Paolo Banchero  1610612753               0.516911
+15    1631095         Jabari Smith Jr.  1610612745               0.510412
+62     202695            Kawhi Leonard  1610612746               0.504371
+71    1641711              Gradey Dick  1610612761               0.502592
+65     201572              Brook Lopez  1610612749               0.481784
+51    1630193        Immanuel Quickley  1610612761               0.478035
+24    1641718           Keyonte George  1610612762               0.449556
+7     1642272             Jared McCain  1610612755               0.437775
+2025-01-08 10:29:37,754:DEBUG:Excluded player IDs after '1_plus' list: {'1641706', '202681', '1628374', '1630217', '201142', '201572', '203992', '202331', '203924', '1627832', '1628401', '1631095', '1642272', '1630169', '1627750', '1626181', '1628983', '202696', '1629130', '1630532', '202691', '1628369', '1641718', '1641705', '1627742', '1626220', '1629639', '1630530', '203468', '1629661', '1630224', '1629673', '1626164', '1630591', '201935', '1641711', '1629628', '1629636', '1628370', '202695', '1630178', '1629029', '1629631', '1629652', '1629014', '1628969', '1628415', '1628368', '1626167', '1628378', '1629027', '1629632', '1630162', '1628978', '1627736', '203897', '1630595', '1627827', '1630202', '1630559', '1630560', '1626157', '1630577', '1630163', '1631093', '203081', '1630193', '1629008', '1629012', '2544', '203999', '1631099', '1631094', '1627783', '201939'}
+2025-01-08 10:29:37,756:INFO:Top scorers for '3_plus' saved to ../data/top_scorers/top_15_3_plus.csv.
+2025-01-08 10:29:37,757:INFO:Top scorers for '2_plus' saved to ../data/top_scorers/top_15_2_plus.csv.
+2025-01-08 10:29:37,758:INFO:Top scorers for '1_plus' saved to ../data/top_scorers/top_15_1_plus.csv.
+2025-01-08 10:29:37,776:DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-08 10:29:38,008:DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-08 10:29:38,032:INFO:Saved updated top scorers for 3_plus to ../data/top_scorers/top_25_3_plus.csv
+2025-01-08 10:29:38,040:INFO:Saved updated top scorers for 2_plus to ../data/top_scorers/top_25_2_plus.csv
+2025-01-08 10:29:38,046:INFO:Saved updated top scorers for 1_plus to ../data/top_scorers/top_25_1_plus.csv
+2025-01-08 10:29:38,046:INFO:Done updating predictions with 'is_playing_today' column.
+2025-01-08 10:29:38,216:WARNING:Player ID 1628983 is NOT included in Top 3_plus scorers. Predicted probability: 0.08.
+2025-01-08 10:29:38,221:WARNING:Player ID 1628983 is NOT included in Top 2_plus scorers. Predicted probability: 0.47.
+2025-01-08 10:29:38,224:WARNING:Player ID 1628983 is NOT included in Top 1_plus scorers. Predicted probability: 0.60.
+2025-01-08 10:29:38,377:WARNING:Player ID 1629029 is NOT included in Top 3_plus scorers. Predicted probability: 0.52.
+2025-01-08 10:29:38,384:WARNING:Player ID 1629029 is NOT included in Top 2_plus scorers. Predicted probability: 0.79.
+2025-01-08 10:29:38,387:WARNING:Player ID 1629029 is NOT included in Top 1_plus scorers. Predicted probability: 0.90.
+2025-01-08 10:29:38,388:ERROR:Player file 'player_1629025.csv' not found for verification.
+2025-01-08 10:29:38,388:INFO:Prediction process completed successfully.
+2025-01-10 08:49:05,590 INFO:Starting update_predictions with single-instance-per-player approach.
+2025-01-10 08:49:06,671 INFO:Loaded model for 3_plus: model_3_plus_approachB_LogisticRegression_acc_0.6459.pkl
+2025-01-10 08:49:06,692 INFO:Loaded model for 2_plus: model_2_plus_approachB_GradientBoosting_acc_0.6480.pkl
+2025-01-10 08:49:06,709 INFO:Loaded model for 1_plus: model_1_plus_approachB_GradientBoosting_acc_0.8395.pkl
+2025-01-10 08:49:06,741 DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-10 08:49:07,062 DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-10 08:49:07,113 INFO:update_predictions complete. One row per player => no duplicates.
+2025-01-11 07:18:21,133 INFO:Starting update_predictions with single-instance-per-player approach.
+2025-01-11 07:18:22,270 INFO:Loaded model for 3_plus: model_3_plus_approachB_LogisticRegression_acc_0.6459.pkl
+2025-01-11 07:18:22,296 INFO:Loaded model for 2_plus: model_2_plus_approachB_GradientBoosting_acc_0.6480.pkl
+2025-01-11 07:18:22,318 INFO:Loaded model for 1_plus: model_1_plus_approachB_XGBoost_acc_0.8454.pkl
+2025-01-11 07:18:22,362 DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-11 07:18:22,661 DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-11 07:18:22,715 INFO:update_predictions complete. One row per player => no duplicates.
+2025-01-12 06:27:29,769 INFO:Starting update_predictions with single-instance-per-player approach.
+2025-01-12 06:27:30,681 INFO:Loaded model for 3_plus: model_3_plus_approachB_LogisticRegression_acc_0.6459.pkl
+2025-01-12 06:27:30,700 INFO:Loaded model for 2_plus: model_2_plus_approachB_GradientBoosting_acc_0.6480.pkl
+2025-01-12 06:27:30,734 INFO:Loaded model for 1_plus: model_1_plus_approachB_XGBoost_acc_0.8454.pkl
+2025-01-12 06:27:30,779 DEBUG:Starting new HTTPS connection (1): www.rotowire.com:443
+2025-01-12 06:27:31,117 DEBUG:https://www.rotowire.com:443 "GET /basketball/nba-lineups.php HTTP/11" 200 None
+2025-01-12 06:27:31,185 INFO:update_predictions complete. One row per player => no duplicates.

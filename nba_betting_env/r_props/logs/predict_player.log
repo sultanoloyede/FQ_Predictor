@@ -1,0 +1,15 @@
+2025-01-15 17:04:21,346 INFO:Starting prediction for player 1629008.
+2025-01-15 17:04:21,417 INFO:Loaded model for 4_plus: model_4_plus_approachB_XGBoost_acc_0.8140.pkl
+2025-01-15 17:04:21,440 INFO:Loaded model for 6_plus: model_6_plus_approachB_GradientBoosting_acc_0.6753.pkl
+2025-01-15 17:04:21,453 INFO:Loaded model for 8_plus: model_8_plus_approachB_GradientBoosting_acc_0.7163.pkl
+2025-01-15 17:04:21,455 INFO:Loaded model for 10_plus: model_10_plus_approachB_LogisticRegression_acc_0.7920.pkl
+2025-01-18 12:24:46,607 INFO:Starting prediction for player 203944.
+2025-01-18 12:24:46,810 INFO:Loaded model for 4_plus: model_4_plus_approachB_XGBoost_acc_0.8109.pkl
+2025-01-18 12:24:46,832 INFO:Loaded model for 6_plus: model_6_plus_approachB_GradientBoosting_acc_0.6741.pkl
+2025-01-18 12:24:46,843 INFO:Loaded model for 8_plus: model_8_plus_approachB_GradientBoosting_acc_0.7092.pkl
+2025-01-18 12:24:46,856 INFO:Loaded model for 10_plus: model_10_plus_approachB_GradientBoosting_acc_0.7887.pkl
+2025-01-18 12:28:38,401 INFO:Starting prediction for player 1627783.
+2025-01-18 12:28:38,498 INFO:Loaded model for 4_plus: model_4_plus_approachB_XGBoost_acc_0.8109.pkl
+2025-01-18 12:28:38,519 INFO:Loaded model for 6_plus: model_6_plus_approachB_GradientBoosting_acc_0.6741.pkl
+2025-01-18 12:28:38,532 INFO:Loaded model for 8_plus: model_8_plus_approachB_GradientBoosting_acc_0.7092.pkl
+2025-01-18 12:28:38,546 INFO:Loaded model for 10_plus: model_10_plus_approachB_GradientBoosting_acc_0.7887.pkl

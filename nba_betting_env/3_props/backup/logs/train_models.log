@@ -1,0 +1,793 @@
+2025-01-05 08:13:38,951:INFO:Training process started.
+2025-01-05 08:13:39,646:INFO:Loaded data from 110 player files. Total games loaded: 12263
+2025-01-05 08:13:39,647:INFO:
+=== Training for Target: 1_plus (> 1 3points) ===
+2025-01-05 08:13:53,474:INFO:Prepared features and targets for 110 players for target > 1 3points.
+2025-01-05 08:13:53,474:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 08:14:15,252:INFO:Best XGBoost ROC-AUC: 0.7909
+2025-01-05 08:14:15,253:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8079255821949569, 'gamma': 4.719458022803786, 'learning_rate': 0.2932754791375502, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 763, 'reg_alpha': 0.6771683423829817, 'reg_lambda': 0.5733670416719333, 'subsample': 0.5642501766169551}
+2025-01-05 08:14:15,254:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 08:15:24,905:INFO:Best GradientBoosting ROC-AUC: 0.7564
+2025-01-05 08:15:24,905:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.02906750508580709, 'max_depth': 9, 'max_features': 'sqrt', 'min_samples_leaf': 5, 'min_samples_split': 4, 'n_estimators': 783, 'subsample': 0.8187787356776066}
+2025-01-05 08:15:24,905:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 08:15:31,673:INFO:Best LogisticRegression ROC-AUC: 0.7972
+2025-01-05 08:15:31,673:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 08:15:31,674:INFO:
+--- Evaluating Model: SVC ---
+2025-01-05 08:20:37,983:INFO:Best SVC ROC-AUC: 0.7885
+2025-01-05 08:20:37,983:INFO:Best SVC Parameters: {'C': 8.18397348116461, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-05 08:20:37,983:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 08:20:38,744:INFO:Best KNeighbors ROC-AUC: 0.7199
+2025-01-05 08:20:38,744:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 3, 'weights': 'distance'}
+2025-01-05 08:20:38,750:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-05 08:20:38,752:INFO:Scaler saved to ../models/scaler_1_plus.pkl.
+2025-01-05 08:20:38,753:INFO:Best model (LogisticRegression) saved to ../models/model_1_plus_LogisticRegression_roc_auc_0.7972.pkl.
+2025-01-05 08:20:38,753:INFO:
+=== Training for Target: 2_plus (> 2 3points) ===
+2025-01-05 08:20:52,414:INFO:Prepared features and targets for 110 players for target > 2 3points.
+2025-01-05 08:20:52,415:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 08:21:04,605:INFO:Best XGBoost ROC-AUC: 0.7375
+2025-01-05 08:21:04,605:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8360130676475996, 'gamma': 1.6407633373736596, 'learning_rate': 0.05651248501832326, 'max_depth': 8, 'min_child_weight': 6, 'n_estimators': 404, 'reg_alpha': 0.03734818874921442, 'reg_lambda': 0.8226005606596583, 'subsample': 0.6800953207056315}
+2025-01-05 08:21:04,605:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 08:22:12,808:INFO:Best GradientBoosting ROC-AUC: 0.7000
+2025-01-05 08:22:12,808:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-05 08:22:12,808:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 08:22:19,741:INFO:Best LogisticRegression ROC-AUC: 0.6947
+2025-01-05 08:22:19,741:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 08:22:19,741:INFO:
+--- Evaluating Model: SVC ---
+2025-01-05 08:32:38,081:INFO:Best SVC ROC-AUC: 0.7508
+2025-01-05 08:32:38,081:INFO:Best SVC Parameters: {'C': 5.185706911647028, 'gamma': 'auto', 'kernel': 'rbf'}
+2025-01-05 08:32:38,081:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 08:32:38,912:INFO:Best KNeighbors ROC-AUC: 0.7509
+2025-01-05 08:32:38,912:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 3, 'weights': 'distance'}
+2025-01-05 08:32:38,914:INFO:KNeighbors model retrained on the entire dataset.
+2025-01-05 08:32:38,915:INFO:Scaler saved to ../models/scaler_2_plus.pkl.
+2025-01-05 08:32:38,916:INFO:Best model (KNeighbors) saved to ../models/model_2_plus_KNeighbors_roc_auc_0.7509.pkl.
+2025-01-05 08:32:38,917:INFO:
+=== Training for Target: 3_plus (> 3 3points) ===
+2025-01-05 08:32:51,941:INFO:Prepared features and targets for 110 players for target > 3 3points.
+2025-01-05 08:32:51,941:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-05 08:33:04,432:INFO:Best XGBoost ROC-AUC: 0.8235
+2025-01-05 08:33:04,432:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.7746133323530602, 'gamma': 3.5729796135003116, 'learning_rate': 0.20805921301531938, 'max_depth': 7, 'min_child_weight': 1, 'n_estimators': 371, 'reg_alpha': 0.5166962574265667, 'reg_lambda': 0.6571113285001668, 'subsample': 0.7178364493389455}
+2025-01-05 08:33:04,432:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-05 08:34:13,121:INFO:Best GradientBoosting ROC-AUC: 0.7788
+2025-01-05 08:34:13,121:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-05 08:34:13,121:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-05 08:34:19,927:INFO:Best LogisticRegression ROC-AUC: 0.8047
+2025-01-05 08:34:19,928:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-05 08:34:19,928:INFO:
+--- Evaluating Model: SVC ---
+2025-01-05 08:37:27,662:INFO:Best SVC ROC-AUC: 0.8306
+2025-01-05 08:37:27,662:INFO:Best SVC Parameters: {'C': 2.813490317738959, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-05 08:37:27,662:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-05 08:37:28,404:INFO:Best KNeighbors ROC-AUC: 0.8188
+2025-01-05 08:37:28,404:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2025-01-05 08:37:28,409:INFO:SVC model retrained on the entire dataset.
+2025-01-05 08:37:28,410:INFO:Scaler saved to ../models/scaler_3_plus.pkl.
+2025-01-05 08:37:28,411:INFO:Best model (SVC) saved to ../models/model_3_plus_SVC_roc_auc_0.8306.pkl.
+2025-01-05 08:37:28,411:INFO:
+=== Training process completed successfully ===
+2025-01-06 06:43:11,212:INFO:Training process started.
+2025-01-06 06:43:11,800:INFO:Loaded data from 111 player files. Total games loaded: 12385
+2025-01-06 06:43:11,801:INFO:
+=== Training for Target: 1_plus (> 1 3points) ===
+2025-01-06 06:43:30,689:INFO:Prepared features and targets for 111 players for target > 1 3points.
+2025-01-06 06:43:30,690:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:44:02,684:INFO:Best XGBoost ROC-AUC: 0.7410
+2025-01-06 06:44:02,685:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8005575058716043, 'gamma': 3.540362888980227, 'learning_rate': 0.016175348288740735, 'max_depth': 4, 'min_child_weight': 8, 'n_estimators': 591, 'reg_alpha': 0.9385527090157502, 'reg_lambda': 0.0007787658410143283, 'subsample': 0.9961057796456088}
+2025-01-06 06:44:02,685:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:46:00,578:INFO:Best GradientBoosting ROC-AUC: 0.7055
+2025-01-06 06:46:00,578:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.05346846162736693, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 6, 'min_samples_split': 5, 'n_estimators': 538, 'subsample': 0.8808098076643588}
+2025-01-06 06:46:00,578:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:46:10,913:INFO:Best LogisticRegression ROC-AUC: 0.7317
+2025-01-06 06:46:10,914:INFO:Best LogisticRegression Parameters: {'C': 0.017787658410143285, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-06 06:46:10,922:INFO:
+--- Evaluating Model: SVC ---
+2025-01-06 06:54:11,094:INFO:Best SVC ROC-AUC: 0.6881
+2025-01-06 06:54:11,096:INFO:Best SVC Parameters: {'C': 2.2233911067827616, 'gamma': 'auto', 'kernel': 'rbf'}
+2025-01-06 06:54:11,096:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 06:54:12,297:INFO:Best KNeighbors ROC-AUC: 0.7149
+2025-01-06 06:54:12,297:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 4, 'weights': 'distance'}
+2025-01-06 06:54:12,400:INFO:XGBoost model retrained on the entire dataset.
+2025-01-06 06:54:12,405:INFO:Scaler saved to ../models/scaler_1_plus.pkl.
+2025-01-06 06:54:12,419:INFO:Best model (XGBoost) saved to ../models/model_1_plus_XGBoost_roc_auc_0.7410.pkl.
+2025-01-06 06:54:12,419:INFO:
+=== Training for Target: 2_plus (> 2 3points) ===
+2025-01-06 06:54:32,544:INFO:Prepared features and targets for 111 players for target > 2 3points.
+2025-01-06 06:54:32,545:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 06:54:50,372:INFO:Best XGBoost ROC-AUC: 0.7570
+2025-01-06 06:54:50,372:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.767044709687721, 'gamma': 2.424149856794916, 'learning_rate': 0.2177308098670811, 'max_depth': 12, 'min_child_weight': 8, 'n_estimators': 926, 'reg_alpha': 0.32320293202075523, 'reg_lambda': 0.5187906217433661, 'subsample': 0.8515094794475889}
+2025-01-06 06:54:50,372:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 06:56:36,104:INFO:Best GradientBoosting ROC-AUC: 0.6985
+2025-01-06 06:56:36,106:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.277613966553134, 'max_depth': 13, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 383, 'subsample': 0.8344620298315498}
+2025-01-06 06:56:36,106:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 06:56:47,111:INFO:Best LogisticRegression ROC-AUC: 0.7359
+2025-01-06 06:56:47,111:INFO:Best LogisticRegression Parameters: {'C': 1.662669390630025, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-06 06:56:47,112:INFO:
+--- Evaluating Model: SVC ---
+2025-01-06 07:08:35,459:INFO:Best SVC ROC-AUC: 0.7252
+2025-01-06 07:08:35,461:INFO:Best SVC Parameters: {'C': 7.41993941811405, 'gamma': 'scale', 'kernel': 'rbf'}
+2025-01-06 07:08:35,463:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 07:08:36,486:INFO:Best KNeighbors ROC-AUC: 0.7523
+2025-01-06 07:08:36,486:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-06 07:08:36,684:INFO:XGBoost model retrained on the entire dataset.
+2025-01-06 07:08:36,686:INFO:Scaler saved to ../models/scaler_2_plus.pkl.
+2025-01-06 07:08:36,707:INFO:Best model (XGBoost) saved to ../models/model_2_plus_XGBoost_roc_auc_0.7570.pkl.
+2025-01-06 07:08:36,707:INFO:
+=== Training for Target: 3_plus (> 3 3points) ===
+2025-01-06 07:08:57,221:INFO:Prepared features and targets for 111 players for target > 3 3points.
+2025-01-06 07:08:57,221:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-06 07:09:14,811:INFO:Best XGBoost ROC-AUC: 0.8421
+2025-01-06 07:09:14,811:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6150926341207776, 'gamma': 2.4959668994237614, 'learning_rate': 0.18160125976275493, 'max_depth': 3, 'min_child_weight': 1, 'n_estimators': 271, 'reg_alpha': 0.9404585843529143, 'reg_lambda': 0.9539285770025874, 'subsample': 0.9574321951102243}
+2025-01-06 07:09:14,812:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-06 07:11:09,161:INFO:Best GradientBoosting ROC-AUC: 0.7925
+2025-01-06 07:11:09,161:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.19033450352296263, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 13, 'n_estimators': 513, 'subsample': 0.6061695553391381}
+2025-01-06 07:11:09,161:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-06 07:11:21,775:INFO:Best LogisticRegression ROC-AUC: 0.7788
+2025-01-06 07:11:21,775:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-06 07:11:21,776:INFO:
+--- Evaluating Model: SVC ---
+2025-01-06 07:13:54,877:INFO:Best SVC ROC-AUC: 0.7936
+2025-01-06 07:13:54,879:INFO:Best SVC Parameters: {'C': 0.8455064367977082, 'gamma': 'scale', 'kernel': 'rbf'}
+2025-01-06 07:13:54,879:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-06 07:13:55,874:INFO:Best KNeighbors ROC-AUC: 0.8349
+2025-01-06 07:13:55,874:INFO:Best KNeighbors Parameters: {'metric': 'euclidean', 'n_neighbors': 6, 'weights': 'distance'}
+2025-01-06 07:13:56,014:INFO:XGBoost model retrained on the entire dataset.
+2025-01-06 07:13:56,017:INFO:Scaler saved to ../models/scaler_3_plus.pkl.
+2025-01-06 07:13:56,023:INFO:Best model (XGBoost) saved to ../models/model_3_plus_XGBoost_roc_auc_0.8421.pkl.
+2025-01-06 07:13:56,023:INFO:
+=== Training process completed successfully ===
+2025-01-07 07:10:40,429:INFO:Training process started.
+2025-01-07 07:10:41,183:INFO:Loaded data from 112 player files. Total games loaded: 12561
+2025-01-07 07:10:41,184:INFO:
+=== Training for Target: 1_plus (> 1 3points) ===
+2025-01-07 07:10:59,035:INFO:Prepared features and targets for 112 players for target > 1 3points.
+2025-01-07 07:10:59,036:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 07:11:28,170:INFO:Best XGBoost ROC-AUC: 0.7337
+2025-01-07 07:11:28,171:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6044593588076801, 'gamma': 3.355717584120253, 'learning_rate': 0.11759403438884916, 'max_depth': 13, 'min_child_weight': 2, 'n_estimators': 884, 'reg_alpha': 0.8486697949246744, 'reg_lambda': 0.13662133144202881, 'subsample': 0.8544554984550593}
+2025-01-07 07:11:28,171:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 07:13:10,793:INFO:Best GradientBoosting ROC-AUC: 0.6949
+2025-01-07 07:13:10,793:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08553468874760924, 'max_depth': 4, 'max_features': 'log2', 'min_samples_leaf': 17, 'min_samples_split': 6, 'n_estimators': 724, 'subsample': 0.9988702425244709}
+2025-01-07 07:13:10,794:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 07:13:20,540:INFO:Best LogisticRegression ROC-AUC: 0.6887
+2025-01-07 07:13:20,540:INFO:Best LogisticRegression Parameters: {'C': 0.06522117123602399, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-07 07:13:20,547:INFO:
+--- Evaluating Model: SVC ---
+2025-01-07 07:24:56,959:INFO:Best SVC ROC-AUC: 0.5769
+2025-01-07 07:24:56,961:INFO:Best SVC Parameters: {'C': 2.0967378215835972, 'gamma': 'scale', 'kernel': 'rbf'}
+2025-01-07 07:24:56,961:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 07:24:58,066:INFO:Best KNeighbors ROC-AUC: 0.6976
+2025-01-07 07:24:58,066:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-07 07:24:58,232:INFO:XGBoost model retrained on the entire dataset.
+2025-01-07 07:24:58,235:INFO:Scaler saved to ../models/scaler_1_plus.pkl.
+2025-01-07 07:24:58,254:INFO:Best model (XGBoost) saved to ../models/model_1_plus_XGBoost_roc_auc_0.7337.pkl.
+2025-01-07 07:24:58,254:INFO:
+=== Training for Target: 2_plus (> 2 3points) ===
+2025-01-07 07:25:17,786:INFO:Prepared features and targets for 112 players for target > 2 3points.
+2025-01-07 07:25:17,788:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 07:25:34,091:INFO:Best XGBoost ROC-AUC: 0.8358
+2025-01-07 07:25:34,091:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8248164495236073, 'gamma': 4.24611705247089, 'learning_rate': 0.207283867690103, 'max_depth': 3, 'min_child_weight': 3, 'n_estimators': 569, 'reg_alpha': 0.26520236768172545, 'reg_lambda': 0.24398964337908358, 'subsample': 0.9865052773762228}
+2025-01-07 07:25:34,091:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 07:27:12,664:INFO:Best GradientBoosting ROC-AUC: 0.7835
+2025-01-07 07:27:12,666:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-07 07:27:12,666:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 07:27:21,880:INFO:Best LogisticRegression ROC-AUC: 0.7771
+2025-01-07 07:27:21,880:INFO:Best LogisticRegression Parameters: {'C': 1.4192422497476265, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-07 07:27:21,881:INFO:
+--- Evaluating Model: SVC ---
+2025-01-07 07:41:02,888:INFO:Best SVC ROC-AUC: 0.7684
+2025-01-07 07:41:02,891:INFO:Best SVC Parameters: {'C': 8.431949117361643, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-07 07:41:02,892:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 07:41:04,046:INFO:Best KNeighbors ROC-AUC: 0.7665
+2025-01-07 07:41:04,046:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2025-01-07 07:41:04,173:INFO:XGBoost model retrained on the entire dataset.
+2025-01-07 07:41:04,177:INFO:Scaler saved to ../models/scaler_2_plus.pkl.
+2025-01-07 07:41:04,189:INFO:Best model (XGBoost) saved to ../models/model_2_plus_XGBoost_roc_auc_0.8358.pkl.
+2025-01-07 07:41:04,190:INFO:
+=== Training for Target: 3_plus (> 3 3points) ===
+2025-01-07 07:41:22,591:INFO:Prepared features and targets for 112 players for target > 3 3points.
+2025-01-07 07:41:22,591:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-07 07:41:39,006:INFO:Best XGBoost ROC-AUC: 0.8350
+2025-01-07 07:41:39,006:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9315517129377968, 'gamma': 3.1164906341377896, 'learning_rate': 0.10926940745579475, 'max_depth': 9, 'min_child_weight': 7, 'n_estimators': 673, 'reg_alpha': 0.32518332202674705, 'reg_lambda': 0.7296061783380641, 'subsample': 0.8187787356776066}
+2025-01-07 07:41:39,006:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-07 07:43:24,125:INFO:Best GradientBoosting ROC-AUC: 0.7769
+2025-01-07 07:43:24,126:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.09003430428258549, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 5, 'min_samples_split': 2, 'n_estimators': 484, 'subsample': 0.6197809453334862}
+2025-01-07 07:43:24,127:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-07 07:43:35,151:INFO:Best LogisticRegression ROC-AUC: 0.8095
+2025-01-07 07:43:35,151:INFO:Best LogisticRegression Parameters: {'C': 1.969828624191452, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-07 07:43:35,151:INFO:
+--- Evaluating Model: SVC ---
+2025-01-07 07:45:50,783:INFO:Best SVC ROC-AUC: 0.8148
+2025-01-07 07:45:50,785:INFO:Best SVC Parameters: {'C': 1.8052412368729154, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-07 07:45:50,785:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-07 07:45:51,709:INFO:Best KNeighbors ROC-AUC: 0.8014
+2025-01-07 07:45:51,709:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 25, 'weights': 'distance'}
+2025-01-07 07:45:51,817:INFO:XGBoost model retrained on the entire dataset.
+2025-01-07 07:45:51,823:INFO:Scaler saved to ../models/scaler_3_plus.pkl.
+2025-01-07 07:45:51,842:INFO:Best model (XGBoost) saved to ../models/model_3_plus_XGBoost_roc_auc_0.8350.pkl.
+2025-01-07 07:45:51,842:INFO:
+=== Training process completed successfully ===
+2025-01-08 09:50:08,593:INFO:Training process started.
+2025-01-08 09:50:09,167:INFO:Loaded data from 112 player files. Total games loaded: 12601
+2025-01-08 09:50:09,169:INFO:
+=== Training for Target: 1_plus (> 1 3points) ===
+2025-01-08 09:50:22,785:INFO:Prepared features and targets for 112 players for target > 1 3points.
+2025-01-08 09:50:22,785:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:50:45,994:INFO:Best XGBoost ROC-AUC: 0.7193
+2025-01-08 09:50:45,996:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.9436063712881633, 'gamma': 2.3610746258097466, 'learning_rate': 0.04587827378149051, 'max_depth': 5, 'min_child_weight': 1, 'n_estimators': 104, 'reg_alpha': 0.5612771975694962, 'reg_lambda': 0.770967179954561, 'subsample': 0.7468977981821954}
+2025-01-08 09:50:45,996:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 09:51:56,798:INFO:Best GradientBoosting ROC-AUC: 0.6698
+2025-01-08 09:51:56,798:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.08763399448000507, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 6, 'min_samples_split': 11, 'n_estimators': 871, 'subsample': 0.5924272277627636}
+2025-01-08 09:51:56,798:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 09:52:03,542:INFO:Best LogisticRegression ROC-AUC: 0.6929
+2025-01-08 09:52:03,542:INFO:Best LogisticRegression Parameters: {'C': 7.090725777960454, 'penalty': 'l2', 'solver': 'saga'}
+2025-01-08 09:52:03,543:INFO:
+--- Evaluating Model: SVC ---
+2025-01-08 09:58:54,600:INFO:Best SVC ROC-AUC: 0.6686
+2025-01-08 09:58:54,601:INFO:Best SVC Parameters: {'C': 5.347746602583891, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-08 09:58:54,601:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 09:58:55,388:INFO:Best KNeighbors ROC-AUC: 0.6155
+2025-01-08 09:58:55,388:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-08 09:58:55,421:INFO:XGBoost model retrained on the entire dataset.
+2025-01-08 09:58:55,423:INFO:Scaler saved to ../models/scaler_1_plus.pkl.
+2025-01-08 09:58:55,426:INFO:Best model (XGBoost) saved to ../models/model_1_plus_XGBoost_roc_auc_0.7193.pkl.
+2025-01-08 09:58:55,426:INFO:
+=== Training for Target: 2_plus (> 2 3points) ===
+2025-01-08 09:59:09,104:INFO:Prepared features and targets for 112 players for target > 2 3points.
+2025-01-08 09:59:09,104:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 09:59:21,639:INFO:Best XGBoost ROC-AUC: 0.7215
+2025-01-08 09:59:21,639:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.6965488623333802, 'gamma': 4.460232775885567, 'learning_rate': 0.19934158779917888, 'max_depth': 4, 'min_child_weight': 5, 'n_estimators': 897, 'reg_alpha': 0.6451033620305648, 'reg_lambda': 0.6689240596630996, 'subsample': 0.9320837825359516}
+2025-01-08 09:59:21,639:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 10:00:32,256:INFO:Best GradientBoosting ROC-AUC: 0.7165
+2025-01-08 10:00:32,256:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.29266052670545584, 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_leaf': 9, 'min_samples_split': 3, 'n_estimators': 439, 'subsample': 0.6205127330130058}
+2025-01-08 10:00:32,256:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 10:00:39,045:INFO:Best LogisticRegression ROC-AUC: 0.7241
+2025-01-08 10:00:39,045:INFO:Best LogisticRegression Parameters: {'C': 3.0561376917337064, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-08 10:00:39,046:INFO:
+--- Evaluating Model: SVC ---
+2025-01-08 10:19:34,137:INFO:Best SVC ROC-AUC: 0.6871
+2025-01-08 10:19:34,140:INFO:Best SVC Parameters: {'C': 2.813490317738959, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-08 10:19:34,140:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 10:19:35,036:INFO:Best KNeighbors ROC-AUC: 0.6940
+2025-01-08 10:19:35,036:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 21, 'weights': 'uniform'}
+2025-01-08 10:19:35,047:INFO:LogisticRegression model retrained on the entire dataset.
+2025-01-08 10:19:35,050:INFO:Scaler saved to ../models/scaler_2_plus.pkl.
+2025-01-08 10:19:35,053:INFO:Best model (LogisticRegression) saved to ../models/model_2_plus_LogisticRegression_roc_auc_0.7241.pkl.
+2025-01-08 10:19:35,053:INFO:
+=== Training for Target: 3_plus (> 3 3points) ===
+2025-01-08 10:19:48,618:INFO:Prepared features and targets for 112 players for target > 3 3points.
+2025-01-08 10:19:48,619:INFO:
+--- Evaluating Model: XGBoost ---
+2025-01-08 10:20:01,292:INFO:Best XGBoost ROC-AUC: 0.8018
+2025-01-08 10:20:01,293:INFO:Best XGBoost Parameters: {'colsample_bytree': 0.8079255821949569, 'gamma': 4.719458022803786, 'learning_rate': 0.2932754791375502, 'max_depth': 14, 'min_child_weight': 4, 'n_estimators': 763, 'reg_alpha': 0.6771683423829817, 'reg_lambda': 0.5733670416719333, 'subsample': 0.5642501766169551}
+2025-01-08 10:20:01,293:INFO:
+--- Evaluating Model: GradientBoosting ---
+2025-01-08 10:21:13,699:INFO:Best GradientBoosting ROC-AUC: 0.7482
+2025-01-08 10:21:13,700:INFO:Best GradientBoosting Parameters: {'learning_rate': 0.023081131526330123, 'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 14, 'min_samples_split': 7, 'n_estimators': 198, 'subsample': 0.873859386948707}
+2025-01-08 10:21:13,700:INFO:
+--- Evaluating Model: LogisticRegression ---
+2025-01-08 10:21:20,535:INFO:Best LogisticRegression ROC-AUC: 0.6923
+2025-01-08 10:21:20,535:INFO:Best LogisticRegression Parameters: {'C': 9.62172024349349, 'penalty': 'l2', 'solver': 'lbfgs'}
+2025-01-08 10:21:20,535:INFO:
+--- Evaluating Model: SVC ---
+2025-01-08 10:25:25,598:INFO:Best SVC ROC-AUC: 0.6382
+2025-01-08 10:25:25,600:INFO:Best SVC Parameters: {'C': 8.431949117361643, 'gamma': 'scale', 'kernel': 'poly'}
+2025-01-08 10:25:25,600:INFO:
+--- Evaluating Model: KNeighbors ---
+2025-01-08 10:25:27,154:INFO:Best KNeighbors ROC-AUC: 0.7011
+2025-01-08 10:25:27,154:INFO:Best KNeighbors Parameters: {'metric': 'manhattan', 'n_neighbors': 29, 'weights': 'uniform'}
+2025-01-08 10:25:27,908:INFO:XGBoost model retrained on the entire dataset.
+2025-01-08 10:25:27,911:INFO:Scaler saved to ../models/scaler_3_plus.pkl.
+2025-01-08 10:25:27,923:INFO:Best model (XGBoost) saved to ../models/model_3_plus_XGBoost_roc_auc_0.8018.pkl.
+2025-01-08 10:25:27,923:INFO:
+=== Training process completed successfully ===
+2025-01-10 08:42:06,505 INFO:Starting consolidation of player game logs.
+2025-01-10 08:42:06,530 DEBUG:Loaded 100 rows from player_1630530.csv.
+2025-01-10 08:42:06,536 DEBUG:Loaded 126 rows from player_1629673.csv.
+2025-01-10 08:42:06,542 DEBUG:Loaded 121 rows from player_1628960.csv.
+2025-01-10 08:42:06,547 DEBUG:Loaded 123 rows from player_201939.csv.
+2025-01-10 08:42:06,552 DEBUG:Loaded 112 rows from player_1626179.csv.
+2025-01-10 08:42:06,557 DEBUG:Loaded 120 rows from player_1626145.csv.
+2025-01-10 08:42:06,562 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-10 08:42:06,568 DEBUG:Loaded 95 rows from player_1630241.csv.
+2025-01-10 08:42:06,573 DEBUG:Loaded 133 rows from player_203484.csv.
+2025-01-10 08:42:06,578 DEBUG:Loaded 103 rows from player_1641718.csv.
+2025-01-10 08:42:06,583 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-10 08:42:06,589 DEBUG:Loaded 128 rows from player_1628369.csv.
+2025-01-10 08:42:06,594 DEBUG:Loaded 120 rows from player_203081.csv.
+2025-01-10 08:42:06,599 DEBUG:Loaded 125 rows from player_1626181.csv.
+2025-01-10 08:42:06,604 DEBUG:Loaded 128 rows from player_1626156.csv.
+2025-01-10 08:42:06,608 DEBUG:Loaded 83 rows from player_1628379.csv.
+2025-01-10 08:42:06,613 DEBUG:Loaded 110 rows from player_1629661.csv.
+2025-01-10 08:42:06,617 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-10 08:42:06,621 DEBUG:Loaded 133 rows from player_1628973.csv.
+2025-01-10 08:42:06,625 DEBUG:Loaded 109 rows from player_1628378.csv.
+2025-01-10 08:42:06,630 DEBUG:Loaded 111 rows from player_1627936.csv.
+2025-01-10 08:42:06,635 DEBUG:Loaded 116 rows from player_1626157.csv.
+2025-01-10 08:42:06,641 DEBUG:Loaded 138 rows from player_203084.csv.
+2025-01-10 08:42:06,646 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-10 08:42:06,652 DEBUG:Loaded 87 rows from player_1641722.csv.
+2025-01-10 08:42:06,657 DEBUG:Loaded 110 rows from player_203468.csv.
+2025-01-10 08:42:06,662 DEBUG:Loaded 37 rows from player_1642377.csv.
+2025-01-10 08:42:06,668 DEBUG:Loaded 118 rows from player_1627749.csv.
+2025-01-10 08:42:06,672 DEBUG:Loaded 77 rows from player_202711.csv.
+2025-01-10 08:42:06,677 DEBUG:Loaded 127 rows from player_1627832.csv.
+2025-01-10 08:42:06,680 DEBUG:Loaded 90 rows from player_1630631.csv.
+2025-01-10 08:42:06,684 DEBUG:Loaded 97 rows from player_1629639.csv.
+2025-01-10 08:42:06,688 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-10 08:42:06,691 DEBUG:Loaded 129 rows from player_1630591.csv.
+2025-01-10 08:42:06,695 DEBUG:Loaded 64 rows from player_1629001.csv.
+2025-01-10 08:42:06,700 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-10 08:42:06,705 DEBUG:Loaded 126 rows from player_1631114.csv.
+2025-01-10 08:42:06,710 DEBUG:Loaded 126 rows from player_1630169.csv.
+2025-01-10 08:42:06,714 DEBUG:Loaded 23 rows from player_1642272.csv.
+2025-01-10 08:42:06,717 DEBUG:Loaded 79 rows from player_1631101.csv.
+2025-01-10 08:42:06,721 DEBUG:Loaded 77 rows from player_1627763.csv.
+2025-01-10 08:42:06,724 DEBUG:Loaded 98 rows from player_1629014.csv.
+2025-01-10 08:42:06,728 DEBUG:Loaded 128 rows from player_201144.csv.
+2025-01-10 08:42:06,733 DEBUG:Loaded 72 rows from player_1629004.csv.
+2025-01-10 08:42:06,738 DEBUG:Loaded 118 rows from player_1630178.csv.
+2025-01-10 08:42:06,743 DEBUG:Loaded 94 rows from player_1630193.csv.
+2025-01-10 08:42:06,748 DEBUG:Loaded 106 rows from player_1630595.csv.
+2025-01-10 08:42:06,752 DEBUG:Loaded 138 rows from player_1630224.csv.
+2025-01-10 08:42:06,756 DEBUG:Loaded 131 rows from player_1631099.csv.
+2025-01-10 08:42:06,759 DEBUG:Loaded 106 rows from player_1629628.csv.
+2025-01-10 08:42:06,763 DEBUG:Loaded 133 rows from player_1629012.csv.
+2025-01-10 08:42:06,767 DEBUG:Loaded 129 rows from player_1630557.csv.
+2025-01-10 08:42:06,772 DEBUG:Loaded 120 rows from player_201142.csv.
+2025-01-10 08:42:06,777 DEBUG:Loaded 130 rows from player_203999.csv.
+2025-01-10 08:42:06,782 DEBUG:Loaded 114 rows from player_101108.csv.
+2025-01-10 08:42:06,787 DEBUG:Loaded 137 rows from player_1627783.csv.
+2025-01-10 08:42:06,791 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-10 08:42:06,795 DEBUG:Loaded 103 rows from player_1629631.csv.
+2025-01-10 08:42:06,800 DEBUG:Loaded 135 rows from player_1630162.csv.
+2025-01-10 08:42:06,804 DEBUG:Loaded 66 rows from player_1630163.csv.
+2025-01-10 08:42:06,808 DEBUG:Loaded 105 rows from player_1631094.csv.
+2025-01-10 08:42:06,811 DEBUG:Loaded 140 rows from player_1627741.csv.
+2025-01-10 08:42:06,814 DEBUG:Loaded 106 rows from player_202692.csv.
+2025-01-10 08:42:06,818 DEBUG:Loaded 129 rows from player_1630573.csv.
+2025-01-10 08:42:06,822 DEBUG:Loaded 90 rows from player_1630217.csv.
+2025-01-10 08:42:06,826 DEBUG:Loaded 136 rows from player_1629008.csv.
+2025-01-10 08:42:06,829 DEBUG:Loaded 133 rows from player_1630559.csv.
+2025-01-10 08:42:06,833 DEBUG:Loaded 133 rows from player_1629632.csv.
+2025-01-10 08:42:06,837 DEBUG:Loaded 102 rows from player_1627742.csv.
+2025-01-10 08:42:06,843 DEBUG:Loaded 129 rows from player_202691.csv.
+2025-01-10 08:42:06,848 DEBUG:Loaded 139 rows from player_1630202.csv.
+2025-01-10 08:42:06,853 DEBUG:Loaded 115 rows from player_203992.csv.
+2025-01-10 08:42:06,858 DEBUG:Loaded 105 rows from player_1630560.csv.
+2025-01-10 08:42:06,863 DEBUG:Loaded 90 rows from player_202695.csv.
+2025-01-10 08:42:06,868 DEBUG:Loaded 108 rows from player_202681.csv.
+2025-01-10 08:42:06,873 DEBUG:Loaded 127 rows from player_1631093.csv.
+2025-01-10 08:42:06,877 DEBUG:Loaded 63 rows from player_202722.csv.
+2025-01-10 08:42:06,881 DEBUG:Loaded 109 rows from player_1630170.csv.
+2025-01-10 08:42:06,884 DEBUG:Loaded 111 rows from player_1629636.csv.
+2025-01-10 08:42:06,888 DEBUG:Loaded 97 rows from player_1629622.csv.
+2025-01-10 08:42:06,892 DEBUG:Loaded 123 rows from player_1629018.csv.
+2025-01-10 08:42:06,897 DEBUG:Loaded 118 rows from player_202331.csv.
+2025-01-10 08:42:06,902 DEBUG:Loaded 127 rows from player_1630577.csv.
+2025-01-10 08:42:06,908 DEBUG:Loaded 131 rows from player_202696.csv.
+2025-01-10 08:42:06,913 DEBUG:Loaded 133 rows from player_201572.csv.
+2025-01-10 08:42:06,917 DEBUG:Loaded 131 rows from player_1630198.csv.
+2025-01-10 08:42:06,921 DEBUG:Loaded 109 rows from player_1629027.csv.
+2025-01-10 08:42:06,926 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-10 08:42:06,931 DEBUG:Loaded 108 rows from player_1627750.csv.
+2025-01-10 08:42:06,936 DEBUG:Loaded 134 rows from player_203471.csv.
+2025-01-10 08:42:06,941 DEBUG:Loaded 133 rows from player_1629652.csv.
+2025-01-10 08:42:06,945 DEBUG:Loaded 76 rows from player_203897.csv.
+2025-01-10 08:42:06,949 DEBUG:Loaded 139 rows from player_1628969.csv.
+2025-01-10 08:42:06,953 DEBUG:Loaded 48 rows from player_1641713.csv.
+2025-01-10 08:42:06,956 DEBUG:Loaded 130 rows from player_1628983.csv.
+2025-01-10 08:42:06,960 DEBUG:Loaded 99 rows from player_1641706.csv.
+2025-01-10 08:42:06,964 DEBUG:Loaded 135 rows from player_1627736.csv.
+2025-01-10 08:42:06,968 DEBUG:Loaded 118 rows from player_1626164.csv.
+2025-01-10 08:42:06,972 DEBUG:Loaded 102 rows from player_1641705.csv.
+2025-01-10 08:42:06,976 DEBUG:Loaded 90 rows from player_1641711.csv.
+2025-01-10 08:42:06,980 DEBUG:Loaded 104 rows from player_1628374.csv.
+2025-01-10 08:42:06,983 DEBUG:Loaded 132 rows from player_1626167.csv.
+2025-01-10 08:42:06,986 DEBUG:Loaded 109 rows from player_203926.csv.
+2025-01-10 08:42:06,990 DEBUG:Loaded 122 rows from player_1628370.csv.
+2025-01-10 08:42:06,994 DEBUG:Loaded 107 rows from player_1628398.csv.
+2025-01-10 08:42:06,998 DEBUG:Loaded 128 rows from player_1628401.csv.
+2025-01-10 08:42:07,002 DEBUG:Loaded 125 rows from player_1628415.csv.
+2025-01-10 08:42:07,006 DEBUG:Loaded 137 rows from player_1628978.csv.
+2025-01-10 08:42:07,010 DEBUG:Loaded 126 rows from player_201935.csv.
+2025-01-10 08:42:07,013 DEBUG:Loaded 121 rows from player_1629130.csv.
+2025-01-10 08:42:07,017 DEBUG:Loaded 132 rows from player_203501.csv.
+2025-01-10 08:42:07,020 DEBUG:Loaded 103 rows from player_203924.csv.
+2025-01-10 08:42:07,030 INFO:Successfully concatenated 112 files. Total rows: 12601
+2025-01-10 08:42:07,091 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-10 08:43:14,385 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-10 08:43:14,389 INFO:[Approach B: label_1_plus] => {1: 10538, 0: 1741}
+2025-01-10 08:43:14,390 INFO:[Approach B: label_2_plus] => {1: 7709, 0: 4570}
+2025-01-10 08:43:14,391 INFO:[Approach B: label_3_plus] => {0: 7374, 1: 4905}
+2025-01-10 08:43:14,406 INFO:=== Training Approach B for threshold: 1_plus ===
+2025-01-10 08:43:14,424 INFO:[1_plus] Train set: (9565, 24), Test set: (2392, 24)
+2025-01-10 08:43:14,425 INFO:[1_plus] Class distribution in TRAIN: {1: 0.8582331416623105, 0: 0.14176685833768948}
+2025-01-10 08:43:14,426 INFO:[1_plus] Class distribution in TEST: {1: 0.8582775919732442, 0: 0.14172240802675584}
+2025-01-10 08:43:14,584 INFO:[1_plus] After SMOTE => Train shape: (16418, 24)
+2025-01-10 08:43:14,585 INFO:[1_plus] Class distribution after SMOTE: {1: 8209, 0: 8209}
+2025-01-10 08:43:15,470 INFO:[1_plus] LogisticRegression -> Test Accuracy: 0.5861
+2025-01-10 08:43:16,456 INFO:[1_plus] XGBoost -> Test Accuracy: 0.8378
+2025-01-10 08:43:16,987 INFO:[1_plus] KNeighbors -> Test Accuracy: 0.6012
+2025-01-10 08:43:25,711 INFO:[1_plus] GradientBoosting -> Test Accuracy: 0.8395
+2025-01-10 08:43:25,712 INFO:[1_plus - Approach B] Best Model: GradientBoosting, Score: 0.8395
+2025-01-10 08:43:25,725 INFO:Saved best Approach B model for 1_plus to ../models/model_1_plus_approachB_GradientBoosting_acc_0.8395.pkl
+2025-01-10 08:43:25,725 INFO:=== Training Approach B for threshold: 2_plus ===
+2025-01-10 08:43:25,733 INFO:[2_plus] Train set: (9565, 24), Test set: (2392, 24)
+2025-01-10 08:43:25,734 INFO:[2_plus] Class distribution in TRAIN: {1: 0.6276006272869838, 0: 0.3723993727130162}
+2025-01-10 08:43:25,734 INFO:[2_plus] Class distribution in TEST: {1: 0.6275083612040134, 0: 0.3724916387959866}
+2025-01-10 08:43:25,796 INFO:[2_plus] After SMOTE => Train shape: (12006, 24)
+2025-01-10 08:43:25,797 INFO:[2_plus] Class distribution after SMOTE: {1: 6003, 0: 6003}
+2025-01-10 08:43:26,268 INFO:[2_plus] LogisticRegression -> Test Accuracy: 0.5995
+2025-01-10 08:43:26,699 INFO:[2_plus] XGBoost -> Test Accuracy: 0.6254
+2025-01-10 08:43:27,116 INFO:[2_plus] KNeighbors -> Test Accuracy: 0.5661
+2025-01-10 08:43:32,211 INFO:[2_plus] GradientBoosting -> Test Accuracy: 0.6480
+2025-01-10 08:43:32,211 INFO:[2_plus - Approach B] Best Model: GradientBoosting, Score: 0.6480
+2025-01-10 08:43:32,219 INFO:Saved best Approach B model for 2_plus to ../models/model_2_plus_approachB_GradientBoosting_acc_0.6480.pkl
+2025-01-10 08:43:32,219 INFO:=== Training Approach B for threshold: 3_plus ===
+2025-01-10 08:43:32,226 INFO:[3_plus] Train set: (9565, 24), Test set: (2392, 24)
+2025-01-10 08:43:32,227 INFO:[3_plus] Class distribution in TRAIN: {0: 0.5995818086774699, 1: 0.40041819132253004}
+2025-01-10 08:43:32,228 INFO:[3_plus] Class distribution in TEST: {0: 0.5994983277591973, 1: 0.4005016722408027}
+2025-01-10 08:43:32,632 INFO:[3_plus] LogisticRegression -> Test Accuracy: 0.6459
+2025-01-10 08:43:32,994 INFO:[3_plus] XGBoost -> Test Accuracy: 0.6221
+2025-01-10 08:43:33,238 INFO:[3_plus] KNeighbors -> Test Accuracy: 0.5836
+2025-01-10 08:43:36,302 INFO:[3_plus] GradientBoosting -> Test Accuracy: 0.6367
+2025-01-10 08:43:36,302 INFO:[3_plus - Approach B] Best Model: LogisticRegression, Score: 0.6459
+2025-01-10 08:43:36,304 INFO:Saved best Approach B model for 3_plus to ../models/model_3_plus_approachB_LogisticRegression_acc_0.6459.pkl
+2025-01-10 08:43:36,304 INFO:Approach B training complete.
+2025-01-11 07:14:32,980 INFO:Starting consolidation of player game logs.
+2025-01-11 07:14:32,992 DEBUG:Loaded 100 rows from player_1630530.csv.
+2025-01-11 07:14:32,995 DEBUG:Loaded 127 rows from player_1629673.csv.
+2025-01-11 07:14:32,999 DEBUG:Loaded 122 rows from player_1628960.csv.
+2025-01-11 07:14:33,003 DEBUG:Loaded 124 rows from player_201939.csv.
+2025-01-11 07:14:33,006 DEBUG:Loaded 113 rows from player_1626179.csv.
+2025-01-11 07:14:33,010 DEBUG:Loaded 121 rows from player_1626145.csv.
+2025-01-11 07:14:33,014 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-11 07:14:33,022 DEBUG:Loaded 96 rows from player_1630241.csv.
+2025-01-11 07:14:33,026 DEBUG:Loaded 135 rows from player_203484.csv.
+2025-01-11 07:14:33,030 DEBUG:Loaded 103 rows from player_1641718.csv.
+2025-01-11 07:14:33,035 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-11 07:14:33,039 DEBUG:Loaded 129 rows from player_1628369.csv.
+2025-01-11 07:14:33,042 DEBUG:Loaded 122 rows from player_203081.csv.
+2025-01-11 07:14:33,046 DEBUG:Loaded 126 rows from player_1626181.csv.
+2025-01-11 07:14:33,049 DEBUG:Loaded 128 rows from player_1626156.csv.
+2025-01-11 07:14:33,054 DEBUG:Loaded 84 rows from player_1628379.csv.
+2025-01-11 07:14:33,057 DEBUG:Loaded 110 rows from player_1629661.csv.
+2025-01-11 07:14:33,061 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-11 07:14:33,065 DEBUG:Loaded 135 rows from player_1628973.csv.
+2025-01-11 07:14:33,070 DEBUG:Loaded 110 rows from player_1628378.csv.
+2025-01-11 07:14:33,073 DEBUG:Loaded 111 rows from player_1627936.csv.
+2025-01-11 07:14:33,077 DEBUG:Loaded 118 rows from player_1626157.csv.
+2025-01-11 07:14:33,081 DEBUG:Loaded 139 rows from player_203084.csv.
+2025-01-11 07:14:33,088 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-11 07:14:33,093 DEBUG:Loaded 90 rows from player_1641722.csv.
+2025-01-11 07:14:33,097 DEBUG:Loaded 112 rows from player_203468.csv.
+2025-01-11 07:14:33,103 DEBUG:Loaded 37 rows from player_1642377.csv.
+2025-01-11 07:14:33,106 DEBUG:Loaded 120 rows from player_1627749.csv.
+2025-01-11 07:14:33,110 DEBUG:Loaded 77 rows from player_202711.csv.
+2025-01-11 07:14:33,114 DEBUG:Loaded 128 rows from player_1627832.csv.
+2025-01-11 07:14:33,119 DEBUG:Loaded 90 rows from player_1630631.csv.
+2025-01-11 07:14:33,123 DEBUG:Loaded 98 rows from player_1629639.csv.
+2025-01-11 07:14:33,126 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-11 07:14:33,130 DEBUG:Loaded 129 rows from player_1630591.csv.
+2025-01-11 07:14:33,135 DEBUG:Loaded 64 rows from player_1629001.csv.
+2025-01-11 07:14:33,139 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-11 07:14:33,142 DEBUG:Loaded 128 rows from player_1631114.csv.
+2025-01-11 07:14:33,146 DEBUG:Loaded 128 rows from player_1630169.csv.
+2025-01-11 07:14:33,150 DEBUG:Loaded 23 rows from player_1642272.csv.
+2025-01-11 07:14:33,155 DEBUG:Loaded 81 rows from player_1631101.csv.
+2025-01-11 07:14:33,160 DEBUG:Loaded 77 rows from player_1627763.csv.
+2025-01-11 07:14:33,164 DEBUG:Loaded 100 rows from player_1629014.csv.
+2025-01-11 07:14:33,169 DEBUG:Loaded 129 rows from player_201144.csv.
+2025-01-11 07:14:33,173 DEBUG:Loaded 72 rows from player_1629004.csv.
+2025-01-11 07:14:33,176 DEBUG:Loaded 120 rows from player_1630178.csv.
+2025-01-11 07:14:33,180 DEBUG:Loaded 96 rows from player_1630193.csv.
+2025-01-11 07:14:33,185 DEBUG:Loaded 108 rows from player_1630595.csv.
+2025-01-11 07:14:33,189 DEBUG:Loaded 139 rows from player_1630224.csv.
+2025-01-11 07:14:33,192 DEBUG:Loaded 132 rows from player_1631099.csv.
+2025-01-11 07:14:33,196 DEBUG:Loaded 108 rows from player_1629628.csv.
+2025-01-11 07:14:33,199 DEBUG:Loaded 134 rows from player_1629012.csv.
+2025-01-11 07:14:33,205 DEBUG:Loaded 131 rows from player_1630557.csv.
+2025-01-11 07:14:33,208 DEBUG:Loaded 121 rows from player_201142.csv.
+2025-01-11 07:14:33,211 DEBUG:Loaded 131 rows from player_203999.csv.
+2025-01-11 07:14:33,215 DEBUG:Loaded 115 rows from player_101108.csv.
+2025-01-11 07:14:33,222 DEBUG:Loaded 139 rows from player_1627783.csv.
+2025-01-11 07:14:33,226 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-11 07:14:33,231 DEBUG:Loaded 104 rows from player_1629631.csv.
+2025-01-11 07:14:33,236 DEBUG:Loaded 136 rows from player_1630162.csv.
+2025-01-11 07:14:33,240 DEBUG:Loaded 66 rows from player_1630163.csv.
+2025-01-11 07:14:33,243 DEBUG:Loaded 106 rows from player_1631094.csv.
+2025-01-11 07:14:33,247 DEBUG:Loaded 142 rows from player_1627741.csv.
+2025-01-11 07:14:33,252 DEBUG:Loaded 107 rows from player_202692.csv.
+2025-01-11 07:14:33,256 DEBUG:Loaded 130 rows from player_1630573.csv.
+2025-01-11 07:14:33,259 DEBUG:Loaded 91 rows from player_1630217.csv.
+2025-01-11 07:14:33,263 DEBUG:Loaded 138 rows from player_1629008.csv.
+2025-01-11 07:14:33,269 DEBUG:Loaded 133 rows from player_1630559.csv.
+2025-01-11 07:14:33,272 DEBUG:Loaded 135 rows from player_1629632.csv.
+2025-01-11 07:14:33,276 DEBUG:Loaded 102 rows from player_1627742.csv.
+2025-01-11 07:14:33,280 DEBUG:Loaded 130 rows from player_202691.csv.
+2025-01-11 07:14:33,286 DEBUG:Loaded 140 rows from player_1630202.csv.
+2025-01-11 07:14:33,290 DEBUG:Loaded 116 rows from player_203992.csv.
+2025-01-11 07:14:33,294 DEBUG:Loaded 105 rows from player_1630560.csv.
+2025-01-11 07:14:33,298 DEBUG:Loaded 90 rows from player_202695.csv.
+2025-01-11 07:14:33,304 DEBUG:Loaded 108 rows from player_202681.csv.
+2025-01-11 07:14:33,308 DEBUG:Loaded 127 rows from player_1631093.csv.
+2025-01-11 07:14:33,312 DEBUG:Loaded 63 rows from player_202722.csv.
+2025-01-11 07:14:33,316 DEBUG:Loaded 110 rows from player_1630170.csv.
+2025-01-11 07:14:33,322 DEBUG:Loaded 113 rows from player_1629636.csv.
+2025-01-11 07:14:33,325 DEBUG:Loaded 99 rows from player_1629622.csv.
+2025-01-11 07:14:33,329 DEBUG:Loaded 125 rows from player_1629018.csv.
+2025-01-11 07:14:33,335 DEBUG:Loaded 119 rows from player_202331.csv.
+2025-01-11 07:14:33,339 DEBUG:Loaded 128 rows from player_1630577.csv.
+2025-01-11 07:14:33,342 DEBUG:Loaded 133 rows from player_202696.csv.
+2025-01-11 07:14:33,346 DEBUG:Loaded 135 rows from player_201572.csv.
+2025-01-11 07:14:33,353 DEBUG:Loaded 133 rows from player_1630198.csv.
+2025-01-11 07:14:33,358 DEBUG:Loaded 110 rows from player_1629027.csv.
+2025-01-11 07:14:33,362 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-11 07:14:33,366 DEBUG:Loaded 110 rows from player_1627750.csv.
+2025-01-11 07:14:33,370 DEBUG:Loaded 136 rows from player_203471.csv.
+2025-01-11 07:14:33,374 DEBUG:Loaded 135 rows from player_1629652.csv.
+2025-01-11 07:14:33,378 DEBUG:Loaded 78 rows from player_203897.csv.
+2025-01-11 07:14:33,381 DEBUG:Loaded 141 rows from player_1628969.csv.
+2025-01-11 07:14:33,387 DEBUG:Loaded 48 rows from player_1641713.csv.
+2025-01-11 07:14:33,390 DEBUG:Loaded 132 rows from player_1628983.csv.
+2025-01-11 07:14:33,393 DEBUG:Loaded 99 rows from player_1641706.csv.
+2025-01-11 07:14:33,397 DEBUG:Loaded 137 rows from player_1627736.csv.
+2025-01-11 07:14:33,402 DEBUG:Loaded 119 rows from player_1626164.csv.
+2025-01-11 07:14:33,405 DEBUG:Loaded 58 rows from player_203935.csv.
+2025-01-11 07:14:33,410 DEBUG:Loaded 103 rows from player_1641705.csv.
+2025-01-11 07:14:33,414 DEBUG:Loaded 92 rows from player_1641711.csv.
+2025-01-11 07:14:33,423 DEBUG:Loaded 105 rows from player_1628374.csv.
+2025-01-11 07:14:33,427 DEBUG:Loaded 133 rows from player_1626167.csv.
+2025-01-11 07:14:33,432 DEBUG:Loaded 109 rows from player_203926.csv.
+2025-01-11 07:14:33,437 DEBUG:Loaded 123 rows from player_1628370.csv.
+2025-01-11 07:14:33,441 DEBUG:Loaded 109 rows from player_1628398.csv.
+2025-01-11 07:14:33,444 DEBUG:Loaded 129 rows from player_1628401.csv.
+2025-01-11 07:14:33,447 DEBUG:Loaded 126 rows from player_1628415.csv.
+2025-01-11 07:14:33,453 DEBUG:Loaded 138 rows from player_1628978.csv.
+2025-01-11 07:14:33,457 DEBUG:Loaded 127 rows from player_201935.csv.
+2025-01-11 07:14:33,461 DEBUG:Loaded 122 rows from player_1629130.csv.
+2025-01-11 07:14:33,464 DEBUG:Loaded 133 rows from player_203501.csv.
+2025-01-11 07:14:33,470 DEBUG:Loaded 103 rows from player_203924.csv.
+2025-01-11 07:14:33,480 INFO:Successfully concatenated 113 files. Total rows: 12774
+2025-01-11 07:14:33,603 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-11 07:16:24,577 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-11 07:16:24,582 INFO:[Approach B: label_1_plus] => {1: 10685, 0: 1764}
+2025-01-11 07:16:24,582 INFO:[Approach B: label_2_plus] => {1: 7818, 0: 4631}
+2025-01-11 07:16:24,583 INFO:[Approach B: label_3_plus] => {0: 7474, 1: 4975}
+2025-01-11 07:16:24,594 INFO:=== Training Approach B for threshold: 1_plus ===
+2025-01-11 07:16:24,614 INFO:[1_plus] Train set: (9699, 24), Test set: (2425, 24)
+2025-01-11 07:16:24,615 INFO:[1_plus] Class distribution in TRAIN: {1: 0.8583359109186514, 0: 0.1416640890813486}
+2025-01-11 07:16:24,616 INFO:[1_plus] Class distribution in TEST: {1: 0.8581443298969073, 0: 0.14185567010309277}
+2025-01-11 07:16:24,783 INFO:[1_plus] After SMOTE => Train shape: (16650, 24)
+2025-01-11 07:16:24,785 INFO:[1_plus] Class distribution after SMOTE: {0: 8325, 1: 8325}
+2025-01-11 07:16:25,814 INFO:[1_plus] LogisticRegression -> Test Accuracy: 0.5852
+2025-01-11 07:16:28,514 INFO:[1_plus] XGBoost -> Test Accuracy: 0.8454
+2025-01-11 07:16:28,989 INFO:[1_plus] KNeighbors -> Test Accuracy: 0.6078
+2025-01-11 07:16:41,346 INFO:[1_plus] GradientBoosting -> Test Accuracy: 0.8425
+2025-01-11 07:16:41,346 INFO:[1_plus - Approach B] Best Model: XGBoost, Score: 0.8454
+2025-01-11 07:16:41,350 INFO:Saved best Approach B model for 1_plus to ../models/model_1_plus_approachB_XGBoost_acc_0.8454.pkl
+2025-01-11 07:16:41,350 INFO:=== Training Approach B for threshold: 2_plus ===
+2025-01-11 07:16:41,361 INFO:[2_plus] Train set: (9699, 24), Test set: (2425, 24)
+2025-01-11 07:16:41,362 INFO:[2_plus] Class distribution in TRAIN: {1: 0.6277966800701104, 0: 0.3722033199298897}
+2025-01-11 07:16:41,363 INFO:[2_plus] Class distribution in TEST: {1: 0.6280412371134021, 0: 0.37195876288659796}
+2025-01-11 07:16:41,450 INFO:[2_plus] After SMOTE => Train shape: (12178, 24)
+2025-01-11 07:16:41,451 INFO:[2_plus] Class distribution after SMOTE: {0: 6089, 1: 6089}
+2025-01-11 07:16:42,266 INFO:[2_plus] LogisticRegression -> Test Accuracy: 0.6041
+2025-01-11 07:16:42,763 INFO:[2_plus] XGBoost -> Test Accuracy: 0.6099
+2025-01-11 07:16:43,143 INFO:[2_plus] KNeighbors -> Test Accuracy: 0.5505
+2025-01-11 07:16:50,606 INFO:[2_plus] GradientBoosting -> Test Accuracy: 0.6334
+2025-01-11 07:16:50,609 INFO:[2_plus - Approach B] Best Model: GradientBoosting, Score: 0.6334
+2025-01-11 07:16:50,628 INFO:Saved best Approach B model for 2_plus to ../models/model_2_plus_approachB_GradientBoosting_acc_0.6334.pkl
+2025-01-11 07:16:50,629 INFO:=== Training Approach B for threshold: 3_plus ===
+2025-01-11 07:16:50,636 INFO:[3_plus] Train set: (9699, 24), Test set: (2425, 24)
+2025-01-11 07:16:50,637 INFO:[3_plus] Class distribution in TRAIN: {0: 0.599340138158573, 1: 0.40065986184142693}
+2025-01-11 07:16:50,642 INFO:[3_plus] Class distribution in TEST: {0: 0.5995876288659794, 1: 0.4004123711340206}
+2025-01-11 07:16:51,400 INFO:[3_plus] LogisticRegression -> Test Accuracy: 0.6416
+2025-01-11 07:16:51,882 INFO:[3_plus] XGBoost -> Test Accuracy: 0.6058
+2025-01-11 07:16:52,617 INFO:[3_plus] KNeighbors -> Test Accuracy: 0.5909
+2025-01-11 07:16:56,218 INFO:[3_plus] GradientBoosting -> Test Accuracy: 0.6396
+2025-01-11 07:16:56,218 INFO:[3_plus - Approach B] Best Model: LogisticRegression, Score: 0.6416
+2025-01-11 07:16:56,220 INFO:Saved best Approach B model for 3_plus to ../models/model_3_plus_approachB_LogisticRegression_acc_0.6416.pkl
+2025-01-11 07:16:56,220 INFO:Approach B training complete.
+2025-01-12 06:24:54,327 INFO:Starting consolidation of player game logs.
+2025-01-12 06:24:54,334 DEBUG:Loaded 100 rows from player_1630530.csv.
+2025-01-12 06:24:54,338 DEBUG:Loaded 127 rows from player_1629673.csv.
+2025-01-12 06:24:54,345 DEBUG:Loaded 123 rows from player_1628960.csv.
+2025-01-12 06:24:54,350 DEBUG:Loaded 124 rows from player_201939.csv.
+2025-01-12 06:24:54,353 DEBUG:Loaded 114 rows from player_1626179.csv.
+2025-01-12 06:24:54,356 DEBUG:Loaded 122 rows from player_1626145.csv.
+2025-01-12 06:24:54,360 DEBUG:Loaded 129 rows from player_1628368.csv.
+2025-01-12 06:24:54,364 DEBUG:Loaded 96 rows from player_1630241.csv.
+2025-01-12 06:24:54,368 DEBUG:Loaded 135 rows from player_203484.csv.
+2025-01-12 06:24:54,371 DEBUG:Loaded 103 rows from player_1641718.csv.
+2025-01-12 06:24:54,374 DEBUG:Loaded 117 rows from player_1630532.csv.
+2025-01-12 06:24:54,378 DEBUG:Loaded 129 rows from player_1628369.csv.
+2025-01-12 06:24:54,381 DEBUG:Loaded 122 rows from player_203081.csv.
+2025-01-12 06:24:54,385 DEBUG:Loaded 97 rows from player_203903.csv.
+2025-01-12 06:24:54,389 DEBUG:Loaded 126 rows from player_1626181.csv.
+2025-01-12 06:24:54,392 DEBUG:Loaded 128 rows from player_1626156.csv.
+2025-01-12 06:24:54,396 DEBUG:Loaded 85 rows from player_1628379.csv.
+2025-01-12 06:24:54,399 DEBUG:Loaded 110 rows from player_1629661.csv.
+2025-01-12 06:24:54,403 DEBUG:Loaded 130 rows from player_1626220.csv.
+2025-01-12 06:24:54,406 DEBUG:Loaded 135 rows from player_1628973.csv.
+2025-01-12 06:24:54,410 DEBUG:Loaded 110 rows from player_1628378.csv.
+2025-01-12 06:24:54,414 DEBUG:Loaded 111 rows from player_1627936.csv.
+2025-01-12 06:24:54,418 DEBUG:Loaded 118 rows from player_1626157.csv.
+2025-01-12 06:24:54,422 DEBUG:Loaded 139 rows from player_203084.csv.
+2025-01-12 06:24:54,426 DEBUG:Loaded 91 rows from player_1628970.csv.
+2025-01-12 06:24:54,428 DEBUG:Loaded 90 rows from player_1641722.csv.
+2025-01-12 06:24:54,431 DEBUG:Loaded 112 rows from player_203468.csv.
+2025-01-12 06:24:54,435 DEBUG:Loaded 39 rows from player_1642377.csv.
+2025-01-12 06:24:54,438 DEBUG:Loaded 120 rows from player_1627749.csv.
+2025-01-12 06:24:54,441 DEBUG:Loaded 77 rows from player_202711.csv.
+2025-01-12 06:24:54,445 DEBUG:Loaded 128 rows from player_1627832.csv.
+2025-01-12 06:24:54,448 DEBUG:Loaded 90 rows from player_1630631.csv.
+2025-01-12 06:24:54,453 DEBUG:Loaded 99 rows from player_1629639.csv.
+2025-01-12 06:24:54,456 DEBUG:Loaded 113 rows from player_1627827.csv.
+2025-01-12 06:24:54,459 DEBUG:Loaded 129 rows from player_1630591.csv.
+2025-01-12 06:24:54,463 DEBUG:Loaded 64 rows from player_1629001.csv.
+2025-01-12 06:24:54,467 DEBUG:Loaded 112 rows from player_1629029.csv.
+2025-01-12 06:24:54,471 DEBUG:Loaded 128 rows from player_1631114.csv.
+2025-01-12 06:24:54,475 DEBUG:Loaded 128 rows from player_1630169.csv.
+2025-01-12 06:24:54,478 DEBUG:Loaded 23 rows from player_1642272.csv.
+2025-01-12 06:24:54,482 DEBUG:Loaded 82 rows from player_1631101.csv.
+2025-01-12 06:24:54,486 DEBUG:Loaded 77 rows from player_1627763.csv.
+2025-01-12 06:24:54,489 DEBUG:Loaded 101 rows from player_1629014.csv.
+2025-01-12 06:24:54,493 DEBUG:Loaded 130 rows from player_201144.csv.
+2025-01-12 06:24:54,497 DEBUG:Loaded 73 rows from player_1629004.csv.
+2025-01-12 06:24:54,501 DEBUG:Loaded 120 rows from player_1630178.csv.
+2025-01-12 06:24:54,504 DEBUG:Loaded 97 rows from player_1630193.csv.
+2025-01-12 06:24:54,508 DEBUG:Loaded 109 rows from player_1630595.csv.
+2025-01-12 06:24:54,511 DEBUG:Loaded 139 rows from player_1630224.csv.
+2025-01-12 06:24:54,514 DEBUG:Loaded 132 rows from player_1631099.csv.
+2025-01-12 06:24:54,518 DEBUG:Loaded 109 rows from player_1629628.csv.
+2025-01-12 06:24:54,521 DEBUG:Loaded 134 rows from player_1629012.csv.
+2025-01-12 06:24:54,525 DEBUG:Loaded 131 rows from player_1630557.csv.
+2025-01-12 06:24:54,529 DEBUG:Loaded 122 rows from player_201142.csv.
+2025-01-12 06:24:54,533 DEBUG:Loaded 131 rows from player_203999.csv.
+2025-01-12 06:24:54,537 DEBUG:Loaded 115 rows from player_101108.csv.
+2025-01-12 06:24:54,541 DEBUG:Loaded 139 rows from player_1627783.csv.
+2025-01-12 06:24:54,545 DEBUG:Loaded 129 rows from player_1631095.csv.
+2025-01-12 06:24:54,548 DEBUG:Loaded 104 rows from player_1629631.csv.
+2025-01-12 06:24:54,552 DEBUG:Loaded 137 rows from player_1630162.csv.
+2025-01-12 06:24:54,555 DEBUG:Loaded 66 rows from player_1630163.csv.
+2025-01-12 06:24:54,558 DEBUG:Loaded 106 rows from player_1631094.csv.
+2025-01-12 06:24:54,561 DEBUG:Loaded 142 rows from player_1627741.csv.
+2025-01-12 06:24:54,565 DEBUG:Loaded 108 rows from player_202692.csv.
+2025-01-12 06:24:54,568 DEBUG:Loaded 130 rows from player_1630573.csv.
+2025-01-12 06:24:54,572 DEBUG:Loaded 92 rows from player_1630217.csv.
+2025-01-12 06:24:54,575 DEBUG:Loaded 138 rows from player_1629008.csv.
+2025-01-12 06:24:54,579 DEBUG:Loaded 133 rows from player_1630559.csv.
+2025-01-12 06:24:54,583 DEBUG:Loaded 135 rows from player_1629632.csv.
+2025-01-12 06:24:54,587 DEBUG:Loaded 102 rows from player_1627742.csv.
+2025-01-12 06:24:54,591 DEBUG:Loaded 130 rows from player_202691.csv.
+2025-01-12 06:24:54,595 DEBUG:Loaded 140 rows from player_1630202.csv.
+2025-01-12 06:24:54,599 DEBUG:Loaded 116 rows from player_203992.csv.
+2025-01-12 06:24:54,603 DEBUG:Loaded 105 rows from player_1630560.csv.
+2025-01-12 06:24:54,606 DEBUG:Loaded 90 rows from player_202695.csv.
+2025-01-12 06:24:54,610 DEBUG:Loaded 108 rows from player_202681.csv.
+2025-01-12 06:24:54,615 DEBUG:Loaded 127 rows from player_1631093.csv.
+2025-01-12 06:24:54,620 DEBUG:Loaded 63 rows from player_202722.csv.
+2025-01-12 06:24:54,624 DEBUG:Loaded 110 rows from player_1630170.csv.
+2025-01-12 06:24:54,628 DEBUG:Loaded 113 rows from player_1629636.csv.
+2025-01-12 06:24:54,631 DEBUG:Loaded 99 rows from player_1629622.csv.
+2025-01-12 06:24:54,635 DEBUG:Loaded 125 rows from player_1629018.csv.
+2025-01-12 06:24:54,639 DEBUG:Loaded 119 rows from player_202331.csv.
+2025-01-12 06:24:54,642 DEBUG:Loaded 128 rows from player_1630577.csv.
+2025-01-12 06:24:54,646 DEBUG:Loaded 133 rows from player_202696.csv.
+2025-01-12 06:24:54,649 DEBUG:Loaded 135 rows from player_201572.csv.
+2025-01-12 06:24:54,652 DEBUG:Loaded 133 rows from player_1630198.csv.
+2025-01-12 06:24:54,656 DEBUG:Loaded 110 rows from player_1629027.csv.
+2025-01-12 06:24:54,659 DEBUG:Loaded 124 rows from player_2544.csv.
+2025-01-12 06:24:54,663 DEBUG:Loaded 110 rows from player_1627750.csv.
+2025-01-12 06:24:54,667 DEBUG:Loaded 136 rows from player_203471.csv.
+2025-01-12 06:24:54,670 DEBUG:Loaded 135 rows from player_1629652.csv.
+2025-01-12 06:24:54,674 DEBUG:Loaded 78 rows from player_203897.csv.
+2025-01-12 06:24:54,678 DEBUG:Loaded 141 rows from player_1628969.csv.
+2025-01-12 06:24:54,681 DEBUG:Loaded 48 rows from player_1641713.csv.
+2025-01-12 06:24:54,685 DEBUG:Loaded 132 rows from player_1628983.csv.
+2025-01-12 06:24:54,689 DEBUG:Loaded 99 rows from player_1641706.csv.
+2025-01-12 06:24:54,693 DEBUG:Loaded 138 rows from player_1627736.csv.
+2025-01-12 06:24:54,696 DEBUG:Loaded 120 rows from player_1626164.csv.
+2025-01-12 06:24:54,700 DEBUG:Loaded 58 rows from player_203935.csv.
+2025-01-12 06:24:54,704 DEBUG:Loaded 103 rows from player_1641705.csv.
+2025-01-12 06:24:54,708 DEBUG:Loaded 93 rows from player_1641711.csv.
+2025-01-12 06:24:54,712 DEBUG:Loaded 106 rows from player_1628374.csv.
+2025-01-12 06:24:54,715 DEBUG:Loaded 133 rows from player_1626167.csv.
+2025-01-12 06:24:54,719 DEBUG:Loaded 109 rows from player_203926.csv.
+2025-01-12 06:24:54,722 DEBUG:Loaded 123 rows from player_1628370.csv.
+2025-01-12 06:24:54,725 DEBUG:Loaded 109 rows from player_1628398.csv.
+2025-01-12 06:24:54,729 DEBUG:Loaded 129 rows from player_1628401.csv.
+2025-01-12 06:24:54,734 DEBUG:Loaded 126 rows from player_1628415.csv.
+2025-01-12 06:24:54,739 DEBUG:Loaded 139 rows from player_1628978.csv.
+2025-01-12 06:24:54,745 DEBUG:Loaded 127 rows from player_201935.csv.
+2025-01-12 06:24:54,750 DEBUG:Loaded 123 rows from player_1629130.csv.
+2025-01-12 06:24:54,755 DEBUG:Loaded 134 rows from player_203501.csv.
+2025-01-12 06:24:54,759 DEBUG:Loaded 103 rows from player_203924.csv.
+2025-01-12 06:24:54,769 INFO:Successfully concatenated 114 files. Total rows: 12896
+2025-01-12 06:24:54,837 INFO:Consolidated logs saved to ../data/consolidated_database.csv
+2025-01-12 06:26:11,045 INFO:Approach B dataset saved to ../data/dataset_for_training_approachB.csv
+2025-01-12 06:26:11,047 INFO:[Approach B: label_1_plus] => {1: 10776, 0: 1792}
+2025-01-12 06:26:11,047 INFO:[Approach B: label_2_plus] => {1: 7881, 0: 4687}
+2025-01-12 06:26:11,048 INFO:[Approach B: label_3_plus] => {0: 7550, 1: 5018}
+2025-01-12 06:26:11,056 INFO:=== Training Approach B for threshold: 1_plus ===
+2025-01-12 06:26:11,065 INFO:[1_plus] Train set: (9792, 24), Test set: (2448, 24)
+2025-01-12 06:26:11,066 INFO:[1_plus] Class distribution in TRAIN: {1: 0.8574346405228758, 0: 0.14256535947712418}
+2025-01-12 06:26:11,066 INFO:[1_plus] Class distribution in TEST: {1: 0.8574346405228758, 0: 0.14256535947712418}
+2025-01-12 06:26:11,202 INFO:[1_plus] After SMOTE => Train shape: (16792, 24)
+2025-01-12 06:26:11,204 INFO:[1_plus] Class distribution after SMOTE: {1: 8396, 0: 8396}
+2025-01-12 06:26:11,832 INFO:[1_plus] LogisticRegression -> Test Accuracy: 0.6111
+2025-01-12 06:26:12,535 INFO:[1_plus] XGBoost -> Test Accuracy: 0.8374
+2025-01-12 06:26:13,185 INFO:[1_plus] KNeighbors -> Test Accuracy: 0.6340
+2025-01-12 06:26:22,516 INFO:[1_plus] GradientBoosting -> Test Accuracy: 0.8431
+2025-01-12 06:26:22,516 INFO:[1_plus - Approach B] Best Model: GradientBoosting, Score: 0.8431
+2025-01-12 06:26:22,525 INFO:Saved best Approach B model for 1_plus to ../models/model_1_plus_approachB_GradientBoosting_acc_0.8431.pkl
+2025-01-12 06:26:22,526 INFO:=== Training Approach B for threshold: 2_plus ===
+2025-01-12 06:26:22,534 INFO:[2_plus] Train set: (9792, 24), Test set: (2448, 24)
+2025-01-12 06:26:22,535 INFO:[2_plus] Class distribution in TRAIN: {1: 0.6268382352941176, 0: 0.37316176470588236}
+2025-01-12 06:26:22,536 INFO:[2_plus] Class distribution in TEST: {1: 0.6270424836601307, 0: 0.3729575163398693}
+2025-01-12 06:26:22,605 INFO:[2_plus] After SMOTE => Train shape: (12276, 24)
+2025-01-12 06:26:22,605 INFO:[2_plus] Class distribution after SMOTE: {1: 6138, 0: 6138}
+2025-01-12 06:26:23,085 INFO:[2_plus] LogisticRegression -> Test Accuracy: 0.6033
+2025-01-12 06:26:23,817 INFO:[2_plus] XGBoost -> Test Accuracy: 0.6115
+2025-01-12 06:26:24,464 INFO:[2_plus] KNeighbors -> Test Accuracy: 0.5609
+2025-01-12 06:26:29,837 INFO:[2_plus] GradientBoosting -> Test Accuracy: 0.6356
+2025-01-12 06:26:29,838 INFO:[2_plus - Approach B] Best Model: GradientBoosting, Score: 0.6356
+2025-01-12 06:26:29,846 INFO:Saved best Approach B model for 2_plus to ../models/model_2_plus_approachB_GradientBoosting_acc_0.6356.pkl
+2025-01-12 06:26:29,847 INFO:=== Training Approach B for threshold: 3_plus ===
+2025-01-12 06:26:29,855 INFO:[3_plus] Train set: (9792, 24), Test set: (2448, 24)
+2025-01-12 06:26:29,855 INFO:[3_plus] Class distribution in TRAIN: {0: 0.5998774509803921, 1: 0.40012254901960786}
+2025-01-12 06:26:29,856 INFO:[3_plus] Class distribution in TEST: {0: 0.5996732026143791, 1: 0.40032679738562094}
+2025-01-12 06:26:30,325 INFO:[3_plus] LogisticRegression -> Test Accuracy: 0.6458
+2025-01-12 06:26:30,715 INFO:[3_plus] XGBoost -> Test Accuracy: 0.6111
+2025-01-12 06:26:31,034 INFO:[3_plus] KNeighbors -> Test Accuracy: 0.6123
+2025-01-12 06:26:34,369 INFO:[3_plus] GradientBoosting -> Test Accuracy: 0.6434
+2025-01-12 06:26:34,370 INFO:[3_plus - Approach B] Best Model: LogisticRegression, Score: 0.6458
+2025-01-12 06:26:34,372 INFO:Saved best Approach B model for 3_plus to ../models/model_3_plus_approachB_LogisticRegression_acc_0.6458.pkl
+2025-01-12 06:26:34,373 INFO:Approach B training complete.

@@ -1,0 +1,1142 @@
+Understood! We'll incorporate your adjustments by replacing Neural Networks with XGBoost and utilizing the NBA API for data collection. Additionally, we'll break down the development steps by specific scripts to provide a clear roadmap for coding each component in sequence.
+
+---
+
+## **Revised Project Development Steps**
+
+### **Key Changes:**
+1. **Algorithm Replacement:** Replace Neural Networks (MLP Classifier) with **XGBoost** in the list of machine learning algorithms.
+2. **Data Source Update:** Utilize the **NBA API** for data collection instead of alternative sources.
+
+---
+
+## **1. Project Initialization**
+
+### **a. Define Project Scope and Objectives**
+- **Clarify Goals:** Predict whether the total first-quarter points between two NBA teams will be over 52 or under 53, along with the probability of the prediction.
+- **Identify Deliverables:** Prediction script, updated dataset, trained model, documentation, and testing suites.
+
+### **b. Set Up Version Control**
+- **Initialize Git Repository:**
+  ```bash
+  git init nba_first_quarter_prediction
+  ```
+- **Create a `.gitignore` File:** Exclude unnecessary files like data, virtual environments, and model artifacts.
+  ```gitignore
+  __pycache__/
+  *.pyc
+  .env/
+  data/raw/
+  data/processed/
+  models/
+  ```
+
+### **c. Create Project Directory Structure**
+- **Structure Layout:**
+  ```
+  nba_first_quarter_prediction/
+  ├── data/
+  │   ├── raw/
+  │   ├── processed/
+  │   └── external/
+  ├── notebooks/
+  ├── src/
+  │   ├── data/
+  │   │   ├── __init__.py
+  │   │   ├── collect_data.py
+  │   │   ├── preprocess.py
+  │   │   └── feature_engineering.py
+  │   ├── analysis/
+  │   │   ├── __init__.py
+  │   │   └── correlation_analysis.py
+  │   ├── models/
+  │   │   ├── __init__.py
+  │   │   ├── train.py
+  │   │   ├── evaluate.py
+  │   │   └── predict.py
+  │   └── utils/
+  │       ├── __init__.py
+  │       ├── config.py
+  │       └── helpers.py
+  ├── models/
+  ├── tests/
+  ├── .gitignore
+  ├── requirements.txt
+  ├── README.md
+  └── predict.py
+  ```
+
+### **d. Set Up Virtual Environment and Install Dependencies**
+- **Create Virtual Environment:**
+  ```bash
+  python3 -m venv venv
+  ```
+- **Activate Virtual Environment:**
+  ```bash
+  source venv/bin/activate  # On Unix or MacOS
+  venv\Scripts\activate     # On Windows
+  ```
+- **Install Required Libraries:**
+  ```bash
+  pip install pandas numpy scikit-learn matplotlib seaborn requests beautifulsoup4 joblib argparse pytest xgboost nba_api
+  ```
+- **Freeze Dependencies:**
+  ```bash
+  pip freeze > requirements.txt
+  ```
+
+---
+
+## **2. Data Collection**
+
+### **a. Identify Data Sources**
+- **Primary Source:** 
+  - **NBA API:** Official API for comprehensive NBA data.
+- **Alternative Sources:** 
+  - **Basketball Reference:** As a supplementary source if needed.
+
+### **b. Develop `collect_data.py`**
+**Purpose:** Fetch historical game data from the 2021-2022 season to the current date using the NBA API.
+
+**Tasks:**
+1. **API Integration:**
+   - Utilize the `nba_api` library to connect to the NBA API.
+   - Fetch game logs, team statistics, and other relevant data.
+2. **Data Extraction:**
+   - Extract required fields:
+     - Team abbreviations
+     - Game dates
+     - Game IDs
+     - Season information
+     - Points scored by each team in the first quarter
+     - Total first-quarter points
+     - Additional team statistics for feature engineering
+3. **Data Storage:**
+   - Save raw data in `data/raw/` as CSV or JSON files.
+4. **Error Handling:**
+   - Implement try-except blocks to manage API rate limits, connection issues, and data retrieval errors.
+5. **Scheduling (Future Step):**
+   - Plan to automate this script using `cron` or another scheduler post initial development.
+
+**Sample Code Snippet:**
+```python
+# src/data/collect_data.py
+
+from nba_api.stats.endpoints import leaguegamefinder
+import pandas as pd
+import os
+from src.utils.config import RAW_DATA_PATH
+
+def fetch_game_logs(season_start='2021'):
+    gamefinder = leaguegamefinder.LeagueGameFinder(season_nullable=season_start)
+    games = gamefinder.get_data_frames()[0]
+    return games
+
+def save_raw_data(games_df):
+    os.makedirs(RAW_DATA_PATH, exist_ok=True)
+    games_df.to_csv(os.path.join(RAW_DATA_PATH, 'raw_games.csv'), index=False)
+
+def main():
+    games_df = fetch_game_logs()
+    save_raw_data(games_df)
+    print("Raw game data collected and saved.")
+
+if __name__ == "__main__":
+    main()
+```
+
+### **c. Validate Collected Data**
+- **Integrity Checks:** Ensure no duplicate records, correct data types, and completeness of essential fields.
+- **Sample Verification:** Manually verify a subset of the data for accuracy.
+
+---
+
+## **3. Data Preprocessing**
+
+### **a. Develop `preprocess.py`**
+**Purpose:** Clean and preprocess raw data to prepare it for feature engineering and modeling.
+
+**Tasks:**
+1. **Load Raw Data:**
+   - Import raw data from `data/raw/raw_games.csv`.
+2. **Handle Missing Values:**
+   - Identify and handle missing data through imputation or removal.
+3. **Data Type Conversion:**
+   - Convert columns to appropriate data types (e.g., dates to `datetime` objects).
+4. **Filter Relevant Columns:**
+   - Retain essential columns required for feature engineering and modeling.
+5. **Remove Duplicates:**
+   - Ensure there are no duplicate game entries.
+6. **Save Cleaned Data:**
+   - Export the cleaned data to `data/processed/cleaned_data.csv`.
+
+**Sample Code Snippet:**
+```python
+# src/data/preprocess.py
+
+import pandas as pd
+import os
+from src.utils.config import RAW_DATA_PATH, PROCESSED_DATA_PATH
+
+def load_raw_data():
+    raw_data_path = os.path.join(RAW_DATA_PATH, 'raw_games.csv')
+    return pd.read_csv(raw_data_path)
+
+def clean_data(df):
+    # Convert game date to datetime
+    df['GAME_DATE'] = pd.to_datetime(df['GAME_DATE'])
+    
+    # Handle missing values (example: drop rows with missing first quarter points)
+    df = df.dropna(subset=['PTS_QTR1', 'PTS_QTR1_OPP'])
+    
+    # Remove duplicate games based on GAME_ID
+    df = df.drop_duplicates(subset=['GAME_ID'])
+    
+    # Additional cleaning steps as needed
+    return df
+
+def save_cleaned_data(df):
+    os.makedirs(PROCESSED_DATA_PATH, exist_ok=True)
+    df.to_csv(os.path.join(PROCESSED_DATA_PATH, 'cleaned_data.csv'), index=False)
+
+def main():
+    df_raw = load_raw_data()
+    df_clean = clean_data(df_raw)
+    save_cleaned_data(df_clean)
+    print("Data preprocessing completed and cleaned data saved.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## **4. Feature Engineering**
+
+### **a. Develop `feature_engineering.py`**
+**Purpose:** Create interaction and polynomial features, as well as rolling statistics for modeling.
+
+**Tasks:**
+1. **Load Cleaned Data:**
+   - Import cleaned data from `data/processed/cleaned_data.csv`.
+2. **Create Interaction Features:**
+   - Multiply team stats with opponent stats (e.g., `fg_interaction = fg_team * fg_opponent`).
+3. **Generate Polynomial Features:**
+   - Calculate squared terms (e.g., `pace_interaction_squared = pace_interaction ** 2`).
+4. **Compute Rolling Averages:**
+   - Average FQP for teams and opponents over the last 5 games.
+   - Average points scored by and against teams and opponents over the last 10 games.
+5. **Incorporate Temporal Features:**
+   - Features like `pace_in_last_10_games`.
+6. **Handle Data Leakage:**
+   - Ensure that rolling statistics only use past data relative to each game.
+7. **Save Engineered Features:**
+   - Export the final feature set to `data/processed/feature_set.csv`.
+
+**Sample Code Snippet:**
+```python
+# src/data/feature_engineering.py
+
+import pandas as pd
+import os
+from src.utils.config import PROCESSED_DATA_PATH
+
+def load_cleaned_data():
+    cleaned_data_path = os.path.join(PROCESSED_DATA_PATH, 'cleaned_data.csv')
+    return pd.read_csv(cleaned_data_path)
+
+def create_interaction_features(df):
+    df['fg_interaction'] = df['FG_TEAM'] * df['FG_OPP']
+    df['efg_interaction'] = df['EFG_TEAM'] * df['EFG_OPP']
+    df['ppg_interaction'] = df['PPG_TEAM'] * df['PPG_OPP']
+    df['pace_interaction'] = df['PACE_TEAM'] * df['PACE_OPP']
+    df['pace_interaction_squared'] = df['pace_interaction'] ** 2
+    # Add other interaction and polynomial features as specified
+    return df
+
+def compute_rolling_statistics(df):
+    df = df.sort_values(['Team', 'GAME_DATE'])
+    
+    # Example: Average FQP over last 5 games for team
+    df['avg_fqp_last5'] = df.groupby('Team')['FQP_TEAM'].transform(lambda x: x.rolling(window=5, min_periods=1).mean())
+    
+    # Repeat for opponent and other rolling statistics
+    # Example: Average points scored by team over last 10 games
+    df['avg_points_scored_last10'] = df.groupby('Team')['PTS_TEAM'].transform(lambda x: x.rolling(window=10, min_periods=1).mean())
+    
+    # Add other rolling statistics as specified
+    return df
+
+def engineer_features(df):
+    df = create_interaction_features(df)
+    df = compute_rolling_statistics(df)
+    # Add any additional feature engineering steps here
+    return df
+
+def save_feature_set(df):
+    feature_set_path = os.path.join(PROCESSED_DATA_PATH, 'feature_set.csv')
+    df.to_csv(feature_set_path, index=False)
+
+def main():
+    df_clean = load_cleaned_data()
+    df_features = engineer_features(df_clean)
+    save_feature_set(df_features)
+    print("Feature engineering completed and feature set saved.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## **5. Exploratory Data Analysis (EDA) and Correlation Analysis**
+
+### **a. Develop `correlation_analysis.py`**
+**Purpose:** Analyze correlations between features and the target variable to understand feature importance and multicollinearity.
+
+**Tasks:**
+1. **Load Feature Set:**
+   - Import `data/processed/feature_set.csv`.
+2. **Define Target Variable:**
+   - Create a binary target where `1` indicates total first-quarter points > 52, else `0`.
+3. **Compute Correlations:**
+   - Calculate Pearson or Spearman correlation coefficients between features and the target.
+4. **Visualize Correlations:**
+   - Create heatmaps using `seaborn` to visualize the correlation matrix.
+   - Plot scatter plots for highly correlated feature pairs.
+5. **Identify Multicollinearity:**
+   - Detect features with high inter-correlations that may affect model performance.
+6. **Feature Selection Recommendations:**
+   - Suggest removing or combining highly correlated features to reduce redundancy.
+7. **Save EDA Reports:**
+   - Export plots and analysis summaries to the `notebooks/` or `reports/` directory.
+
+**Sample Code Snippet:**
+```python
+# src/analysis/correlation_analysis.py
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+from src.utils.config import PROCESSED_DATA_PATH
+
+def load_feature_set():
+    feature_set_path = os.path.join(PROCESSED_DATA_PATH, 'feature_set.csv')
+    return pd.read_csv(feature_set_path)
+
+def define_target(df):
+    df['Target'] = (df['Total_first_quarter_points'] > 52).astype(int)
+    return df
+
+def compute_correlations(df):
+    corr_matrix = df.corr()
+    return corr_matrix
+
+def plot_heatmap(corr_matrix):
+    plt.figure(figsize=(20, 15))
+    sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap='coolwarm')
+    plt.title('Correlation Matrix Heatmap')
+    plt.tight_layout()
+    plt.savefig('reports/correlation_heatmap.png')
+    plt.close()
+
+def main():
+    df = load_feature_set()
+    df = define_target(df)
+    corr_matrix = compute_correlations(df)
+    plot_heatmap(corr_matrix)
+    print("Correlation analysis completed and heatmap saved.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## **6. Model Training and Selection**
+
+### **a. Develop `train.py`**
+**Purpose:** Train multiple machine learning algorithms (including XGBoost) and identify the best-performing model based on initial evaluation metrics.
+
+**Tasks:**
+1. **Load Feature Set:**
+   - Import `data/processed/feature_set.csv`.
+2. **Define Features and Target:**
+   - Features (`X`): All engineered features excluding identifiers and the target.
+   - Target (`y`): Binary classification where `1` indicates total first-quarter points > 52, else `0`.
+3. **Split Data:**
+   - Divide data into training and testing sets (e.g., 80-20 split).
+4. **Initialize Machine Learning Algorithms:**
+   - **List of Algorithms:**
+     1. **Logistic Regression**
+     2. **Random Forest Classifier**
+     3. **Gradient Boosting Classifier**
+     4. **Support Vector Machine (SVM)**
+     5. **K-Nearest Neighbors (KNN)**
+     6. **XGBoost Classifier**
+5. **Train Models:**
+   - Fit each algorithm on the training data.
+6. **Evaluate Initial Performance:**
+   - Use metrics like accuracy, precision, recall, F1-score, and ROC-AUC on the testing set.
+   - Record performance metrics for comparison.
+7. **Select Best Performing Model:**
+   - Based on evaluation metrics, identify the top-performing algorithm.
+8. **Save Trained Models:**
+   - Serialize and save each trained model using `joblib` in the `models/` directory.
+
+**Sample Code Snippet:**
+```python
+# src/models/train.py
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from xgboost import XGBClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+import joblib
+import os
+from src.utils.config import PROCESSED_DATA_PATH, MODELS_PATH
+
+def load_data():
+    feature_set_path = os.path.join(PROCESSED_DATA_PATH, 'feature_set.csv')
+    df = pd.read_csv(feature_set_path)
+    X = df.drop(['Team', 'Opp', 'Game_date', 'Game_ID', 'season', 'Total_first_quarter_points'], axis=1)
+    y = (df['Total_first_quarter_points'] > 52).astype(int)
+    return X, y
+
+def train_models(X_train, y_train):
+    models = {
+        'LogisticRegression': LogisticRegression(max_iter=1000),
+        'RandomForest': RandomForestClassifier(),
+        'GradientBoosting': GradientBoostingClassifier(),
+        'SVM': SVC(probability=True),
+        'KNN': KNeighborsClassifier(),
+        'XGBoost': XGBClassifier(use_label_encoder=False, eval_metric='logloss')
+    }
+
+    trained_models = {}
+    for name, model in models.items():
+        model.fit(X_train, y_train)
+        trained_models[name] = model
+        print(f"{name} trained.")
+    
+    return trained_models
+
+def evaluate_models(models, X_test, y_test):
+    performance = {}
+    for name, model in models.items():
+        preds = model.predict(X_test)
+        probs = model.predict_proba(X_test)[:,1] if hasattr(model, "predict_proba") else None
+        performance[name] = {
+            'Accuracy': accuracy_score(y_test, preds),
+            'Precision': precision_score(y_test, preds),
+            'Recall': recall_score(y_test, preds),
+            'F1-Score': f1_score(y_test, preds),
+            'ROC-AUC': roc_auc_score(y_test, probs) if probs is not None else None
+        }
+        print(f"{name} Evaluation Metrics:")
+        for metric, value in performance[name].items():
+            print(f"  {metric}: {value:.4f}")
+    return performance
+
+def select_best_model(performance):
+    # Example selection based on ROC-AUC
+    best_score = 0
+    best_model_name = None
+    for name, metrics in performance.items():
+        if metrics['ROC-AUC'] and metrics['ROC-AUC'] > best_score:
+            best_score = metrics['ROC-AUC']
+            best_model_name = name
+    print(f"Best Model Selected: {best_model_name} with ROC-AUC: {best_score:.4f}")
+    return best_model_name
+
+def save_models(models):
+    os.makedirs(MODELS_PATH, exist_ok=True)
+    for name, model in models.items():
+        joblib.dump(model, os.path.join(MODELS_PATH, f"{name}.pkl"))
+        print(f"{name} saved.")
+
+def main():
+    X, y = load_data()
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    trained_models = train_models(X_train, y_train)
+    performance = evaluate_models(trained_models, X_test, y_test)
+    best_model_name = select_best_model(performance)
+    
+    save_models(trained_models)
+    print("All models trained and saved.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## **7. Model Evaluation and Optimization**
+
+### **a. Develop `evaluate.py`**
+**Purpose:** Perform cross-validation and hyperparameter tuning on the best-performing model to optimize its performance.
+
+**Tasks:**
+1. **Load Data and Best Model:**
+   - Import `data/processed/feature_set.csv`.
+   - Load the best-performing model identified in `train.py` (e.g., XGBoost).
+2. **Define Features and Target:**
+   - Features (`X`) and Target (`y`) as in `train.py`.
+3. **Cross-Validation:**
+   - Implement k-fold cross-validation (e.g., k=5) to assess model robustness.
+   - Compute average metrics across folds.
+4. **Hyperparameter Tuning:**
+   - Use `GridSearchCV` or `RandomizedSearchCV` to explore optimal hyperparameters for the best model.
+   - Define a parameter grid specific to XGBoost (or the selected model).
+   - Fit the search on the training data and identify optimal hyperparameters.
+5. **Evaluate Optimized Model:**
+   - Assess performance on validation sets to ensure improvements.
+6. **Retrain with Optimal Parameters:**
+   - Train the model using the entire training dataset with the best-found hyperparameters.
+7. **Save Optimized Model:**
+   - Serialize and save the optimized model to `models/optimized_model.pkl`.
+8. **Document Model Performance:**
+   - Record final evaluation metrics post-optimization.
+   - Save evaluation summaries and comparison charts.
+
+**Sample Code Snippet:**
+```python
+# src/models/evaluate.py
+
+import pandas as pd
+from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+import joblib
+import os
+from src.utils.config import PROCESSED_DATA_PATH, MODELS_PATH
+
+def load_data():
+    feature_set_path = os.path.join(PROCESSED_DATA_PATH, 'feature_set.csv')
+    df = pd.read_csv(feature_set_path)
+    X = df.drop(['Team', 'Opp', 'Game_date', 'Game_ID', 'season', 'Total_first_quarter_points'], axis=1)
+    y = (df['Total_first_quarter_points'] > 52).astype(int)
+    return X, y
+
+def load_best_model():
+    # Assuming 'XGBoost.pkl' is the best model saved from train.py
+    model_path = os.path.join(MODELS_PATH, 'XGBoost.pkl')
+    return joblib.load(model_path)
+
+def cross_validate_model(model, X, y, cv=5):
+    scores = cross_val_score(model, X, y, cv=cv, scoring='roc_auc')
+    print(f"Cross-Validation ROC-AUC Scores: {scores}")
+    print(f"Mean ROC-AUC: {scores.mean():.4f}")
+    print(f"Std ROC-AUC: {scores.std():.4f}")
+    return scores
+
+def hyperparameter_tuning(model, X, y):
+    param_grid = {
+        'n_estimators': [100, 200, 300],
+        'max_depth': [3, 5, 7],
+        'learning_rate': [0.01, 0.1, 0.2],
+        'subsample': [0.8, 1.0],
+        'colsample_bytree': [0.8, 1.0]
+    }
+    grid_search = GridSearchCV(estimator=model, param_grid=param_grid, 
+                               cv=5, scoring='roc_auc', n_jobs=-1, verbose=1)
+    grid_search.fit(X, y)
+    print(f"Best Parameters: {grid_search.best_params_}")
+    print(f"Best ROC-AUC Score: {grid_search.best_score_:.4f}")
+    return grid_search.best_estimator_
+
+def save_optimized_model(model):
+    optimized_model_path = os.path.join(MODELS_PATH, 'optimized_model.pkl')
+    joblib.dump(model, optimized_model_path)
+    print("Optimized model saved.")
+
+def main():
+    X, y = load_data()
+    model = load_best_model()
+    
+    # Cross-Validation
+    print("Performing cross-validation...")
+    cross_validate_model(model, X, y)
+    
+    # Hyperparameter Tuning
+    print("Starting hyperparameter tuning...")
+    optimized_model = hyperparameter_tuning(model, X, y)
+    
+    # Save Optimized Model
+    save_optimized_model(optimized_model)
+    
+    # Optionally, evaluate the optimized model further or save evaluation metrics
+    print("Model evaluation and optimization completed.")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## **8. Develop Prediction Interface**
+
+### **a. Develop `predict.py` (Entry Point)**
+**Purpose:** Provide a command-line interface for making predictions based on input team abbreviations.
+
+**Tasks:**
+1. **Parse Command-Line Arguments:**
+   - Accept two team abbreviations (e.g., `LAL` and `BOS`).
+2. **Load Latest Data and Model:**
+   - Import the latest `feature_set.csv`.
+   - Load the optimized model (`optimized_model.pkl`).
+3. **Retrieve Team Statistics:**
+   - Extract the most recent statistics for both input teams from the dataset.
+4. **Feature Preparation:**
+   - Apply the same preprocessing and feature engineering steps to the input data.
+5. **Make Prediction:**
+   - Predict the class (Over 52 or Under 53) using the model.
+   - Calculate the probability of the predicted class.
+6. **Output Results:**
+   - Display the prediction and its probability in a user-friendly format.
+7. **Handle Errors and Edge Cases:**
+   - Provide informative error messages for invalid inputs or missing data.
+
+**Sample Code Snippet:**
+```python
+# src/models/predict.py
+
+import argparse
+import joblib
+import pandas as pd
+import os
+from src.utils.config import PROCESSED_DATA_PATH, MODELS_PATH
+
+def load_model():
+    model_path = os.path.join(MODELS_PATH, 'optimized_model.pkl')
+    return joblib.load(model_path)
+
+def load_feature_set():
+    feature_set_path = os.path.join(PROCESSED_DATA_PATH, 'feature_set.csv')
+    return pd.read_csv(feature_set_path)
+
+def get_latest_game(team1, team2, df):
+    # Filter for the latest game between the two teams
+    games = df[((df['Team'] == team1) & (df['Opp'] == team2)) |
+              ((df['Team'] == team2) & (df['Opp'] == team1))]
+    if games.empty:
+        raise ValueError("No games found between the specified teams.")
+    latest_game = games.sort_values('Game_date', ascending=False).iloc[0]
+    return latest_game
+
+def prepare_features(game_series):
+    # Convert the Series to DataFrame and drop unnecessary columns
+    features = game_series.drop(['Team', 'Opp', 'Game_date', 'Game_ID', 'season', 'Total_first_quarter_points']).to_frame().T
+    return features
+
+def main():
+    parser = argparse.ArgumentParser(description='Predict first quarter total points between two NBA teams.')
+    parser.add_argument('team1', type=str, help='Abbreviation of the first team (e.g., LAL)')
+    parser.add_argument('team2', type=str, help='Abbreviation of the second team (e.g., BOS)')
+    args = parser.parse_args()
+    
+    team1 = args.team1.upper()
+    team2 = args.team2.upper()
+    
+    try:
+        # Load data and model
+        df = load_feature_set()
+        model = load_model()
+        
+        # Get latest game stats
+        game = get_latest_game(team1, team2, df)
+        features = prepare_features(game)
+        
+        # Make prediction
+        prediction = model.predict(features)[0]
+        probability = model.predict_proba(features)[0][prediction]
+        
+        label = 'Over 52' if prediction == 1 else 'Under 53'
+        probability_percent = round(probability * 100, 2)
+        
+        print(f"Prediction: {label}")
+        print(f"Probability: {probability_percent}%")
+        
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Usage Example:**
+```bash
+python predict.py LAL BOS
+```
+**Sample Output:**
+```
+Prediction: Over 52
+Probability: 78.5%
+```
+
+---
+
+## **9. Automation and Updating Mechanism**
+
+### **a. Automate Data Collection and Processing**
+**Tasks:**
+1. **Scheduling Tools:** 
+   - Use `cron` (Unix/Linux) or Task Scheduler (Windows) to run data collection scripts after each game day.
+2. **Sequential Execution:**
+   - Ensure that `collect_data.py`, `preprocess.py`, and `feature_engineering.py` run in sequence.
+3. **Sample `cron` Job:**
+   ```bash
+   # Run at midnight every day
+   0 0 * * * /path/to/venv/bin/python /path/to/src/data/collect_data.py && \
+              /path/to/venv/bin/python /path/to/src/data/preprocess.py && \
+              /path/to/venv/bin/python /path/to/src/data/feature_engineering.py
+   ```
+
+### **b. Automate Model Retraining**
+**Tasks:**
+1. **Define Trigger Conditions:**
+   - Retrain the model after accumulating a certain number of new games (e.g., every 10 new games).
+2. **Automated Scripts:**
+   - Schedule `train.py` and `evaluate.py` to execute based on the defined conditions.
+3. **Sample `cron` Job for Retraining:**
+   ```bash
+   # Run model training on the 1st day of every month
+   0 0 1 * * /path/to/venv/bin/python /path/to/src/models/train.py && \
+             /path/to/venv/bin/python /path/to/src/models/evaluate.py
+   ```
+
+### **c. Implement Continuous Integration (Optional)**
+**Tasks:**
+1. **CI Tools:**
+   - Use platforms like GitHub Actions or Travis CI to automate testing and deployment processes.
+2. **Sample GitHub Actions Workflow:**
+   ```yaml
+   name: CI
+
+   on:
+     push:
+       branches: [ main ]
+     pull_request:
+       branches: [ main ]
+
+   jobs:
+     build:
+
+       runs-on: ubuntu-latest
+
+       steps:
+       - uses: actions/checkout@v2
+       - name: Set up Python
+         uses: actions/setup-python@v2
+         with:
+           python-version: '3.8'
+       - name: Install dependencies
+         run: |
+           python -m pip install --upgrade pip
+           pip install -r requirements.txt
+       - name: Run tests
+         run: |
+           pytest
+   ```
+
+---
+
+## **10. Testing and Validation**
+
+### **a. Develop Unit Tests in `tests/` Directory**
+**Purpose:** Ensure each module functions correctly and reliably.
+
+**Tasks:**
+1. **Create Test Files:**
+   - `test_collect_data.py`
+   - `test_preprocess.py`
+   - `test_feature_engineering.py`
+   - `test_train.py`
+   - `test_predict.py`
+2. **Write Test Cases:**
+   - **Data Collection:** Verify that data is correctly fetched and stored.
+   - **Preprocessing:** Ensure that cleaning and transformation functions work as intended.
+   - **Feature Engineering:** Check the correctness of interaction and polynomial features.
+   - **Model Training:** Confirm that models can be trained without errors.
+   - **Prediction Interface:** Validate that predictions are generated accurately given sample inputs.
+3. **Sample Test Case:**
+   ```python
+   # tests/test_preprocess.py
+
+   import pytest
+   import pandas as pd
+   from src.data.preprocess import clean_data
+
+   def test_clean_data():
+       # Create a sample dataframe with missing values and duplicates
+       data = {
+           'GAME_ID': [1, 2, 2, 3],
+           'GAME_DATE': ['2022-01-01', '2022-01-02', '2022-01-02', '2022-01-03'],
+           'PTS_QTR1': [25, 30, 30, None],
+           'PTS_QTR1_OPP': [27, 26, 26, 25],
+           'FG_TEAM': [10, 12, 12, 11],
+           'FG_OPP': [9, 11, 11, 10]
+       }
+       df = pd.DataFrame(data)
+       cleaned_df = clean_data(df)
+       assert cleaned_df.shape[0] == 2  # One duplicate and one missing value row removed
+   ```
+
+### **b. Implement Integration Tests**
+**Purpose:** Test the entire pipeline from data collection to prediction to ensure seamless integration.
+
+**Tasks:**
+1. **End-to-End Testing:**
+   - Simulate a complete run of the pipeline with sample data.
+   - Compare predictions against known outcomes.
+2. **Simulate Real Scenarios:**
+   - Use historical game data to simulate predictions and validate against actual results.
+
+### **c. Use Testing Frameworks**
+**Tasks:**
+1. **Choose Framework:** Utilize `pytest` for writing and running tests.
+2. **Run Tests:**
+   ```bash
+   pytest
+   ```
+
+---
+
+## **11. Documentation**
+
+### **a. Write Comprehensive `README.md`**
+**Contents:**
+1. **Project Overview:**
+   - Explain the purpose and functionality of the prediction tool.
+2. **Setup Instructions:**
+   - Guide users on environment setup and dependency installation.
+3. **Usage Guide:**
+   - Describe how to run the prediction script with examples.
+4. **Data Sources:**
+   - Detail the use of the NBA API and any supplementary sources.
+5. **Feature Descriptions:**
+   - Explain the engineered features and their significance.
+6. **Model Information:**
+   - Outline the machine learning algorithms used and the selection process.
+7. **Contribution Guidelines:**
+   - Provide guidelines for contributors if the project is open-sourced.
+8. **License Information:**
+   - Specify the project's licensing terms.
+
+**Sample `README.md` Structure:**
+```markdown
+# NBA First Quarter Points Predictor
+
+## Overview
+This project predicts whether the total first-quarter points between two NBA teams will be over 52 or under 53, providing the probability of the predicted outcome.
+
+## Features
+- Utilizes historical game data from the NBA API.
+- Implements multiple machine learning algorithms, including XGBoost.
+- Provides a command-line interface for predictions.
+- Automatically updates data and retrains models periodically.
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.8+
+- Virtual Environment Tool (e.g., `venv`)
+
+### Installation
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/nba_first_quarter_prediction.git
+   cd nba_first_quarter_prediction
+   ```
+
+2. **Create and Activate Virtual Environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Unix or MacOS
+   venv\Scripts\activate     # On Windows
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Collect and Prepare Data
+```bash
+python src/data/collect_data.py
+python src/data/preprocess.py
+python src/data/feature_engineering.py
+```
+
+### Train and Optimize Models
+```bash
+python src/models/train.py
+python src/models/evaluate.py
+```
+
+### Make Predictions
+```bash
+python predict.py TEAM_ABBR1 TEAM_ABBR2
+```
+**Example:**
+```bash
+python predict.py LAL BOS
+```
+
+**Sample Output:**
+```
+Prediction: Over 52
+Probability: 78.5%
+```
+
+## Data Sources
+- **NBA API:** Utilized via the `nba_api` Python library for fetching game logs and team statistics.
+
+## Features and Model
+- **Feature Engineering:** Includes interaction terms, polynomial features, and rolling statistics.
+- **Machine Learning Algorithms:** Logistic Regression, Random Forest, Gradient Boosting, SVM, KNN, and XGBoost.
+- **Model Selection:** Based on ROC-AUC and other evaluation metrics.
+
+## Contributing
+Contributions are welcome! Please open issues and submit pull requests for enhancements or bug fixes.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+```
+
+### **b. Document Code with Docstrings and Comments**
+**Tasks:**
+1. **Function and Class Docstrings:**
+   - Describe the purpose, inputs, outputs, and any important notes.
+   ```python
+   def load_cleaned_data():
+       """
+       Load cleaned data from the processed data directory.
+
+       Returns:
+           pd.DataFrame: Cleaned game data.
+       """
+       # Function implementation
+   ```
+2. **Inline Comments:**
+   - Clarify complex logic or important steps within the code.
+   ```python
+   # Calculate interaction between team and opponent FG%
+   df['fg_interaction'] = df['FG_TEAM'] * df['FG_OPP']
+   ```
+
+### **c. Create Additional Documentation (Optional)**
+**Tasks:**
+1. **API Documentation:**
+   - If expanding to a web service, document API endpoints using tools like Swagger.
+2. **User Guides:**
+   - Develop tutorials or guides for end-users to understand and utilize the tool effectively.
+
+---
+
+## **12. Deployment Preparation**
+
+### **a. Ensure Portability**
+**Tasks:**
+1. **Environment Independence:**
+   - Confirm that the project runs seamlessly across different operating systems by testing in multiple environments.
+2. **Dependency Management:**
+   - Ensure `requirements.txt` accurately reflects all necessary packages.
+
+### **b. Package the Project (Optional)**
+**Tasks:**
+1. **Distribution:**
+   - Create a package using tools like `setuptools` if you plan to distribute the project.
+2. **Executable Scripts:**
+   - Make `predict.py` executable and add appropriate shebang lines for Unix systems.
+   ```python
+   #!/usr/bin/env python3
+   ```
+   - Modify `predict.py` to include the shebang line at the top.
+
+### **c. Containerization (Optional)**
+**Tasks:**
+1. **Dockerize the Application:**
+   - Create a `Dockerfile` to containerize the application, ensuring consistent environments across deployments.
+   ```dockerfile
+   FROM python:3.9-slim
+
+   WORKDIR /app
+
+   COPY requirements.txt .
+   RUN pip install --no-cache-dir -r requirements.txt
+
+   COPY . .
+
+   ENTRYPOINT ["python", "predict.py"]
+   ```
+2. **Build and Test Docker Image:**
+   ```bash
+   docker build -t nba-predictor .
+   docker run nba-predictor LAL BOS
+   ```
+
+---
+
+## **13. Future Enhancements and Maintenance**
+
+### **a. Enhance Feature Set**
+**Tasks:**
+1. **Additional Statistics:**
+   - Incorporate player-level data, injury reports, or advanced metrics.
+2. **Dynamic Features:**
+   - Introduce real-time data feeds for live predictions.
+
+### **b. Develop a Graphical User Interface (GUI)**
+**Tasks:**
+1. **User-Friendly Interface:**
+   - Create a GUI using frameworks like `Tkinter` or `Streamlit` for users who prefer not to use the terminal.
+
+### **c. Deploy as a Web Service**
+**Tasks:**
+1. **Web Frameworks:**
+   - Use `Flask` or `Django` to deploy the prediction model as an accessible web application.
+2. **API Endpoints:**
+   - Develop RESTful APIs for integration with other services or applications.
+
+### **d. Implement Model Monitoring**
+**Tasks:**
+1. **Performance Tracking:**
+   - Monitor model performance over time to detect drift and trigger retraining as needed.
+2. **Logging and Alerts:**
+   - Set up logging mechanisms and alerts for any anomalies in predictions or data.
+
+### **e. Optimize Performance**
+**Tasks:**
+1. **Speed Enhancements:**
+   - Optimize data processing and prediction steps for faster execution.
+2. **Scalability:**
+   - Ensure the system can handle increasing data volumes and user requests efficiently.
+
+---
+
+## **14. Detailed Step-by-Step Timeline with Script Breakdown**
+
+To ensure clarity on what to code first, second, etc., here's a detailed step-by-step timeline mapped to specific scripts:
+
+### **Week 1-2: Project Initialization**
+1. **Initialize Repository and Directory Structure**
+   - Set up Git repository and `.gitignore`.
+   - Create the project directory structure as outlined.
+2. **Set Up Virtual Environment**
+   - Create and activate a virtual environment.
+   - Install dependencies and freeze `requirements.txt`.
+3. **Documentation Setup**
+   - Initialize `README.md` with basic project information.
+
+### **Week 3-4: Data Collection**
+1. **Develop `collect_data.py`**
+   - Implement functions to fetch game data using the NBA API.
+   - Test data collection and ensure data is saved in `data/raw/`.
+2. **Validate Data**
+   - Manually verify the collected data for accuracy and completeness.
+
+### **Week 5-6: Data Preprocessing**
+1. **Develop `preprocess.py`**
+   - Implement data cleaning steps: handle missing values, convert data types, remove duplicates.
+   - Test preprocessing and ensure cleaned data is saved in `data/processed/cleaned_data.csv`.
+
+### **Week 7-8: Feature Engineering**
+1. **Develop `feature_engineering.py`**
+   - Create interaction and polynomial features.
+   - Compute rolling statistics.
+   - Ensure no data leakage by using only past data for rolling calculations.
+   - Test feature engineering and save the feature set to `data/processed/feature_set.csv`.
+
+### **Week 9-10: Exploratory Data Analysis (EDA)**
+1. **Develop `correlation_analysis.py`**
+   - Perform correlation analysis between features and the target.
+   - Generate and save heatmaps and other relevant plots.
+   - Document insights and potential feature selection adjustments.
+
+### **Week 11-13: Model Training and Selection**
+1. **Develop `train.py`**
+   - Load feature set and define features and target.
+   - Split data into training and testing sets.
+   - Initialize and train the specified machine learning algorithms, including XGBoost.
+   - Evaluate initial model performances and save all trained models in `models/`.
+   - Identify the best-performing model based on evaluation metrics.
+
+### **Week 14-16: Model Evaluation and Optimization**
+1. **Develop `evaluate.py`**
+   - Load the best-performing model and perform cross-validation.
+   - Conduct hyperparameter tuning using `GridSearchCV` or `RandomizedSearchCV`.
+   - Retrain the model with optimal parameters.
+   - Save the optimized model as `models/optimized_model.pkl`.
+
+### **Week 17-18: Develop Prediction Interface**
+1. **Develop `predict.py`**
+   - Implement the command-line interface for predictions.
+   - Ensure the script correctly loads data and the optimized model.
+   - Test predictions with various team inputs and handle edge cases.
+
+### **Week 19-20: Automation and Updating Mechanism**
+1. **Set Up Scheduling for Data Updates**
+   - Configure `cron` jobs or Task Scheduler to run `collect_data.py`, `preprocess.py`, and `feature_engineering.py` sequentially after each game day.
+2. **Set Up Scheduling for Model Retraining**
+   - Configure `cron` jobs or Task Scheduler to run `train.py` and `evaluate.py` based on predefined trigger conditions (e.g., after accumulating 10 new games).
+
+### **Week 21-22: Testing and Validation**
+1. **Develop Unit Tests**
+   - Write unit tests for `collect_data.py`, `preprocess.py`, `feature_engineering.py`, `train.py`, and `predict.py`.
+2. **Implement Integration Tests**
+   - Test the entire pipeline from data collection to prediction.
+   - Validate predictions against known outcomes using historical data.
+
+### **Week 23-24: Documentation and Deployment Preparation**
+1. **Finalize `README.md`**
+   - Complete all sections with detailed instructions and information.
+2. **Ensure Code Documentation**
+   - Add comprehensive docstrings and inline comments to all scripts.
+3. **Prepare for Deployment (Optional)**
+   - Implement Dockerization or packaging if desired.
+
+### **Ongoing: Maintenance and Future Enhancements**
+1. **Monitor Model Performance**
+   - Continuously track model accuracy and other metrics.
+2. **Implement Enhancements**
+   - Add new features, improve existing ones, and incorporate user feedback.
+3. **Update Documentation**
+   - Keep all documentation up-to-date with project changes.
+
+---
+
+## **15. Tools and Best Practices**
+
+### **a. Version Control**
+- **Branching Strategy:** Use branches like `develop`, `feature/*`, and `main` for organized development.
+- **Commit Messages:** Write clear and descriptive commit messages to track changes effectively.
+
+### **b. Code Quality**
+- **Linting:** Use tools like `flake8` or `pylint` to maintain code quality and consistency.
+- **Formatting:** Adopt a consistent code style using `Black` or `autopep8`.
+
+### **c. Continuous Integration (CI)**
+- **Automate Testing:** Integrate CI tools (e.g., GitHub Actions) to run tests on each commit or pull request.
+- **Ensure Code Integrity:** Prevent broken code from being merged into the main branch.
+
+### **d. Documentation**
+- **Maintain Clarity:** Keep documentation up-to-date with the latest project changes.
+- **Use Markdown:** Utilize Markdown for readable and well-structured documentation.
+
+### **e. Security**
+- **Protect Sensitive Data:** Exclude API keys and sensitive information from version control using environment variables or `.env` files.
+- **Access Control:** If deploying online, ensure appropriate security measures are in place.
+
+---
+
+## **16. Conclusion**
+
+By following this detailed, script-oriented step-by-step plan, you'll systematically develop your NBA first-quarter points prediction tool. This approach ensures that each component—from data collection using the NBA API to model training with XGBoost and the prediction interface—is thoughtfully implemented, tested, and documented. Remember to adapt the timeline and steps as needed based on your progress and any challenges encountered during development. Good luck with your project!

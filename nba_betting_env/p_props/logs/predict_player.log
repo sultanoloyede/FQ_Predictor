@@ -1,0 +1,32 @@
+2025-01-14 12:00:31,599 INFO:Starting prediction for player 1629008.
+2025-01-14 12:00:31,654 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:02:58,387 INFO:Starting prediction for player 1629008.
+2025-01-14 12:02:58,443 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:05:34,369 INFO:Starting prediction for player 1629008.
+2025-01-14 12:05:34,471 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:06:05,386 INFO:Starting prediction for player 1629008.
+2025-01-14 12:06:05,437 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:06:34,282 INFO:Starting prediction for player 1629008.
+2025-01-14 12:06:34,334 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:06:50,519 INFO:Starting prediction for player 1629008.
+2025-01-14 12:06:50,556 ERROR:No data found for player 1629008. Exiting.
+2025-01-14 12:07:57,665 INFO:Starting prediction for player 1629008.
+2025-01-14 12:07:57,820 INFO:Loaded model for 20_plus: model_20_plus_approachB_GradientBoosting_acc_0.7012.pkl
+2025-01-14 12:07:57,869 INFO:Loaded model for 15_plus: model_15_plus_approachB_GradientBoosting_acc_0.7282.pkl
+2025-01-14 12:07:57,890 INFO:Loaded model for 10_plus: model_10_plus_approachB_XGBoost_acc_0.8456.pkl
+2025-01-14 12:11:13,419 INFO:Starting prediction for player 1629008.
+2025-01-14 12:11:13,560 INFO:Loaded model for 20_plus: model_20_plus_approachB_GradientBoosting_acc_0.7012.pkl
+2025-01-14 12:11:13,578 INFO:Loaded model for 15_plus: model_15_plus_approachB_GradientBoosting_acc_0.7282.pkl
+2025-01-14 12:11:13,593 INFO:Loaded model for 10_plus: model_10_plus_approachB_XGBoost_acc_0.8456.pkl
+2025-01-15 17:02:23,916 INFO:Starting prediction for player 1630559.
+2025-01-15 17:02:24,097 INFO:Loaded model for 20_plus: model_20_plus_approachB_GradientBoosting_acc_0.6977.pkl
+2025-01-15 17:02:24,115 INFO:Loaded model for 15_plus: model_15_plus_approachB_GradientBoosting_acc_0.7263.pkl
+2025-01-15 17:02:24,152 INFO:Loaded model for 10_plus: model_10_plus_approachB_XGBoost_acc_0.8505.pkl
+2025-01-15 17:03:47,618 INFO:Starting prediction for player 1629008.
+2025-01-15 17:03:47,753 INFO:Loaded model for 20_plus: model_20_plus_approachB_GradientBoosting_acc_0.6977.pkl
+2025-01-15 17:03:47,766 INFO:Loaded model for 15_plus: model_15_plus_approachB_GradientBoosting_acc_0.7263.pkl
+2025-01-15 17:03:47,786 INFO:Loaded model for 10_plus: model_10_plus_approachB_XGBoost_acc_0.8505.pkl
+2025-01-18 12:26:34,347 INFO:Starting prediction for player 1628386.
+2025-01-18 12:26:34,534 INFO:Loaded model for 20_plus: model_20_plus_approachB_GradientBoosting_acc_0.6997.pkl
+2025-01-18 12:26:34,552 INFO:Loaded model for 15_plus: model_15_plus_approachB_GradientBoosting_acc_0.7255.pkl
+2025-01-18 12:26:34,583 INFO:Loaded model for 10_plus: model_10_plus_approachB_XGBoost_acc_0.8413.pkl
